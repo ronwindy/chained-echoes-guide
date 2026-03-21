@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@400;500;700&display=swap');
+
+:root {
+  --bg-color: #0d0f14; /* Slightly darker for more contrast */
+  --bg-sidebar: #151821;
+  --bg-card: rgba(26, 29, 39, 0.7);
+  --text-main: #e2e4e9;
+  --text-muted: #9499ad;
+  --accent-gold: #e2b43b;
+  --accent-blue: #00d2ff;
+  --accent-glow: rgba(0, 210, 255, 0.15);
+  --border-color: rgba(255, 255, 255, 0.1);
+  
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Cinzel', serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  background-image: 
+    linear-gradient(rgba(13, 15, 20, 0.85), rgba(13, 15, 20, 0.85)), /* Readability Overlay */
+    url('/images/chained-echoes-1.avif');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #7dd3fc;
+  text-decoration: underline;
+}
+
+.layout-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 280px;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border-color);
+  padding: 2rem 1.5rem;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-bottom: 2px solid var(--accent-gold);
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  margin-bottom: 0.75rem;
+}
+
+.nav-links a {
+  color: var(--text-main);
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  background-color: rgba(212, 175, 55, 0.1);
+  color: var(--accent-gold);
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  margin-left: 280px; /* offset for sidebar */
+  padding: 3rem 4rem;
+  max-width: 1600px; /* Increased for wider screens */
+  width: calc(100% - 280px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .layout-container {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    padding: 2rem 1.5rem;
+  }
+}
