@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 
 interface Props {
 	title: string;
@@ -12,7 +12,10 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Chained Echoes Interactive Walkthrough" />
+		<meta
+			name="description"
+			content="Chained Echoes Interactive Walkthrough"
+		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -21,11 +24,24 @@ const { title } = Astro.props;
 	<body>
 		<div class="layout-container">
 			<aside class="sidebar">
-				<h2>Walkthrough</h2>
-				<nav>
+				<div class="sidebar-header">
+					<a href="/table-of-contents" class="header-logo">
+						<h2>Chained Echoes</h2>
+					</a>
+					<button
+						id="menu-toggle"
+						class="menu-toggle"
+						aria-label="Toggle Menu"
+					>
+						<span class="hamburger"></span>
+					</button>
+				</div>
+				<nav class="sidebar-nav">
 					<ul class="nav-links">
 						<li><a href="/">Introduction</a></li>
-						<li><a href="/table-of-contents">Table of Contents</a></li>
+						<li>
+							<a href="/table-of-contents">Table of Contents</a>
+						</li>
 					</ul>
 				</nav>
 			</aside>
@@ -33,5 +49,36 @@ const { title } = Astro.props;
 				<slot />
 			</main>
 		</div>
+		<div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+		<script>
+			const menuToggle = document.getElementById("menu-toggle");
+			const sidebar = document.querySelector(".sidebar");
+			const overlay = document.getElementById("sidebar-overlay");
+
+			if (menuToggle && sidebar && overlay) {
+				menuToggle.addEventListener("click", () => {
+					sidebar.classList.toggle("active");
+					overlay.classList.toggle("active");
+					document.body.classList.toggle("menu-open");
+				});
+
+				overlay.addEventListener("click", () => {
+					sidebar.classList.remove("active");
+					overlay.classList.remove("active");
+					document.body.classList.remove("menu-open");
+				});
+
+				// Close menu when clicking links
+				const navLinks = sidebar.querySelectorAll(".nav-links a");
+				navLinks.forEach((link) => {
+					link.addEventListener("click", () => {
+						sidebar.classList.remove("active");
+						overlay.classList.remove("active");
+						document.body.classList.remove("menu-open");
+					});
+				});
+			}
+		</script>
 	</body>
 </html>
