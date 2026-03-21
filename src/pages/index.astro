@@ -1,17 +1,186 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome">
   <div class="hero">
-    <h1>Chained Echoes</h1>
+    <img src="/logo.png" alt="Chained Echoes" class="hero-logo" />
     <p class="subtitle">An Interactive Walkthrough</p>
   </div>
 
   <section class="content-section" id="intro">
-    <h2>Welcome to Valandis</h2>
-    <p>This is a custom-built, interactive guide for Chained Echoes. It features a responsive layout, beautiful aesthetics inspired by the game, and an easy-to-navigate Table of Contents on the left.</p>
-    <p>Later, we will extract actual guide content and populate these sections!</p>
+    <div class="story-blurb">
+      <p>
+        <strong>NOTE</strong>: Wrote a full guide for the newly released DLC,
+        Ashes of Elrant. Click the link below to check it out!
+      </p>
+
+      <ul>
+        <li>
+          <a
+            href="https://www.neoseeker.com/chained-echoes/Ashes_of_Elrant_Introduction"
+            title="Ashes of Elrant Introduction"
+            >Ashes of Elrant
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <h2>Introduction</h2>
+
+    <div class="handwritten">
+      <p>
+        Welcome to our Chained Echoes (2022) walkthrough and guide! With this
+        guide you can expect a full walkthrough from beginning to end with
+        strategies for every dungeon, every quest, every sidequest, strategies
+        for every boss fight, and much more!
+      </p>
+
+      <p>
+        What do you get from a combination of Final Fantasy VI, Chrono Trigger,
+        Xenogears, and Secret of Mana? Yeah, you get Chained Echoes. This game
+        is like a love letter to all the classic RPG masterpieces from the
+        SNES/PS1 era. This game hits all the bells and whistles that makes a
+        great RPG... well, great!
+      </p>
+
+      <p>
+        Right from the get go this game starts like Chrono Trigger, with you in
+        your bed being woken up by your mom. After that, you're on an airship
+        alla FFIV (but the size and shape feels more like FFVI), then we're
+        flying mechas like in Xenogears! And where does Secret of Mana come in?
+        Combat and sound effects all remind me of nothing but Secret of Mana!
+        I'm telling you I fell in love within the first hour!
+      </p>
+
+      <p>
+        And what studio created this? Well, remember how we found it amazing
+        that <strong>Thomas Happ</strong> was the sole creator of Axiom Verge? That
+        fantastic Metroidvania that came out like 8 years ago? Well, one person also
+        working on this game, alone. This person is none other than <strong
+          >Matthias Linda</strong
+        >... yep, also made by one person! Amazing!
+      </p>
+
+      <p>
+        Enough of me rambling, let's get into the adventure and find out what
+        happens together!
+      </p>
+    </div>
+
+    <p>
+      <a
+        href="https://www.neoseeker.com/chained-echoes/File:Vinheim_cursive.png"
+      >
+        <img
+          src="https://cdn.staticneo.com/ew/thumb/f/ff/Vinheim_cursive.png/80px-Vinheim_cursive.png"
+          alt="Vinheim cursive.png"
+        />
+      </a>
+    </p>
+    <h3>What this guide will offer:</h3>
+
+    <ul>
+      <li>Complete walkthrough for the game from start to finish</li>
+      <li>All Boss Strategies</li>
+      <li>All Side Quests</li>
+      <li>Important Collectables</li>
+      <li>Much, much more!</li>
+    </ul>
+
+    <h2>Controls</h2>
+
+    <table class="controls-table">
+      <thead>
+        <tr>
+          <th>XBOX</th>
+          <th>FUNCTION</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            ><img
+              src="https://cdn.staticneo.com/ew/thumb/8/80/VinXBA.png/23px-VinXBA.png"
+              alt="XBOX A"
+            /></td
+          >
+          <td>Use / Talk / Confirm</td>
+        </tr>
+        <tr>
+          <td
+            ><img
+              src="https://cdn.staticneo.com/ew/thumb/e/ee/VinXB.png/23px-VinXB.png"
+              alt="XBOX B"
+            /></td
+          >
+          <td>Cancel</td>
+        </tr>
+        <tr>
+          <td
+            ><img
+              src="https://cdn.staticneo.com/ew/thumb/6/65/VinXY.png/23px-VinXY.png"
+              alt="XBOX Y"
+            /></td
+          >
+          <td>Menu</td>
+        </tr>
+        <tr>
+          <td
+            ><img
+              src="https://cdn.staticneo.com/ew/thumb/d/d4/VinXX.png/23px-VinXX.png"
+              alt="XBOX X"
+            /></td
+          >
+          <td>Map</td>
+        </tr>
+        <tr>
+          <td
+            ><img
+              src="https://cdn.staticneo.com/ew/thumb/4/42/VinXRB.png/23px-VinXRB.png"
+              alt="XBOX RB"
+            /></td
+          >
+          <td>Switch Character (Battle), Call / Raise Sky Armor</td>
+        </tr>
+        <tr>
+          <td
+            ><img
+              src="https://cdn.staticneo.com/ew/thumb/9/94/VinXLB.png/23px-VinXLB.png"
+              alt="XBOX LB"
+            /></td
+          >
+          <td>Flee (Battle), Exit / Lower Sky Armor</td>
+        </tr>
+        <tr>
+          <td
+            ><img
+              src="https://cdn.staticneo.com/ew/thumb/1/19/VinXRT.png/23px-VinXRT.png"
+              alt="XBOX RT"
+            /></td
+          >
+          <td>Quest Log</td>
+        </tr>
+        <tr>
+          <td
+            ><img
+              src="https://cdn.staticneo.com/ew/thumb/6/62/VinXLT.png/23px-VinXLT.png"
+              alt="XBOX LT"
+            /></td
+          >
+          <td>Reward Board</td>
+        </tr>
+        <tr>
+          <td
+            ><img
+              src="https://cdn.staticneo.com/ew/thumb/d/d6/VinXMenu.png/23px-VinXMenu.png"
+              alt="XBOX Menu"
+            /></td
+          >
+          <td>Main Menu</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 </Layout>
 
@@ -23,9 +192,12 @@ import Layout from '../layouts/Layout.astro';
     border-bottom: 1px solid var(--border-color);
   }
 
-  .hero h1 {
-    font-size: 4rem;
-    margin-bottom: 0.5rem;
+  .hero-logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 15rem; /* Large imposing logo for the hero section */
+    margin-bottom: 1rem;
+    display: inline-block;
   }
 
   .subtitle {
@@ -45,5 +217,44 @@ import Layout from '../layouts/Layout.astro';
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 2rem 0;
+    }
+    .hero-logo {
+      max-height: 6rem;
+    }
+    .subtitle {
+      font-size: 1rem;
+    }
+  }
+
+  .controls-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background-color: var(--card-bg, rgba(0, 0, 0, 0.2));
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .controls-table th,
+  .controls-table td {
+    border: 1px solid var(--border-color, #444);
+    padding: 0.75rem;
+    text-align: center;
+  }
+
+  .controls-table th {
+    background-color: var(--secondary-bg, rgba(0, 0, 0, 0.4));
+    font-family: var(--font-heading);
+    color: var(--primary-color, #f0c05a);
+    font-size: 1.1rem;
+  }
+
+  .controls-table td img {
+    vertical-align: middle;
   }
 </style>

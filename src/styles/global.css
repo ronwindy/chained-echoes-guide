@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Spectral:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Spectral:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@400;500;700&family=Caveat:wght@400;700&display=swap');
 
 :root {
   --bg-color: #0d0f14;
@@ -15,6 +15,7 @@
 
   --font-body: 'Spectral', serif;
   --font-heading: 'Cinzel', serif;
+  --font-handwriting: 'Caveat', cursive;
 }
 
 * {
@@ -50,6 +51,7 @@ h5,
 h6 {
   font-family: var(--font-heading);
   color: var(--accent-gold);
+  margin-top: 2.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -72,6 +74,32 @@ p {
   margin-bottom: 1.5rem;
 }
 
+ul, ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.story-blurb {
+  background: rgba(21, 24, 33, 0.6);
+  border-left: 4px solid var(--accent-gold);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.handwritten {
+  font-family: var(--font-handwriting);
+  font-size: 1.4rem; /* Handwriting fonts often need a boost in size */
+  line-height: 1.4;
+  color: var(--text-main);
+}
+
 a {
   color: var(--accent-blue);
   text-decoration: none;
@@ -86,6 +114,7 @@ a:hover {
 .layout-container {
   display: flex;
   min-height: 100vh;
+  padding-left: 280px;
 }
 
 /* Sidebar Styling */
@@ -95,10 +124,21 @@ a:hover {
   border-right: 1px solid var(--border-color);
   padding: 2rem 1.5rem;
   position: fixed;
+  left: 0;
+  top: 0;
   height: 100vh;
   overflow-y: auto;
   z-index: 1000;
   transition: transform 0.3s ease;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE/Edge */
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+  /* Chrome/Safari/Webkit */
 }
 
 .sidebar-header {
@@ -106,7 +146,6 @@ a:hover {
   align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
-  border-bottom: 2px solid var(--accent-gold);
   padding-bottom: 0.5rem;
   width: 100%;
 }
@@ -118,12 +157,12 @@ a:hover {
   align-items: center;
 }
 
-.sidebar h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--accent-gold);
+.sidebar-logo {
+  max-width: 100%;
+  height: 1.5rem;
+  max-height: 100px;
+  display: block;
+  margin: 0 auto;
 }
 
 .menu-toggle {
@@ -158,8 +197,15 @@ a:hover {
   transition: transform 0.3s, top 0.3s;
 }
 
-.hamburger::before { top: -8px; left: 0; }
-.hamburger::after { top: 8px; left: 0; }
+.hamburger::before {
+  top: -8px;
+  left: 0;
+}
+
+.hamburger::after {
+  top: 8px;
+  left: 0;
+}
 
 .sidebar.active .hamburger {
   background: transparent;
@@ -179,20 +225,133 @@ a:hover {
   display: block;
 }
 
+.nav-section {
+  margin-bottom: 1.5rem;
+}
+
+details>summary {
+  cursor: pointer;
+  list-style: none;
+  /* Hide default triangle */
+}
+
+details>summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-section>summary h3 {
+  font-size: 1rem;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+/* Animated Plus/Minus for open/close state */
+.nav-section>summary h3::before,
+.nav-section>summary h3::after,
+.nav-subsection>summary h4::before,
+.nav-subsection>summary h4::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 2px;
+  background-color: var(--text-muted);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
+}
+
+/* Hover colors */
+.nav-section>summary h3:hover::before,
+.nav-section>summary h3:hover::after,
+.nav-subsection>summary h4:hover::before,
+.nav-subsection>summary h4:hover::after {
+  background-color: var(--accent-gold);
+}
+
+/* Horizontal bar (-) */
+.nav-section>summary h3::before,
+.nav-subsection>summary h4::before {
+  transform: translateY(-50%);
+}
+
+/* Vertical bar (|) to form (+) */
+.nav-section>summary h3::after,
+.nav-subsection>summary h4::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+/* Positioning */
+.nav-section>summary h3::before,
+.nav-section>summary h3::after {
+  right: 0;
+}
+
+.nav-subsection>summary h4 {
+  font-size: 0.95rem;
+  color: var(--accent-blue);
+  text-transform: uppercase;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  position: relative;
+}
+
+.nav-subsection>summary h4::before,
+.nav-subsection>summary h4::after {
+  right: 0.5rem;
+}
+
+/* When Open, change color to gold */
+details[open].nav-section>summary h3::before,
+details[open].nav-section>summary h3::after,
+details[open].nav-subsection>summary h4::before,
+details[open].nav-subsection>summary h4::after {
+  background-color: var(--accent-gold);
+}
+
+/* The vertical bar rotates to overlap the horizontal bar, forming a single (-) */
+details[open].nav-section>summary h3::after,
+details[open].nav-subsection>summary h4::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Sub-items fade and slide down */
+details[open]>summary~* {
+  animation: navSlideDown 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes navSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .nav-links {
   list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
 }
 
 .nav-links li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.3rem;
 }
 
 .nav-links a {
   color: var(--text-main);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   display: flex;
   align-items: center;
-  padding: 0.5rem;
+  padding: 0.4rem 0.5rem;
   border-radius: 4px;
   transition: background-color 0.2s, color 0.2s;
 }
@@ -206,12 +365,12 @@ a:hover {
 /* Main Content */
 .main-content {
   flex: 1;
-  margin-left: 280px;
-  /* offset for sidebar */
+  margin: 0 auto;
+  /* offset for sidebar handled by layout-container */
   padding: 3rem 4rem;
   max-width: 1600px;
   /* Increased for wider screens */
-  width: calc(100% - 280px);
+  width: 100%;
 }
 
 /* Sidebar Overlay */
@@ -242,6 +401,7 @@ body.menu-open {
 @media (max-width: 768px) {
   .layout-container {
     flex-direction: column;
+    padding-left: 0;
   }
 
   .sidebar {
@@ -267,8 +427,9 @@ body.menu-open {
     padding-bottom: 0;
   }
 
-  .sidebar h2 {
-    font-size: 1.2rem;
+  .sidebar-logo {
+    max-height: 40px;
+    margin: 0;
   }
 
   .menu-toggle {
@@ -277,7 +438,8 @@ body.menu-open {
 
   .sidebar-nav {
     position: fixed;
-    top: 60px; /* Below the top bar */
+    top: 60px;
+    /* Below the top bar */
     left: -280px;
     width: 280px;
     height: calc(100vh - 60px);
@@ -294,7 +456,6 @@ body.menu-open {
   .nav-links {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
   }
 
   .nav-links a {
@@ -304,7 +465,8 @@ body.menu-open {
 
   .main-content {
     margin-left: 0;
-    padding: 5rem 1rem 2rem; /* padding-top to account for fixed header */
+    padding: 5rem 1rem 2rem;
+    /* padding-top to account for fixed header */
     width: 100%;
   }
 }

@@ -22,7 +22,7 @@ import Layout from "../layouts/Layout.astro";
       </h2>
       <ul>
         <li><a href="#">Controls</a></li>
-        <li><a href="/table-of-contents">Walkthrough Table of Contents</a></li>
+        <li><a href="/table-of-contents">Table of Contents</a></li>
       </ul>
     </section>
 
@@ -38,15 +38,12 @@ import Layout from "../layouts/Layout.astro";
         Walkthrough
       </h2>
 
-      <h3>Prologue</h3>
-      <ul>
-        <li><a href="#">The Alpha Not the Omega</a></li>
-      </ul>
-
       <h3>Act 2</h3>
       <ul>
-        <li><a href="#">Three Months Later</a></li>
-        <li><a href="#">World Exploration</a></li>
+        <li>
+          <a href="/walkthrough/three-months-later">Three Months Later</a>
+        </li>
+        <li><a href="/walkthrough/world-exploration">World Exploration</a></li>
         <li><a href="#">Searching for a Princess</a></li>
         <li><a href="#">Looking for Allies</a></li>
         <li><a href="#">Storming Tormund</a></li>
@@ -229,7 +226,7 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .toc-header h1 {
-    font-size: clamp(1.8rem, 9vw, 3.5rem); /* Scaled down for mobile */
+    font-size: clamp(1.8rem, 10vw, 3.5rem); /* Scaled down for mobile */
     color: var(--accent-gold);
     margin-bottom: 1.25rem; /* More space for subtitle */
     line-height: 1.2;
