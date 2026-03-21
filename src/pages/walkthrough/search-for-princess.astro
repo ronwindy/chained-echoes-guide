@@ -1,6 +1,8 @@
 ---
 import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const sections = [
   {
     id: "rohlan-fields",
@@ -273,8 +275,8 @@ const sections = [
 
   <div class="next-steps-card">
     <ul>
-      <li><a href="/walkthrough/world-exploration">Optional - World Exploration</a></li>
-      <li><a href="/walkthrough/three-months-later">Back to Three Months Later</a></li>
+      <li><a href=`${baseUrl}walkthrough/world-exploration`>Optional - World Exploration</a></li>
+      <li><a href=`${baseUrl}walkthrough/three-months-later`>Back to Three Months Later</a></li>
     </ul>
     <div class="clan-crest">
       <img src="https://cdn.staticneo.com/ew/thumb/6/65/Ce_Crimson_Wings.png/100px-Ce_Crimson_Wings.png" alt="Crimson Wings Crest" />
