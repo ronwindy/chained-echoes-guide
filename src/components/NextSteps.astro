@@ -1,0 +1,115 @@
+---
+const baseUrl = import.meta.env.BASE_URL;
+
+interface Link {
+  href: string;
+  label: string;
+}
+
+interface Props {
+  links?: Link[];
+  showDefault?: boolean;
+}
+
+const { 
+  links = [], 
+  showDefault = true 
+} = Astro.props;
+
+const defaultLinks = [
+  { href: `${baseUrl}table-of-contents`, label: "Back to Table of Contents" }
+];
+
+const allLinks = [...links, ...(showDefault ? defaultLinks : [])];
+---
+
+<div class="next-steps-card">
+  <div class="links-section">
+    <h3>Next Steps</h3>
+    <ul>
+      {allLinks.map((link) => (
+        <li>
+          <a href={link.href}>{link.label}</a>
+        </li>
+      ))}
+    </ul>
+  </div>
+  
+  <div class="clan-crest">
+    <img src="https://cdn.staticneo.com/ew/thumb/6/65/Ce_Crimson_Wings.png/100px-Ce_Crimson_Wings.png" alt="Crimson Wings Crest" />
+  </div>
+</div>
+
+<style>
+  .next-steps-card {
+    background: linear-gradient(145deg, var(--bg-card), rgba(21, 24, 33, 0.9));
+    border: 1px solid var(--accent-gold);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  .links-section h3 {
+    color: var(--accent-gold);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+  }
+
+  .next-steps-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .next-steps-card li {
+    margin-bottom: 1rem;
+  }
+
+  .next-steps-card a {
+    color: var(--accent-blue);
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s;
+  }
+
+  .next-steps-card a::before {
+    content: "→";
+    color: var(--accent-gold);
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+
+  .next-steps-card a:hover {
+    color: var(--accent-gold);
+    transform: translateX(10px);
+  }
+
+  .clan-crest img {
+    width: 60px;
+    height: auto;
+    filter: drop-shadow(0 0 10px var(--accent-gold));
+    opacity: 0.8;
+  }
+
+  @media (max-width: 600px) {
+    .next-steps-card {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .next-steps-card a {
+      justify-content: center;
+    }
+  }
+</style>

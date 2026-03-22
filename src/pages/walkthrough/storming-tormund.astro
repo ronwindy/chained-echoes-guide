@@ -1,0 +1,181 @@
+---
+import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import Image from "../../components/Image.astro";
+import MediaGrid from "../../components/MediaGrid.astro";
+import Tip from "../../components/Tip.astro";
+import Video from "../../components/Video.astro";
+import BossFight from "../../components/BossFight.astro";
+import NextSteps from "../../components/NextSteps.astro";
+import StoryBlurb from "../../components/StoryBlurb.astro";
+
+const baseUrl = import.meta.env.BASE_URL;
+
+const sections = [
+  {
+    id: "storming-tormund-castle",
+    label: "Storming Tormund Castle",
+    subsections: [
+      { id: "deactivate-cannons", label: "Deactivate all ether cannons (6)" },
+      { id: "reach-grimoire", label: "Reach the Grand Grimoire" },
+    ],
+  },
+];
+---
+
+<WalkthroughLayout
+  title="Storming Tormund"
+  subtitle="Act 2 Final Walkthrough"
+  sections={sections}
+>
+  <StoryBlurb>
+    <p><em>The party sets off to steal the Grand Grimoire once and for all. Will they succeed?</em></p>
+    <p>We are on the eastern side of the castle. We can use our SAs, but only in hover mode for now. We need to deal with the ASACs (cannons) in order to fly. Let's do that!</p>
+  </StoryBlurb>
+
+  <section id="storming-tormund-castle" class="walkthrough-section">
+    <h2 class="section-title">Storming Tormund Castle</h2>
+
+    <QuestStep id="deactivate-cannons" title="Deactivate all ether cannons (6)">
+      <p>From where we start we have a merchant to the north. Check him out if you need to then head west and up the stairs. There are some enemy SAs up above so be careful. Again they are mostly the same as the ones you fought when rescuing Amalia so you shouldn't have a problem against them.</p>
+      
+      <p>From these guys though head east and turn off the first <strong>cannon</strong>.</p>
+      
+      <Image src="https://cdn.staticneo.com/ew/thumb/8/87/Ce_435.jpg/730px-Ce_435.jpg" alt="First Cannon" />
+      
+      <p>Return to the fork and go south and east at the bottom to find find a chest at the end with <strong>Gemstone Jerkin</strong>. From here go west all the way until you see a door to the north you can go in. Head inside and go through the building to find our second <strong>cannon</strong> at the top guarded by some enemy SAs. You can actually go around them and not fight if you wish.</p>
+      
+      <p>Do check left of these SAs to find a chest with <strong>Exchange Parts x2</strong>.</p>
+      
+      <Image src="https://cdn.staticneo.com/ew/thumb/9/98/Ce_436.jpg/730px-Ce_436.jpg" alt="Second Cannon" />
+      
+      <p>Head back down this tower and return northeast to where we fought the first SAs. From here head north now and east at the next fork to find another tower we can go inside and a chest outside with <strong>Demon Leather x2</strong>.</p>
+      
+      <Image src="https://cdn.staticneo.com/ew/thumb/1/13/Ce_437.jpg/730px-Ce_437.jpg" alt="Tower Entrance" />
+      
+      <p>Head inside the tower and go to the top to find some soldiers. Kill them and head up some more to find our next <strong>cannon</strong>.</p>
+      
+      <p>Head back to the bottom of the tower and go north from here to the top where you'll have to fight some <strong>Baki Fighters</strong>. Remember one of these guys tried to scare us back then? Yeah, time to kick their ass! Thankfully we have our SAs. They're not that hard either. They mostly just punch you and can enter counter stance. When they do don't attack them.</p>
+      
+      <p>Past them is another <strong>cannon</strong> and a chest next to it with <strong>Pirate Gun</strong>, a nice upgrade for Amalia.</p>
+      
+      <Image src="https://cdn.staticneo.com/ew/thumb/c/c3/Ce_438.jpg/730px-Ce_438.jpg" alt="Pirate Gun Chest" />
+      
+      <p>Continue going south and to the left of where we fought our first enemies is a staircase going down. Go down and to the far south to find a chest with <strong>Halberd</strong>, a nice upgrade for Lenne once you upgrade it. Head north from here and go through the door next to the stairs to be in a hallway. Before you go through the door go right between the boxes to find another door.</p>
+      
+      <Image src="https://cdn.staticneo.com/ew/thumb/7/7e/Ce_439.jpg/730px-Ce_439.jpg" alt="Hidden Door" />
+      
+      <p>Go through this second door to find an area that has a chest with <strong>Ovelia FO200</strong>. A VERY nice upgrade for whoever has the SA FO100. Return inside and now go through the first door to find a chest to the far north with <strong>Exchange Parts x2</strong> and a <strong>cannon</strong> to the right. This is the fifth one!</p>
+      
+      <MediaGrid>
+        <Image src="https://cdn.staticneo.com/ew/thumb/c/ca/Ce_440.jpg/326px-Ce_440.jpg" alt="Fifth Cannon" />
+        <Image src="https://cdn.staticneo.com/ew/thumb/0/02/Ce_441.jpg/326px-Ce_441.jpg" alt="Chest" />
+      </MediaGrid>
+      
+      <p>Head back and go up the stairs. From here head north following the west path and go west when possible to find some more Baki Fighters. Deal with them and follow the path as we go up the staircases until a scene plays where June and Gwayn (who we know very little of) stop us. Something VERY interesting plays out here where we see the white door Glenn's been seeing all this time. Whoa!</p>
+      
+      <p>Eventually we'll end up in a fight against them, and in our SAs. Well, this is something. June will be mostly laughing at you and not doing anything. Gwayn on the other hand, he'll be snapping his finger and dropping the HP of one character to 1. That's about all they do. I'm not even sure if you can die in this fight. You can attack them all you want but I just healed a little bit the character whose HP dropped to 1 and eventually the fight will be over. Are they bad? I always pinned them as the bad guys. Hmm.</p>
+      
+      <p>Once we regain control go inside the tower nearby, go up one floor and open the chest in the bottom left corner for <strong>TP Cost Down Crystal</strong>, then head up to the top to find the last <strong>cannon</strong>. We can now fly! But we need to go back down the tower first for some reason.</p>
+      
+      <Image src="https://cdn.staticneo.com/ew/thumb/7/77/Ce_442.jpg/730px-Ce_442.jpg" alt="Last Cannon" />
+    </QuestStep>
+
+    <QuestStep id="reach-grimoire" title="Reach the Grand Grimoire">
+      <p>Now that we can fly let's go collect the 7 chests that remain. Let's start by continuing going west and over here you can find a chest with <strong>Nectar</strong>.</p>
+      
+      <Image src="https://cdn.staticneo.com/ew/thumb/c/c3/Ce_445.jpg/730px-Ce_445.jpg" alt="Nectar Chest" />
+      
+      <p>From here you'll see the door marked 1 on your map. That's the way forward but leave that for later. A scene will play as you get close to it so go ahead and watch it. You can continue right after. Damn that stupid bird!</p>
+      
+      <p>From here head south to find a little forested area. Fly around it and spot the 3 chests containing <strong>Dragon Mail</strong>, <strong>Kerberos FK200</strong> (good SA upgrade), and <strong>Merlin FM200</strong> (another great SA upgrade).</p>
+      
+      <Image src="https://cdn.staticneo.com/ew/thumb/6/63/Ce_443.jpg/730px-Ce_443.jpg" alt="Three Chests" />
+      
+      <p>From this forested area go directly right to find another metal chest, this one has <strong>Agamemnon FA200</strong> inside.</p>
+      
+      <Tip>
+        <p><strong>NOTE:</strong> I had difficulty opening this one up for some reason. Couldn't open it no matter what I tried. If it happens to you try running to the bottom of the screen and run back up (without your SA). That's what worked for me.</p>
+      </Tip>
+      
+      <Image src="https://cdn.staticneo.com/ew/thumb/0/02/Ce_444.jpg/730px-Ce_444.jpg" alt="Agamemnon FA200 Chest" />
+      
+      <p>Lastly, head to the top where we fought the first Baki Fighters and just south of the passage is an area where you can land. Here you'll have to fight a whopping 10 enemy soldiers. Thankfully you can fight them in your SAs... which make this a laughable fight haha.</p>
+      
+      <p>Once you kill them though go ahead and open the chests behind them for <strong>Paris FP200</strong> and <strong>Hammer &amp; Shield H200</strong>, more SA upgrades. I dig!</p>
+      
+      <Image src="https://cdn.staticneo.com/ew/thumb/7/72/Ce_446.jpg/730px-Ce_446.jpg" alt="Paris FP200 Chest" />
+      
+      <p>And that's it for this area! Go ahead and head to the door on the west side marked as 1 and go through to enter the castle itself.</p>
+      
+      <p>In here we'll be fighting more soldiers and some of those dogs that shoot out rockets that hit everything, so basically enemies we've already encountered. From where we start go south to the diner and open the chest on the right for <strong>2300a</strong>. Go south to find 2 smaller rooms. Check the left one to find a chest with <strong>Fine Wool x2</strong>.</p>
+      
+      <Image src="https://cdn.staticneo.com/ew/thumb/5/5e/Ce_447.jpg/730px-Ce_447.jpg" alt="Diner Chests" />
+      
+      <p>Try going south some more and a scene will play where we see the current captain of the Valkyries looking for us. Uh oh. We cannot continue this way so head back north to the top and head west now. The first 2 doors lead to the same empty room so ignore them, kill the enemies to the left and enter the next room to find the weapon room with a chest that has <strong>Strong Suit</strong> inside. There's also an anvil in here if you need to upgrade anything.</p>
+      
+      <p>The next room to the left is the kitchen and has a merchant. Buy anything you need then head south to find a chest on the left side of the open area with <strong>Angel Wing</strong>. Continue south until you reach the 2 little rooms. Enter the left room to find <strong>Meal x2</strong>.</p>
+      
+      <p>From here go right to a fork. Go up and right to be in a hallway with 3 rooms. Kill the soldiers and enter the middle room to find a chest with <strong>Yahnagi Bow</strong>.</p>
+      
+      <Image src="https://cdn.staticneo.com/ew/thumb/5/5e/Ce_449.jpg/730px-Ce_449.jpg" alt="Yahnagi Bow" />
+      
+      <p>Return south and check the large open area in the southwestern corner to find a chest with <strong>Topaz Amulet</strong>.</p>
+      
+      <Image src="https://cdn.staticneo.com/ew/thumb/c/c6/Ce_448.jpg/730px-c6-Ce_448.jpg" alt="Topaz Amulet" />
+      
+      <p>Head east to the entrance of the castle and head up to the next floor. Once up here head west to trigger a series of scenes where we see Nabrelia get obliterated by the Generals and their newfound powers. This is horrible. We need to kill these Generals ASAP!</p>
+      
+      <p>Once we regain control get on your SAs and head left to find some Baki Fighters. Kill them and continue. <strong>SAVE YOUR GAME</strong> before you enter the next room because some scenes will play out and afterwards a boss fight!</p>
+      
+      <BossFight title="BOSS FIGHT: STURM & DRANG">
+        <Video id="0Qas2pdw2Rc" title="Boss Fight: Sturm & Drang" />
+        
+        <p>This fight... I thought it was going to be one of those really difficult fights because we have 2 targets (which we haven't had in a while), but these guys I found to be very weak.</p>
+        
+        <p>So we have the blue soldier that focuses on single target attacks (that hit pretty hard) and the green soldier that focuses on party wide attacks. I don't know why but I attacked the green soldier first. Don't. Attack and focus on the blue soldier first. His attacks deal a ton more to a single target, which for me is much harder to heal.</p>
+        
+        <p>For this fight I highly suggest you use Glenn's Ultra Move as soon as you can. This is to of course lower the damage they do, but also because they have a combo attack that can kill a party member if their HP is too low. Glenn's Ultra Move REALLY helps combat this but you can't know when this is happening so good luck.</p>
+        
+        <p>Focus on single target attacks throughout the fight. Have Sienna/Rob Bleed/Poison the blue soldier while you have Victor heal and buff you up. Since they should be debuffed, have Glenn spam his Cross Slash to do tons of damage. Lenne is one of your main damage dealers, as she normally is. They soldiers are weak to wind and earth (one each) so having Lenne take advantage of that is great. If you don't have an earth spell with her, just use the wind spell on the one that's weak and any other spell will do against the other.</p>
+        
+        <p>Overall not that hard of a fight. Focus on the blue soldier first (unlike me) to have an easier time. Once one is down the other one doesn't really power up or do anything crazy so feel free to go ham on them.</p>
+
+        <div class="boss-stats">
+          <ul>
+            <li><strong>Drang</strong>
+              <ul>
+                <li><strong>Eindrang</strong>: hits one party member for around 100 dmg.</li>
+                <li><strong>Sturm and Drang</strong>: hits one party member for around 200 dmg.</li>
+              </ul>
+            </li>
+            <li><strong>Sturm</strong>
+              <ul>
+                <li><strong>Sturmwind</strong>: hits the entire party for around 20 dmg.</li>
+                <li><strong>Sturm and Drang</strong>: hits one party member for around 200 dmg.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </BossFight>
+      
+      <p>After the fight there will be tons of scenes, and we see what looks like the past of our party members? After that... enjoy the scenes! They get pretty good! After the scenes the quest AND act will come to an end. We're told what happens after getting the Grand Grimoire and what's happening in Valandis.</p>
+    </QuestStep>
+  </section>
+
+  <NextSteps links={[{ href: `${baseUrl}walkthrough/mysterious-girl-2`, label: "Next: Mysterious Girl 2" }]} />
+</WalkthroughLayout>
+
+<style>
+  .walkthrough-section {
+    margin-bottom: 4rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    color: var(--accent-gold);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+  }
+</style>

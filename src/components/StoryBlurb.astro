@@ -1,0 +1,47 @@
+<div class="story-blurb">
+  <slot />
+</div>
+
+<style>
+  .story-blurb {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    padding: 2.5rem;
+    background: linear-gradient(145deg, rgba(226, 180, 59, 0.05), rgba(226, 180, 59, 0.02));
+    border-radius: 16px;
+    border: 1px dashed rgba(226, 180, 59, 0.3);
+    position: relative;
+  }
+
+  .story-blurb::before, .story-blurb::after {
+    content: "“";
+    position: absolute;
+    font-size: 4rem;
+    color: rgba(226, 180, 59, 0.1);
+    font-family: serif;
+  }
+
+  .story-blurb::before {
+    top: 0.5rem;
+    left: 1rem;
+  }
+
+  .story-blurb::after {
+    content: "”";
+    bottom: -1rem;
+    right: 1rem;
+  }
+
+  :global(.story-blurb p) {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 0;
+  }
+
+  :global(.story-blurb em) {
+    color: var(--accent-gold);
+    font-style: italic;
+  }
+</style>

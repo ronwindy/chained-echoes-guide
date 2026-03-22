@@ -1,0 +1,31 @@
+---
+interface Props {
+  columns?: number;
+}
+
+const { columns = 2 } = Astro.props;
+---
+
+<div class="media-grid" style={`--grid-cols: ${columns}`}>
+  <slot />
+</div>
+
+<style>
+  .media-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-cols, 2), 1fr);
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .media-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Ensure nested images don't have their own margins when in a grid */
+  :global(.media-grid .media-container) {
+    margin: 0 !important;
+  }
+</style>

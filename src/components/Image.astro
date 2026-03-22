@@ -1,0 +1,61 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  caption?: string;
+  wide?: boolean;
+}
+
+const { src, alt, caption, wide = true } = Astro.props;
+
+// Transform thumbnail URL to high-res for lightbox if it follows the pattern
+// Example: https://cdn.staticneo.com/ew/thumb/1/19/Ce_427.jpg/326px-Ce_427.jpg
+// Becomes: https://cdn.staticneo.com/ew/1/19/Ce_427.jpg
+const highResSrc = src.includes('/thumb/') 
+  ? src.replace('/thumb/', '/').replace(/\/\d+px-[^\/]+$/, '')
+  : src;
+---
+
+<div class={`media-container ${wide ? 'wide' : ''}`}>
+  <a href={highResSrc} target="_blank" class="image-link">
+    <img src={src} alt={alt} loading="lazy" />
+    {caption && <p class="image-caption">{caption}</p>}
+  </a>
+</div>
+
+<style>
+  .media-container {
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .media-container.wide {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    transition: transform 0.3s, border-color 0.3s;
+    cursor: zoom-in;
+  }
+
+  img:hover {
+    transform: scale(1.02);
+    border-color: var(--accent-blue);
+  }
+
+  .image-caption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  .image-link {
+    text-decoration: none;
+    display: inline-block;
+  }
+</style>

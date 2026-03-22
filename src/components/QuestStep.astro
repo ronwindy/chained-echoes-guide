@@ -1,0 +1,62 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  isObjective?: boolean;
+}
+
+const { id, title, isObjective = true } = Astro.props;
+const objIcon = "https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png";
+---
+
+<article id={id} class="quest-step">
+  <h3 class="step-title">
+    {isObjective && <img src={objIcon} alt="Objective" class="obj-icon" />}
+    <span>{title}</span>
+  </h3>
+  
+  <div class="step-content">
+    <slot />
+  </div>
+</article>
+
+<style>
+  .quest-step {
+    margin-bottom: 4rem;
+    scroll-margin-top: 2rem;
+  }
+
+  .step-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.6rem;
+    color: var(--accent-blue);
+    margin-bottom: 1.8rem;
+    background: linear-gradient(90deg, rgba(58, 113, 221, 0.15), transparent);
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    border-left: 3px solid var(--accent-blue);
+  }
+
+  .obj-icon {
+    width: 28px;
+    height: 28px;
+    filter: drop-shadow(0 0 5px rgba(58, 113, 221, 0.5));
+  }
+
+  .step-content {
+    padding-left: 0.5rem;
+  }
+
+  :global(.step-content p) {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  :global(.step-content strong) {
+    color: var(--accent-gold);
+    font-weight: 600;
+  }
+</style>
