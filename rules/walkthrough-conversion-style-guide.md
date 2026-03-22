@@ -128,4 +128,23 @@ If there is introductory text *before* the first `<h2>` header, it should be wra
 <div class="story-blurb">
   <p>Welcome to one of the biggest pages...</p>
 </div>
+
+## 8. Astro Compiler Syntax Requirements
+Astro uses Esbuild under the hood, so standard JS module syntax and JSX rules apply inside `.astro` files.
+
+**Frontmatter Import Order:**
+- All `import` statements **MUST** be placed at the very top of the frontmatter section.
+- You cannot define any constants (like `const baseUrl = ...`) prior to your imports. Placing variable declarations before `import` statements will break the Esbuild parser and throw misleading "Unterminated string literal" errors further down the file.
+
+```astro
+---
+// CORRECT
+import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
+const baseUrl = import.meta.env.BASE_URL;
+---
+```
+
+**JSX Text Escaping:**
+- Bare ampersand (`&`) characters inside JSX text nodes (e.g. `Sword & Shield`) can sometimes trigger parser errors during production builds. 
+- ALWAYS convert bare ampersands in text into HTML entities (`&amp;`) when hardcoding them inside the Astro template. (e.g. `Sword &amp; Shield`).
 ```
