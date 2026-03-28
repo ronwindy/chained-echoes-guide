@@ -1,0 +1,588 @@
+---
+import StoryBlurb from "../../components/StoryBlurb.astro";
+import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
+import Image from "../../components/Image.astro";
+import Video from "../../components/Video.astro";
+import BossFight from "../../components/BossFight.astro";
+import MediaGrid from "../../components/MediaGrid.astro";
+const baseUrl = import.meta.env.BASE_URL;
+
+const sections = [
+  {
+    id: "find-lenne",
+    label: "Find Lenne",
+    subsections: [
+      { id: "explore-inn-floor", label: "Explore the inn floor" },
+      { id: "lower-floors", label: "Explore the lower floors" },
+      { id: "find-lenne-park", label: "Find Lenne in the park" },
+    ],
+  },
+  {
+    id: "return-to-the-inn",
+    label: "Return to the Inn",
+    subsections: [
+      { id: "warehouse-chests", label: "Collect chests in the warehouse" },
+      { id: "return-to-inn", label: "Return to the inn" },
+    ],
+  },
+  {
+    id: "escape-marylea",
+    label: "Escape Marylea",
+    subsections: [
+      { id: "key-card-a", label: "Find Key Card A" },
+      { id: "priests-fight", label: "Fight the Priests" },
+      { id: "beast-tamer", label: "Fight the Beast Tamer" },
+      { id: "key-card-b", label: "Find Key Card B" },
+      { id: "key-card-c", label: "Find Key Card C" },
+      { id: "key-card-d", label: "Find Key Card D" },
+      { id: "trash-room", label: "Trash room area" },
+      { id: "hangar", label: "Reach the hangar" },
+      { id: "boss-fight", label: "Boss Fight: Raphael & Eva" },
+    ],
+  },
+];
+---
+
+<WalkthroughLayout
+  title="In Good Faith"
+  subtitle="Act 3 Walkthrough"
+  sections={sections}
+  guideId="in-good-faith"
+>
+  <StoryBlurb>
+    <p>
+      <em
+        >Marylea has reached Valandis, and our heroes venture forward to find
+        more information on the Order of Leonar.</em
+      >
+    </p>
+  </StoryBlurb>
+
+  <section id="find-lenne" class="walkthrough-section">
+    <h2 class="section-title">Find Lenne</h2>
+
+    <article id="explore-inn-floor" class="quest-step">
+      <h3 class="step-title">
+        <img
+          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
+          alt="Objective Icon"
+          class="obj-icon"
+        />
+        Explore the inn floor
+      </h3>
+      <div class="step-content">
+        <p>
+          As we wake up, we need to go find Lenne. There's nothing to find on
+          this floor of what looks like an Inn so head downstairs to find some
+          of your party members. Go ahead and talk to them but leave the
+          building and now we are to explore this place. Just an FYI, once we're
+          done here we won't be able to come back. There's nothing of importance
+          you can miss, but just in case you want to get all the chests, get
+          them now.
+        </p>
+        <p>
+          From right outside the building you can explore and talk to the people
+          you find. Head west first and into the building. In here go west and
+          exit to find a chest outside with <strong>Parade Armor</strong>.
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/1/14/Ce_550.jpg/730px-Ce_550.jpg"
+          alt="Parade Armor Chest"
+        />
+
+        <p>
+          Return to the entrance of the inn and go south now, and enter the
+          building on your left. In here go up the stairs and exit via the
+          southern exit up here to find a chest with <strong
+            >Rayon Fiber x4</strong
+          >. Victor is also here so you can talk to him.
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/9/99/Ce_545.jpg/730px-Ce_545.jpg"
+          alt="Rayon Fiber Chest"
+        />
+
+        <p>
+          Head back inside the building and go through the western exit now.
+          Follow this path as you go north through another building and you
+          reach the northern side. On this northern passage a scene will play
+          between Amalia and Ba'Thraz. We'll have more backstory on Amalia...
+          and what she gave for those healing powers. Damn that's deep!
+        </p>
+        <p>
+          Go talk to Ba'Thraz then head north to find an elevator. There are 3
+          floors to this place and right now we're on the "City Floor". Go ahead
+          and take it to the <strong>lower floors</strong>. Here go north until
+          you reach a fork. Both the western and eastern sides have a chest you
+          can grab with <strong>1a</strong> and <strong>Decorated Vest</strong> inside.
+        </p>
+
+        <MediaGrid columns={2}>
+          <Image
+            src="https://cdn.staticneo.com/ew/thumb/1/1c/Ce_548.jpg/326px-Ce_548.jpg"
+            alt="Lower floors chest 1"
+            wide={false}
+          />
+          <Image
+            src="https://cdn.staticneo.com/ew/thumb/f/f9/Ce_549.jpg/326px-Ce_549.jpg"
+            alt="Lower floors chest 2"
+            wide={false}
+          />
+        </MediaGrid>
+
+        <p>
+          Explore if you wish then return to the elevator. The <strong
+            >higher floors</strong
+          > have nothing besides NPCs to talk to so do if you wish but when ready
+          return to the <strong>city floors</strong>.
+        </p>
+      </div>
+    </article>
+
+    <article id="find-lenne-park" class="quest-step">
+      <h3 class="step-title">
+        <img
+          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
+          alt="Objective Icon"
+          class="obj-icon"
+        />
+        Find Lenne in the park
+      </h3>
+      <div class="step-content">
+        <p>
+          Return to Ba'Thraz now and go east until you reach a fork. The
+          building to the right has nothing besides some NPCs you can talk to so
+          continue east past it to find a shop... a different guy this time!
+          Further east is a park area where you'll find Lenne with Amalia.
+          Several scenes play here where we see that Glenn is Timothy... whoa!
+          We also see some more of Kylian.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <section id="return-to-the-inn" class="walkthrough-section">
+    <h2 class="section-title">Return to the Inn</h2>
+
+    <article id="warehouse-chests" class="quest-step">
+      <h3 class="step-title">
+        <img
+          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
+          alt="Objective Icon"
+          class="obj-icon"
+        />
+        Collect chests in the warehouse
+      </h3>
+      <div class="step-content">
+        <p>
+          Well, after those scenes head back west and go down the stairs to the
+          south to find another building to the right. You can find Mikah out
+          here if you want to talk to her but head inside the building, which is
+          like a warehouse. Enter the room to the right as you enter and head to
+          the very end of the rooms to find a chest with <strong
+            >Monster Fangs x2</strong
+          >.
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/5/51/Ce_546.jpg/730px-Ce_546.jpg"
+          alt="Monster Fangs Chest"
+        />
+
+        <p>
+          Return to the entrance and enter the room to the left to find another
+          chest, this one with <strong>Nectar</strong>. From here you can easily
+          see the last chest to the left. Head north in the hallway and enter
+          the room to the left. Here you want to go in between the crates near
+          the entrance to reach the chest that has <strong
+            >Colossus Hide x3</strong
+          > inside.
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/1/1f/Ce_547.jpg/730px-Ce_547.jpg"
+          alt="Colossus Hide Chest"
+        />
+      </div>
+    </article>
+
+    <article id="return-to-inn" class="quest-step">
+      <h3 class="step-title">
+        <img
+          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
+          alt="Objective Icon"
+          class="obj-icon"
+        />
+        Return to the inn
+      </h3>
+      <div class="step-content">
+        <p>
+          Exit the building through the northern side and go east to find Robb
+          near the trees. Speak to him if you wish and at the end of the path
+          you can find Egyl as well. Talk to them if you so wish but head back
+          to the inn now and the game will ask you if you're ready. We cannot
+          come back after this but we're not missing anything so go ahead and
+          enter the inn to trigger what's probably the longest series of scenes,
+          all of them really good.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <section id="escape-marylea" class="walkthrough-section">
+    <h2 class="section-title">Escape Marylea</h2>
+
+    <article id="key-card-a" class="quest-step">
+      <h3 class="step-title">
+        <img
+          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
+          alt="Objective Icon"
+          class="obj-icon"
+        />
+        Find Key Card A
+      </h3>
+      <div class="step-content">
+        <p>
+          Time to escape this place! I can't even believe what's happening! From
+          the fork head left first and enter the room. Check the table to find a
+          sparkle that has <strong>Key Card A</strong>. We'll be needing these
+          Key Cards to proceed through this whole area. There's also a merchant
+          here so go ahead and make any purchases you may need.
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/c/c1/Ce_551.jpg/730px-Ce_551.jpg"
+          alt="Key Card A location"
+        />
+      </div>
+    </article>
+
+    <article id="priests-fight" class="quest-step">
+      <h3 class="step-title">
+        <img
+          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
+          alt="Objective Icon"
+          class="obj-icon"
+        />
+        Fight the Priests
+      </h3>
+      <div class="step-content">
+        <p>
+          Return to the fork and go right now to be attacked by some <strong
+            >Priests</strong
+          >. These guys are VERY annoying. They have some really strong single
+          target earth spells and can also summon vines. These will trap one of
+          your characters for the remainder of the fight, or until you destroy
+          them. Make sure to target one of these Priests at a time so you don't
+          get 2 characters trapped in vines.
+        </p>
+        <p>
+          After the fight open the chest to find <strong
+            >Pacifist's Charm</strong
+          >, then return left and go north. Open the door with the key card and
+          then go left and up the stairs at the end. Up here we have a new enemy
+          up ahead, the <strong>Beast Tamer</strong>. These guys are much easier
+          and less annoying than the Priests, but make sure to take out the
+          Beast Tamer first because he can heal the enemy party.
+        </p>
+        <p>
+          After the fight open the chest that was behind them for <strong
+            >Ley Line Coat</strong
+          >.
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/3/3d/Ce_552.jpg/730px-Ce_552.jpg"
+          alt="Ley Line Coat chest"
+        />
+      </div>
+    </article>
+
+    <article id="key-card-b" class="quest-step">
+      <h3 class="step-title">
+        <img
+          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
+          alt="Objective Icon"
+          class="obj-icon"
+        />
+        Find Key Card B
+      </h3>
+      <div class="step-content">
+        <p>
+          Head north and go up the stairs. Enter the room here, open the chest
+          for <strong>Monster Fangs x2</strong> and grab that sparkle near the chair
+          for <strong>Key Card B</strong>.
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/b/b4/Ce_553.jpg/730px-Ce_553.jpg"
+          alt="Key Card B location"
+        />
+      </div>
+    </article>
+
+    <article id="key-card-c" class="quest-step">
+      <h3 class="step-title">
+        <img
+          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
+          alt="Objective Icon"
+          class="obj-icon"
+        />
+        Find Key Card C
+      </h3>
+      <div class="step-content">
+        <p>
+          Return downstairs, go around and go back up the other stairs. Once
+          back here go north following either of the 2 paths and head east and
+          down the stairs marked as 3. Head north here to watch some pretty dope
+          scenes. Ba'Thraz is FAST, and shows no hesitation whatsoever! I'm
+          surprised they didn't make the Pope a boss fight. You know how they
+          tend to make you fight every character that dies in RPGS? Yeah, I
+          thought that was going to happen.
+        </p>
+        <p>
+          Enjoy the scenes that play here and Lenne will rejoin the party. Go
+          ahead and make any changes needed once we regain control and head
+          north past the hallway. At the fork head east (there's nothing in the
+          room to the left), then head east. You'll see that a door to the north
+          is blocking our way towards exit 5 so go around this area until you
+          reach the eastern most side of this room. You'll be able to find <strong
+            >Key Card C</strong
+          > on the floor here so make sure to pick it up. There's also a chest to
+          the right with <strong>Golden Brigandine</strong> inside.
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/7/75/Ce_554.jpg/730px-Ce_554.jpg"
+          alt="Key Card C location"
+        />
+      </div>
+    </article>
+
+    <article id="key-card-d" class="quest-step">
+      <h3 class="step-title">
+        <img
+          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
+          alt="Objective Icon"
+          class="obj-icon"
+        />
+        Find Key Card D
+      </h3>
+      <div class="step-content">
+        <p>
+          Return and go south now. We can now open the southern door! Enter the
+          dining room here and check both smaller rooms below to find a chest in
+          each one, containing <strong>Meal x2</strong> and <strong
+            >Tachi</strong
+          >. More importantly though, make sure to pick up <strong
+            >Key Card D</strong
+          > from the sparkle on the table.
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/7/7e/Ce_555.jpg/730px-Ce_555.jpg"
+          alt="Key Card D location"
+        />
+
+        <p>
+          With this Key Card you'll be able to open the 2 doors to the north
+          that lead to exit 5. <strong>BEFORE</strong> we follow this though, head
+          west to exit 4 and use the Key Card to gain access to the stairs that lead
+          to a chest with <strong>Stylish Accessory</strong>.
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/b/b0/Ce_556.jpg/730px-Ce_556.jpg"
+          alt="Stylish Accessory chest"
+        />
+
+        <p>
+          Return and now go up to exit 5, which is one of those holes in the
+          wall used to dispose of trash and dirty laundry.
+        </p>
+      </div>
+    </article>
+
+    <article id="trash-room" class="quest-step">
+      <h3 class="step-title">
+        <img
+          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
+          alt="Objective Icon"
+          class="obj-icon"
+        />
+        Trash room area
+      </h3>
+      <div class="step-content">
+        <p>
+          We are in what looks like the trash room. There's an anvil here if you
+          need to upgrade your equipment. That's nice... and very convenient.
+          Head south to find some people being attacked by some monsters.
+          Shockingly enough, Robb is the one that wants to help them. Let's do
+          it! Head downstairs and kill the monsters. They're the same that
+          appear with a Beast Tamer, just without the tamer.
+        </p>
+        <p>
+          After killing these 3 head south to find 4 more of them. They can be
+          overwhelming so make sure to deal with one at a time to lower the
+          amount of damage you take ASAP. Watch the little scene after the fight
+          and we'll even see Eva shocked by what she's seeing. Yep, the church
+          is not so good after all, huh?
+        </p>
+        <p>
+          Once you regain control head north up the stairs and go right to find
+          2 stairs. We can't go up so head downstairs.
+        </p>
+        <p>
+          This is the last area. Start following the path and when you reach a
+          fork go west to find a chest with <strong>Wyrm Carapace x2</strong>.
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/0/03/Ce_557.jpg/730px-Ce_557.jpg"
+          alt="Wyrm Carapace chest"
+        />
+      </div>
+    </article>
+
+    <article id="hangar" class="quest-step">
+      <h3 class="step-title">
+        <img
+          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
+          alt="Objective Icon"
+          class="obj-icon"
+        />
+        Reach the hangar
+      </h3>
+      <div class="step-content">
+        <p>
+          Head east now to reach the hangar itself. Before you go north go to
+          the southeastern platform to find a chest with <strong
+            >Colossus Hide x3</strong
+          >. I'd be TERRIFIED of anywhere near the edge of this place.
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/7/7b/Ce_558.jpg/730px-Ce_558.jpg"
+          alt="Colossus Hide chest"
+        />
+
+        <p>
+          Head north now (this is where Eva was!) and follow this path killing
+          enemies until you start going south across airships. Note that you can
+          go inside the second airship. Head inside to find a chest at the very
+          end with <strong>1278a</strong>. There's also an anvil in here if you
+          need it.
+        </p>
+
+        <MediaGrid columns={2}>
+          <Image
+            src="https://cdn.staticneo.com/ew/thumb/3/38/Ce_559.jpg/326px-Ce_559.jpg"
+            alt="Airship chest"
+            wide={false}
+          />
+          <Image
+            src="https://cdn.staticneo.com/ew/thumb/a/aa/Ce_560.jpg/326px-Ce_560.jpg"
+            alt="Airship anvil"
+            wide={false}
+          />
+        </MediaGrid>
+
+        <p>
+          Head back outside and go south, then west at the fork to find another
+          chest, this one with <strong>Colichemarde</strong>. Continue heading
+          east following the extremely straightforward path and when you reach
+          the southeastern area make sure to save your game and prepare yourself
+          because as you head north to the quest marker a scene will play and
+          right after a boss fight!
+        </p>
+      </div>
+    </article>
+
+    <article id="boss-fight" class="quest-step">
+      <h3 class="step-title">
+        <img
+          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
+          alt="Objective Icon"
+          class="obj-icon"
+        />
+        Boss Fight: Raphael & Eva
+      </h3>
+      <div class="step-content">
+        <p>
+          Head back outside and go south, then west at the fork to find another
+          chest, this one with <strong>Colichemarde</strong>. Continue heading
+          east following the extremely straightforward path and when you reach
+          the southeastern area make sure to save your game and prepare yourself
+          because as you head north to the quest marker a scene will play and
+          right after a boss fight!
+        </p>
+
+        <BossFight title="Raphael & Eva">
+          <Video id="acHU840JQYM" title="Raphael & Eva Boss Fight" />
+
+          <p>
+            I knew this day would come sooner or later, but I did not think we
+            would fight them when we came to the church!
+          </p>
+          <p>
+            Luckily for us, they are actually quite easy to deal with. You want
+            to start with your usual: Victor using Heroic Ode (I hope you got
+            this) to buff up all of the party's stats. This saves us turns and
+            it's really good! Glenn has a similar skill, All Break, which lowers
+            all of one enemy's stats. Extremely good. I personally had Sienna
+            steal the Platinum Nugget from Raphael before switching her out for
+            Mikah and having her buff our speed, then sticking to either her
+            Tiger or Dragon combo. Whichever one you want to do.
+          </p>
+          <p>
+            Of course, you want to use Glenn's Ultra Move to REALLY debuff both
+            of these enemies to have an easier time. Raphael is weak to water
+            and Eva is weak to wind so Lenne is perfect to deal tons of damage
+            on them.
+          </p>
+          <p>
+            Overall, it's not a hard fight, but be careful of Eva's Raging Boar
+            skill, though. It's very strong, and can kill your party if you
+            don't keep an eye on their HP.
+          </p>
+
+          <h4>Raphael</h4>
+          <ul>
+            <li>
+              <strong>Attack</strong>: deals around 50 dmg. to one target.
+            </li>
+            <li><strong>Souls Crush</strong>: debuff physical attack</li>
+            <li><strong>Blinding Light</strong>: AOE light attack</li>
+          </ul>
+
+          <h4>Eva</h4>
+          <ul>
+            <li>
+              <strong>Attack</strong>: deals around 85 dmg. to one target.
+            </li>
+            <li><strong>Raging Boar</strong>: AOE earth attack</li>
+          </ul>
+        </BossFight>
+
+        <p>
+          After the fight watch all the scenes that play out where Kylian...
+          enjoy the scenes. The scenes continue with Glenn and the party... and
+          who Glenn actually is. This completely took me by surprised! I'm
+          actually so invested in this story; it's better than most AAA RPGs
+          I've played in a couple years!
+        </p>
+        <p>
+          Once these scenes are over, so too will the Act and quest. I will see
+          you all in the start of the end. See you there!
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/6/65/Ce_Crimson_Wings.png/100px-Ce_Crimson_Wings.png"
+          alt="Crimson Wings"
+        />
+      </div>
+    </article>
+  </section>
+</WalkthroughLayout>
