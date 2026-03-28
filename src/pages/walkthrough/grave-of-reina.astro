@@ -1,4 +1,5 @@
 ---
+import QuestStep from "../../components/QuestStep.astro";
 import StoryBlurb from "../../components/StoryBlurb.astro";
 import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
 import Image from "../../components/Image.astro";
@@ -68,508 +69,358 @@ const sections = [
   <section id="talk-with-friends-return-to-cres" class="walkthrough-section">
     <h2 class="section-title">Talk with your friends and return to Cres</h2>
 
-    <article id="talk-with-friends" class="quest-step">
-      <h3 class="step-title">
-        <img
-          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
-          alt="Objective Icon"
-          class="obj-icon"
-        />
-        Talk with your friends and return to Cres
-      </h3>
-      <div class="step-content">
-        <p>
-          We start out with a couple scenes and we then take control of Amalia.
-          It seems she wants to cook. Ok. From the start you can go north and
-          talk to Lenne and south to find Victor. Head downstairs, go left and
-          north to find Ba'Thraz and Sienna here in the dining hall. Talk to
-          them, head downstairs and go talk to Glenn at the Sky Armor bay.
-        </p>
-        <p>
-          Head back upstairs and go outside. Head to the northern side of the
-          island to find Egyl, Robb, and Tomke. And that's it. Once you've
-          talked to them all return to the second floor of the cave and return
-          to Cres, your dog.
-        </p>
-        <p>
-          Here it seems you need to pick who you go talk to to ask for help. I
-          did this 3 times and the only thing that really changed was the
-          scenes. Sometimes the party kinda liked it... something they hated it.
-        </p>
-      </div>
-    </article>
+    <QuestStep id="talk-with-friends" title="Talk with your friends and return to Cres">
+      <p>
+        We start out with a couple scenes and we then take control of Amalia.
+        It seems she wants to cook. Ok. From the start you can go north and
+        talk to Lenne and south to find Victor. Head downstairs, go left and
+        north to find Ba'Thraz and Sienna here in the dining hall. Talk to
+        them, head downstairs and go talk to Glenn at the Sky Armor bay.
+      </p>
+      <p>
+        Head back upstairs and go outside. Head to the northern side of the
+        island to find Egyl, Robb, and Tomke. And that's it. Once you've
+        talked to them all return to the second floor of the cave and return
+        to Cres, your dog.
+      </p>
+      <p>
+        Here it seems you need to pick who you go talk to to ask for help. I
+        did this 3 times and the only thing that really changed was the
+        scenes. Sometimes the party kinda liked it... something they hated it.
+      </p>
+    </QuestStep>
 
-    <article id="cooking-event" class="quest-step">
-      <h3 class="step-title">
-        <img
-          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
-          alt="Objective Icon"
-          class="obj-icon"
-        />
-        Cooking event
-      </h3>
-      <div class="step-content">
-        <Tip type="note">
-          <p>
-            Although the below combination is confirmed to yield a reward, if
-            you got anything special here with a different combination, let me
-            know down below in the comments!
-          </p>
-        </Tip>
+    <QuestStep id="cooking-event" title="Cooking event">
+      <Tip type="note">
         <p>
-          <strong>Appetizers:</strong> Amalia because she states she had prior experience
-          with it. If you already recruited her before finishing the Empyrean Ruins,
-          Mikah can also fill this role.
+          Although the below combination is confirmed to yield a reward, if
+          you got anything special here with a different combination, let me
+          know down below in the comments!
         </p>
-        <p>
-          <strong>Main Dish:</strong> Robb because he's experienced with herbs and
-          spices
-        </p>
-        <p>
-          <strong>Desserts:</strong> Egyl because he likes sweets
-        </p>
-        <p>
-          <strong>Drinks:</strong> Sienna because she's an experienced drinker
-        </p>
-        <p>
-          After this though we'll have several scenes but we'll eventually
-          regain control of Glenn.
-        </p>
-        <p>
-          If you picked the correct sequence for the cooking event, you can
-          speak to the chef to get an <strong>Elixir</strong>.
-        </p>
-      </div>
-    </article>
+      </Tip>
+      <p>
+        <strong>Appetizers:</strong> Amalia because she states she had prior experience
+        with it. If you already recruited her before finishing the Empyrean Ruins,
+        Mikah can also fill this role.
+      </p>
+      <p>
+        <strong>Main Dish:</strong> Robb because he's experienced with herbs and
+        spices
+      </p>
+      <p>
+        <strong>Desserts:</strong> Egyl because he likes sweets
+      </p>
+      <p>
+        <strong>Drinks:</strong> Sienna because she's an experienced drinker
+      </p>
+      <p>
+        After this though we'll have several scenes but we'll eventually
+        regain control of Glenn.
+      </p>
+      <p>
+        If you picked the correct sequence for the cooking event, you can
+        speak to the chef to get an <strong>Elixir</strong>.
+      </p>
+    </QuestStep>
   </section>
 
   <section id="exploration" class="walkthrough-section">
     <h2 class="section-title">Exploration</h2>
 
-    <article id="recruit-triony" class="quest-step">
-      <h3 class="step-title">
-        <img
-          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
-          alt="Objective Icon"
-          class="obj-icon"
-        />
-        Recruit Triony
-      </h3>
-      <div class="step-content">
-        <p>
-          Before we head to the catacombs, let us go explore. There are several
-          things we can do: there are some new sidequests to complete and some
-          more people to recruit! Remember, if you want to you can save/load
-          when you talk to the fortune teller for tips on the people we're
-          recruiting.
-        </p>
-        <p>I'll leave a link down below for the sidequest you can do.</p>
-        <ul>
-          <li>
-            <a
-              href="https://www.neoseeker.com/chained-echoes/walkthrough/A_Goblin%27s_Dilemma"
-              >A Goblin's Dilemma</a
-            >
-          </li>
-        </ul>
-        <p>As for the people we can recruit:</p>
-        <ul>
-          <li>
-            <strong>Triony</strong>: head to the docks in Farnsport and on your
-            way to where you met Magnolia in a previous sidequest you can find
-            this character fishing.
-          </li>
-        </ul>
-        <Image
-          src="https://cdn.staticneo.com/ew/thumb/4/41/Ce_522.jpg/730px-Ce_522.jpg"
-          alt="Triony fishing at Farnsport docks"
-        />
-      </div>
-    </article>
+    <QuestStep id="recruit-triony" title="Recruit Triony">
+      <p>
+        Before we head to the catacombs, let us go explore. There are several
+        things we can do: there are some new sidequests to complete and some
+        more people to recruit! Remember, if you want to you can save/load
+        when you talk to the fortune teller for tips on the people we're
+        recruiting.
+      </p>
+      <p>I'll leave a link down below for the sidequest you can do.</p>
+      <ul>
+        <li>
+          <a
+            href="https://www.neoseeker.com/chained-echoes/walkthrough/A_Goblin%27s_Dilemma"
+            >A Goblin's Dilemma</a
+          >
+        </li>
+      </ul>
+      <p>As for the people we can recruit:</p>
+      <ul>
+        <li>
+          <strong>Triony</strong>: head to the docks in Farnsport and on your
+          way to where you met Magnolia in a previous sidequest you can find
+          this character fishing.
+        </li>
+      </ul>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/4/41/Ce_522.jpg/730px-Ce_522.jpg"
+        alt="Triony fishing at Farnsport docks"
+      />
+    </QuestStep>
 
-    <article id="recruit-bob" class="quest-step">
-      <h3 class="step-title">
-        <img
-          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
-          alt="Objective Icon"
-          class="obj-icon"
-        />
-        Recruit Bob
-      </h3>
-      <div class="step-content">
-        <p>
-          <strong>Bob</strong>: on the western area of Tormund, in the middle of
-          the park you can find him sitting down.
-        </p>
-        <Image
-          src="https://cdn.staticneo.com/ew/thumb/d/d4/Ce_523.jpg/730px-Ce_523.jpg"
-          alt="Bob sitting in Tormund park"
-        />
-      </div>
-    </article>
+    <QuestStep id="recruit-bob" title="Recruit Bob">
+      <p>
+        <strong>Bob</strong>: on the western area of Tormund, in the middle of
+        the park you can find him sitting down.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/d/d4/Ce_523.jpg/730px-Ce_523.jpg"
+        alt="Bob sitting in Tormund park"
+      />
+    </QuestStep>
 
-    <article id="recruit-murchands" class="quest-step">
-      <h3 class="step-title">
-        <img
-          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
-          alt="Objective Icon"
-          class="obj-icon"
-        />
-        Recruit Murchands
-      </h3>
-      <div class="step-content">
-        <p>
-          <strong>Murchands</strong>: in Flandern, go directly west from the
-          crystal to find him in the corner.
-        </p>
-        <Image
-          src="https://cdn.staticneo.com/ew/thumb/a/aa/Ce_524.jpg/730px-Ce_524.jpg"
-          alt="Murchands in Flandern"
-        />
-      </div>
-    </article>
+    <QuestStep id="recruit-murchands" title="Recruit Murchands">
+      <p>
+        <strong>Murchands</strong>: in Flandern, go directly west from the
+        crystal to find him in the corner.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/a/aa/Ce_524.jpg/730px-Ce_524.jpg"
+        alt="Murchands in Flandern"
+      />
+    </QuestStep>
 
-    <article id="mikah-quest" class="quest-step">
-      <h3 class="step-title">
-        <img
-          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
-          alt="Objective Icon"
-          class="obj-icon"
-        />
-        Mikah sidequest
-      </h3>
-      <div class="step-content">
-        <p>
-          Once getting these people, if you've been getting everyone thus far
-          your clan will reach <strong>Rank 3</strong>, which means that you'll
-          now have buildings. You can check them out if you want. Inside the
-          base we finally have wooden floors.
-        </p>
-        <p>
-          Most importantly, a scene will trigger as you enter the upper left
-          building where this chick is eating and even kicks Tomke. It seems
-          she's his... granddaughter how? He's a goat? Oh well. After the scene
-          we'll actually start a sidequest. This one is important to do because
-          you get her, <strong>Mikah</strong>, to join the party (unless, of
-          course, you've already done this quest earlier in your playthrough).
-        </p>
-        <ul>
-          <li>
-            <a
-              href="https://www.neoseeker.com/chained-echoes/walkthrough/For_the_Love_of_Food"
-              >For the Love of Food</a
-            >
-          </li>
-        </ul>
-      </div>
-    </article>
+    <QuestStep id="mikah-quest" title="Mikah sidequest">
+      <p>
+        Once getting these people, if you've been getting everyone thus far
+        your clan will reach <strong>Rank 3</strong>, which means that you'll
+        now have buildings. You can check them out if you want. Inside the
+        base we finally have wooden floors.
+      </p>
+      <p>
+        Most importantly, a scene will trigger as you enter the upper left
+        building where this chick is eating and even kicks Tomke. It seems
+        she's his... granddaughter how? He's a goat? Oh well. After the scene
+        we'll actually start a sidequest. This one is important to do because
+        you get her, <strong>Mikah</strong>, to join the party (unless, of
+        course, you've already done this quest earlier in your playthrough).
+      </p>
+      <ul>
+        <li>
+          <a
+            href="https://www.neoseeker.com/chained-echoes/walkthrough/For_the_Love_of_Food"
+            >For the Love of Food</a
+          >
+        </li>
+      </ul>
+    </QuestStep>
 
-    <article id="recruit-kayn-sivar" class="quest-step">
-      <h3 class="step-title">
-        <img
-          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
-          alt="Objective Icon"
-          class="obj-icon"
-        />
-        Recruit Kayn Sivar
-      </h3>
-      <div class="step-content">
-        <p>
-          There's not much more going on here on the island. The anvil and
-          merchant are now in their own building but you can also find some more
-          people to recruit now that we're Rank 3. I'll leave their locations
-          below:
-        </p>
-        <ul>
-          <li>
-            <strong>Kayn Sivar</strong>: in Farnsport head northwest from the
-            crystal to trigger a scene where we get Kayn Sivar to join the clan.
-            When he joins we're now able to purchase new airships in The Hooge.
-            They are quite pricey and offer nothing but a cosmetic change.
-          </li>
-        </ul>
-        <Image
-          src="https://cdn.staticneo.com/ew/thumb/e/ee/Ce_526.jpg/730px-Ce_526.jpg"
-          alt="Kayn Sivar in Farnsport"
-        />
-      </div>
-    </article>
+    <QuestStep id="recruit-kayn-sivar" title="Recruit Kayn Sivar">
+      <p>
+        There's not much more going on here on the island. The anvil and
+        merchant are now in their own building but you can also find some more
+        people to recruit now that we're Rank 3. I'll leave their locations
+        below:
+      </p>
+      <ul>
+        <li>
+          <strong>Kayn Sivar</strong>: in Farnsport head northwest from the
+          crystal to trigger a scene where we get Kayn Sivar to join the clan.
+          When he joins we're now able to purchase new airships in The Hooge.
+          They are quite pricey and offer nothing but a cosmetic change.
+        </li>
+      </ul>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/e/ee/Ce_526.jpg/730px-Ce_526.jpg"
+        alt="Kayn Sivar in Farnsport"
+      />
+    </QuestStep>
 
-    <article id="recruit-linus" class="quest-step">
-      <h3 class="step-title">
-        <img
-          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
-          alt="Objective Icon"
-          class="obj-icon"
-        />
-        Recruit Linus
-      </h3>
-      <div class="step-content">
-        <ul>
-          <li>
-            <strong>Linus</strong>: head to Tormund and go into the underground
-            area. Run around to find a dog running around. I found him near the
-            northeastern corner.
-          </li>
-        </ul>
-        <Image
-          src="https://cdn.staticneo.com/ew/thumb/f/f6/Ce_527.jpg/730px-Ce_527.jpg"
-          alt="Linus the dog in Tormund underground"
-        />
-        <p>And that's about it for new recruits.</p>
-      </div>
-    </article>
+    <QuestStep id="recruit-linus" title="Recruit Linus">
+      <ul>
+        <li>
+          <strong>Linus</strong>: head to Tormund and go into the underground
+          area. Run around to find a dog running around. I found him near the
+          northeastern corner.
+        </li>
+      </ul>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/f/f6/Ce_527.jpg/730px-Ce_527.jpg"
+        alt="Linus the dog in Tormund underground"
+      />
+      <p>And that's about it for new recruits.</p>
+    </QuestStep>
 
-    <article id="chest-fiorwoods" class="quest-step">
-      <h3 class="step-title">
-        <img
-          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
-          alt="Objective Icon"
-          class="obj-icon"
-        />
-        Chest in Fiorwoods
-      </h3>
-      <div class="step-content">
-        <p>
-          Before we continue, I missed a chest, so I might as well add it here.
-          Head to the eastern crystal in Tormund and head south until you leave
-          and you're back in the Fiorwoods. From here go east to find what
-          should be your last chest with <strong>Yak Grass Fiber x2</strong>.
-        </p>
-      </div>
-    </article>
+    <QuestStep id="chest-fiorwoods" title="Chest in Fiorwoods">
+      <p>
+        Before we continue, I missed a chest, so I might as well add it here.
+        Head to the eastern crystal in Tormund and head south until you leave
+        and you're back in the Fiorwoods. From here go east to find what
+        should be your last chest with <strong>Yak Grass Fiber x2</strong>.
+      </p>
+    </QuestStep>
 
-    <article id="chest-perpetua" class="quest-step">
-      <h3 class="step-title">
-        <img
-          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
-          alt="Objective Icon"
-          class="obj-icon"
-        />
-        Chest in Perpetua
-      </h3>
-      <div class="step-content">
-        <p>
-          Lastly, let's go get 2 more chests that I completely missed. Fast
-          travel to the central crystal in Perpetua and use your SAs to go
-          directly east across the water to find a chest with <strong
-            >Passive RAM</strong
-          >.
-        </p>
-        <Image
-          src="https://cdn.staticneo.com/ew/thumb/c/ca/Ce_542.jpg/730px-Ce_542.jpg"
-          alt="Chest with Passive RAM in Perpetua"
-        />
-      </div>
-    </article>
+    <QuestStep id="chest-perpetua" title="Chest in Perpetua">
+      <p>
+        Lastly, let's go get 2 more chests that I completely missed. Fast
+        travel to the central crystal in Perpetua and use your SAs to go
+        directly east across the water to find a chest with <strong
+          >Passive RAM</strong
+        >.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/c/ca/Ce_542.jpg/730px-Ce_542.jpg"
+        alt="Chest with Passive RAM in Perpetua"
+      />
+    </QuestStep>
 
-    <article id="chest-perpetua-sw" class="quest-step">
-      <h3 class="step-title">
-        <img
-          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
-          alt="Objective Icon"
-          class="obj-icon"
-        />
-        Chest in Perpetua SW
-      </h3>
-      <div class="step-content">
-        <p>
-          Now head to the small patch of land in the southwestern corner to find
-          a lonely chest with <strong>750a</strong>.
-        </p>
-        <Image
-          src="https://cdn.staticneo.com/ew/thumb/3/3f/Ce_543.jpg/730px-Ce_543.jpg"
-          alt="Chest with 750a in Perpetua southwestern corner"
-        />
-        <p>And that's about it.</p>
-      </div>
-    </article>
+    <QuestStep id="chest-perpetua-sw" title="Chest in Perpetua SW">
+      <p>
+        Now head to the small patch of land in the southwestern corner to find
+        a lonely chest with <strong>750a</strong>.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/3/3f/Ce_543.jpg/730px-Ce_543.jpg"
+        alt="Chest with 750a in Perpetua southwestern corner"
+      />
+      <p>And that's about it.</p>
+    </QuestStep>
   </section>
 
   <section id="head-catacombs-northeast-farnsport" class="walkthrough-section">
     <h2 class="section-title">Head for the catacombs northeast of Farnsport</h2>
 
-    <article class="quest-step">
-      <h3 class="step-title">
-        <img
-          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
-          alt="Objective Icon"
-          class="obj-icon"
-        />
-        Head for the catacombs
-      </h3>
-      <div class="step-content">
-        <p>
-          Once you're ready head on over to the catacombs to the north-northeast
-          of Farnsport.
-        </p>
-        <Image
-          src="https://cdn.staticneo.com/ew/thumb/c/c3/Ce_541.jpg/730px-Ce_541.jpg"
-          alt="Catacombs entrance northeast of Farnsport"
-        />
-        <p>
-          As you land head north into the building to trigger a scene. Thanks to
-          Glenn the path is now open.
-        </p>
-      </div>
-    </article>
+    <QuestStep id="head-for-catacombs" title="Head for the catacombs">
+      <p>
+        Once you're ready head on over to the catacombs to the north-northeast
+        of Farnsport.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/c/c3/Ce_541.jpg/730px-Ce_541.jpg"
+        alt="Catacombs entrance northeast of Farnsport"
+      />
+      <p>
+        As you land head north into the building to trigger a scene. Thanks to
+        Glenn the path is now open.
+      </p>
+    </QuestStep>
   </section>
 
   <section id="investigate-grave" class="walkthrough-section">
     <h2 class="section-title">Investigate the grave</h2>
 
-    <article id="amalia-section" class="quest-step">
-      <h3 class="step-title">
-        <img
-          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
-          alt="Objective Icon"
-          class="obj-icon"
-        />
-        Amalia's section
-      </h3>
-      <div class="step-content">
-        <p>
-          Head down these stairs and head north. Open the chest on your left
-          when you see it for <strong>Ley Line Coat</strong> then continue north.
-          Follow either path and take the large teleporter at the top.
-        </p>
-        <p>
-          In this next area move forward to trigger a scene where Amalia and
-          Ba'Thraz are separated from the rest of the group. This is because
-          they have the Curse. They kind of fight between them and they then end
-          up separated as well. Hmm.
-        </p>
-        <p>
-          Well, we start playing as Amalia. Start by heading north and go right
-          at the fork to get a <strong>Musket</strong> from the chest. Excellent upgraded
-          for Amalia. Return and head north now, then left at the fork to find another
-          chest, this one with <strong>Meal</strong>.
-        </p>
-        <Image
-          src="https://cdn.staticneo.com/ew/thumb/f/f3/Ce_544.jpg/730px-Ce_544.jpg"
-          alt="Amalia section in catacombs"
-        />
-        <p>
-          Continue north from here until a scene plays out where we see some of
-          Amalia's backstory. It's... VERY messed up. This tells us how she
-          ended up with the Curse. Afterwards though we're going to be fighting
-          Amalia... with Amalia. Yeah, we're basically fighting our past here.
-          This is a very easy fight since the enemy just normal attacks, brings
-          up a shield to protect her, and uses Regen.
-        </p>
-        <p>
-          If you have it use "Cres Command". This changes Cres from attacking
-          every round to healing. With this you don't need to heal as the doggo
-          will heal you every round. If you don't have it then make sure to heal
-          whenever you need to. Besides that, using Piercing Shot or any other
-          offensive skill is good until the other Amalia goes down.
-        </p>
-        <p>
-          Watch the scenes that play out after (still very messed up) and
-          eventually we'll be now playing as Ba'Thraz.
-        </p>
-      </div>
-    </article>
+    <QuestStep id="amalia-section" title="Amalia's section">
+      <p>
+        Head down these stairs and head north. Open the chest on your left
+        when you see it for <strong>Ley Line Coat</strong> then continue north.
+        Follow either path and take the large teleporter at the top.
+      </p>
+      <p>
+        In this next area move forward to trigger a scene where Amalia and
+        Ba'Thraz are separated from the rest of the group. This is because
+        they have the Curse. They kind of fight between them and they then end
+        up separated as well. Hmm.
+      </p>
+      <p>
+        Well, we start playing as Amalia. Start by heading north and go right
+        at the fork to get a <strong>Musket</strong> from the chest. Excellent upgraded
+        for Amalia. Return and head north now, then left at the fork to find another
+        chest, this one with <strong>Meal</strong>.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/f/f3/Ce_544.jpg/730px-Ce_544.jpg"
+        alt="Amalia section in catacombs"
+      />
+      <p>
+        Continue north from here until a scene plays out where we see some of
+        Amalia's backstory. It's... VERY messed up. This tells us how she
+        ended up with the Curse. Afterwards though we're going to be fighting
+        Amalia... with Amalia. Yeah, we're basically fighting our past here.
+        This is a very easy fight since the enemy just normal attacks, brings
+        up a shield to protect her, and uses Regen.
+      </p>
+      <p>
+        If you have it use "Cres Command". This changes Cres from attacking
+        every round to healing. With this you don't need to heal as the doggo
+        will heal you every round. If you don't have it then make sure to heal
+        whenever you need to. Besides that, using Piercing Shot or any other
+        offensive skill is good until the other Amalia goes down.
+      </p>
+      <p>
+        Watch the scenes that play out after (still very messed up) and
+        eventually we'll be now playing as Ba'Thraz.
+      </p>
+    </QuestStep>
 
-    <article id="bathraz-section" class="quest-step">
-      <h3 class="step-title">
-        <img
-          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
-          alt="Objective Icon"
-          class="obj-icon"
-        />
-        Ba'Thraz's section
-      </h3>
-      <div class="step-content">
-        <p>
-          Same thing will happen here: head north and left when possible to find
-          a chest with <strong>Opal Amulet</strong>, an upgrade for him.
-          Continue north, grab <strong>Meal x2</strong> from the chest in the same
-          location as the previous one with Amalia, and continue until you start a
-          fight against dark Ba'Thraz. Of course we'll have some scenes here telling
-          us about Ba'Thraz and his past.
-        </p>
-        <p>
-          This fight is just as easy as Amalia's fight. If you have it use
-          Drunken Master to dramatically increase your speed, giving you two
-          turns nearly every time. If you happen to have Counter Regen equipped
-          and you happen to trigger it that'd be fantastic since you wouldn't
-          need to heal. After that just use Summon Dagger until you have all 3
-          summoned weapons, then summon them. If needed, heal once or twice and
-          you'll be golden.
-        </p>
-        <p>
-          After the fight we'll have more scenes. These are insanely good! We
-          even see why Ba'Thraz talks in plural. Once the scenes are over
-          though, we'll be in control of the main party. Save your game, prepare
-          yourself and move forward to trigger a scene and a boss fight.
-        </p>
-      </div>
-    </article>
+    <QuestStep id="bathraz-section" title="Ba'Thraz's section">
+      <p>
+        Same thing will happen here: head north and left when possible to find
+        a chest with <strong>Opal Amulet</strong>, an upgrade for him.
+        Continue north, grab <strong>Meal x2</strong> from the chest in the same
+        location as the previous one with Amalia, and continue until you start a
+        fight against dark Ba'Thraz. Of course we'll have some scenes here telling
+        us about Ba'Thraz and his past.
+      </p>
+      <p>
+        This fight is just as easy as Amalia's fight. If you have it use
+        Drunken Master to dramatically increase your speed, giving you two
+        turns nearly every time. If you happen to have Counter Regen equipped
+        and you happen to trigger it that'd be fantastic since you wouldn't
+        need to heal. After that just use Summon Dagger until you have all 3
+        summoned weapons, then summon them. If needed, heal once or twice and
+        you'll be golden.
+      </p>
+      <p>
+        After the fight we'll have more scenes. These are insanely good! We
+        even see why Ba'Thraz talks in plural. Once the scenes are over
+        though, we'll be in control of the main party. Save your game, prepare
+        yourself and move forward to trigger a scene and a boss fight.
+      </p>
+    </QuestStep>
 
-    <article id="living-wall-boss" class="quest-step">
-      <h3 class="step-title">
-        <img
-          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
-          alt="Objective Icon"
-          class="obj-icon"
-        />
-        Living Wall boss fight
-      </h3>
-      <div class="step-content">
-        <BossFight title="Living Wall">
-          <Video id="ejBiaytFOQo" title="Living Wall Boss Fight" />
-          <p>I'm happy we have another easy boss.</p>
-          <p>
-            For this fight I highly recommend you bring Mikah if you have the
-            skill to increase speed. If you have it then you can greatly
-            increase your party's speed and given that the boss is really slow
-            you'll have several turns before each of his.
-          </p>
-          <p>
-            Of course, the boss is weak to water so using Lenne's Water Thrust
-            and if you have it, Glenn's Water Strike, is awesome to do tons of
-            damage. At this point I hope you did the correct thing and get the
-            skill <strong>All Break</strong>. This combines all of Glenn's Break
-            skills into one. It's really good so I hope you have it and use it
-            on this guy. Same goes for Victor. He has all his buffs in one skill
-            so use that to buff the party, then feel free to switch him out or
-            have him cast spells.
-          </p>
-          <p>
-            As for the boss, he doesn't do much. He has 2 swords and can either
-            attack all party members, attack one side or the other. That's about
-            it. He doesn't do much damage either so you can go a couple of turns
-            without needing to heal, which goes to show how much damage this
-            statue does.
-          </p>
-          <ul>
-            <li>
-              <strong>Cross Slash</strong>: hits all party members for around 60
-              dmg.
-            </li>
-            <li>
-              <strong>Right Swing</strong>: hits the characters on the left side
-              of the screen for around 55 dmg.
-            </li>
-            <li>
-              <strong>Left Swing</strong>: hits the characters on the right side
-              of the screen for around 55 dmg.
-            </li>
-          </ul>
-        </BossFight>
+    <QuestStep id="living-wall-boss" title="Living Wall boss fight">
+      <BossFight title="Living Wall">
+        <Video id="ejBiaytFOQo" title="Living Wall Boss Fight" />
+        <p>I'm happy we have another easy boss.</p>
         <p>
-          After the fight there will be tons of scenes where we find the grave
-          of Reina and many things happen where we end up in <strong
-            >Marylea</strong
-          >.
+          For this fight I highly recommend you bring Mikah if you have the
+          skill to increase speed. If you have it then you can greatly
+          increase your party's speed and given that the boss is really slow
+          you'll have several turns before each of his.
         </p>
-        <Image
-          src="https://cdn.staticneo.com/ew/thumb/6/65/Ce_Crimson_Wings.png/100px-Ce_Crimson_Wings.png"
-          alt="Crimson Wings - transition to Marylea"
-        />
-      </div>
-    </article>
+        <p>
+          Of course, the boss is weak to water so using Lenne's Water Thrust
+          and if you have it, Glenn's Water Strike, is awesome to do tons of
+          damage. At this point I hope you did the correct thing and get the
+          skill <strong>All Break</strong>. This combines all of Glenn's Break
+          skills into one. It's really good so I hope you have it and use it
+          on this guy. Same goes for Victor. He has all his buffs in one skill
+          so use that to buff the party, then feel free to switch him out or
+          have him cast spells.
+        </p>
+        <p>
+          As for the boss, he doesn't do much. He has 2 swords and can either
+          attack all party members, attack one side or the other. That's about
+          it. He doesn't do much damage either so you can go a couple of turns
+          without needing to heal, which goes to show how much damage this
+          statue does.
+        </p>
+        <ul>
+          <li>
+            <strong>Cross Slash</strong>: hits all party members for around 60
+            dmg.
+          </li>
+          <li>
+            <strong>Right Swing</strong>: hits the characters on the left side
+            of the screen for around 55 dmg.
+          </li>
+          <li>
+            <strong>Left Swing</strong>: hits the characters on the right side
+            of the screen for around 55 dmg.
+          </li>
+        </ul>
+      </BossFight>
+      <p>
+        After the fight there will be tons of scenes where we find the grave
+        of Reina and many things happen where we end up in <strong
+          >Marylea</strong
+        >.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/6/65/Ce_Crimson_Wings.png/100px-Ce_Crimson_Wings.png"
+        alt="Crimson Wings - transition to Marylea"
+      />
+    </QuestStep>
   </section>
 
   <NextSteps

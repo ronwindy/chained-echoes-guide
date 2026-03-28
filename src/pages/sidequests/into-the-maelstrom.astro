@@ -1,0 +1,56 @@
+---
+import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import StoryBlurb from "../../components/StoryBlurb.astro";
+import Image from "../../components/Image.astro";
+import MediaGrid from "../../components/MediaGrid.astro";
+import Tip from "../../components/Tip.astro";
+import NextSteps from "../../components/NextSteps.astro";
+
+const sections = [
+  { id: "speak-to-the-client", title: "Speak to the client", label: "Speak to the client" },
+  { id: "find-the-patient-in-his-dreams", title: "Find the patient in his dreams", label: "Find the patient in his dreams" }
+];
+---
+
+<WalkthroughLayout title="Into the Maelstrom" sections={sections} guideId="into-the-maelstrom">
+  <StoryBlurb>
+    Someone is searching for people that see a white door within their dreams. What is this all about?
+  </StoryBlurb>
+
+  <Image src="https://cdn.staticneo.com/ew/thumb/3/34/Ce_409.jpg/730px-Ce_409.jpg" alt="Into the Maelstrom Quest Start" />
+
+  <p>To start this quest you want to fast travel to Tormund's eastern crystal and check the message board to the north, right outside the Adventurer's Guild. It seems if we see a white door we need to go visit this person in Farnsport. Well, we know someone who sees a white door.</p>
+
+  <Image src="https://cdn.staticneo.com/ew/thumb/a/ac/Ce_430.jpg/730px-Ce_430.jpg" alt="Message board" />
+
+  <section id="speak-to-the-client" class="walkthrough-section">
+    <QuestStep id="speak-to-the-client" title="Speak to the client">
+      <p>Fast travel to the crystal in Farnsport and head for the docks. Once here go around and enter the building where the marker is. You remember this place I presume? Remember I said this woman was going to be coming back later because she had a portrait? Yep, here we are haha.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/8/89/Ce_431.jpg/730px-Ce_431.jpg" alt="Speaking to the client in Farnsport" />
+
+      <p>Enjoy the scenes that play out here and we'll eventually be in that NPC's mind. Whoa!</p>
+    </QuestStep>
+  </section>
+
+  <section id="find-the-patient-in-his-dreams" class="walkthrough-section">
+    <QuestStep id="find-the-patient-in-his-dreams" title="Find the patient in his dreams">
+      <p>There are no enemies here whatsoever so don't worry about them. Follow the path and go south when possible to find a chest with <strong>Elastic Wing</strong>. Continue east and you'll find... a house? Part of a house. Just past the house is a yellow sphere. Interact with it to remove the fragment, which is the house. We'll use that in the black sphere next to us. Do so so we can cross the gap here.</p>
+
+      <p>Cross the gap and pick up the house. To the right is a sphere and next to it is another fragment, this one is a bridge. Pick it up and place it on the left where the house was. From here head north and follow this path as you go around and cross the bridge. This is to reach a chest with <strong>Fine Wool x3</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/1/1a/Ce_432.jpg/730px-Ce_432.jpg" alt="Dream puzzle bridge" />
+
+      <p>Return and pick up the bridge (this sounds so weird haha) and place the "house" on the right side. Cross now and follow the path north to reach a fork. Check the northern side first to find a chest with <strong>Hard Shell x2</strong>. Now go right to find a new fragment, a "cliff". Note that this one has a wall you can climb down. For now pick it up and go west. Place the cliff fragment here and go down the wall on the cliff. This lets you go down and pick up the house fragment.</p>
+
+      <p>Head back up, pick up the cliff fragment and go right and place the cliff fragment where it originally was. Go down the wall on it and follow the path. Open the chest when you get to it for <strong>Platinum Ore x3</strong> and continue. Place the bridge fragment here, return up the cliff and go right. Place the house fragment and we can now cross and go north. Doing so will take us to the patient where we see him and his daughter and what happened. It seems he killed his little girl and intended to kill himself right after. Wow...</p>
+
+      <p>When you regain control interact with the rift on the left corner to have many more interesting scenes play out. Once they're over, so too will the quest.</p>
+    </QuestStep>
+  </section>
+
+  <NextSteps links={[
+    { href: "/sidequests/for-the-love-of-food", label: "For the Love of Food" }
+  ]} />
+</WalkthroughLayout>

@@ -1,0 +1,81 @@
+---
+import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import StoryBlurb from "../../components/StoryBlurb.astro";
+import Image from "../../components/Image.astro";
+import MediaGrid from "../../components/MediaGrid.astro";
+import Tip from "../../components/Tip.astro";
+import NextSteps from "../../components/NextSteps.astro";
+
+const sections = [
+  { id: "see-what-bark-is-up-to", title: "See what Bark is up to", label: "See what Bark is up to" },
+  { id: "continue-to-search-for-bark", title: "Continue to search for Bark", label: "Continue to search for Bark" },
+  { id: "find-the-goblin-village-and-talk-to-the-goblin-chief", title: "Find the Goblin Village and talk to the Goblin Chief", label: "Find the Goblin Village and talk to the Goblin Chief" },
+  { id: "head-for-jans-home", title: "Head for Jan's home", label: "Head for Jan's home" }
+];
+---
+
+<WalkthroughLayout title="A Goblin's Dilemma" sections={sections} guideId="a-goblins-dilemma">
+  <StoryBlurb>
+    You've met a strange goblin who was able to speak.
+  </StoryBlurb>
+
+  <Image src="https://cdn.staticneo.com/ew/thumb/f/fa/Ce_536.jpg/730px-Ce_536.jpg" alt="A Goblin's Dilemma Quest Start" />
+
+  <p>You can start this quest after the main quest <a href="/walkthrough/ruins-under-a-tree">Ruins Under a Tree</a>. Once you've complete it fast travel to the northeastern crystal in Rohlan Fields and head west to find this quest. You start it by approaching the Goblin tied to the tree.</p>
+
+  <MediaGrid columns={2}>
+    <Image src="https://cdn.staticneo.com/ew/thumb/5/57/Ce_534.jpg/326px-Ce_534.jpg" alt="Goblin tied to tree" />
+    <Image src="https://cdn.staticneo.com/ew/thumb/7/7f/Ce_535.jpg/326px-Ce_535.jpg" alt="Quest Location" />
+  </MediaGrid>
+
+  <section id="see-what-bark-is-up-to" class="walkthrough-section">
+    <QuestStep id="see-what-bark-is-up-to" title="See what Bark is up to">
+      <p>Go ahead and fly to Basil and leave the village via the eastern exit. Follow the path here to where you saw those huge claw marks before to trigger a scene.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/2/2e/Ce_537.jpg/730px-Ce_537.jpg" alt="Claw Marks" />
+
+      <p>Approach them to trigger a scene.</p>
+    </QuestStep>
+  </section>
+
+  <section id="continue-to-search-for-bark" class="walkthrough-section">
+    <QuestStep id="continue-to-search-for-bark" title="Continue to search for Bark">
+      <p>Go ahead and head southwest now to Jan's house. We haven't seen him in a while! As we get here we see little Marsia outside. It seems the villagers are blaming Jan about what's been happening lately. During the scenes we'll be asked to go to the "Goblin Village". They also give us an emblem that should allow us passage. Ok.</p>
+    </QuestStep>
+  </section>
+
+  <section id="find-the-goblin-village-and-talk-to-the-goblin-chief" class="walkthrough-section">
+    <QuestStep id="find-the-goblin-village-and-talk-to-the-goblin-chief" title="Find the Goblin Village and talk to the Goblin Chief">
+      <p>We've already been to this village... or at least we tried but we were not allowed passage haha. For this you'll want to go to Ograne Grottos. I'm going to expect you to have been in here already (<a href="/sidequests/the-gates-of-nhysa">CLICK HERE</a> for help in here if you need it).</p>
+
+      <p>Fast travel to the bottom crystal and from here head north and at the top fork go east and follow this path until reach the village.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/3/3d/Ce_538.jpg/730px-Ce_538.jpg" alt="Goblin Village" />
+
+      <p>Once in here talk to the Goblins if you want (you can't understand them) and in the middle you'll find a huge cauldron. On the right side of it is a bottle you can interact with. You can drink from it or not. I have no idea what this does but I drank from it haha. It just says it tasted strange.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/9/95/Ce_539.jpg/730px-Ce_539.jpg" alt="Cauldron and Bottle" />
+
+      <p>Head north up the slope and go right first. Over here you'll be able to go north through the blue mushrooms, and south between the crates.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/2/23/Ce_540.jpg/730px-Ce_540.jpg" alt="Blue Mushrooms Path" />
+
+      <p>Follow these paths to find <strong>Hall</strong> and <strong>Magic Poleyns</strong> in chests. Return to the slope and go into the large tent to trigger a scene with the Goblin Chief. Why can he speak? Oh well, he doesn't want peace.</p>
+    </QuestStep>
+  </section>
+
+  <section id="head-for-jans-home" class="walkthrough-section">
+    <QuestStep id="head-for-jans-home" title="Head for Jan's home">
+      <p>Go ahead and fast travel to the crystal near the Class Emblem Statue and head south to Jan's house. A scene will play where we see a goblin attacking little Marsia. The goblin will attack us but have Egyl <strong>"ring the goblin down"</strong>. After this the Goblin Chief will appear and drops some pretty horrible info on us: goblins are people. They've turned people into goblins and we've just been killing them. Damn.</p>
+
+      <p>Afterwards we'll be in a fight against more goblins. Not much we can do besides fight. These are your normal goblins from back in the day so take care of them. Focus on the Wizards first because they have "Heal All" spells that are VERY annoying.</p>
+
+      <p>Watch the scenes after the fight and the quest will come to an end. I feel really bad for Jan. I wonder if we're having a continuation to this quest.</p>
+    </QuestStep>
+  </section>
+
+  <NextSteps links={[
+    { href: "/sidequests/a-little-vacation", label: "A Little Vacation" }
+  ]} />
+</WalkthroughLayout>

@@ -1,0 +1,175 @@
+---
+import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import Image from "../../components/Image.astro";
+import Tip from "../../components/Tip.astro";
+import MediaGrid from "../../components/MediaGrid.astro";
+import StoryBlurb from "../../components/StoryBlurb.astro";
+import NextSteps from "../../components/NextSteps.astro";
+import BossFight from "../../components/BossFight.astro";
+import Video from "../../components/Video.astro";
+
+const sections = [
+  {
+    id: "arkant-archipelago",
+    title: "Arkant Archipelago",
+    label: "Arkant Archipelago",
+  },
+  { id: "the-hooge", title: "The Hooge", label: "The Hooge" },
+];
+---
+
+<WalkthroughLayout
+  title="The Food, the Chap, and the Hungry"
+  guideId="the-food-the-chap-and-the-hungry"
+  sections={sections}
+>
+  <StoryBlurb>
+    <em
+      >You've met a hungry and senile old fellow. Help him regain his memory!</em
+    >
+  </StoryBlurb>
+
+  <Image
+    src="https://cdn.staticneo.com/ew/thumb/0/04/Ce_315.jpg/730px-Ce_315.jpg"
+    alt="Chained Echoes"
+  />
+
+  <section id="arkant-archipelago" class="walkthrough-section">
+    <h2>Arkant Archipelago</h2>
+
+    <p>
+      We can start this quest by heading to Arkant Archipelago. This place is
+      located southwest of our isle.
+    </p>
+
+    <MediaGrid columns={2}>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/3/3e/Ce_309.jpg/326px-Ce_309.jpg"
+        alt="Arkant Archipelago Location 1"
+      />
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/5/58/Ce_308.jpg/326px-Ce_308.jpg"
+        alt="Arkant Archipelago Location 2"
+      />
+    </MediaGrid>
+
+    <p>
+      Once here head left to trigger a scene where we meet a goat named <strong
+        >Tomke</strong
+      >. It seems he doesn't remember anything but you'll see him fighting a
+      Boxfly and canning it.... then drinking it? Disgusting! We'll talk a bit
+      more and then the sidequest itself will start.
+    </p>
+
+    <QuestStep
+      id="speak-to-tomke-and-head-for-the-hooge"
+      title="Speak to Tomke and head for the Hooge"
+    >
+      <p>
+        Time to head to the Hooge. Once you're ready talk to Tomke who's nearby
+        and agree to go to Hooge. The area pretty much is an oil rig.
+      </p>
+
+      <Tip type="note"
+        >Hooge will NOT appear on the map until you do this quest.</Tip
+      >
+    </QuestStep>
+  </section>
+
+  <section id="the-hooge" class="walkthrough-section">
+    <h2>The Hooge</h2>
+
+    <p>
+      Once we get here we'll have some scenes where we meet with Captain Agatha,
+      the leader of this place. It seems not even her knows who Tomke is. Hmm.
+      Once the scenes are over, so too will the sidequest end. Don't worry,
+      let's explore this place before we end this page!
+    </p>
+
+    <p>
+      Leave this room and outside before you go down the stairs go left and
+      around the building and on the upper right side you'll see several traffic
+      cones. Wait here a bit and you'll see a moving platform come from the
+      right.
+    </p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/c/c2/Ce_328.jpg/730px-Ce_328.jpg"
+      alt="Moving platform at Hooge"
+    />
+
+    <p>
+      Ride it, jump down the roof on the other side and jump down a second one.
+      DON'T jump down a third time. Instead go right and up the ladder to find a
+      chest in the corner with <strong>Platinum Ore x2</strong>. NOW jump down
+      and open the chest to the right for <strong>Sacred Water</strong>. This
+      was an easy one.
+    </p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/1/1b/Ce_329.jpg/730px-Ce_329.jpg"
+      alt="Chest with Sacred Water"
+    />
+
+    <p>
+      From here go south and jump down once. Down here go left and north. Go
+      through the door under the metal sheet roof to reach a metal chest with <strong
+        >Exorcist RAM</strong
+      >. Great upgrade in my opinion.
+    </p>
+
+    <MediaGrid columns={2}>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/f/fc/Ce_331.jpg/326px-Ce_331.jpg"
+        alt="Left metal chest 1"
+      />
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/7/78/Ce_330.jpg/326px-Ce_330.jpg"
+        alt="Left metal chest 2"
+      />
+    </MediaGrid>
+
+    <p>
+      Head to the right side where you can find several NPCs and talk to the man
+      on the right (dressed in brown) named <strong>Gormit</strong>. After a
+      little scene he'll join the clan and go to our island. Neat.
+    </p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/d/d9/Ce_332.jpg/730px-Ce_332.jpg"
+      alt="Gormit"
+    />
+
+    <p>
+      Go to the bottom left corner of this area and jump down to the bottom of
+      the oil rig. Down here head left, grab the <strong
+        >Exchange Parts x2</strong
+      >, and go up the ladder when you get to it. At the top go straight up and
+      go left when possible to find another ladder going down. Go down to find a
+      chest with <strong>Fine Wool</strong>.
+    </p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/4/44/Ce_327.jpg/730px-Ce_327.jpg"
+      alt="Chest with Fine Wool"
+    />
+
+    <p>
+      Head back up the ladder and go right until you find stairs going up.
+      Before you go up head down from these stairs to find a chest with <strong
+        >1500a</strong
+      > around the metal containers. Now go up the stairs and we'll be in the area
+      at the bottom of the stairs where we met Captain Agatha. The double doors up
+      ahead have nothing but NPCs you can talk to. Go left to find several shops.
+      The first one sells Sky Armor Frames and a new one he has is <strong
+        >Kerberos</strong
+      >. And at the moment of me recording this I couldn't make use of the other
+      2 shops.
+    </p>
+
+    <p>And that's about it for this place! Super small!</p>
+  </section>
+
+  <NextSteps links={[{ href: "/sidequests/a-little-vacation", label: "A Little Vacation" }]} />
+</WalkthroughLayout>

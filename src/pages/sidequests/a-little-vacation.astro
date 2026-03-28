@@ -1,0 +1,146 @@
+---
+import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import StoryBlurb from "../../components/StoryBlurb.astro";
+import Image from "../../components/Image.astro";
+import MediaGrid from "../../components/MediaGrid.astro";
+import Tip from "../../components/Tip.astro";
+import BossFight from "../../components/BossFight.astro";
+import Video from "../../components/Video.astro";
+import NextSteps from "../../components/NextSteps.astro";
+
+const sections = [
+  { id: "visit-the-farm", title: "Visit the farm", label: "Visit the farm" },
+];
+---
+
+<WalkthroughLayout
+  title="A Little Vacation"
+  sections={sections}
+  guideId="a-little-vacation"
+>
+  <StoryBlurb>
+    <em
+      >The carrot and his gang are back. They seem to have been spotted in
+      different locations.</em
+    >
+  </StoryBlurb>
+
+  <Image
+    src="https://cdn.staticneo.com/ew/thumb/e/e8/Ce_338.jpg/730px-Ce_338.jpg"
+    alt="A Little Vacation Start"
+  />
+
+  <section id="visit-the-farm" class="walkthrough-section">
+    <QuestStep id="visit-the-farm" title="Visit the farm">
+      <p>
+        This sidequest has us go and check up on the carrot and other talking
+        veggies we previously fought. Go ahead and leave New Wyrnshire and
+        you'll see there's a side quest icon to the southwest. There's a sparkle
+        near the lake. Go ahead and land there.
+      </p>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/9/99/Ce_342.jpg/326px-Ce_342.jpg"
+          alt="Farm Location 1"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/7/79/Ce_341.jpg/326px-Ce_341.jpg"
+          alt="Farm Location 2"
+        />
+      </MediaGrid>
+
+      <p>
+        As you land move forward to find the carrot. Follow it north to find a
+        farm with all the veggies just there. You can't talk to them or do
+        anything with them so go inside the main building to find several brooms
+        sweeping by themselves. There's nothing for us to grab so head north
+        into the room to find a pair of pigs smoking. What? They end up running
+        away.
+      </p>
+
+      <p>
+        Go ahead and follow them upstairs then go through the door to the south.
+        You'll find them on the balcony outside...they jump off. Head back
+        downstairs and outside to find them to the right. They'll run away again
+        as you get close to them. <strong>BEFORE</strong> you follow them again save
+        your game and prepare yourself. Once ready head west to find the some dude
+        that's riding a larger pig. Boss fight time!
+      </p>
+
+      <BossFight title="Fridolyn">
+        <Video id="YDb_30QBwAQ" title="Boss Fight: Fridolyn" />
+
+        <p>
+          I didn't expect to fight a man riding a pig when I entered this area!
+          I thought we were fighting the veggies again! Thankfully we're not
+          because this boss is super easy.
+        </p>
+
+        <p>
+          What makes the boss very mid is the fact that he has nothing to steal,
+          has no weaknesses and no strengths, which pretty much means we're good
+          to go with basically anything and any party member.
+        </p>
+
+        <p>
+          As it's usual in these boss fights, having Glenn and Victor start the
+          fight by buffing the party and debuffing the enemy is the best you can
+          do. You can even have Glenn use his Ultra Move to lower everything at
+          once then focus on attacking with Cross Slash. Poison and Bleed are
+          still good so have Sienna and Robb put both of them on the boss.
+        </p>
+
+        <p>
+          Besides that, however, everything is pretty standard. I don't even
+          know if this guy is supposed to be considered a boss (he has the music
+          and gives us a Grimoire Shard) but you can see his attacks below. He
+          uses a random element to hit all the party for around 50 dmg. You can
+          easily take three of these before needing healing so that says a lot
+          about this fight.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Earth</strong>: hits all party members for around 50 dmg.
+          </li>
+          <li>
+            <strong>Fire</strong>: hits all party members for around 50 dmg.
+          </li>
+          <li>
+            <strong>Wind</strong>: hits all party members for around 50 dmg.
+          </li>
+        </ul>
+      </BossFight>
+
+      <p>
+        After the fight some scenes will play out and the quest will come to an
+        end. That was fast.
+      </p>
+
+      <p>
+        Before we end this sidequest, head back out to the world map and we can
+        go directly south to find a beach we can enter.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/0/0a/Ce_343.jpg/730px-Ce_343.jpg"
+        alt="Beach Area"
+      />
+
+      <p>
+        In here check the sparkle to the left to find a <strong
+          >Rusty Anchor</strong
+        >. To the right you can actually find Fridolyn and his pigs basking in
+        the sun haha. Nice!
+      </p>
+    </QuestStep>
+  </section>
+
+  <NextSteps
+    links={[
+      { href: "/sidequests/the-gates-of-nhysa", label: "The Gates of Nhysa" },
+    ]}
+  />
+</WalkthroughLayout>

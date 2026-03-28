@@ -1,0 +1,431 @@
+---
+import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import StoryBlurb from "../../components/StoryBlurb.astro";
+import Image from "../../components/Image.astro";
+import MediaGrid from "../../components/MediaGrid.astro";
+import Tip from "../../components/Tip.astro";
+import NextSteps from "../../components/NextSteps.astro";
+
+const sections = [
+  { id: "hermit-island", title: "Hermit Island", label: "Hermit Island" },
+  { id: "ograne-grottos", title: "Ograne Grottos", label: "Ograne Grottos" },
+  { id: "rohlan-fields", title: "Rohlan Fields", label: "Rohlan Fields" },
+  { id: "fiorwoods", title: "Fiorwoods", label: "Fiorwoods" },
+  { id: "perpetua", title: "Perpetua", label: "Perpetua" },
+  {
+    id: "ograne-grottos-again",
+    title: "Ograne Grottos again",
+    label: "Ograne Grottos again",
+  },
+];
+---
+
+<WalkthroughLayout
+  title="The Gates of Nhysa"
+  sections={sections}
+  guideId="the-gates-of-nhysa"
+>
+  <StoryBlurb>
+    <em
+      >A young scholar wants to learn more about Nhysa. Assist her in finding
+      the lost city.</em
+    >
+  </StoryBlurb>
+
+  <Image
+    src="https://cdn.staticneo.com/ew/thumb/4/41/Ce_408.jpg/730px-Ce_408.jpg"
+    alt="The Gates of Nhysa Quest Start"
+  />
+
+  <section id="hermit-island" class="walkthrough-section">
+    <QuestStep id="hermit-island" title="Hermit Island">
+      <p>
+        We can start this quest after completing the quest "Searching for a
+        Princess"
+      </p>
+
+      <p>
+        When we're on our island, check the beach on the eastern side to find a
+        person who washed ashore. Approach her to trigger a scene.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/3/36/Ce_410.jpg/730px-Ce_410.jpg"
+        alt="Washed ashore person"
+      />
+    </QuestStep>
+  </section>
+
+  <section id="ograne-grottos" class="walkthrough-section">
+    <QuestStep id="ograne-grottos" title="Ograne Grottos">
+      <p>
+        Well, time to help out Maddeleine. And this means time to go explore
+        Ograne Grottos, finally! We can't explore it fully yet, but we can make
+        some progress at least. The entrance to Ograne Grottos we want to access
+        is in Rohlan Fields. Remember that cave I told you about that was behind
+        the waterfall? Let's go there.
+      </p>
+
+      <p>
+        You don't remember where it is? Head to the large lake in the middle of
+        the area and behind the mansion on the island is a waterfall with a cave
+        behind it.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/9/9b/Ce_411.jpg/730px-Ce_411.jpg"
+        alt="Waterfall Cave"
+      />
+
+      <p>
+        Welcome to Ograne Grottos! This is our third time in here. For now
+        follow the path and up ahead we'll have 2 ways we can go. Jump across
+        the western gap to find a <strong>buried treasure</strong> mark. That's good
+        to know. Return across the gap and jump across the eastern ones. As you jump
+        over the second one check the cactus on the right to find your <strong
+          >buried treasure</strong
+        > with <strong>3100a</strong>.
+      </p>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/5/55/Ce_413.jpg/326px-Ce_413.jpg"
+          alt="Jump across gap"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/1/1f/Ce_412.jpg/326px-Ce_412.jpg"
+          alt="Buried treasure"
+        />
+      </MediaGrid>
+
+      <p>
+        Head north now, jump across another 2 gaps and you'll fight some
+        Goblins. After the fight head up the slope and at the fork go south
+        across the gap and open the chest at the end for <strong
+          >Platinum Ore</strong
+        >.
+      </p>
+
+      <p>
+        Return and go north now up down slope and continue west. Follow this
+        tunnel and at the fork head north all the way for a <strong
+          >crystal source</strong
+        >. Return to the fork to the south go east. There's a hidden path here
+        that takes you easy through the wall (you can't see) and it takes you to
+        a fight with some Goblins. Kill them and head to the end of this path to
+        find a chest with <strong>Falchion</strong>.
+      </p>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/1/1d/Ce_414.jpg/326px-Ce_414.jpg"
+          alt="Tunnel fork"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/8/82/Ce_415.jpg/326px-Ce_415.jpg"
+          alt="Hidden path Falchion"
+        />
+      </MediaGrid>
+
+      <p>
+        Return and head north and east. Go up the wall to find some more Goblins
+        to kill. Do so and proceed east to the next area. Once here head south
+        first to reach a chest with <strong>Gemstone Jerkin</strong>. Return and
+        go east across a couple gaps. As you go east keep an eye north for a <strong
+          >hidden cave</strong
+        >. This one has <strong>Dragon Mail</strong> inside.
+      </p>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/f/fb/Ce_433.jpg/326px-Ce_433.jpg"
+          alt="Goblins path"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/7/79/Ce_416.jpg/326px-Ce_416.jpg"
+          alt="Hidden cave Dragon Mail"
+        />
+      </MediaGrid>
+
+      <p>
+        You can now go south at the fork for a <strong>crystal source</strong>,
+        but then head north into the next area.
+      </p>
+
+      <p>
+        Once here head up to find a <strong>fast travel crystal</strong>. Let's
+        go! From here head right to find a chest with <strong>2500a</strong>.
+        Return and move forward to find Maddeleine. She tells you there's a
+        strong enemy up ahead and that we don't stand a chance against it unless
+        we give it a <strong>Incocybin Berry</strong>, which she hands us one.
+        Nice.
+      </p>
+
+      <p>
+        Head forward and you'll find the enemy. This guy is no joke. He kills
+        you in one hit, and you barely do any damage to it. Thankfully, we have
+        the berry. Go ahead and scroll through your items until you find the
+        berry. Give it to the monster. This will both really lower the monster's
+        stats and also nearly kill it, leaving it with a sliver of HP.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/2/26/Ce_417.jpg/730px-Ce_417.jpg"
+        alt="Berry Monster"
+      />
+
+      <p>
+        From here it has around 2000 HP left so just attack it until it dies.
+        Its attacks are also extremely weak (around 30 dmg. per attack). Nothing
+        to worry about. Once it's dead though, we can now explore the area.
+      </p>
+
+      <p>
+        From where the monster was we can go west and north. Go north and check
+        the southeastern corner (south of the cactus) to find a <strong
+          >buried treasure</strong
+        > with <strong>Crit Damage Up Crystal</strong>.
+      </p>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/2/2e/Ce_418.jpg/326px-Ce_418.jpg"
+          alt="Buried Treasure Location 1"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/f/f7/Ce_419.jpg/326px-Ce_419.jpg"
+          alt="Buried Treasure Location 2"
+        />
+      </MediaGrid>
+
+      <p>
+        Head north and we'll have another fork. Go east first to reach a new
+        area. Follow this tunnel east into the next area to find a Goblin. He
+        doesn't let us pass. Hmm. Is this like a Goblin Village? We did see a
+        Crab Village, so I wouldn't put it past the dev to make one.
+      </p>
+
+      <p>
+        Return to the fork and ignore the path going north. It's the way to go
+        so we'll leave it for last. Return south to where the monster was and go
+        west now to reach yet another fork. Go south here and follow this path
+        going south until you find a spot where you can jump into the water. Get
+        in there and it's time to explore. Follow the wall right where you
+        jumped down into the water, and you'll come across some bubbles in the
+        water.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/6/65/Ce_420.jpg/730px-Ce_420.jpg"
+        alt="Water bubbles"
+      />
+
+      <p>
+        Interact with them to go underwater and across the walkway above. Neat.
+        Do so then go through another set of bubbles to reach a lonely chest
+        that has <strong>Earth Belt</strong> inside.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/2/24/Ce_423.jpg/730px-Ce_423.jpg"
+        alt="Earth Belt chest"
+      />
+
+      <p>
+        Return and directly east you can find some more bubbles. Go through and
+        on the other side go south to find more bubbles. Go through and on the
+        other side go south and jump out of the water to find a chest with <strong
+          >Elastic Wing</strong
+        >.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/5/51/Ce_421.jpg/730px-Ce_421.jpg"
+        alt="Elastic Wing chest"
+      />
+
+      <p>
+        Return into the water and head back through the bubbles. Once back head
+        north past the bubbles near Maddeleine and at the end of the water path
+        you'll find some more bubbles. Go through these and go to the far south
+        to find some bubbles next to the platform where the chest we just got
+        is. Go through these bubbles, then through another set of bubbles to
+        reach a little isle where we can open the chest for <strong
+          >Phantom Cloak</strong
+        >. Awesome upgrade for Victor and Thraz if you don't have it already.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/6/62/Ce_422.jpg/730px-Ce_422.jpg"
+        alt="Phantom Cloak chest"
+      />
+
+      <p>
+        And that's about it for the water section. Head back and get out of the
+        water. From here we can go west into the next area, but there's another
+        one of those monsters blocking our way. Sadly we don't have a berry to
+        give it so we won't be able to get past it.
+      </p>
+
+      <p>
+        Return to the fork that's west of where we fought the monster and follow
+        it north. We are leaving this area through the northwestern exit. As you
+        go however, you'll find an adventurer that gives you some hints for the
+        Unique Monsters of this place:
+      </p>
+
+      <ul>
+        <li>
+          If lucky, you can find it in the west of Ograne. It's an alpha male
+          and all other enemies disappear when he spawns.
+        </li>
+        <li>
+          Goblin appears in the northeast of Ograne. It wants all other goblins
+          dead. Only then it'll appear.
+        </li>
+      </ul>
+
+      <p>
+        Continue north into the next area, then west into the next one. These
+        worms creep me out. To the north is a metal chest we can't get to and to
+        the west are 4 <strong>crystal sources</strong>. And that's about it for
+        exploration. Return to where we fought the monster and now go north all
+        the way until we reach some ruins and a scene with Maddeleine plays. She
+        finds a hidden switch that opens up one of the gates... but we need to
+        find the rest. Oh god. She tells us there's a switch in Rohlan,
+        Fiorwoods, and Perpetua.
+      </p>
+
+      <p>
+        At this point, if you've been following the guide you should have
+        already all 3 switches pressed. BUT if you haven't then here's a quick
+        recap of where you can find them:
+      </p>
+    </QuestStep>
+  </section>
+
+  <section id="rohlan-fields" class="walkthrough-section">
+    <QuestStep id="rohlan-fields" title="Rohlan Fields">
+      <p>
+        Directly north from Farnsport past the Yak Unique Monster is a large
+        chasm. On the northeastern side of it is a part of the wall you can
+        climb down. Head down there and follow the tunnels to find the lever (go
+        right at the fork).
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/c/c4/Ce_104.jpg/730px-Ce_104.jpg"
+        alt="Rohlan Fields Lever"
+      />
+    </QuestStep>
+  </section>
+
+  <section id="fiorwoods" class="walkthrough-section">
+    <QuestStep id="fiorwoods" title="Fiorwoods">
+      <p>
+        To get to it exit Tormund via the sourthwestern exit and once in the
+        Fiorwoods follow the wooden rafter south, go east then south until you
+        reach the next area. Once in the next area go east at the first fork and
+        down the staircase. Down here go west, kill the Forest Wyrms and go
+        inside the cave. Follow this cave until you reach a room with the lever
+        we're supposed to flip.
+      </p>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/a/a8/Ce_348.jpg/326px-Ce_348.jpg"
+          alt="Fiorwoods Path"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/6/62/Ce_347.jpg/326px-Ce_347.jpg"
+          alt="Fiorwoods Lever"
+        />
+      </MediaGrid>
+    </QuestStep>
+  </section>
+
+  <section id="perpetua" class="walkthrough-section">
+    <QuestStep id="perpetua" title="Perpetua">
+      <p>
+        Check the northeastern corner of the southwestern area to find a cave.
+        Head inside and follow the tunnel to find a lever.
+      </p>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/1/19/Ce_427.jpg/326px-Ce_427.jpg"
+          alt="Perpetua Cave"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/b/be/Ce_424.jpg/326px-Ce_424.jpg"
+          alt="Perpetua Lever"
+        />
+      </MediaGrid>
+    </QuestStep>
+  </section>
+
+  <section id="ograne-grottos-again" class="walkthrough-section">
+    <QuestStep id="ograne-grottos-again" title="Ograne Grottos again">
+      <p>
+        Once you have them all head back to Ograne Grotto and head north from
+        Maddeleine down the long hallway. At the top we'll find a <strong
+          >fast travel crystal</strong
+        > and an elevator in the middle. We also have a path to the left and right.
+        let's go explore first. Going right leads to a locked door. Hmm.
+      </p>
+
+      <p>
+        Go left instead and when you reach the first room you'll see a <strong
+          >buried treasure</strong
+        > mark on the right behind the table. To find it enter the next room and check
+        the wall where the torch and red chain are to find it. It has <strong
+          >Crit Damage Up Crystal</strong
+        >.
+      </p>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/f/f4/Ce_429.jpg/326px-Ce_429.jpg"
+          alt="Buried treasure room 1"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/6/60/Ce_428.jpg/326px-Ce_428.jpg"
+          alt="Buried treasure room 2"
+        />
+      </MediaGrid>
+
+      <p>
+        From here you can head further south and read some books, then continue
+        south for a <strong>crystal source</strong>, then proceed to the next
+        area to find a metal chest with <strong>Strike First RAM</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/c/c8/Ce_434.jpg/730px-Ce_434.jpg"
+        alt="Strike First RAM chest"
+      />
+
+      <p>
+        Return to the elevator and take it down. Enjoy the scene as you go down
+        where Maddeleine tells us about the True Kings. Not going to lie, all of
+        this is VERY interesting! I like how we get images of what they look
+        like as well!
+      </p>
+
+      <p>
+        Eventually our ride to the bottom will conclude and we'll reach the
+        bottom. We'll discover a <strong>fast travel crystal</strong> down here as
+        well. Talk to Maddeleine to trigger another scene where the quest will come
+        to an end. It seems we'll have to come back later to see if she's done with
+        the math problem.
+      </p>
+    </QuestStep>
+  </section>
+
+  <NextSteps
+    links={[
+      { href: "/sidequests/into-the-maelstrom", label: "Into the Maelstrom" },
+    ]}
+  />
+</WalkthroughLayout>
