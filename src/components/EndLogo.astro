@@ -1,0 +1,62 @@
+---
+---
+
+<div class="end-logo-container">
+  <div class="fancy-line"></div>
+  <div class="clan-crest">
+    <img src="https://cdn.staticneo.com/ew/thumb/6/65/Ce_Crimson_Wings.png/100px-Ce_Crimson_Wings.png" alt="Crimson Wings Crest" />
+  </div>
+</div>
+
+<style>
+  .end-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 0;
+    margin-top: 5rem;
+  }
+
+  .fancy-line {
+    width: 100%;
+    max-width: 600px;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--accent-gold) 20%,
+      var(--accent-gold) 80%,
+      transparent
+    );
+    margin-bottom: 3rem;
+    position: relative;
+    opacity: 0.5;
+  }
+
+  .fancy-line::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: var(--accent-gold);
+    transform: translate(-50%, -50%) rotate(45deg);
+    box-shadow: 0 0 10px var(--accent-gold);
+  }
+
+  .clan-crest img {
+    width: 60px;
+    height: auto;
+    filter: drop-shadow(0 0 10px var(--accent-gold));
+    opacity: 0.8;
+    transition: all 0.5s ease;
+  }
+
+  .clan-crest img:hover {
+    opacity: 1;
+    filter: drop-shadow(0 0 20px var(--accent-gold));
+    transform: scale(1.1);
+  }
+</style>

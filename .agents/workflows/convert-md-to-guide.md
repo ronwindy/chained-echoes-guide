@@ -28,7 +28,7 @@ Follow these steps to convert a markdown file into an Astro walkthrough guide:
 
 1. **Acknowledge Output Limitations**: Determine the size of the source file. If it's too large to convert in a single response, use the chunking protocol described in the guidelines above. Maintain 1:1 parity with the source text.
 2. **Page Wrapper**: Create the `.astro` file wrapper:
-   - Import `WalkthroughLayout` and needed components (`QuestStep`, `Image`, `Video`, `Tip`, `BossFight`, `MediaGrid`, `NextSteps`, `StoryBlurb`).
+   - Import `WalkthroughLayout` and needed components (`QuestStep`, `Image`, `Video`, `Tip`, `BossFight`, `MediaGrid`, `EndLogo`, `StoryBlurb`).
    - Map `<h2>` headers into the `sections` array and use `<WalkthroughLayout>`.
    - Always include a relevant `subtitle` prop in `<WalkthroughLayout>` (e.g., 'MAIN QUEST WALKTHROUGH' or 'SIDE QUEST WALKTHROUGH').
 3. **Global Content Introduction**: Wrap story text in `<StoryBlurb>` and cover the text inside with an `<em>` tag.
@@ -52,7 +52,7 @@ Follow these steps to convert a markdown file into an Astro walkthrough guide:
    - **Videos**: Always use `<Video id="..." title="...">` component, not raw `<iframe>` tags.
    - **Boss Fight Videos**: Videos inside boss fights should use `<Video>` component inside `<BossFight>`, not raw iframes.
    - **QuestStep**: Always use `<QuestStep id="..." title="...">` component, not manual `<article>` with `<h3>` and `<img>` tags.
-10. **Next Steps**: Use `<NextSteps />` at the very bottom.
+10. **Next Steps**: Use `<EndLogo />` at the very bottom.
 11. **Astro Syntax**:
     - Escape bare ampersands `&amp;`.
     - Ensure imports are at the top.
