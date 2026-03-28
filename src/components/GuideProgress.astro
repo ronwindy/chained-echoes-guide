@@ -1,0 +1,159 @@
+---
+interface Props {
+  guideId: string;
+  guideTitle: string;
+}
+
+const { guideId, guideTitle } = Astro.props;
+---
+
+<button
+  id={`complete-btn-${guideId}`}
+  class="complete-btn"
+  data-guide-id={guideId}
+  data-guide-title={guideTitle}
+  onclick={`toggleCompletion('${guideId}', '${guideTitle}')`}
+  aria-label={`Mark "${guideTitle}" as completed`}
+>
+  <span class="complete-icon">○</span>
+  <span class="complete-text">Mark as Completed</span>
+</button>
+
+<style>
+  .complete-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(21, 24, 33, 0.9);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition:
+      all 0.2s ease,
+      transform 0.1s ease,
+      box-shadow 0.2s ease;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .complete-btn:hover {
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+    box-shadow: 0 0 15px rgba(226, 180, 59, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .complete-btn:active {
+    transform: translateY(0);
+  }
+
+  .complete-btn.completed {
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+    background: rgba(21, 24, 33, 0.9);
+    box-shadow:
+      0 0 15px rgba(226, 180, 59, 0.5),
+      0 0 30px rgba(226, 180, 59, 0.3);
+  }
+
+  .complete-btn.completed:hover {
+    box-shadow:
+      0 0 20px rgba(226, 180, 59, 0.7),
+      0 0 40px rgba(226, 180, 59, 0.4);
+  }
+
+  .complete-icon {
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+  }
+
+  .complete-btn.completed .complete-icon {
+    text-shadow: 0 0 8px rgba(226, 180, 59, 0.6);
+  }
+
+  .complete-btn:hover .complete-icon {
+    transform: scale(1.1);
+  }
+
+  .complete-text {
+    font-weight: 500;
+  }
+</style>
+
+<script>
+  // Get completed guides from localStorage
+  const getCompletedGuides = (): string[] => {
+    const stored = localStorage.getItem("chained-echoes-completed");
+    return stored ? JSON.parse(stored) : [];
+  };
+
+  // Update button state based on completion status
+  const updateButtonState = (id: string, title: string) => {
+    const completed = getCompletedGuides();
+    const isCompleted = completed.includes(id);
+    const button = document.getElementById(`complete-btn-${id}`);
+
+    if (button) {
+      const icon = button.querySelector(".complete-icon");
+      const text = button.querySelector(".complete-text");
+
+      if (icon && text) {
+        icon.textContent = isCompleted ? "✓" : "○";
+        text.textContent = isCompleted ? "Completed" : "Mark as Completed";
+        button.setAttribute(
+          "aria-label",
+          isCompleted
+            ? `Mark "${title}" as not completed`
+            : `Mark "${title}" as completed`,
+        );
+        // Add or remove the completed class for styling
+        if (isCompleted) {
+          button.classList.add("completed");
+        } else {
+          button.classList.remove("completed");
+        }
+      }
+    }
+  };
+
+  // Toggle guide completion status
+  (window as any).toggleCompletion = (id: string, title: string) => {
+    const completed = getCompletedGuides();
+    const index = completed.indexOf(id);
+
+    if (index > -1) {
+      // Remove from completed
+      completed.splice(index, 1);
+    } else {
+      // Add to completed
+      completed.push(id);
+    }
+
+    localStorage.setItem("chained-echoes-completed", JSON.stringify(completed));
+
+    // Update the button state
+    updateButtonState(id, title);
+
+    // Update sidebar and TOC
+    (window as any).updateCompletedIndicators();
+  };
+
+  // Initialize button state on page load using data attributes
+  if (typeof document !== "undefined") {
+    document.addEventListener("DOMContentLoaded", () => {
+      const button = document.querySelector(`[data-guide-id]`);
+      if (button) {
+        const guideId = button.getAttribute("data-guide-id");
+        const guideTitle = button.getAttribute("data-guide-title");
+        if (guideId && guideTitle) {
+          updateButtonState(guideId, guideTitle);
+        }
+      }
+    });
+  }
+</script>

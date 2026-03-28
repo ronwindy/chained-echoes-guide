@@ -73,11 +73,13 @@ const baseUrl = import.meta.env.BASE_URL;
       <ul>
         <li>
           <a href={`${baseUrl}walkthrough/a-call-from-the-past`}
-            >A Call From the Past</a>
+            >A Call From the Past</a
+          >
         </li>
         <li>
           <a href={`${baseUrl}walkthrough/ruins-under-a-tree`}
-            >Ruins Under a Tree</a>
+            >Ruins Under a Tree</a
+          >
         </li>
         <li><a href="#">The Grave of Reina</a></li>
         <li><a href="#">In Good Faith</a></li>
@@ -412,4 +414,63 @@ const baseUrl = import.meta.env.BASE_URL;
     color: var(--accent-gold);
     text-decoration: none;
   }
+
+  /* Completed guide indicator */
+  .toc-card a.completed {
+    color: var(--accent-gold);
+    position: relative;
+  }
+
+  .toc-card a.completed::after {
+    content: "✓";
+    position: absolute;
+    right: 0;
+    color: var(--accent-gold);
+    font-weight: bold;
+  }
 </style>
+
+<script>
+  // Update table of contents to show completed guides
+  const getCompletedGuides = (): string[] => {
+    const stored = localStorage.getItem("chained-echoes-completed");
+    return stored ? JSON.parse(stored) : [];
+  };
+
+  // Map guide IDs to their href patterns in the TOC
+  const guideIdMap: Record<string, string> = {
+    "three-months-later": "three-months-later",
+    "world-exploration": "world-exploration",
+    "search-for-princess": "search-for-princess",
+    "looking-for-allies": "looking-for-allies",
+    "storming-tormund": "storming-tormund",
+    "mysterious-girl-2": "mysterious-girl-2",
+    "a-call-from-the-past": "a-call-from-the-past",
+    "ruins-under-a-tree": "ruins-under-a-tree",
+  };
+
+  // Update TOC links with completed status
+  const updateTOCLinks = () => {
+    const completedGuides = getCompletedGuides();
+    const tocLinks = document.querySelectorAll(".toc-card a");
+    tocLinks.forEach((link) => {
+      const href = link.getAttribute("href") || "";
+      const guideId = Object.keys(guideIdMap).find((id) => href.includes(id));
+      if (guideId && completedGuides.includes(guideId)) {
+        link.classList.add("completed");
+      } else {
+        link.classList.remove("completed");
+      }
+    });
+  };
+
+  // Wait for DOM to be ready
+  if (typeof document !== "undefined") {
+    document.addEventListener("DOMContentLoaded", () => {
+      updateTOCLinks();
+    });
+  }
+
+  // Expose function for toggleCompletion to call
+  (window as any).updateCompletedIndicators = updateTOCLinks;
+</script>

@@ -1,5 +1,6 @@
 ---
 import Layout from "./Layout.astro";
+import GuideProgress from "../components/GuideProgress.astro";
 
 interface Section {
   id: string;
@@ -11,9 +12,11 @@ interface Props {
   title: string;
   subtitle?: string;
   sections: Section[];
+  guideId?: string;
 }
 
-const { title, subtitle, sections } = Astro.props;
+const { title, subtitle, sections, guideId } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <Layout title={title}>
@@ -22,6 +25,13 @@ const { title, subtitle, sections } = Astro.props;
       <header class="walkthrough-header">
         <h1>{title}</h1>
         {subtitle && <p class="subtitle">{subtitle}</p>}
+        {
+          guideId && (
+            <div class="complete-btn-container">
+              <GuideProgress guideId={guideId} guideTitle={title} />
+            </div>
+          )
+        }
       </header>
 
       <div class="walkthrough-content">
@@ -34,31 +44,32 @@ const { title, subtitle, sections } = Astro.props;
         <h3>Navigation</h3>
         <nav>
           <ul>
-            {sections.map((section) => (
-              <li>
-                <a href={`#${section.id}`}>{section.label}</a>
-                {section.subsections && section.subsections.length > 0 && (
-                  <ul>
-                    {section.subsections.map((sub) => (
-                      <li>
-                        <a href={`#${sub.id}`}>{sub.label}</a>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
+            {
+              sections.map((section) => (
+                <li>
+                  <a href={`#${section.id}`}>{section.label}</a>
+                  {section.subsections && section.subsections.length > 0 && (
+                    <ul>
+                      {section.subsections.map((sub) => (
+                        <li>
+                          <a href={`#${sub.id}`}>{sub.label}</a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))
+            }
           </ul>
         </nav>
       </div>
-      </aside>
-    </div>
+    </aside>
+  </div>
 
-    <!-- Image Lightbox Overlay -->
-    <div id="image-lightbox" class="lightbox">
-      <span class="lightbox-close">&times;</span>
-      <img id="lightbox-img" class="lightbox-content" />
-    </div>
+  <!-- Image Lightbox Overlay -->
+  <div id="image-lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" class="lightbox-content" />
   </div>
 </Layout>
 
@@ -94,6 +105,12 @@ const { title, subtitle, sections } = Astro.props;
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+  }
+
+  .complete-btn-container {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
   }
 
   /* Local TOC Sidebar */
@@ -138,7 +155,9 @@ const { title, subtitle, sections } = Astro.props;
   .local-toc a {
     color: var(--text-muted);
     text-decoration: none;
-    transition: color 0.2s, padding-left 0.2s;
+    transition:
+      color 0.2s,
+      padding-left 0.2s;
     display: block;
     line-height: 1.4;
   }
@@ -212,8 +231,14 @@ const { title, subtitle, sections } = Astro.props;
   }
 
   @keyframes zoom {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
 
   .lightbox-close {
@@ -239,20 +264,20 @@ const { title, subtitle, sections } = Astro.props;
   // Simple active link observer
   const observerOptions = {
     root: null,
-    rootMargin: '0px 0px -80% 0px',
-    threshold: 0
+    rootMargin: "0px 0px -80% 0px",
+    threshold: 0,
   };
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        const tocLinks = document.querySelectorAll('.local-toc a');
-        tocLinks.forEach(link => {
+        const id = entry.target.getAttribute("id");
+        const tocLinks = document.querySelectorAll(".local-toc a");
+        tocLinks.forEach((link) => {
           const htmlLink = link as HTMLElement;
-          htmlLink.classList.remove('active');
-          if (htmlLink.getAttribute('href') === `#${id}`) {
-            htmlLink.classList.add('active');
+          htmlLink.classList.remove("active");
+          if (htmlLink.getAttribute("href") === `#${id}`) {
+            htmlLink.classList.add("active");
             htmlLink.style.color = "var(--accent-gold)";
           } else {
             htmlLink.style.color = "";
@@ -263,55 +288,55 @@ const { title, subtitle, sections } = Astro.props;
   }, observerOptions);
 
   // Track all sections and quest steps
-  const sections = document.querySelectorAll('section[id], article[id]');
-  if(sections) {
+  const sections = document.querySelectorAll("section[id], article[id]");
+  if (sections) {
     sections.forEach((section) => {
       observer.observe(section);
     });
   }
 
   // Lightbox functionality
-  const lightbox = document.getElementById('image-lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const closeBtn = document.querySelector('.lightbox-close');
+  const lightbox = document.getElementById("image-lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".lightbox-close");
 
   if (lightbox && lightboxImg && closeBtn) {
-    document.querySelectorAll('.walkthrough-content img').forEach(img => {
-      const parentLink = img.closest('a');
+    document.querySelectorAll(".walkthrough-content img").forEach((img) => {
+      const parentLink = img.closest("a");
       if (parentLink) {
-        parentLink.addEventListener('click', (e) => e.preventDefault());
+        parentLink.addEventListener("click", (e) => e.preventDefault());
       }
-      
-      img.addEventListener('click', () => {
-        const originalSrc = img.getAttribute('src') || '';
+
+      img.addEventListener("click", () => {
+        const originalSrc = img.getAttribute("src") || "";
         // Transform the thumbnail URL to the high-res URL
         // Example: https://cdn.staticneo.com/ew/thumb/1/19/Ce_427.jpg/326px-Ce_427.jpg
         // Becomes: https://cdn.staticneo.com/ew/1/19/Ce_427.jpg
         const fullSrc = originalSrc
-          .replace('/thumb/', '/')
-          .replace(/\/\d+px-[^\/]+$/, '');
-          
-        lightboxImg.setAttribute('src', fullSrc);
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
+          .replace("/thumb/", "/")
+          .replace(/\/\d+px-[^\/]+$/, "");
+
+        lightboxImg.setAttribute("src", fullSrc);
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden"; // Prevent scrolling
       });
     });
 
     const closeLightbox = () => {
-      lightbox.classList.remove('active');
-      document.body.style.overflow = '';
+      lightbox.classList.remove("active");
+      document.body.style.overflow = "";
     };
 
-    closeBtn.addEventListener('click', closeLightbox);
-    
-    lightbox.addEventListener('click', (e) => {
+    closeBtn.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", (e) => {
       if (e.target !== lightboxImg) {
         closeLightbox();
       }
     });
-    
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && lightbox.classList.contains("active")) {
         closeLightbox();
       }
     });

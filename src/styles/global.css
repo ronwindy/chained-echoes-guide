@@ -368,6 +368,20 @@ details[open] > summary ~ * {
   color: var(--accent-gold);
 }
 
+/* Completed guide indicator in sidebar */
+.nav-links a.completed {
+  color: var(--accent-gold);
+  position: relative;
+}
+
+.nav-links a.completed::after {
+  content: "✓";
+  position: absolute;
+  right: 0.5rem;
+  color: var(--accent-gold);
+  font-weight: bold;
+}
+
 /* Main Content */
 .main-content {
   flex: 1;

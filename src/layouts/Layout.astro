@@ -268,6 +268,70 @@ const baseUrl = import.meta.env.BASE_URL;
           });
         });
       }
+
+      // Update sidebar to show completed guides
+      const getCompletedGuides = (): string[] => {
+        const stored = localStorage.getItem("chained-echoes-completed");
+        return stored ? JSON.parse(stored) : [];
+      };
+
+      const completedGuides = getCompletedGuides();
+
+      // Map guide IDs to their href patterns in the sidebar
+      const guideIdMap: Record<string, string> = {
+        "three-months-later": "walkthrough/three-months-later",
+        "world-exploration": "walkthrough/world-exploration",
+        "search-for-princess": "walkthrough/search-for-princess",
+        "looking-for-allies": "walkthrough/looking-for-allies",
+        "storming-tormund": "walkthrough/storming-tormund",
+        "mysterious-girl-2": "walkthrough/mysterious-girl-2",
+        "a-call-from-the-past": "walkthrough/a-call-from-the-past",
+        "ruins-under-a-tree": "walkthrough/ruins-under-a-tree",
+      };
+
+      // Wait for DOM to be ready
+      if (typeof document !== "undefined") {
+        document.addEventListener("DOMContentLoaded", () => {
+          completedGuides.forEach((guideId) => {
+            const hrefPattern = guideIdMap[guideId];
+            if (hrefPattern) {
+              const link = sidebar?.querySelector(
+                `a[href*="${hrefPattern}"]`,
+              ) as HTMLAnchorElement;
+              if (link) {
+                link.classList.add("completed");
+              }
+            }
+          });
+        });
+      }
+
+      (window as any).updateCompletedIndicators = () => {
+        const completedGuides = getCompletedGuides();
+        const guideIdMap = {
+          "three-months-later": "walkthrough/three-months-later",
+          "world-exploration": "walkthrough/world-exploration",
+          "search-for-princess": "walkthrough/search-for-princess",
+          "looking-for-allies": "walkthrough/looking-for-allies",
+          "storming-tormund": "walkthrough/storming-tormund",
+          "mysterious-girl-2": "walkthrough/mysterious-girl-2",
+          "a-call-from-the-past": "walkthrough/a-call-from-the-past",
+          "ruins-under-a-tree": "walkthrough/ruins-under-a-tree",
+        };
+
+        const sidebarLinks = document.querySelectorAll(".sidebar .nav-links a");
+        sidebarLinks.forEach((link) => {
+          const href = link.getAttribute("href") || "";
+          const guideId = Object.keys(guideIdMap).find((id) =>
+            href.includes(id),
+          );
+          if (guideId && completedGuides.includes(guideId)) {
+            link.classList.add("completed");
+          } else {
+            link.classList.remove("completed");
+          }
+        });
+      };
     </script>
   </body>
 </html>
