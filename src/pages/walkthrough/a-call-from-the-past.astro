@@ -1,0 +1,707 @@
+---
+import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import Image from "../../components/Image.astro";
+import Video from "../../components/Video.astro";
+import Tip from "../../components/Tip.astro";
+import BossFight from "../../components/BossFight.astro";
+import MediaGrid from "../../components/MediaGrid.astro";
+import NextSteps from "../../components/NextSteps.astro";
+import StoryBlurb from "../../components/StoryBlurb.astro";
+
+const sections = [
+  {
+    id: "hermits-isle",
+    label: "Hermit's Isle",
+    subsections: [
+      { id: "find-ser-victor", label: "Find Ser Victor" },
+      {
+        id: "reach-shambala",
+        label: "Reach Shambala in the northwest of Valandis",
+      },
+    ],
+  },
+  {
+    id: "shambala",
+    label: "Shambala",
+    subsections: [
+      { id: "reach-ruins-under-tree", label: "Reach the ruins under the tree" },
+      {
+        id: "talk-to-egyl",
+        label: "Talk to Egyl after looking around the village",
+      },
+      {
+        id: "deactivate-ether-cannons",
+        label: "Deactivate the two ether cannons",
+      },
+      {
+        id: "find-ruins-facility",
+        label: "Find the ruins within the facility",
+      },
+    ],
+  },
+];
+---
+
+<WalkthroughLayout
+  title="A Call From the Past"
+  subtitle="Lenne sees strange visions from her past. Is it worth pursuing them?"
+  sections={sections}
+>
+  <!-- STORY BLURB -->
+
+  Lenne sees strange visions from her past. Is it worth pursuing them?
+
+  <!-- PART 1: HERMIT'S ISLE SECTION -->
+  <section id="hermits-isle" class="walkthrough-section">
+    <h2 class="section-title">Hermit's Isle</h2>
+
+    <QuestStep id="find-ser-victor" title="Find Ser Victor">
+      After all those scenes we'll regain control of Glenn in our HQ. We need to
+      go talk to Victor. Head upstairs and into the eastern room where you can
+      find him talking to Ba'Thraz. We tell him that we've been hearing a voice
+      in our head and of course that's Gwayn. He and Ba'Thraz will then proceed
+      to tell both Glenn and Lenne about the Echo and what they've been seeing.
+      Enjoy all the talk that happens here. Everything really interesting. We
+      also talk about our next objective, Shambala. Sienna is not very happy
+      with that, but we have to go over there. The scenes will transition to
+      Kylian... what is he doing in bed with the priest? Whoa!
+    </QuestStep>
+
+    <QuestStep
+      id="reach-shambala"
+      title="Reach Shambala in the northwest of Valandis"
+    >
+      Once you regain control feel free to go around and talk to the party
+      members. There's not much to check in here nor any new information about
+      new people we can recruit so go ahead and leave this place via your
+      airship and you'll see that an isle has appeared in the northwestern
+      corner. Head on over there to reach our destination, Shambala.
+
+      <Tip type="note">
+        If you want, you can do the <a
+          href="https://www.neoseeker.com/chained-echoes/walkthrough/For_the_Love_of_Food"
+          target="_blank">For the Love of Food</a
+        > side quest and recruit a new character, assuming you'll be able to fulfill
+        the necessary requirements. If not, you can always come back to it later.
+      </Tip>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/c/c7/Ce_452.jpg/730px-Ce_452.jpg"
+        alt="Shambala area introduction"
+      />
+
+      As you enter we'll have the new area introduction. This place is really
+      pretty. We also discovered our first fast travel crystal and open up the
+      final section of the Reward Board. We now have it all open up for us to
+      complete (check the pages in the Table of Contents for more info).
+    </QuestStep>
+  </section>
+
+  <!-- PART 2: SHAMBALA SECTION (FIRST 2 QUEST STEPS) -->
+  <section id="shambala" class="walkthrough-section">
+    <h2 class="section-title">Shambala</h2>
+
+    <QuestStep
+      id="reach-ruins-under-tree"
+      title="Reach the ruins under the tree"
+    >
+      From where we start though go up the wall and west when possible. This
+      takes us to a chest with Mythril Ore x2. Head east now and jump down the
+      ledge. At the bottom we'll have to fight a new enemy, the Toucibri. These
+      guys are real hard, at least until you get the new armor upgrades in a
+      little bit. Yeah, they can hit pretty hard. They have an attack called
+      Toucarang, in which they throw their beak like a boomerang. This hits all
+      party members and the first character always gets hit the hardest, then
+      the damage lowers for each party member. Their normal attacks can hit for
+      around 80 dmg. to one character as well so be very careful. After these
+      guys head north to what looks like a dead end. Here, when you see these
+      markings on the edge of the floor means there's a floating island moving
+      around that's going to come and pick you up.
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/9/9c/Ce_453.jpg/730px-Ce_453.jpg"
+        alt="Floating island markings"
+      />
+
+      Ride it as it takes you northwest. Get off the left side of it. Once here
+      we see this bird run away. What was that? A giant owl? I guess we'll be
+      chasing it. Head west to find a crystal source and above it you'll find a
+      buried treasure mark. We'll get that in a bit. For now head right and go
+      up the wall. Up here you'll find the second mark on your right. Go to the
+      northeast here to find a crystal source. Head back and from here go left
+      and you'll see a massive chain. Is it holding the islands together?
+      Anyway, a bit north is the buried treasure that has Fauchard, excellent
+      upgrade for Lenne.
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/3/3a/Ce_454.jpg/326px-Ce_454.jpg"
+          alt="Buried treasure location 1"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/c/c6/Ce_455.jpg/326px-Ce_455.jpg"
+          alt="Buried treasure location 2"
+        />
+      </MediaGrid>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/e/e4/Ce_456.jpg/326px-Ce_456.jpg"
+        alt="Buried treasure location 3"
+      />
+
+      From here you'll want to go north around the hole and go west, jump across
+      the gap and open the chest to find a Viking Sword, and upgrade for Glenn.
+      Head back, go up the small wall to get some items, then head back down and
+      go east until you trigger a scene where we find that huge owl. It'll run
+      off again. From here you can head south to find a golden egg. This is a
+      monster if you get close to it. This monster is the Golden Borb Bob. I
+      don't know what this is because it's really strong for a regular enemy,
+      and I don't think it's a Unique Monster, nor it is a boss. Hmm. It has an
+      attack called Melting Gold that hits the whole party for around 90 dmg.
+      That's a lot! It also has a move called Consume TP that has him just use
+      TP. (Why? I don't know.) To the left of this bird is a chest with Dragon
+      Killer Crystal. Return back north and go east into the next area. Here we
+      have a bit of a "puzzle". We have floating islands moving around in a
+      circle throughout the area. Start by riding the first one as it goes
+      south. When you reach the southern side you'll see there's an island where
+      you CAN'T get off at. We need to match the edges so that we can jump.
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/1/10/Ce_457.jpg/730px-Ce_457.jpg"
+        alt="Floating island puzzle"
+      />
+
+      The island will eventually go north and pass through the middle island.
+      Get off here. As you move left a scene will play out where the owl we've
+      been chasing comes out and attacks us. His name is Egyl and we are now
+      time to fight!
+
+      <BossFight title="BOSS FIGHT: EGYL">
+        <Video id="WXD130M7wMw" title="Egyl Boss Fight" />
+
+        Well, time to fight this dodo-owl guy. Thankfully he's not that hard
+        despite him being able to act twice per turn. As you can tell by his
+        attacks below, he literally only has 2 attacks, a single target and a
+        party wide attack. The party wide attack is super weak and can be easily
+        healed, but his single target attack you want to be careful of. It does
+        a ton of damage and can even kill one of your characters if he happens
+        to use it twice on the same character. Given that we know his attacks,
+        you can pretty much tackle this fight however you want. Debuffing him
+        with attack and defense down is good, but I at least recommend you lower
+        his defense. The reason for this is you want to do as much damage as you
+        can as fast as you can, which means having Victor buff the party and
+        having Sienna use Kesa Giri/Petal Storm, Glenn's Cross Slash, Lenne with
+        an earth spell like Terra if you have it to really hurt him. The reason
+        for this is because he takes 2 turns to use First Aid, a move that heals
+        him for 2000 HP exactly. In one of my turns I do around 2500+ dmg. so I
+        can easily overcome his healing, but still it's annoying and important
+        for you to know.
+
+        <div class="boss-stats">
+          <li>
+            <strong>Whirlwind Spear</strong>: hits all party members for around
+            50 dmg.
+          </li>
+          <li>
+            <strong>Giant Sting</strong>: hits one character for around 120 dmg.
+          </li>
+          <li>
+            <strong>First Aid</strong>: uses 2 of his turns to heal himself for
+            2000 HP.
+          </li>
+        </div>
+      </BossFight>
+
+      After the fight we'll have some scenes that play out and Egyl will take us
+      to the village. Nice! From where we fight him go up the slope right behind
+      you to find a building you can't go into and a crystal source. Head to the
+      northern side of the island, kill the monsters here and you'll see to the
+      north a spot where we get get on a moving platform. Wait here until you
+      see a platform with ledges on the top and bottom. Get on it and you'll be
+      able to get off the patch of land on the northern side, which leads to the
+      quest marker. Ignore it for now. We are going to the southern island
+      (check your map). Down here you can find a crystal source and a chest in
+      the upper left corner with Golden Breastplate, nice upgrade for Glenn.
+      You'll see an adventurer down here we cannot talk to just yet. We'll need
+      to be able to fly around to get to him. More on him later.
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/a/ae/Ce_458.jpg/730px-Ce_458.jpg"
+        alt="Southern island area"
+      />
+
+      Get back on the moving island and now ride it once again, getting off at
+      the same central island. Head back to the bottom where we can get on a
+      moving island and wait for a moving island that has ledges on the left and
+      right sides. Ride it and immediately move to the right side and get off on
+      the northeastern island. Here go up the wall and open the chest for an
+      Epee, great update for Victor.
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/3/3f/Ce_459.jpg/730px-Ce_459.jpg"
+        alt="Northeastern island chest"
+      />
+
+      Return to the central island now, head to the northern side and ride the
+      island. NOW we're going north to the quest marker, which means we'll reach
+      the next area. Once here head north to trigger some scenes where we reach
+      the village of the Sova. There's a long scene here on reasons why they
+      don't let us go through, but they at least let us stay the night.
+    </QuestStep>
+
+    <QuestStep
+      id="talk-to-egyl"
+      title="Talk to Egyl after looking around the village"
+    >
+      Before we continue, let's go and explore the village. From where we start
+      go south to find a staircase. BEFORE going down go left in between the
+      walls to find a chest with Monster Fangs x2.
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/9/9c/Ce_460.jpg/730px-Ce_460.jpg"
+        alt="Monster Fangs chest location"
+      />
+
+      Head down the stairs now and talk to the Nova down here... He jumps off.
+      But that's about all of it down here besides the couple items. Return to
+      where Egyl is and go left now to a bridge. From here go south first to
+      find a merchant... (What is he doing here?) Well, he confesses that he's
+      been following us. Sounds about right. Buy anything you need and make use
+      of the anvil here if you also need to. Head back up and go left. The first
+      house has nothing but a pair of Novas you can talk to but continue west
+      until you see a staircase going up. Go up (the house has nothing) and go
+      behind the house to find a sneaky little chest with Metal Aketon.
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/4/49/Ce_464.jpg/730px-Ce_464.jpg"
+        alt="Metal Aketon chest location"
+      />
+
+      Head east now following this upper platform until you reach a staircase
+      going down to a chest with Colossus Hide x3. From the top of the stairs
+      you can actually go north up some walls to find a chest with 1000a.
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/0/08/Ce_461.jpg/326px-Ce_461.jpg"
+          alt="Colossus Hide chest"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/d/da/Ce_462.jpg/326px-Ce_462.jpg"
+          alt="1000a chest location"
+        />
+      </MediaGrid>
+
+      From the chest head north behind the trees to find a very hidden one, this
+      one has Golden Brigandine.
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/6/6f/Ce_463.jpg/730px-Ce_463.jpg"
+        alt="Golden Brigandine hidden chest"
+      />
+
+      Go ahead and return to Egyl and let him know you're ready to go to your
+      rooms. Several scenes will play out here and we'll eventually regain
+      control, and we'll be allowed to head to Shambala. Nice! They do tell us
+      we'll need our SAs to fly so we'll need to destroy the ASACs (the cannons)
+      in order to proceed. Let's do it!
+    </QuestStep>
+
+    <QuestStep
+      id="deactivate-ether-cannons"
+      title="Deactivate the two ether cannons"
+    >
+      Ok, time to continue! From where we regain control head southwest to leave
+      the village gates and go northwest across the gap and into the next area.
+      Once over here we'll get a fast travel crystal. Move forward to trigger
+      some info where we learn about Hate and Tanking... is this an MMO? I'm a
+      tank main! Well, the concept here works pretty much the same. The more you
+      attack or heal the more your characters draw hate from the enemy, making
+      them more prone to be attacked. Egyl joins the party here (at least for a
+      brief moment) and he's a tank. He has tons of HP and DEF and his skills
+      specialize in drawing this hate towards himself. Get him in the party and
+      practice because a boss up ahead will be much easier if you learn how to
+      manage hate.
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/6/61/Ce_465.jpg/326px-Ce_465.jpg"
+          alt="Hate and Tanking explanation 1"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/8/8d/Ce_466.jpg/326px-Ce_466.jpg"
+          alt="Hate and Tanking explanation 2"
+        />
+      </MediaGrid>
+
+      Now this means that we have some skills to learn with Egyl. Of course I
+      mostly got his action skills but both his stats and passive skills are
+      great too. Learning an "Element" Resistance is great, especially if you
+      know what to guard against prior to a boss fight. Stats like HP and DEF
+      are also very desirable. Mind is great as well to lower magic damage so
+      get that. Attack and Crit, while always good, Egyl's job is more of
+      defending than attacking. For now head west and you'll see a huge turtle
+      enemy called Ancient Turtle. This is a regular enemy and it's perfect to
+      test Egyl. After the fight go west and grab the crystal source. Jump down
+      the edge and you'll see you can ride an island on the left. Before you do
+      so jump down again and open the chest for Demon Leather x5.
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/1/11/Ce_467.jpg/730px-Ce_467.jpg"
+        alt="Demon Leather chest location"
+      />
+
+      Return back up and now ride an island. There's only one you can ride.
+      While you ride open up your map to see several red arrows pointing in one
+      direction. A good way to know where you're going is by checking the
+      arrows. Where we took this first island had arrows pointing left, so
+      you'll get off where there's arrows pointing left, meaning the top left
+      side of the large central island.
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/a/a4/Ce_468.jpg/730px-Ce_468.jpg"
+        alt="Map with directional arrows"
+      />
+
+      Once you get off over here head south and as soon as you get the item
+      you'll see a chest on the left side. You can get it by going under the
+      wall. It has Reaction Armlet inside.
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/e/ed/Ce_469.jpg/730px-Ce_469.jpg"
+        alt="Reaction Armlet chest location"
+      />
+
+      Head south, grab the crystal source when you see it and to the south is a
+      spot where you can ride an island. Before we ride one head right go up the
+      stairs. Follow this path until you reach a fork. Go right first to find a
+      chest with Wyrm Carapace. Here you'll notice there's a spot to the upper
+      right where you can ride an island. There are no islands we can ride right
+      now so we'll leave that for now. Return to the fork and go down this time,
+      going down the stairs at the end. You can ride an island to the right but
+      we're not going to. Instead head left and the path will go north but note
+      that you can go south here under the wall. Go north first and open the
+      chest over here for 2210a. Return and go south under the wall now. At the
+      upcoming fork go north first to find a chest with Rayon Fiber x3. Head
+      south from the fork now to find a merchant. Yep, still following us.
+      Buy/sell anything you need and note that you can get on an island here as
+      well. Go ahead and ride the island here. Just like before, open your map
+      and notice that the arrows on the central island were pointing down, which
+      means we can get off both at the bottom left side of this central isle,
+      and to the north. Get off the north side and proceed to the next area. We
+      are going to get rid of the first cannon here! Start by moving forward and
+      at the fork up ahead go west first. At the end you'll find a cracked
+      chain. Go ahead and break it. This releases a moving island that'll start
+      spinning down in the previous area.
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/b/be/Ce_470.jpg/730px-Ce_470.jpg"
+        alt="Cracked chain location"
+      />
+
+      As you do this a scene will play out where Godfrey is here. I don't like
+      this. Once you regain control head back right and you'll definitely see
+      the buried treasure mark on the top edge of the cliff. We'll get it in a
+      bit. Further to the right is a wall you can climb BUT there's a hidden
+      cave just to the right of the climbable wall. Go ahead and break it to
+      find Repair Kit DX x2 inside.
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/8/8f/Ce_471.jpg/326px-Ce_471.jpg"
+          alt="Hidden cave location 1"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/2/26/Ce_472.jpg/326px-Ce_472.jpg"
+          alt="Hidden cave location 2"
+        />
+      </MediaGrid>
+
+      Go up the wall now and you'll see the second buried treasure mark on the
+      right. DO you see the little pond to the northwest with the flamingos?
+      Check the left side of it (in between the pond and the chain) to find your
+      buried treasure with Can Machine.
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/d/d0/Ce_473.jpg/326px-Ce_473.jpg"
+          alt="Buried treasure mark"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/3/3c/Ce_474.jpg/326px-Ce_474.jpg"
+          alt="Can Machine buried treasure"
+        />
+      </MediaGrid>
+
+      Now go up the wall here to find a pair of Turtle enemies. You can avoid
+      them if you want by going up the right side. Do check the northwestern
+      corner to find a crystal source. Go up the stairs of the building here and
+      at the top you'll find your first cannon. Destroy it!
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/a/a9/Ce_475.jpg/730px-Ce_475.jpg"
+        alt="First ether cannon"
+      />
+
+      Time to head back. If you go north from the cannon you can see there's a
+      green block on the ground. We'll be using that later. For now head back to
+      the far south and go back to the central area. As you get here you'll be
+      told about the new sky island. Nice, just what we needed. Wait for an
+      island to come and ride it, getting off on the central island. Once here
+      open your map and locate the northeastern boarding area with the red
+      arrows pointing up. Head there and ride an island to go to the bottom left
+      island (also with arrows pointing up).
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/4/48/Ce_476.jpg/730px-Ce_476.jpg"
+        alt="Map showing new sky island route"
+      />
+
+      Once down here head west into the next area. Once here head west and grab
+      the chest for Colossus Hide x2. Head north and go up the walls until you
+      reach the top. Up here continue following the path, kill the enemies you
+      find and go down the upcoming walls. At the bottom look right to find a
+      hidden cave that has Wyrm Carapace x2 inside.
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/6/6f/Ce_477.jpg/326px-Ce_477.jpg"
+          alt="Hidden cave with Wyrm Carapace 1"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/f/f6/Ce_478.jpg/326px-Ce_478.jpg"
+          alt="Hidden cave with Wyrm Carapace 2"
+        />
+      </MediaGrid>
+
+      To the left is another cracked chain. Go ahead and destroy it to release
+      another island that floats over to the central island. This will trigger
+      another scene where we see Raphael and others from the church arrive at
+      Nova Village... oh no. Go ahead and return back to the central area to see
+      the islands moving around. Go ahead and ride an island and get off once
+      again at the central one. Now go ahead and open your map and locate the
+      arrows pointing right. There are some red arrows also on the platform in
+      the upper left corner. Ride a platform and head on over to the upper left
+      platform, then head west into the next area. Once here follow the path,
+      kill the monkeys when you get to them and you'll see the path goes north.
+      This is our destination but we need to destroy the last cannon first.
+      Continue west and jump down 3 walls. Once you do go west to find a crystal
+      source then head back and jump down another wall. Once you do go down,
+      open the chest on the left for Platinum Ore x6 and then destroy the
+      cannon.
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/8/87/Ce_480.jpg/730px-Ce_480.jpg"
+        alt="Second ether cannon"
+      />
+    </QuestStep>
+
+    <QuestStep
+      id="find-ruins-facility"
+      title="Find the ruins within the facility"
+    >
+      We can now FLY! Let's go! Notice that south of the cannon is a buried
+      treasure mark. The treasure is to the right right where the lone small
+      tree is. It has 5000a and it's the last one!
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/8/8a/Ce_481.jpg/326px-Ce_481.jpg"
+          alt="Buried treasure mark near cannon"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/a/a7/Ce_482.jpg/326px-Ce_482.jpg"
+          alt="5000a buried treasure"
+        />
+      </MediaGrid>
+
+      Head up the wall to the right and you'll spot a hidden cave to the right.
+      Open it up to find Leather Gear, Golden Breastplate, and a Mage's Garb
+      inside. What a haul! This is our last one as well!
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/f/f7/Ce_483.jpg/326px-Ce_483.jpg"
+          alt="Hidden cave entrance"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/b/ba/Ce_484.jpg/326px-Ce_484.jpg"
+          alt="Hidden cave contents"
+        />
+      </MediaGrid>
+
+      Once back outside go up to find a chest with Monster Fangs x3 and that's
+      about it. Now it's time to explore with our SAs really quick. Fly to the
+      area below and you'll spot 3 islands on the map. Head to the large one in
+      the middle to find a Class Emblem Statue. Save your game and it's time to
+      prove ourselves!
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/e/e8/Ce_486.jpg/326px-Ce_486.jpg"
+          alt="Class Emblem Statue location"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/0/01/Ce_485.jpg/326px-Ce_485.jpg"
+          alt="Class Emblem Statue"
+        />
+      </MediaGrid>
+
+      Sadly we can't do this fight on our SAs so on foot it is! So, this fight
+      at the start would've been SUPER hard, but with all the upgrades we've
+      been getting throughout the area it shouldn't be that bad. We are fighting
+      an Ancient Turtle, a Toucibri, and 3 Monkeys. I personally went for the
+      Toucibri first because it's weak to wind and Lenne is real good against
+      it. The Monkeys are weak to dark so I had to swap out Sienna for Ba'Thraz
+      and use Dark Scythe on the enemies. Although I always recommend single
+      target to lower the number of enemies, this time around I recommend
+      multi-target because there are 3 weak against it. Using it 3 times then
+      summoning your weapons will do tons of damage. Of course in this fight you
+      want to make absolutely sure you use Glenn's Ultra Move ASAP to lower
+      their defenses and attacks. And let's also bring Egyl. This is the perfect
+      fight where you can see how a tank works in the game. After the fight
+      we'll get Carlyn the Chemist, the Chemist Class Emblem. As is in every RPG
+      that has a chemist class, this one revolves around items. Increasing
+      potency of items and increased chance of getting more items.
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/3/39/Ce_487.jpg/730px-Ce_487.jpg"
+        alt="Chemist Class Emblem"
+      />
+
+      From here go to the southwestern isle to find a large stone slab. You can
+      interact with it and read what it says. Still doesn't say much. We'll come
+      back to it. Go east to the other isle to find a person standing there.
+      Talk to him and he'll introduce himself as Archy. After a little talk
+      he'll join the clan. Nice.
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/3/35/Ce_489.jpg/326px-Ce_489.jpg"
+          alt="Archy introduction"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/c/c8/Ce_488.jpg/326px-Ce_488.jpg"
+          alt="Archy joins clan"
+        />
+      </MediaGrid>
+
+      Now go to the eastern area of Shambala and land on the southwestern isle.
+      Remember the adventurer we previously saw? Go ahead and land here to talk
+      to him. He'll give us info on the Unique Monsters here:
+
+      <li>
+        In the house where there's a tree coming out of it, go there with 100k
+        arc to have it appear.
+      </li>
+      <li>If lucky, we can find him in the northeast area of Shambala.</li>
+
+      Now go ahead and go to the northeastern area of Shambala. We cannot go
+      through Sova Village for obvious reasons so go around. Once here land on
+      the top of the 3 isles on the western side and jump down to a grassy isle
+      where we can get the only chest that has Rusty Gunspear inside. Neat.
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/0/08/Ce_492.jpg/730px-Ce_492.jpg"
+        alt="Rusty Gunspear chest location"
+      />
+
+      Now go to the eastern isle to find several crystal sources and an NPC.
+      Talk to him and he'll introduce himself as Thopas. After a little talk
+      he'll join the clan. We'll now get 3 crystals per crystal source, which is
+      nice.
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/2/27/Ce_491.jpg/326px-Ce_491.jpg"
+          alt="Thopas introduction"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/c/c2/Ce_490.jpg/326px-Ce_490.jpg"
+          alt="Thopas joins clan"
+        />
+      </MediaGrid>
+
+      The island to the north is where the unique monster appears. I haven't
+      been able to spawn it yet, but I'll have its info in it's own page. But
+      that's about it. When ready proceed to the northwestern area of Shambala
+      and a scene will start as you approach the northern isle. Here we see...
+      just what the church is doing. WHAT? Damn talk about crazy. Go ahead and
+      talk to the scientists out here if you want, but when ready head north and
+      into the research facility, but do make sure to save before you enter.
+      Watch the scenes that play inside and head north until some scenes play
+      out and right after a boss fight. Finally!
+
+      <BossFight title="BOSS FIGHT: GODFREY">
+        <Video id="TphmMePkA5A" title="Godfrey Boss Fight" />
+
+        Godfrey, we can finally deal with him! And despite him talking about
+        being a god, he's a real pushover. He doesn't act twice per turn, but
+        his arms have their turns. Both of his hands hit for around 55 dmg.,
+        which isn't bad. They also have 2 attacks but they deal roughly the same
+        amount. Also, don't bother destroying them. Godfrey will bring them back
+        once you get rid of them so it's not worth the time and TP. As for
+        Godfrey, all his attacks are fire based so if you want you can either
+        equip skills to resist fire, or an accessory. These still aren't even
+        needed because the damage is not that high. He does have a move where
+        his flames will continue to grow, allowing him to deal more damage.
+        Thankfully we can lower these flames by using water attacks. So
+        attacking him helps keep him from doing more damage. I like that! So
+        your party here is pretty conventional. You can use Sienna to steal a
+        Baghnahk from him, which is a weapon for a character we don't even have
+        yet, and use X-Slash to make him bleed and Nukitsuke to increase our
+        crit. If you want you can continue to have her use Kesa Giri and Petal
+        Storm when available. Lenne is one of your main damage dealers here with
+        Water Thrust. This does a ton of damage to Godfrey so use it every turn.
+        Glenn is another really important character. As per usual his Arms and
+        Armor Break skills are super good, but also his Ultra Move. Lowering the
+        stats of Godfrey AND the arms is amazing. If you have it too, use Water
+        Strike. This does a ton of damage but if you don't have it just use his
+        busted Cross Slash. This is still great. And Victor can do his usual
+        buffing and healing. You can switch him out for Amalia to continue the
+        healing (so she can have some screen time), but overall not a difficult
+        fight. We don't even need Egyl for this one.
+
+        <div class="boss-stats">
+          <li><strong>Feeding Fire</strong>: increases fire damage.</li>
+          <li>
+            <strong>Fire Snap</strong>: hits one character for around 50 fire
+            dmg.
+          </li>
+          <li>
+            <strong>Fire Belly</strong>: hits all party for around 60 fire dmg.
+          </li>
+        </div>
+      </BossFight>
+
+      After the fight watch the long scenes where a lot of crazy things happen.
+      So it seems the Mato helped us in order to break free from the oath. Damn
+      that sucks. Egyl will end up joining your party officially after the
+      scenes.
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/5/54/Ce_493.jpg/730px-Ce_493.jpg"
+        alt="Post-Godfrey fight scene"
+      />
+
+      And with that the quest will come to an end and the next one starts. Let's
+      do this!
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/6/65/Ce_Crimson_Wings.png/100px-Ce_Crimson_Wings.png"
+        alt="Crimson Wings emblem"
+      />
+    </QuestStep>
+  </section>
+
+  <!-- NEXT STEPS -->
+  <NextSteps
+    links={[
+      {
+        href: "/walkthrough/storming-tormund",
+        label: "Next Quest: Storming Tormund",
+      },
+    ]}
+  />
+</WalkthroughLayout>
