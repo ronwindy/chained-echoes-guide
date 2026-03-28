@@ -1,6 +1,7 @@
 ---
 import StoryBlurb from "../../components/StoryBlurb.astro";
 import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
+import NextSteps from "../../components/NextSteps.astro";
 const baseUrl = import.meta.env.BASE_URL;
 
 const sections = [
@@ -637,26 +638,7 @@ const sections = [
     </article>
   </section>
 
-  <div class="next-steps-card">
-    <ul>
-      <li>
-        <a href=`${baseUrl}walkthrough/world-exploration`
-          >Optional - World Exploration</a
-        >
-      </li>
-      <li>
-        <a href=`${baseUrl}walkthrough/three-months-later`
-          >Back to Three Months Later</a
-        >
-      </li>
-    </ul>
-    <div class="clan-crest">
-      <img
-        src="https://cdn.staticneo.com/ew/thumb/6/65/Ce_Crimson_Wings.png/100px-Ce_Crimson_Wings.png"
-        alt="Crimson Wings Crest"
-      />
-    </div>
-  </div>
+  <NextSteps />
 </WalkthroughLayout>
 
 <style>

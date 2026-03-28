@@ -52,7 +52,7 @@ Follow these steps to convert a markdown file into an Astro walkthrough guide:
    - **Videos**: Always use `<Video id="..." title="...">` component, not raw `<iframe>` tags.
    - **Boss Fight Videos**: Videos inside boss fights should use `<Video>` component inside `<BossFight>`, not raw iframes.
    - **QuestStep**: Always use `<QuestStep id="..." title="...">` component, not manual `<article>` with `<h3>` and `<img>` tags.
-10. **Next Steps**: Use `<NextSteps links={[{ href: "...", label: "..." }]} />` at the very bottom.
+10. **Next Steps**: Use `<NextSteps />` at the very bottom.
 11. **Astro Syntax**:
     - Escape bare ampersands `&amp;`.
     - Ensure imports are at the top.
