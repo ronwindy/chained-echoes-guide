@@ -40,17 +40,23 @@ Follow these steps to convert a markdown file into an Astro walkthrough guide:
    - Use `<MediaGrid columns={2}>` to wrap multiple `<Image>` components (not raw `<div class="media-grid">`).
 6. **Callouts**: Use `<Tip type="tip|warning|note">` for NOTE/blockquote sections.
 7. **Boss Fights**: Use `<BossFight title="...">` for boss sections, including a `<Video>` and list of stats inside.
-8. **Common Mistakes to Avoid**:
+8. **QuestStep Component**:
+   - **Always use `<QuestStep id="ID" title="Title">`** for quest objectives (not manual `<article>` with `<h3>` and `<img>` tags).
+   - The `id` should be a kebab-case version of the objective title (e.g., "Head for the top of Raminas Tower" → `head-for-the-top-of-raminas-tower`).
+   - The `title` should be the exact objective text as it appears in the source.
+   - **Common Mistake**: Do NOT use raw HTML like `<article id="..." class="quest-step"><h3><img src="..." class="obj-icon" /></h3>...</article>`. Always use the `<QuestStep>` component.
+9. **Common Mistakes to Avoid**:
    - **Images**: Always use `<Image>` component, not raw `<div class="media-container">` with `<img>` tags.
    - **Multiple Images**: Always use `<MediaGrid columns={2}>` component, not raw `<div class="media-grid">`.
    - **Videos**: Always use `<Video id="..." title="...">` component, not raw `<iframe>` tags.
    - **Boss Fight Videos**: Videos inside boss fights should use `<Video>` component inside `<BossFight>`, not raw iframes.
-9. **Next Steps**: Use `<NextSteps links={[{ href: "...", label: "..." }]} />` at the very bottom.
-10. **Astro Syntax**:
+   - **QuestStep**: Always use `<QuestStep id="..." title="...">` component, not manual `<article>` with `<h3>` and `<img>` tags.
+10. **Next Steps**: Use `<NextSteps links={[{ href: "...", label: "..." }]} />` at the very bottom.
+11. **Astro Syntax**:
     - Escape bare ampersands `&amp;`.
     - Ensure imports are at the top.
-11. **Link to TOC / Sidebar**: Add the new guide to `Layout.astro` and `table-of-contents.astro`.
-12. **Guide Completion Tracking**:
+12. **Link to TOC / Sidebar**: Add the new guide to `Layout.astro` and `table-of-contents.astro`.
+13. **Guide Completion Tracking**:
     - Add `guideId` prop to `<WalkthroughLayout>` component (use the page slug, e.g., `guideId="three-months-later"`).
     - The `GuideProgress.astro` component will automatically render a "Mark as Completed" button at the top of the page.
     - Users can toggle completion status, which is saved to localStorage.

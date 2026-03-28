@@ -35,7 +35,7 @@ const baseUrl = import.meta.env.BASE_URL;
           </a>
         </div>
         <nav class="sidebar-nav">
-          <details class="nav-section" open>
+          <details class="nav-section">
             <summary><h3>Getting Started</h3></summary>
             <ul class="nav-links">
               <li><a href={baseUrl}>Controls</a></li>
@@ -47,7 +47,7 @@ const baseUrl = import.meta.env.BASE_URL;
 
           <details class="nav-section">
             <summary><h3>Walkthrough</h3></summary>
-            <details class="nav-subsection" open>
+            <details class="nav-subsection">
               <summary><h4>Act 2</h4></summary>
               <ul class="nav-links">
                 <li>
@@ -112,10 +112,17 @@ const baseUrl = import.meta.env.BASE_URL;
             <details class="nav-subsection">
               <summary><h4>Finale</h4></summary>
               <ul class="nav-links">
-                <li><a href="#">Chained Echoes</a></li>
-                <li><a href="#">End of an Era</a></li>
                 <li>
-                  <a href="#">World Exploration (Finale)</a>
+                  <a href=`${baseUrl}walkthrough/chained-echoes`
+                    >Chained Echoes</a
+                  >
+                </li>
+                <li>
+                  <a href=`${baseUrl}walkthrough/end-of-an-era`>End of an Era</a
+                  >
+                </li>
+                <li>
+                  <a href=`${baseUrl}walkthrough/world-exploration-2`>World Exploration (2nd)</a>
                 </li>
                 <li><a href="#">Killing Gods</a></li>
               </ul>
@@ -293,6 +300,7 @@ const baseUrl = import.meta.env.BASE_URL;
         "looking-for-allies": "walkthrough/looking-for-allies",
         "storming-tormund": "walkthrough/storming-tormund",
         "mysterious-girl-2": "walkthrough/mysterious-girl-2",
+        "world-exploration-2": "walkthrough/world-exploration-2",
         "a-call-from-the-past": "walkthrough/a-call-from-the-past",
         "ruins-under-a-tree": "walkthrough/ruins-under-a-tree",
       };
@@ -311,6 +319,29 @@ const baseUrl = import.meta.env.BASE_URL;
               }
             }
           });
+
+          // Highlight active link and open its parent details
+          const currentUrlStr = window.location.href.split("#")[0].replace(/\/$/, "");
+          const allSidebarLinks = document.querySelectorAll(".sidebar .nav-links a");
+          
+          allSidebarLinks.forEach((link) => {
+            const anchor = link as HTMLAnchorElement;
+            const linkUrl = anchor.href.split("#")[0].replace(/\/$/, "");
+            
+            // Check if link matches current URL and is not a placeholder
+            if (linkUrl === currentUrlStr && link.getAttribute("href") !== "#") {
+              link.classList.add("active");
+              
+              // Traverse up and open all parent <details> elements
+              let parent = link.parentElement;
+              while (parent && !parent.classList.contains("sidebar-nav")) {
+                if (parent.tagName === "DETAILS") {
+                  (parent as HTMLDetailsElement).open = true;
+                }
+                parent = parent.parentElement;
+              }
+            }
+          });
         });
       }
 
@@ -323,6 +354,7 @@ const baseUrl = import.meta.env.BASE_URL;
           "looking-for-allies": "walkthrough/looking-for-allies",
           "storming-tormund": "walkthrough/storming-tormund",
           "mysterious-girl-2": "walkthrough/mysterious-girl-2",
+          "world-exploration-2": "walkthrough/world-exploration-2",
           "a-call-from-the-past": "walkthrough/a-call-from-the-past",
           "ruins-under-a-tree": "walkthrough/ruins-under-a-tree",
         };

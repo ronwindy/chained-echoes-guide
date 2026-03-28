@@ -1,0 +1,425 @@
+---
+import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
+import StoryBlurb from "../../components/StoryBlurb.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import Image from "../../components/Image.astro";
+import Video from "../../components/Video.astro";
+import Tip from "../../components/Tip.astro";
+import BossFight from "../../components/BossFight.astro";
+import MediaGrid from "../../components/MediaGrid.astro";
+import NextSteps from "../../components/NextSteps.astro";
+
+const sections = [
+  { id: "new-quests", label: "New quests" },
+  { id: "the-kraken", label: "The Kraken" },
+  {
+    id: "ograne-grottos",
+    label: "Ograne Grottos",
+    subsections: [
+      { id: "goblin-village", label: "Goblin village" },
+      { id: "western-grotto", label: "Western grotto" },
+    ],
+  },
+  {
+    id: "rockbottom",
+    label: "Rockbottom",
+    subsections: [
+      { id: "the-shrew", label: "The shrew" },
+      { id: "the-conclusion-of-a-goblins-dilemma", label: "The conclusion of a goblin's dilemma" },
+    ],
+  },
+  {
+    id: "rohlan-fields",
+    label: "Rohlan Fields",
+    subsections: [
+      { id: "jan-and-marisa", label: "Jan and Marisa" },
+      { id: "treasure-hunting", label: "Treasure hunting" },
+    ],
+  },
+  {
+    id: "perpetua",
+    label: "Perpetua",
+    subsections: [
+      { id: "southeast", label: "Southeast" },
+      { id: "east", label: "East" },
+      { id: "northeast", label: "Northeast" },
+    ],
+  },
+  { id: "fiorwoods", label: "Fiorwoods" },
+  { id: "vacation-resort", label: "Vacation Resort" },
+  { id: "hermit-island", label: "Hermit Island" },
+  {
+    id: "leonar-challenges",
+    label: "Leonar Challenges",
+    subsections: [
+      { id: "west-of-perpetua", label: "West of Perpetua" },
+      { id: "west-coast-of-valandis", label: "West coast of Valandis" },
+      { id: "northwest-of-valandis", label: "Northwest of Valandis" },
+    ],
+  },
+];
+---
+
+<WalkthroughLayout
+  title="World Exploration Walkthrough (2nd)"
+  subtitle="Welcome to the second and probably final world exploration."
+  sections={sections}
+  guideId="world-exploration-2"
+>
+  <StoryBlurb>
+    <p>
+      <em>Welcome to the second and probably final world exploration. There are tons of things to do, things to complete and whatnot. You ready?</em>
+    </p>
+  </StoryBlurb>
+
+  <section id="new-quests" class="walkthrough-section">
+    <h2 class="section-title">New quests</h2>
+    <QuestStep id="new-quests-objective" title="Complete new quests before exploring">
+      <ul>
+        <li><a href="https://www.neoseeker.com/chained-echoes/walkthrough/Falfalaran_Sings_the_Fairy" target="_blank">Falfalaran Sings the Fairy</a>: acquired in Tormund, rewards you with a new fighter</li>
+        <li><a href="https://www.neoseeker.com/chained-echoes/walkthrough/Two-Winged_Angel" target="_blank">Two-Winged Angel</a>: acquired in New Wyrnshire, rewards you with the opportunity to buy a Sky Armor for 50,000</li>
+        <li><a href="https://www.neoseeker.com/chained-echoes/walkthrough/A_Will_To_Live" target="_blank">A Will To Live</a>: acquired in the Iden Village of the Fiorwoods, rewards you with a new fighter</li>
+        <li><a href="https://www.neoseeker.com/chained-echoes/walkthrough/No_Place_for_Happy_Endings" target="_blank">No Place for Happy Endings</a>: acquired in Flandern, concludes Robb's story</li>
+      </ul>
+
+      <p>Once you're done with these quests, get on your airship. You'll notice several things appear on the world map:</p>
+
+      <ul>
+        <li>The Inner Sanctum</li>
+        <li>The Raminas Tower</li>
+        <li>A kraken in the northeastern part of the map</li>
+      </ul>
+    </QuestStep>
+  </section>
+
+  <section id="the-kraken" class="walkthrough-section">
+    <h2 class="section-title">The Kraken</h2>
+    <QuestStep id="the-kraken-objective" title="Head on over there and land.">
+      <Image src="https://cdn.staticneo.com/ew/thumb/8/8a/Ce_588.jpg/730px-Ce_588.jpg" alt="The Kraken location" />
+
+      As you do save your game, get on your SAs and head right to find a kraken named <strong>Krakun</strong>! It's a stronger version of <a href="https://www.neoseeker.com/chained-echoes/walkthrough/Krachan" target="_blank">the Kraken we fought in the sewers of Farnsport</a>. We're fighting the 3 tentacles again (healer, magic user, and physical user). The strategy remain mostly the same despite us using SAs. I had Glenn use Command Attack and Defense to increase ATK and DEF while Victor focused on healing. All the tentacles are weak to wind so take advantage of that. However, if you're aiming to win the battle on max difficulty settings, you may want to wait until you have tier 6 SA equipment.
+
+      <Tip type="note">Note that the Krakun's main body can act too, and it can randomly increase or decrease the size of the safe Overdrive Gauge in SA combat.</Tip>
+
+      After the fight, collect the 4 chests strewn about. Two of them have money while one of them has <strong>Repair Kit DX x2</strong> and the other has a <strong>Wind Tablet</strong>, which is a key item we'll save for later.
+    </QuestStep>
+  </section>
+
+  <section id="ograne-grottos" class="walkthrough-section">
+    <h2 class="section-title">Ograne Grottos</h2>
+    <QuestStep id="goblin-village" title="Goblin village">
+      Once back in the grottos, head on over to the Goblin Village in the upper right corner and talk to the merchant (to the left of the Goblin Chief) to purchase some items.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/8/87/Ce_633.jpg/730px-Ce_633.jpg" alt="Goblin Village merchant" />
+
+      The first item of interest is the <strong>Incocybin Berry</strong>. As you've learned from <a href="https://www.neoseeker.com/chained-echoes/walkthrough/The_Gates_of_Nhysa" target="_blank">The Gates of Nhysa</a> quest, this item considerably weakens the formidable Tadeye monsters in the grotto. Purchase at least 10 Incocybin Berries.
+
+      The two other important items to buy are <strong>The Human Language</strong> and <strong>Baibai X</strong>. The former allows you to understand Goblins while the latter allows you to enter northeastern portion of the Perpetua.
+
+      <Tip type="note"><strong>NOTE</strong>: if you go talk to Jan and his daughter, you'll see what happened to the daughter... it's like she's a completely different being. That's so sad!</Tip>
+
+      Talk to the one Goblin on the right side of the chief's hut. He says he lost "the key" in the western mushroom field, which is next to the merchant. Return to that area and retrieve the <strong>Miner's Key</strong>. We'll put the key to use shortly. For now, let's finish up other tidbits in the grottos.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/e/e3/Ce_641.jpg/730px-Ce_641.jpg" alt="Retrieving the Miner's Key" />
+    </QuestStep>
+
+    <QuestStep id="western-grotto" title="Western grotto">
+      Fast travel back to the central crystal and go over to the west side of the grotto. Depending on your luck, a Tadeye may be blocking your path.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/6/67/Ce_634.jpg/730px-Ce_634.jpg" alt="Western grotto entrance" />
+
+      Fight it. Use that Incocybin Berry and kill it. After the fight, go west first and south after the bridge to find a chest with <strong>3584a</strong>. Go west across another bridge to find a fork. Harvest the <strong>crystal source</strong> and go west to find a <strong>Class Emblem Statue</strong>. Depending on your luck, a Senior Tadeye may be blocking your path. Defeat it using the Incocybin Berry.
+
+      Save the game and interact with the statue. Time to prove ourselves.
+
+      <MediaGrid columns={2}>
+        <Image src="https://cdn.staticneo.com/ew/thumb/8/80/Ce_635.jpg/326px-Ce_635.jpg" alt="Class Emblem Statue 1" />
+        <Image src="https://cdn.staticneo.com/ew/thumb/1/19/Ce_636.jpg/326px-Ce_636.jpg" alt="Class Emblem Statue 2" />
+      </MediaGrid>
+
+      This one makes us fight 4 Tadeyes. Of course this will be an easy fight if your 4 party members have their turn first. Have each member use an Incocybin Berry on a different target to dramatically lower their stats. After the fight we'll get <strong>Franforth the Mage Warrior</strong>, the <strong>Mage Warrior Class Emblem</strong>. It improves all stats negligibly and bestows the "Magic Smash" and "Physical Wonder" skills. Physical Wonder is a physical attack that depends on the MAG stat instead of ATK, enabling Lenne and Ba'Thraz to do powerful physical attacks. Magic Smash is magical attack that depends on the ATK stat instead of MAG, Sienna and Glenn to perform powerful magical attacks.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/0/0e/Ce_637.jpg/730px-Ce_637.jpg" alt="Mage Warrior Class Emblem" />
+
+      Return to the fork and go north. Follow this path, kill another Tadeye and climb down the wall to find a monk called <strong>Gimaj</strong>. Talk to him and he'll join the clan, giving you 50% chance to earn double SP from battles.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/5/58/Ce_638.jpg/730px-Ce_638.jpg" alt="Gimaj the monk" />
+
+      Climb back up the wall and go north for a chest with <strong>Sacred Water</strong>.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/0/04/Ce_639.jpg/730px-Ce_639.jpg" alt="Sacred Water chest" />
+
+      Return to the entrance (where the first Tadeye was) and head north now to find another Tadeye. Go left, down the wall and to the left you'll find a <strong>fast travel crystal</strong>. Going north from here leads to an arena adorned with six tablet stands.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/0/09/Ce_640.jpg/730px-Ce_640.jpg" alt="Six tablet stands" />
+
+      The Wind Tablet we received from Krakun goes here, on the right side. We need five more tablets, one of each element. The crystal allows us to access this location quickly.
+    </QuestStep>
+  </section>
+  <section id="rockbottom" class="walkthrough-section">
+    <h2 class="section-title">Rockbottom</h2>
+    <QuestStep id="the-shrew" title="The shrew">
+      Teleport to Rockbottom, go east across the bridge. Enter Bernd's house and talk to the lonely "Never his Wife to Begin with"! She wishes to visit the Hermit Island. Once she does, teleport to the island and find Bernd east of the music auditorium. A scene will play as you get close, and "Never his Wife to Begin with" joins the clan. Talk to her in the inn. She enables you to receive only one type of crystal each time you harvest a crystal source. Useful!
+    </QuestStep>
+
+    <QuestStep id="the-conclusion-of-a-goblins-dilemma" title="The conclusion of a goblin's dilemma">
+      This part of the guide assumes you've completed <a href="https://www.neoseeker.com/chained-echoes/walkthrough/A_Goblin%27s_Dilemma" target="_blank">A Goblin's Dilemma</a>, which ended in a cliffhanger. Time to finish it.
+
+      Teleport back to Rockbottom, From the crystal, go south, enter the mine, and follow the tracks. Once you're outside, continue following the tracks north into the cave. Here you'll find an elevator. Use the Miner's Key from the Goblin's Village to ride it down to Wygrand Mines.
+
+      <MediaGrid columns={2}>
+        <Image src="https://cdn.staticneo.com/ew/thumb/7/75/Ce_664.jpg/326px-Ce_664.jpg" alt="Wygrand Mines elevator" />
+        <Image src="https://cdn.staticneo.com/ew/thumb/6/6b/Ce_665.jpg/326px-Ce_665.jpg" alt="Wygrand Mines entrance" />
+      </MediaGrid>
+
+      Go east, kill the long-outclassed enemy, and unlock the door to the north. (Perhaps you remember that during Act 1, a goblin blocked it.)
+
+      Go inside and follow the path. You have two fights with Goblins along the way. Once you reach the end of the area, you'll find an electric rail car. Ride it to the next area. Don't worry, there are no bosses to fight this time.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/0/00/Ce_666.jpg/730px-Ce_666.jpg" alt="Electric rail car" />
+
+      Read the note nearby. It tells you about the Goblins and how they were "created". Move forward to find the <strong>Darkness Tablet</strong>.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/9/98/Ce_667.jpg/730px-Ce_667.jpg" alt="Darkness Tablet location" />
+
+      Continue west. As the path goes south, you'll be able to jump across the water. Do so and destroy the totem to trigger a short scene. Doing so transforms all the Goblins back into humans... at least those that could still be alive.
+
+      You'll be teleported back to Hermit Island.
+    </QuestStep>
+  </section>
+
+  <section id="rohlan-fields" class="walkthrough-section">
+    <h2 class="section-title">Rohlan Fields</h2>
+    <QuestStep id="jan-and-marisa" title="Jan and Marisa">
+      Visit Jan in the cave hidden behind his house. Marsia is back to being a little kid as if nothing has happened. Jan will be super happy and give you an <strong>Elixir</strong> and a <strong>Repair Kit DX</strong> as thanks.
+    </QuestStep>
+
+    <QuestStep id="treasure-hunting" title="Treasure hunting">
+      Head to the northwestern area of Rohlan Fields. Above the entrance to the Temple of Purple Flame is an area where we can land our SAs. Do so and you'll find some ruined buildings. There are 3 chests here. The 2 chests on the western side have an <strong>All Immunity RAM</strong> and <strong>Exchange Parts x2</strong>. The lone chest on the right has the <strong>Manor Key</strong>.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/5/53/Ce_668.jpg/730px-Ce_668.jpg" alt="Ruined buildings area" />
+
+      Remember that mansion in the middle of the lake that was locked? Head on over there and head inside. This place... is in ruins! Head upstairs and go inside the bottom room. This looks empty right/ There's actually a hidden path on the southern wall. It connects to the room to the far left.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/2/2f/Ce_669.jpg/730px-Ce_669.jpg" alt="Hidden path in the mansion" />
+
+      Over here go around and back downstairs. Head into the room to find a pair of chests, one of them with <strong>Rusty Rapier</strong> and the other one has <strong>Charon's Coin Bag</strong>. This is very important and we need it on the eastern side of Ograne Grottos. We cannot access it just yet but we got it so we wouldn't forget.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/e/e9/Ce_670.jpg/730px-Ce_670.jpg" alt="Chest with Charon's Coin Bag" />
+    </QuestStep>
+  </section>
+  <section id="perpetua" class="walkthrough-section">
+    <h2 class="section-title">Perpetua</h2>
+    <QuestStep id="southeast" title="Southeast">
+      Fast travel to the central crystal and head to the bottom right area. Remember that building we previously couldn't get into? Also, do you remember we got the <strong>Church Key</strong> while we were in the Empyrean Ruins? That's where we use it. Land your SA within the walls and open the door and head inside.
+
+      <MediaGrid columns={2}>
+        <Image src="https://cdn.staticneo.com/ew/thumb/7/75/Ce_632.jpg/326px-Ce_632.jpg" alt="Building entrance" />
+        <Image src="https://cdn.staticneo.com/ew/thumb/1/13/Ce_631.jpg/326px-Ce_631.jpg" alt="Using Church Key" />
+      </MediaGrid>
+
+      Once inside the building check the upper right painting to open up a secret passage. There's a staircase near the entrance. Go down and follow the path to find a pair of large stone slabs. It says something about Leonar and gives you some rough locations. More on this later. Let's finish up things here in Perpetua.
+
+      Leave the building and remember that camp just a bit north with the scientists? Talk to the NPC here called <strong>Zellor</strong> (the one we couldn't talk to before) and we'll get him to join the clan. Thanks to him we'll actually get a discount in every shop!
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/9/94/Ce_657.jpg/730px-Ce_657.jpg" alt="Zellor joins clan" />
+    </QuestStep>
+
+    <QuestStep id="east" title="East">
+      Head north from the desert to the next area of Perpetua and remember we couldn't traverse through here because of those huge black Yak enemies? Well, we are now strong enough to defeat them... at least I was haha. They are called <strong>Black Sheep</strong> and they are still super strong so be careful. Their normal attack hit me for around 650 dmg. but they have a party wide attack that hits for over 1100 dmg. to everyone. Super dangerous.
+
+      After defeating the first one go west while sticking to the bottom wall to reach a chest that has <strong>Filthy Touch RAM</strong>.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/4/44/Ce_587.jpg/730px-Ce_587.jpg" alt="Filthy Touch RAM chest location" />
+
+      Return to where you fought the Sheep and go right also sticking to the bottom wall to get to a <strong>crystal source</strong>. Head north from here then go west when possible for another <strong>crystal source</strong>. Continue going west until you reach another fork which you should also follow west. This leads to a fight with 2 Black Sheep. Save your game here before you start. This fight is very hard thanks to their party wide attack. I recommend you focus on one and do your best to kill one of them ASAP, before they start using their attack. If you die before, simply run away and try again.
+
+      After the fight open the chest here for your reward, a <strong>Dark and Light Resist RAM</strong>. Nice! Return to the fork to the far east side and go north for another fight with 2 Black Sheep. Kill them and go past them into the next area.
+    </QuestStep>
+
+    <QuestStep id="northeast" title="Northeast">
+      Here you'll discover a <strong>fast travel crystal</strong> and also complete the map. Nice! Also, do you notice the vines blocking your way? Remember we bought this Baibai X item from the Goblins in Ograne Grotto? Yeah, use it here to get rid of the vines! We can now explore this section.
+
+      Note that the enemies here hit really hard so be careful. There's also a boss fight of sorts up ahead so be warry and save your game often. Go east from the start and you'll find some enemies.
+
+      This enemy is the <strong>Cobwebtadie</strong>. They are weak to fire and you want to debuff them ASAP (or buff yourself) because they hit hard. They also like to Poison you with their bite and when you kill them their green back explodes and deals around 100 dmg. to all the party AND poisons them. Horrible. You can purchase Herbal Collars from Tormund to resist poison. Make sure to fully heal before you kill the next enemy.
+
+      Past them follow the southern path to find a chest with <strong>Ancient Carcass x6</strong>. Then follow the northern path for <strong>Emperor's Hide x6</strong>.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/1/1b/Ce_652.jpg/730px-Ce_652.jpg" alt="Emperor's Hide chest location" />
+
+      Head west from the entrance and make your way north to reach a fork. Grab the <strong>crystal source</strong> here and head north to reach a marsh-looking area. Head through through these to find a chest with <strong>Blood Stone x4</strong>. For the other chest go to the southeastern exit and go north following the outer area of the marsh (under the trees) to reach the chest to the north that has <strong>Divine Wool x5</strong>.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/8/89/Ce_654.jpg/730px-Ce_654.jpg" alt="Divine Wool chest location" />
+
+      Go southeast from here and you'll see the path going up and around. Make sure to save when you reach the top part of the path because a little scene will play then a boss fight!
+
+      <BossFight title="BOSS FIGHT: ASSASSIN GIRL">
+        <Video id="Ta6FYgNJI5U" title="Assassin Girl Boss Fight" />
+
+        This fight is though and needs some preparation. Bring the following along:
+
+        <ul>
+          <li>Plenty of Angel Wing items</li>
+          <li>Tomke, with Broken Accordion learned</li>
+          <li>Sienna, equipped with X-Slash, Blade Reflection, Quick Step, Shadow Step, Dragonfang and geared for high AGI and high CRIT</li>
+          <li>Robb, equipped with Leg Shot, Poison Shot, Toxic Shot, Paralyze Shot, and Sleep Powder</li>
+        </ul>
+
+        The assassin (which resembles the <a href="https://en.wikipedia.org/wiki/Little_Red_Riding_Hood%7CLittle" target="_blank">Red Riding Hood</a>) uses the following moves:
+
+        <ul>
+          <li>Attacks two party members, instantly killing them – Sienna's speed and evasion are priceless here. She can dodge death and land more blows.</li>
+          <li>Uses the <strong>Thousand Daggers</strong> skill, which culls all of your characters' HP to 1 – This is where Tomke must retaliate with Broken Accordion.</li>
+          <li>Summon up to two Doppelgangers (resembling the grandmother and the wolf who ate the grandmother, both from the Little Red Riding Hood story.) – Robb's Pandemic can keep them occupied with healing.</li>
+          <li>Advances toward her victim – You must defeat her before she has a chance to reach her victim.</li>
+        </ul>
+
+        In this fight, you don't have the luxury of giving away turns to buff the party or heal them. They'll continuously die and lose the buffs. Debuffing the boss, however, is effective. Inflict Leg Shot (Robb, priority one), All Break (Glenn), Poison (Robb), Toxic (Robb), Bleed (Sienna or Mikah), and Blind. Over time, she gains resistance to Robb's ailments. Use Robb's Ultra move to reset the resistance. Other characters must attack non-stop.
+
+        <div class="boss-stats">
+        </div>
+      </BossFight>
+
+      After the fight and the scene, pick up the <strong>Light Tablet</strong>.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/6/6f/Ce_653.jpg/730px-Ce_653.jpg" alt="Light Tablet location" />
+    </QuestStep>
+  </section>
+  <section id="fiorwoods" class="walkthrough-section">
+    <h2 class="section-title">Fiorwoods</h2>
+    <QuestStep id="fiorwoods-objective" title="Explore the new area">
+      Fast travel to the crystal at the camp and talk to the NPC to the north, <strong>Jack</strong>. He finally cleared the area here, giving us access. He'll also join the clan so that's a win win!
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/5/5b/Ce_658.jpg/730px-Ce_658.jpg" alt="Jack joins clan" />
+
+      Go through this new area to find a chest at the end with <strong>Rusty Gun</strong>. Neat!
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/b/ba/Ce_659.jpg/730px-Ce_659.jpg" alt="Rusty Gun chest location" />
+    </QuestStep>
+  </section>
+
+  <section id="vacation-resort" class="walkthrough-section">
+    <h2 class="section-title">Vacation Resort</h2>
+    <QuestStep id="vacation-resort-objective" title="Visit the beach">
+      Remember the beach where <strong>Fridolyn</strong> went? We need to go there.
+
+      <MediaGrid columns={2}>
+        <Image src="https://cdn.staticneo.com/ew/thumb/c/c9/Ce_661.jpg/326px-Ce_661.jpg" alt="Beach area 1" />
+        <Image src="https://cdn.staticneo.com/ew/thumb/b/b8/Ce_660.jpg/326px-Ce_660.jpg" alt="Beach area 2" />
+      </MediaGrid>
+
+      Once here talk to him and he'll join the clan. We could use a magic user! With Fridolyn joining the clan, he should be the last one and your trophy/achievement should've popped.
+    </QuestStep>
+  </section>
+
+  <section id="hermit-island" class="walkthrough-section">
+    <h2 class="section-title">Hermit Island</h2>
+    <QuestStep id="hermit-island-objective" title="Explore the updated island">
+      Recruiting every available NPC into your clan has a dramatic impact on the Hermit Island. It now has stone walls, a main square, additional buildings for offices and diplomatic affairs, and a small park for children. In addition, the inn and the armory have unlocked their top floors. Visit the armory's second floor to find some chests containing <strong>Mystic Ring</strong>, <strong>Plot Armor, Knightly Sword, and Life Thread</strong>.
+
+      Inside the old base, go to the auditorium and go west. Remember that Bernd was digging here? Well it looks like he finally cleared the way so we can get the golden chest behind that has <strong>Soul of Farnese</strong>.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/5/50/Ce_662.jpg/730px-Ce_662.jpg" alt="Golden chest with Soul of Farnese" />
+
+      Head through the southwestern exit where Triony and Pavel are fishing. Speak to Triony to receive another <strong>Soul of Farnese</strong>.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/c/cb/Ce_663.jpg/730px-Ce_663.jpg" alt="Triony giving Soul of Farnese" />
+    </QuestStep>
+  </section>
+  <section id="leonar-challenges" class="walkthrough-section">
+    <h2 class="section-title">Leonar Challenges</h2>
+    <QuestStep id="west-of-perpetua" title="West of Perpetua">
+      By now, three new areas must have appeared on your world map. These are the Leonar Challenges, puzzles with the orbs. Let's go counterclockwise starting with the one just west of Perpetua.
+
+      <MediaGrid columns={2}>
+        <Image src="https://cdn.staticneo.com/ew/thumb/4/46/Ce_643.jpg/326px-Ce_643.jpg" alt="Leonar Challenge map location" />
+        <Image src="https://cdn.staticneo.com/ew/thumb/2/2d/Ce_642.jpg/326px-Ce_642.jpg" alt="Orb puzzle area" />
+      </MediaGrid>
+
+      This challenge... broke me haha. Tried to do it for like 40 minutes one night and I rage quit. Woke up the next day and still took me like another hour to decipher how to do it. Read carefully as I give you directions:
+
+      <ul>
+        <li>Move middle orb left then up.</li>
+        <li>Move left orb up so it's next to the previous orb. Then move it right into the orb, then down, right, up, right, and down into the breakable block.</li>
+        <li>Move the top left orb right into the other orb.</li>
+        <li>From these 2 orbs, move the right one down, left, up, and right into the other orb.</li>
+        <li>Now push the bottom orb up and right onto the golden plate.</li>
+        <li>From the 2 remaining orbs, move the right one up then move the left orb to the right onto the golden plate.</li>
+        <li>Lastly move the orb right, down, left, up and right onto the golden plate.</li>
+      </ul>
+
+      And with this we gain access to the back of the area. Go through to find a chest on the right with <strong>Rusty Spear</strong>, then at the top is our <strong>Class Emblem Statue</strong>. Time to prove ourselves!
+
+      <Tip type="note"><strong>NOTE</strong>: Please note that all 3 of the fights in these challenges are roughly the same and the same strategy applied to one can be applied to all 3.</Tip>
+
+      In this one we're fighting an astounding <strong>nine</strong> Clock Spiders. Remember them? They used to be really tough but at this point in time they are really easy. Since this is considered a "boss fight" the game will fill up our Ultra Move gauge. What I did here was use Glenn's Ultra Move to of course lower all of their stats, used Mikah's Double Steps to buff my speed, Victor's Heroic Ode to buff literally everything we have, then had Lenne use Water Jump. Used my SP to max out Lenne's Water Jump and she killed them all in 2 hits. Pretty crazy.
+
+      They won't be dealing that much damage thanks to the buffing from Victor and debuffing from Glenn but feel free to heal if you do take considerable amount of damage. Also feel free to switch Mikah for Sienna and have her boost our crit instead.
+
+      After the fight we'll get <strong>Methosilis the Rune Knight</strong>, the <strong>Rune Knight Class Emblem</strong>. This one boosts almost all of our stats but REALLY gives us a boost in MIND, magic defense. It is also a fantastic class so we can get <strong>Light and Dark Coat</strong>. These give that element to our physical attacks, for all the party. This is great for when we're fighting a tough boss that's weak against that element. You can use it with Glenn's Cross Slash to do tons of damage. Lenne already knows the Water, Fire, and Wind variation of this skill as well.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/8/8c/Ce_645.jpg/730px-Ce_645.jpg" alt="Rune Knight Class Emblem" />
+    </QuestStep>
+
+    <QuestStep id="west-coast-of-valandis" title="West coast of Valandis">
+      Our second one is located on the western side of the island.
+
+      <MediaGrid columns={2}>
+        <Image src="https://cdn.staticneo.com/ew/thumb/0/02/Ce_650.jpg/326px-Ce_650.jpg" alt="Leonar Challenge west coast map" />
+        <Image src="https://cdn.staticneo.com/ew/thumb/b/bd/Ce_649.jpg/326px-Ce_649.jpg" alt="Orb puzzle 2" />
+      </MediaGrid>
+
+      Another orb puzzle! Let's do this! We only have 2 orbs this time.
+
+      <ul>
+        <li>Move the top orb right, down into the breakable block, then left, down, right into the breakable block.</li>
+        <li>Move the left orb up, right, down, right into the breakable block, up, left into the breakable block.</li>
+        <li>Move the bottom orb up then move them both onto the golden plate.</li>
+      </ul>
+
+      That was... surprisingly easy! Go through the gate to find at the top our <strong>Class Emblem Statue</strong>. Time to prove ourselves! This fight is against 5 Golems. Same strategy like I mentioned above.
+
+      After the fight we'll get <strong>Trangil the Gambler</strong>, the <strong>Gambler Class Emblem</strong>. This class is all about luck, and I don't like that haha. His skills are all based on luck. One of his skills attacks enemies at random and a random amount of times. It can be really good or really bad. I can see it being useful for boss fights where there's only one enemy, but that's about it. His other skill lets him inflict a status effect on all enemies for 1 turn.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/7/7e/Ce_651.jpg/730px-Ce_651.jpg" alt="Gambler Class Emblem" />
+    </QuestStep>
+
+    <QuestStep id="northwest-of-valandis" title="Northwest of Valandis">
+      Lastly, this one is located in the northwestern corner of the island, directly west from Tormund.
+
+      <MediaGrid columns={2}>
+        <Image src="https://cdn.staticneo.com/ew/thumb/4/41/Ce_647.jpg/326px-Ce_647.jpg" alt="Leonar Challenge northwest map" />
+        <Image src="https://cdn.staticneo.com/ew/thumb/2/28/Ce_646.jpg/326px-Ce_646.jpg" alt="Orb puzzle 3" />
+      </MediaGrid>
+
+      Again, we have an orb puzzle in here. We're back to 3 orbs! Here's how to solve it:
+
+      <ul>
+        <li>The middle orb move it down into the breakable block, then left, then up and right, breaking both breakable blocks.</li>
+        <li>The orb to the right (the one that was already here) move it down into a breakable block.</li>
+        <li>The orb to the left move it right.</li>
+        <li>The top orb move it down, then left, then up, right, down and left under the breakable block.</li>
+        <li>From the 2 orbs on the left, move the right orb down then the left orb left.</li>
+        <li>Continue moving this left orb up, right, and down into the breakable block.</li>
+        <li>Move all 3 orbs onto the golden plate.</li>
+      </ul>
+
+      And with this we gain access to the back of the area. Go through to find a chest on the left with <strong>Rusty Amulet</strong>, then at the top is our <strong>Class Emblem Statue</strong>. Time to prove ourselves! This fight is against 3 Golems and 4 Clock Spiders. Same strategy like I mentioned above.
+
+      After the fight we'll get <strong>Living Flame the Pyromancer</strong>, the <strong>Pyromancer Class Emblem</strong>. This is the class that gives you a huge boost in MAG, perfect for Lenne and even Victor for more healing. This class gives you access to both fire and wind spells. Although Lenne's are stronger than these, they are perfect so you can have other characters learn these spells like Thraz and even Victor. You can also get Fire Resistance and even kill plants faster. Neat.
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/b/bb/Ce_648.jpg/730px-Ce_648.jpg" alt="Pyromancer Class Emblem" />
+    </QuestStep>
+  </section>
+
+  <!-- NEXT STEPS -->
+  <NextSteps
+    links={[
+      {
+        href: "/walkthrough/into-nhysa",
+        label: "Next Quest: Into Nhysa",
+      },
+    ]}
+  />
+</WalkthroughLayout>

@@ -1,9 +1,9 @@
 ---
 interface Props {
-  type?: 'tip' | 'note' | 'warning';
+  type?: "tip" | "note" | "warning";
 }
 
-const { type = 'tip' } = Astro.props;
+const { type = "tip" } = Astro.props;
 ---
 
 <div class={`tip-card ${type}`}>
@@ -12,25 +12,25 @@ const { type = 'tip' } = Astro.props;
 
 <style>
   .tip-card {
-     background: rgba(226, 180, 59, 0.1);
-     border-left: 4px solid var(--accent-gold);
-     padding: 1rem 1.5rem;
-     margin: 2rem 0;
-     border-radius: 0 4px 4px 0;
+    background: rgba(226, 180, 59, 0.1);
+    border: 2px dashed var(--accent-gold);
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    border-radius: 8px;
   }
 
   .tip-card.note {
     background: rgba(58, 113, 221, 0.1);
-    border-left-color: var(--accent-blue);
+    border-color: var(--accent-blue);
   }
 
   .tip-card.warning {
     background: rgba(200, 50, 50, 0.1);
-    border-left-color: #ff6b6b;
+    border-color: #ff6b6b;
   }
 
   :global(.tip-card p) {
-    margin-bottom: 0 !important;
+    margin-bottom: 1.5rem !important;
     color: #e0e0e0;
   }
 </style>

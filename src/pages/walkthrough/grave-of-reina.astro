@@ -6,6 +6,7 @@ import Video from "../../components/Video.astro";
 import Tip from "../../components/Tip.astro";
 import BossFight from "../../components/BossFight.astro";
 import MediaGrid from "../../components/MediaGrid.astro";
+import NextSteps from "../../components/NextSteps.astro";
 const baseUrl = import.meta.env.BASE_URL;
 
 const sections = [
@@ -570,4 +571,13 @@ const sections = [
       </div>
     </article>
   </section>
+
+  <NextSteps
+    links={[
+      {
+        href: `${baseUrl}walkthrough/in-good-faith`,
+        label: "Next Quest: In Good Faith",
+      },
+    ]}
+  />
 </WalkthroughLayout>

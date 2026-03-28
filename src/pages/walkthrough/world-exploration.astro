@@ -1,6 +1,8 @@
 ---
 import StoryBlurb from "../../components/StoryBlurb.astro";
+import Tip from "../../components/Tip.astro";
 import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
+import NextSteps from "../../components/NextSteps.astro";
 const baseUrl = import.meta.env.BASE_URL;
 
 const sections = [
@@ -25,41 +27,46 @@ const sections = [
 >
   <StoryBlurb>
     <p>
-      Welcome to one of the biggest pages I've written for this guide thus far.
-      We're going to go explore the entire world so be ready !!
+      <em
+        >Welcome to one of the biggest pages I've written for this guide thus
+        far. We're going to go explore the entire world so be ready !!
+      </em>
     </p>
   </StoryBlurb>
-  <p>A couple things to note:</p>
-  <ul>
-    <li>
-      We'll be getting several sidequests while on this exploration page. I'll
-      be listing them in their own separate pages and will be linking them. Open
-      them up in a new tab if you want/need help with them.
-    </li>
-    <li>
-      We'll be recruiting several people for our island. I will have a page with
-      all of them up so keep an eye there if you need help.
-    </li>
-    <li>
-      <em>There'll be A LOT of fighting</em>. This is 100% optional for you guys
-      but you can always lower the difficulty of the game so that the fights go
-      by much faster. Personally I did this during this whole page <strong
-        >BUT</strong
-      > I have to be clear here: I always fight the enemies first on normal difficulty
-      so I know they're actually killable, and bosses are ALWAYS fought on normal
-      difficulty. Lowering the difficulty is just to make things go faster (you have
-      no idea how many hours it takes to write these haha).
-    </li>
-    <li>
-      Speaking of fighting, make sure to do your Rewards Board, as much as you
-      can do. Note for the challenges where you need to fight enemies you can
-      use your Sky Armors in many cases. Use that to your advantage.
-    </li>
-  </ul>
-  <p>
-    And those are my tips/notes. Do with them as you will. An now though, we're
-    going to go explore. You ready? I hope so because we have a lot to tackle!
-  </p>
+  <Tip
+    ><h3>A couple things to note:</h3>
+    <ul>
+      <li>
+        We'll be getting several sidequests while on this exploration page. I'll
+        be listing them in their own separate pages and will be linking them.
+        Open them up in a new tab if you want/need help with them.
+      </li>
+      <li>
+        We'll be recruiting several people for our island. I will have a page
+        with all of them up so keep an eye there if you need help.
+      </li>
+      <li>
+        <em>There'll be A LOT of fighting</em>. This is 100% optional for you
+        guys but you can always lower the difficulty of the game so that the
+        fights go by much faster. Personally I did this during this whole page <strong
+          >BUT</strong
+        > I have to be clear here: I always fight the enemies first on normal difficulty
+        so I know they're actually killable, and bosses are ALWAYS fought on normal
+        difficulty. Lowering the difficulty is just to make things go faster (you
+        have no idea how many hours it takes to write these haha).
+      </li>
+      <li>
+        Speaking of fighting, make sure to do your Rewards Board, as much as you
+        can do. Note for the challenges where you need to fight enemies you can
+        use your Sky Armors in many cases. Use that to your advantage.
+      </li>
+    </ul>
+    <p>
+      And those are my tips/notes. Do with them as you will. An now though,
+      we're going to go explore. You ready? I hope so because we have a lot to
+      tackle!
+    </p></Tip
+  >
 
   <section id="hermits-isle" class="walkthrough-section">
     <h2 class="section-title">Hermit's Isle</h2>
@@ -1786,11 +1793,14 @@ const sections = [
         />
       </div>
 
-      <div class="next-steps-card">
-        <a href={`${baseUrl}walkthrough/search-for-princess`}
-          >Main Quest - Searching for a Princess</a
-        >
-      </div>
+      <NextSteps
+        links={[
+          {
+            href: `${baseUrl}walkthrough/search-for-princess`,
+            label: "Next Quest: Searching for a Princess",
+          },
+        ]}
+      />
     </div>
   </section>
 </WalkthroughLayout>
@@ -1910,42 +1920,5 @@ const sections = [
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-shadow: 0 0 15px rgba(255, 71, 87, 0.4);
-  }
-
-  .next-steps-card {
-    background: linear-gradient(
-      135deg,
-      rgba(0, 210, 255, 0.1),
-      rgba(21, 24, 33, 0.95)
-    );
-    border: 1px solid var(--accent-blue);
-    border-radius: 12px;
-    padding: 2.5rem;
-    margin-top: 5rem;
-    text-align: center;
-  }
-
-  .next-steps-card a {
-    color: var(--accent-blue);
-    font-size: 1.5rem;
-    font-family: var(--font-heading);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    transition: transform 0.3s;
-  }
-
-  .next-steps-card a::before {
-    content: "»";
-  }
-  .next-steps-card a::after {
-    content: "«";
-  }
-
-  .next-steps-card a:hover {
-    transform: scale(1.05);
-    color: var(--accent-gold);
   }
 </style>

@@ -1,0 +1,420 @@
+---
+import StoryBlurb from "../../components/StoryBlurb.astro";
+import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
+import Image from "../../components/Image.astro";
+import Video from "../../components/Video.astro";
+import BossFight from "../../components/BossFight.astro";
+import NextSteps from "../../components/NextSteps.astro";
+
+const baseUrl = import.meta.env.BASE_URL;
+
+const sections = [
+  {
+    id: "chained-echoes",
+    label: "Chained Echoes",
+    subsections: [
+      { id: "dungeon-fragments", label: "Dungeon Fragments" },
+      { id: "behemoth-boss", label: "Behemoth Boss" },
+      { id: "chained-echo-boss", label: "Chained Echo Boss" },
+    ],
+  },
+];
+---
+
+<WalkthroughLayout
+  title="Chained Echoes"
+  subtitle="Finale Walkthrough"
+  sections={sections}
+  guideId="chained-echoes"
+>
+  <StoryBlurb>
+    <p>
+      <em
+        >Glenn has fallen into a coma. Use Magnolia's help to restore his
+        shattered mind.</em
+      >
+    </p>
+  </StoryBlurb>
+
+  <p>
+    Enjoy the scenes that play out here and we'll eventually dwell deep into
+    Glenn's mind!
+  </p>
+  <section id="glenns-mind" class="walkthrough-section">
+    <h2 class="section-title">Take a Look Through Glenn's Mind</h2>
+
+    <article id="dungeon-fragments" class="quest-step">
+      <h3 class="step-title">
+        <img
+          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
+          alt="Objective Icon"
+          class="obj-icon"
+        />
+        Dungeon Fragments
+      </h3>
+      <div class="step-content">
+        <p>
+          Remember that one time we went into that person's mind in the
+          sidequest? Yeah, we're doing it again! This time, however, it's much
+          longer, there are enemies and a couple bosses. Ready?
+        </p>
+        <p>
+          From where we start you can go right first to find... the merchant?
+          Yeah, seems Magnolia sent him in with us in case we needed him. We're
+          to pay with imaginary arcs. Anyway, there's also an anvil here so
+          you'll need to make good use of them.
+        </p>
+        <p>
+          Head north now to trigger a scene. Remember those kids from before?
+          Yeah, they're back. It seems they're the sins of Glenn. After they're
+          gone we're left with 3 paths, with only one path available right now.
+          Head upper left and go through the pink door into the next area.
+        </p>
+        <p>
+          This area is VERY confusing so make sure to read properly. I'll be
+          listing it as bullet points to make it easier to follow and will be
+          based on the map below!
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/d/dc/Ce_561.jpg/730px-Ce_561.jpg"
+          alt="Dungeon map showing numbered locations"
+        />
+
+        <ul>
+          <li>Go to 1 and pick up the <strong>Beach Fragment</strong>.</li>
+          <li>
+            Go to 3 and place Beach, then cross to 4, fight the <strong
+              >Flying Eyes</strong
+            > enemies and head to 5. Before you take out the fragment head through
+            to reach a lone isle with a chest that has <strong>Sweets x2</strong
+            >.
+          </li>
+          <li>
+            Return to 5, take the <strong>Dungeon Fragment</strong>, return to 3
+            and pick up Beach as well.
+          </li>
+          <li>Return to 1 and place the Dungeon Fragment to reach 6.</li>
+          <li>Pick up Dungeon, head to 7 and place Dungeon to reach 8.</li>
+          <li>
+            Head north to fight some <strong>Flying Noses</strong> enemies, and go
+            to 9 to find the <strong>Fragment Ship</strong>. Pick it up.
+          </li>
+          <li>
+            Return to 8, cross back to 7 and pick up Dungeon. On this same orb
+            (7), go ahead and place Ship. This connects 2 and 13.
+          </li>
+          <li>
+            Head back to 6, place Dungeon, cross to 1 and pick up Dungeon.
+          </li>
+          <li>
+            Go to 2, cross to 13 and Robb will tell you you'll need all 3
+            Fragments to go east.
+          </li>
+          <li>Go to 14 and place Beach to create a passage to 12.</li>
+          <li>
+            Return to 13, cross to 2 and head back down to 1. Place Dungeon to
+            cross to 6, pick up Dungeon, then head up to 7 and pick up Ship.
+          </li>
+          <li>Go ahead and place Dungeon here on 7.</li>
+          <li>Cross to 8, pick up Dungeon, head up to 9 and place Ship.</li>
+          <li>
+            Cross to 11, pick up Ship and head back down to 14 where you'll be
+            able to pick up Beach. We now have them all.
+          </li>
+          <li>
+            The large open area here between 13 and 15 has a chest on the lower
+            path with <strong>Nectar</strong>. There are also some <strong
+              >Flying Mouth</strong
+            > enemies here if you wish to fight.
+          </li>
+          <li>Head on over to 15 and place Beach.</li>
+          <li>Cross and place Dungeon at 17.</li>
+          <li>
+            Go through to 18, go around to 19, pick up Dungeon and place Ship to
+            gain access to the open area before 20.
+          </li>
+        </ul>
+
+        <p>
+          And that's about it. There is an eye, nose, and mouth enemies here if
+          you want to fight them, but open the chest on the right side for <strong
+            >Meal x4</strong
+          >.
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/3/34/Ce_562.jpg/730px-Ce_562.jpg"
+          alt="Dungeon area with numbered locations"
+        />
+
+        <p>
+          Head to 20 and place Dungeon to create the last passage. Cross and
+          head to the northern exit to trigger a series of scenes where we see
+          what seems to be one of Glenn's memories. This game's story continues
+          to blow my mind to be honest. I've loved every moment of it thus far
+          and this dungeon just solidified it as one of my 2022 GOTY.
+        </p>
+        <p>
+          After the scenes we'll be back in the "HUB" where the merchant is. The
+          upper right entrance is now open so go ahead and go through it.
+        </p>
+        <p>
+          Thankfully this side is much easier than the previous one. From where
+          we start go directly west to find a pair of eyeball enemies. Approach
+          them to have them fly away. Hmm. Head northwest now to find a chest at
+          the end with <strong>Angel Wing x2</strong>.
+        </p>
+        <p>
+          Return to the entrance and to the right you'll see an open area with
+          the eyeballs just chilling there. From here go north-northwest to find
+          a nose. Just like with the eyeballs approach it to have it fly away.
+          It goes to the eyes.
+        </p>
+        <p>
+          Return and head to the eastern side where you'll now find a mouth.
+          Approach it to have it go to the eyeballs and nose. South of this
+          mouth is a chest with <strong>Ambrosia</strong> so make sure to get it.
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/e/ea/Ce_563.jpg/730px-Ce_563.jpg"
+          alt="Final dungeon area with boss"
+        />
+
+        <p>
+          Now that you have both chests go ahead and save your game, prepare
+          yourself and approach the collection of body parts in the center to
+          trigger a boss fight.
+        </p>
+      </div>
+    </article>
+
+    <article id="behemoth-boss" class="quest-step">
+      <h3 class="step-title">
+        <img
+          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
+          alt="Boss Fight Icon"
+          class="obj-icon"
+        />
+        BOSS FIGHT: BEHEMOTH
+      </h3>
+      <div class="step-content">
+        <BossFight title="Behemoth">
+          <Video id="tt0CMMjqDEQ" title="Behemoth Boss Fight" />
+
+          <p>
+            Ok, this is one creepy looking enemy! I don't know why we're
+            fighting a face, but here we are!
+          </p>
+          <p>
+            This is the fight that made me appreciate Glenn so much, and made me
+            realize just how important of a party member he is. There's no
+            debuffing in this fight so we'll have to rely on Victor's buff on
+            the party, as well as his heals. Make sure to have a second
+            character that also has Heal All just in case it's needed.
+          </p>
+          <p>
+            That being said, you should pilfer from the boss to get a <strong
+              >Scholar's Habit</strong
+            >, which is a near upgrade for Victor (although we'll get them
+            relatively soon). Although I couldn't do it, bringing both Mikah and
+            Ba'Thraz to this fight is great. Ba'Thraz has his light swords to
+            take advantage of the boss's weakness to light, then he can summon
+            them all to deal tons of damage.
+          </p>
+          <p>
+            Mikah is also fantastic because she can of course give a huge boost
+            in speed to the party and pack quite a punch with her Tiger combo.
+            Don't bother using Final Blossom and just stick to the Tiger combo
+            if you do end up using her.
+          </p>
+          <p>
+            Given that we don't have that many ways to exploit light weaknesses
+            right now, having Lenne use <strong>Heaven's Tear</strong> is great. It's
+            basically a skill that ALWAYS hits the weakspot no matter which one it
+            is. It's weaker than her elemental thrusts, but it's still great if you're
+            willing to sacrifice some damage for more skill slots. This was doing
+            pretty good damage, around 700 dmg. per hit.
+          </p>
+          <p>
+            The boss itself though only has 2 attacks but they are quite strong
+            so be careful. The good thing is that he only acts once per turn so
+            you have plenty of time to heal up, especially after Windy Wings.
+            Don't be like me and not heal through the damage.
+          </p>
+          <ul>
+            <li>
+              <strong>Glare</strong>: hits one character for around 130 dmg.
+            </li>
+            <li>
+              <strong>Windy Wings</strong>: hits all party members for around
+              120 dmg.
+            </li>
+          </ul>
+        </BossFight>
+
+        <p>
+          And with that the northern exit will now open up. Head on over there
+          to trigger another scene where we see more of Glenn's memories and
+          another one of his previous lives. Damn I love this. Enjoy the scenes.
+        </p>
+        <p>
+          We'll regain control back in the HUB. This is it, we're about to reach
+          the end. Save your game, prepare yourself (I REALLY mean it this time)
+          and head north. There's a long hallway here you'll have to run through
+          but go through the top exit to trigger more scenes... VERY GOOD
+          SCENES.
+        </p>
+        <p>
+          After the scenes though, we'll end up in a boss fight, and it's
+          probably the hardest fight we've had so far in the game.
+        </p>
+      </div>
+    </article>
+
+    <article id="chained-echo-boss" class="quest-step">
+      <h3 class="step-title">
+        <img
+          src="https://cdn.staticneo.com/ew/b/bf/Ce_OBJ.png"
+          alt="Boss Fight Icon"
+          class="obj-icon"
+        />
+        BOSS FIGHT: CHAINED ECHO
+      </h3>
+      <div class="step-content">
+        <BossFight title="Chained Echo">
+          <Video id="J-ckWdwIpA4" title="Chained Echo Boss Fight" />
+
+          <p>
+            This fight... this fight is HARD! And again, without Glenn you can
+            really feel just how hard the boss hits.
+          </p>
+          <p>
+            To begin with, this boss can actually hit twice which is something
+            I'll never like. Of course, given that he's a major boss in the game
+            he'll also hit like a truck so I hope you're prepared. One thing I
+            REALLY recommend if you end up struggling is to check your equipment
+            and insert crystals into them. I played through the whole game
+            without using the crystals and never had an issue, until this boss
+            really made me think about it and make some changes.
+          </p>
+          <p>
+            That being said, let's go over what our characters should be doing.
+            Lenne should be doing what she does best, in this case using
+            Heaven's Tear to exploit the boss's weakness to dark attacks. If
+            she's one of your characters that also has Heal All, that'll be very
+            important. Sienna is a character that's also really good in this
+            fight thanks to her Kesa Giri and Petal Storm. You'll want her
+            pretty much focusing on attacking the boss and, if really needed,
+            have her use OD bombs to keep your OD gauge down.
+          </p>
+          <p>
+            Victor, as per usual, should be buffing your party whenever it's
+            needed and sticking to either healing or keeping your TP up. Using
+            Valor Minuet for a TP regen is nice, but use items to heal TP if
+            it's needed. Shielding Mazurka, if you got the skill, gives your
+            party a shield that block certain amount of damage, which is really
+            good. Don't even bother attacking with him. If you don't need to
+            buff or heal, just use an item to fill up your TP instead.
+          </p>
+          <p>
+            Mikah is fantastic in this fight too because of her skills. Her
+            Tiger combo does tons of damage against the boss, but so too does
+            her Dragon combo, which you want to use once the boss summons his
+            little minions. On the other hand, having Ba'Thraz out is a smart
+            thing to use his dark magic attacks to really hit all the enemies,
+            then summon his weapons to deal a considerable amount of damage.
+          </p>
+          <p>
+            Although I personally didn't use him, Egyl is a great unit in this
+            fight to bring out once the boss summons his minions and have them
+            focus on Egyl.
+          </p>
+          <p>
+            Now onto the boss. This guy is HARD! For starters, like said above,
+            he can act twice per turn, and you know how that goes! Expect him to
+            attack a lot! His attacks themselves aren't really that big of a
+            deal, even if he uses something like Blinding Light twice. You can
+            easily heal that, but the problem comes when he summons the Echo
+            minions. These guys just attack but there's 3 of them and the damage
+            can pile up really quick. That's not the only thing! There are 3 of
+            them plus 2 moves from the boss, you can see where this is going
+            right? Your OD gauge will be going right like crazy, making you
+            REALLY focus on it at all times.
+          </p>
+          <p>
+            For this reason dealing with the minions is your most important
+            thing to do, not even for the damage they do but for the OD gauge.
+            Using Mikah's Dragon combo REALLY helps out against them, and so
+            does Lenne's Ultra Move.
+          </p>
+          <p>
+            Speaking of OD gauge, around halfway through the fight the boss will
+            use Twisting Wind to screw up the OD gauge. Yep, we haven't seen
+            this in a while and man does it change the whole fight! When he does
+            that, make sure to have Mikah buff your speed so you have several
+            turns before he has a move of his own. You'll want to make sure to
+            attack with your hardest hitting party members while the others
+            either heal or keep the gauge at bay.
+          </p>
+          <p>
+            Do be careful because here the boss can interrupt your turns and
+            summon his Echo fighters. Here you'll want to use your hardest
+            hitting attacks: Sienna's Yoko Giri, Mikah's Dragon Combo/Final
+            Blossom, Lenne's Elemental Jump Skill or even her Ultra Move if you
+            got it at this point again.
+          </p>
+          <p>
+            One thing I REALLY recommend is saving your Ultra Move and have
+            Victor use it. He fully restores the party's TP and gives you TP
+            regen, which is always fantastic. I personally struggle with TP so
+            this was a godsend.
+          </p>
+          <p>
+            Overall the fight is only hard because the Echo fighters and you
+            have to REALLY focus on your OD gauge, but besides that it's not
+            that bad.
+          </p>
+          <ul>
+            <li>
+              <strong>Glare</strong>: hits one character for around 110 dmg.
+            </li>
+            <li>
+              <strong>Summoning Echo</strong>: summons 3 Glenn looking
+              characters.
+            </li>
+            <li>
+              <strong>Blinding Light</strong>: hits all party members for around
+              60 dmg.
+            </li>
+            <li>
+              <strong>Twisting Wind</strong>: interruption skill that messes up
+              the OD gauge.
+            </li>
+            <li><strong>Doom</strong>: inflicts Doom on one character.</li>
+          </ul>
+        </BossFight>
+
+        <p>
+          After the fight we'll of course have many more scenes. Enjoy them all
+          and the quest will come to an end once they're over.
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/6/65/Ce_Crimson_Wings.png/100px-Ce_Crimson_Wings.png"
+          alt="Crimson Wings achievement"
+        />
+      </div>
+    </article>
+  </section>
+
+  <NextSteps
+    links={[
+      {
+        href: `${baseUrl}walkthrough/end-of-an-era`,
+        label: "Next Quest: End of an Era",
+      },
+    ]}
+  />
+</WalkthroughLayout>
