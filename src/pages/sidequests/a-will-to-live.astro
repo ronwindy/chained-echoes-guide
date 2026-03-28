@@ -1,0 +1,78 @@
+---
+import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import Image from "../../components/Image.astro";
+import MediaGrid from "../../components/MediaGrid.astro";
+import NextSteps from "../../components/NextSteps.astro";
+import StoryBlurb from "../../components/StoryBlurb.astro";
+
+const sections = [
+  { id: "search-for-arlette-in-the-west-of-the-fiorwoods", title: "Search for Arlette in the west of the Fiorwoods", label: "Search for Arlette in the west of the Fiorwoods" },
+  { id: "find-arlette-in-kortara", title: "Find Arlette in Kortara", label: "Find Arlette in Kortara" },
+  { id: "collect-food-4-and-bring-it-to-arlette-afterwards", title: "Collect food (4) and bring it to Arlette afterwards", label: "Collect food (4) and bring it to Arlette afterwards" },
+  { id: "find-a-way-out", title: "Find a way out", label: "Find a way out" }
+];
+---
+
+<WalkthroughLayout title="A Will To Live Walkthrough" guideId="a-will-to-live" sections={sections}>
+  <StoryBlurb>
+    <em>Arlette vanished? And she was taking care of some wild animal? You need to find and help her!</em>
+  </StoryBlurb>
+
+  <Image src="https://cdn.staticneo.com/ew/thumb/b/b0/Ce_582.jpg/730px-Ce_582.jpg" alt="A Will To Live Walkthrough" />
+
+  <p>You can start this quest after the main quest <a href="/walkthrough/chained-echoes">Chained Echoes</a>. Once you've complete it fast travel to Iden in the Fiorwoods and enter the tavern/inn to trigger a scene where the quest proper will start.</p>
+
+  <MediaGrid columns={2}>
+    <Image src="https://cdn.staticneo.com/ew/thumb/4/43/Ce_580.jpg/326px-Ce_580.jpg" alt="Iden tavern scene 1" />
+    <Image src="https://cdn.staticneo.com/ew/thumb/2/21/Ce_581.jpg/326px-Ce_581.jpg" alt="Iden tavern scene 2" />
+  </MediaGrid>
+
+  <section id="search-for-arlette-in-the-west-of-the-fiorwoods" class="walkthrough-section">
+    <QuestStep id="search-for-arlette-in-the-west-of-the-fiorwoods" title="Search for Arlette in the west of the Fiorwoods">
+      <p>It seems Arlette disappeared. Hmm. Remember her? I thought she was the kid in the artwork of the game. Nope, that was Amalia!</p>
+
+      <p>Leave Iden through the northern exit and follow the path west until you reach the area with the quest marker. As you get here go ahead and kill the 2 Forest Wyrms that are near the entrance and a scene will play where we find Arlette. She'll run away from us. Dang it!</p>
+
+      <p>Go ahead and fast travel to the crystal to our south and follow this path. As you go south you'll see a path going left across the river. Go across and enter the house.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/b/bd/Ce_583.jpg/730px-Ce_583.jpg" alt="House across the river" />
+
+      <p>In here we'll find none other than... Raphael? I though he died! Enjoy the scenes that play out here and we'll end up back in Iden with more scenes playing. It seems Arlette... ran away again, and this time she went to Kortara.</p>
+    </QuestStep>
+  </section>
+
+  <section id="find-arlette-in-kortara" class="walkthrough-section">
+    <QuestStep id="find-arlette-in-kortara" title="Find Arlette in Kortara">
+      <p>Fast travel to the bottom crystal and fly east. You want to investigate the large open area on the northeastern side of the marked area. You'll see there's a little interact button on the ground.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/0/08/Ce_584.jpg/730px-Ce_584.jpg" alt="Interact button on the ground" />
+
+      <p>As you land some more scenes play out where we find Raphael with Arlette. Enjoy the scenes here as both of them end up in an underground cave. Damn. We'll also be in control of Raphael here. Nice! Raphael, just like Egyl, is a tank so learn skills accordingly. Of course you'll also want to get a bunch of HP, DEF and MIND.</p>
+    </QuestStep>
+  </section>
+
+  <section id="collect-food-4-and-bring-it-to-arlette-afterwards" class="walkthrough-section">
+    <QuestStep id="collect-food-4-and-bring-it-to-arlette-afterwards" title="Collect food (4) and bring it to Arlette afterwards">
+      <p>Now head east and you'll spot a mushroom. Go ahead and pick it up. This is food for Arlette.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/5/5c/Ce_585.jpg/730px-Ce_585.jpg" alt="Mushroom food for Arlette" />
+
+      <p>Head right to a fork. We can't go east right now so head north while you keep an eye on the right wall. We can go through. Go through to find a chest with <strong>Meal x5</strong> and a mushroom.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/4/4d/Ce_586.jpg/730px-Ce_586.jpg" alt="Chest with Meal x5 and mushroom" />
+
+      <p>Return west and go north and west, then north again to find another mushroom. From here go left, go around the river and follow it south to find the last mushroom. Return to Arlette now to give her the food.</p>
+    </QuestStep>
+  </section>
+
+  <section id="find-a-way-out" class="walkthrough-section">
+    <QuestStep id="find-a-way-out" title="Find a way out">
+      <p>After a little scene it'll be time to get out of here. Head all the way east to where we couldn't go before and you'll now have to fight several bats. It's one at a time and your HP and TP will refill after every fight so it's impossible for you to fail.</p>
+
+      <p>After the fights watch the scenes as we'll be back in Iden where Raphael officially joins the party. Nice! The sidequest will also end here, which is really nice.</p>
+    </QuestStep>
+  </section>
+
+  <NextSteps links={[{ href: "/sidequests/falfalaran-sings-the-fairy", label: "Falfalaran Sings the Fairy" }]} />
+</WalkthroughLayout>

@@ -1,0 +1,108 @@
+---
+import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import Image from "../../components/Image.astro";
+import MediaGrid from "../../components/MediaGrid.astro";
+import NextSteps from "../../components/NextSteps.astro";
+import StoryBlurb from "../../components/StoryBlurb.astro";
+import BossFight from "../../components/BossFight.astro";
+import Video from "../../components/Video.astro";
+
+const sections = [
+  { id: "talk-to-the-client-in-the-west-of-tormund", title: "Talk to the client in the west of Tormund", label: "Talk to the client in the west of Tormund" },
+  { id: "head-to-the-briefed-location-in-the-fiorwoods", title: "Head to the briefed location in the Fiorwoods", label: "Head to the briefed location in the Fiorwoods" },
+  { id: "find-your-way-through-the-inner-sanctum", title: "Find your way through the Inner Sanctum", label: "Find your way through the Inner Sanctum" },
+  { id: "head-into-the-helaifa-free", title: "Head into the Helaifa Free", label: "Head into the Helaifa Free" }
+];
+---
+
+<WalkthroughLayout title="Falfalaran Sings the Fairy Walkthrough" guideId="falfalaran-sings-the-fairy" sections={sections}>
+  <StoryBlurb>
+    <em>A shady merchant in Tormund wants you to escort him to the Inner Sanctum.</em>
+  </StoryBlurb>
+
+  <Image src="https://cdn.staticneo.com/ew/thumb/c/cb/Ce_574.jpg/730px-Ce_574.jpg" alt="Falfalaran Sings the Fairy Walkthrough" />
+
+  <p>You can start this quest after the main quest <a href="/walkthrough/chained-echoes">Chained Echoes</a>. Once you've complete it fast travel to Tormund and approach the notice board outside the Adventurer's Guild to trigger a scene and start the quest proper.</p>
+
+  <Image src="https://cdn.staticneo.com/ew/thumb/c/ca/Ce_573.jpg/730px-Ce_573.jpg" alt="Notice board in Tormund" />
+
+  <section id="talk-to-the-client-in-the-west-of-tormund" class="walkthrough-section">
+    <QuestStep id="talk-to-the-client-in-the-west-of-tormund" title="Talk to the client in the west of Tormund">
+      <p>Head on over to the western side of Tormund now and enter the upper right house. Inside move inside the room in front of you to trigger a scene with Radhat, the person who wants us to help him out. After a little talk, we'll agree to help him out since we need the money. Hmm.</p>
+    </QuestStep>
+  </section>
+
+  <section id="head-to-the-briefed-location-in-the-fiorwoods" class="walkthrough-section">
+    <QuestStep id="head-to-the-briefed-location-in-the-fiorwoods" title="Head to the briefed location in the Fiorwoods">
+      <p>Fast travel to the bottom left crystal and make your way south and around towards the marker. You'll find Radhat and his crew here all ready to leave.</p>
+
+      <MediaGrid columns={2}>
+        <Image src="https://cdn.staticneo.com/ew/thumb/6/64/Ce_575.jpg/326px-Ce_575.jpg" alt="Radhat and his crew 1" />
+        <Image src="https://cdn.staticneo.com/ew/thumb/a/af/Ce_576.jpg/326px-Ce_576.jpg" alt="Radhat and his crew 2" />
+      </MediaGrid>
+    </QuestStep>
+  </section>
+
+  <section id="find-your-way-through-the-inner-sanctum" class="walkthrough-section">
+    <QuestStep id="find-your-way-through-the-inner-sanctum" title="Find your way through the Inner Sanctum">
+      <p>We are to get to the next area. This is one huge area full of forks and intertwined paths. There's also no map so read carefully. The enemies you fight here are a bit dangerous as well so make sure to save your game before fighting them... JUST in case.</p>
+
+      <p>Follow the path from where we start and right after the Blow Fish enemies you'll have 2 paths. Follow the path on the right to reach a fork. Go north all the way first for a chest with <strong>Orichalcum x3</strong>. Return to the first fork and go right to reach another chest, this one with <strong>Modal Fiber x4</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/b/bc/Ce_577.jpg/730px-Ce_577.jpg" alt="Inner Sanctum fork" />
+
+      <p>Return to the fork and go left now. Grab the <strong>crystal source</strong> as you go and soon after you'll see a spot where you can climb down. Go down and go left (right takes you back to the start). Go down at the next fork to find a chest with <strong>Adamantite x2</strong>. Return to the previous fork and go left then down to reach a larger area. There are some Blow Fish here so fight them if you want then open the chest past them for <strong>Scholar's Habit</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/a/a9/Ce_578.jpg/730px-Ce_578.jpg" alt="Chest with Scholar's Habit" />
+
+      <p>Head north now back onto the wooden platform and climb the wall when you see it to get the <strong>crystal source</strong> on your left. From this fork go right and up right away to find a chest with <strong>Repair Kit DX</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/f/f4/Ce_579.jpg/730px-Ce_579.jpg" alt="Chest with Repair Kit DX" />
+
+      <p>Return to the crystal source and go north now. Go down the wall when you get to it and you'll reach the end of the area where there are some Blow Fish waiting for you. Kill them and head north into the next area.</p>
+
+      <p>Here you'll see that there's a little village. Head to the northern part of it to trigger a scene. It seems the Faeries live here! And they are NOT happy!</p>
+    </QuestStep>
+  </section>
+
+  <section id="head-into-the-helaifa-free" class="walkthrough-section">
+    <QuestStep id="head-into-the-helaifa-free" title="Head into the Helaifa Free">
+      <p>Go ahead and head north into the tree once you regain control and inside save your game and prepare yourself. Once ready head through the tree to trigger a scene with the Queen of the Faeries. Here we see Magnolia is also a Faerie! Eventually the Queen will ask you to move. This changes a couple of things (spoilers for what happens by the way):</p>
+
+      <ul>
+        <li>If you let her pass she'll kill Radhat then you have to fight the Queen.</li>
+        <li>If you fight her here Radhat and his goons will kill all the small Faeries outside but they'll still die.</li>
+      </ul>
+
+      <p>Either way, Radhat dies here but it's up to you whether the Faeries live. I did this fight 4 times for all the different options and, besides the Faeries living, I didn't see any other change. If you let them live and you go back to the Inner Sanctum they'll be gone so pick whichever one you feel is better for you. You'll have to fight the Queen regardless.</p>
+
+      <BossFight title="FAIRY QUEEN">
+        <Video id="MjIpFydZQTM" title="Fairy Queen Boss Fight" />
+        
+        <p>Ready for a really easy fight? Let's do this!</p>
+        
+        <p>For starters, she acts twice per turn. Nice. The only attack I saw her do is Blinding Wings. This hits all the party for around 45 dmg. and she usually uses it twice for a total of ~90 dmg. This sounds like a lot of damage, but know that it's the only source of damage you'll take so Victor can easily heal you up. Of course this damage is before Victor buffs you up and Glenn debuffs the boss, so you can expect like 60-70 dmg. total.</p>
+        
+        <p>The boss does have other moves like charm and lullaby but you'll hardly ever see them (I saw them once in the 4 times I did the fight). The other move is when she summons a Thorn Flower. This thing is basically a bomb when it explodes, hitting all your characters pretty hard. It's also super tanky for what it is. I personally decided to ignore it and go full ham on the boss to kill her before the bomb went off.</p>
+        
+        <p>For the fight, it's pretty much all the same. Glenn and Victor with the buffing/debuffing and healing, Mikah can buff your party's speed then switch out for Sienna or whoever else you have and have them attack nonstop. The boss has no weaknesses or resistances so any element is good against her, which means Lenne is as good as always.</p>
+        
+        <p>This boss doesn't really do anything different that other bosses haven't done before.</p>
+        
+        <ul>
+          <li><strong>Blinding Wings</strong>: Hits all party members for around 45 dmg.</li>
+          <li><strong>Summoning Thorn Flower</strong>: summons a thorn flower.</li>
+          <li><strong>Charm</strong>: charms one character.</li>
+          <li><strong>Lullaby</strong>: puts to sleep one character.</li>
+        </ul>
+      </BossFight>
+
+      <p>After the fight watch the scenes where Magnolia will be heartbroken no matter what, but she asks us about joining the guild. Of course we say yes! She joins our guild AND our party! She's the one that uses the card weapon in case you were wondering who used those weapons haha.</p>
+
+      <p>And that's about it! Magnolia will join our party and we'll be back at our island automatically. Nice!</p>
+    </QuestStep>
+  </section>
+
+  <NextSteps links={[{ href: "/sidequests/no-place-for-happy-endings", label: "No Place for Happy Endings" }]} />
+</WalkthroughLayout>

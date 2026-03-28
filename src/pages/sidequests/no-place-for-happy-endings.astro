@@ -1,0 +1,66 @@
+---
+import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import Image from "../../components/Image.astro";
+import NextSteps from "../../components/NextSteps.astro";
+import StoryBlurb from "../../components/StoryBlurb.astro";
+
+const sections = [
+  { id: "talk-to-thoma-in-flandern", title: "Talk to Thoma in Flandern", label: "Talk to Thoma in Flandern" },
+  { id: "storm-the-castle", title: "Storm the Castle", label: "Storm the Castle" }
+];
+---
+
+<WalkthroughLayout title="No Place for Happy Endings Walkthrough" guideId="no-place-for-happy-endings" sections={sections}>
+  <StoryBlurb>
+    <em>Robb and his father got some serious relationship issues. Will the party be able to fix it?</em>
+  </StoryBlurb>
+
+  <Image src="https://cdn.staticneo.com/ew/thumb/7/7a/Ce_700.jpg/730px-Ce_700.jpg" alt="No Place for Happy Endings Walkthrough" />
+
+  <p>For the sidequest to appear just go to Flandern in Kortara and approach the center near the crystal. After the little scene head on over to Rockbottom and head east to the marker and go inside the house to trigger another scene and then the quest proper will start.</p>
+
+  <section id="talk-to-thoma-in-flandern" class="walkthrough-section">
+    <QuestStep id="talk-to-thoma-in-flandern" title="Talk to Thoma in Flandern">
+      <p>Once the quest starts head on over to Flandern and go west to find Thoma. Go ahead and talk to him.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/f/f5/Ce_701.jpg/730px-Ce_701.jpg" alt="Thoma in Flandern" />
+
+      <p>After the scene we'll finally be able to go to the northwestern area of Kortara. It's the last area we've yet to explore!</p>
+    </QuestStep>
+  </section>
+
+  <section id="storm-the-castle" class="walkthrough-section">
+    <QuestStep id="storm-the-castle" title="Storm the Castle">
+      <p>Head north from Flandern to reach the Castle grounds. As you go head north a little bit, kill the soldiers and before you cross the bridge go left to find a chest with <strong>Devil's Head</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/0/05/Ce_702.jpg/730px-Ce_702.jpg" alt="Chest with Devil's Head" />
+
+      <p>Head north now and before you go through the main gate go right and go into the cave you see to find a chest inside with <strong>Silver bolero</strong>. Don't jump down.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/6/6d/Ce_703.jpg/730px-Ce_703.jpg" alt="Chest with Silver bolero" />
+
+      <p>Return and now go through the gate. There'a lot of paths here. Going north up the stairs is the way to the end so we want to leave that for last. Instead go inside the building on the far left side and follow this straightforward path until you reach a chest with <strong>Titan Leather x3</strong>.</p>
+
+      <p>Return to the entrance and enter the door to the door that's next to the one you just took. Go through the building, kill the enemies in the back and go up the ladder. Up here ignore the door and go right until you spot a spot where you can jump down. Do so and go northeast to find a golden chest with <strong>Soul of Farnese</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/2/2c/Ce_705.jpg/730px-Ce_705.jpg" alt="Golden chest with Soul of Farnese" />
+
+      <p>Head back south and enter the cave. Follow the path in here and at the fork go south and back outside. We're next to the staircase going up to the end! It's good to be back. Now go to the far right. Enter the building here, kill the enemies and go right to find a chest back outside with <strong>Adamantite</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/9/95/Ce_704.jpg/730px-Ce_704.jpg" alt="Chest with Adamantite" />
+
+      <p>Head back inside and go north and exit through this side. Follow this path, go up the ladder when you reach it and jump across the gap to the left to find a chest with <strong>Rhongomiant</strong>. From here go ahead and use the ledge to the northeast to jump to the grassy area down below. Nice!</p>
+
+      <p>And with that we can NOW go up the main staircase.</p>
+
+      <p>Inside head north, kill the enemies blocking your way and head up the stairs to the next floor. Up here ignore the door on the left (takes you back outside) and instead head up the stairs. On the roof go right, jump down and go inside the door on the right.</p>
+
+      <p>Head north in here to trigger some scenes between Robb and his dad. Damn what a piece of human garbage. Eventually we'll end up fighting Thoma and his sidekick. This is pretty much like a regular fight to be honest. Remember he has his bomb so make sure it's close to him before the bomb's turn comes up.</p>
+
+      <p>After the fight several scenes will take place and the sidequest will come to an end. You'll also get the <strong>Rusty Bow</strong> weapon, which is used for Robb's ultimate weapon.</p>
+    </QuestStep>
+  </section>
+
+  <NextSteps links={[{ href: "/sidequests/two-winged-angel", label: "Two-Winged Angel" }]} />
+</WalkthroughLayout>

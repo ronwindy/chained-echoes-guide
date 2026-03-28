@@ -1,0 +1,72 @@
+---
+import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import Image from "../../components/Image.astro";
+import Tip from "../../components/Tip.astro";
+import NextSteps from "../../components/NextSteps.astro";
+import StoryBlurb from "../../components/StoryBlurb.astro";
+
+const sections = [
+  { id: "take-a-look-at-the-black-market", title: "Take a look at the Black Market", label: "Take a look at the Black Market" },
+  { id: "head-for-norgants-camp", title: "Head for Norgant's camp", label: "Head for Norgant's camp" },
+  { id: "pay-up-for-the-seraph-armor", title: "Pay up for the Seraph Armor", label: "Pay up for the Seraph Armor" }
+];
+---
+
+<WalkthroughLayout title="Two-Winged Angel Walkthrough" guideId="two-winged-angel" sections={sections}>
+  <StoryBlurb>
+    <em>Your party was allowed access into the black market of Wyrnshire. What will you find there?</em>
+  </StoryBlurb>
+
+  <Image src="https://cdn.staticneo.com/ew/thumb/f/f1/Ce_565.jpg/730px-Ce_565.jpg" alt="Two-Winged Angel Walkthrough" />
+
+  <p>You can start this quest after the main quest <a href="/walkthrough/chained-echoes">Chained Echoes</a>. Once you've complete it fast travel to New Wyrnshire and approach the blonde man with brown vest in the northeastern corner of the city.</p>
+
+  <Image src="https://cdn.staticneo.com/ew/thumb/f/f1/Ce_566.jpg/730px-Ce_566.jpg" alt="Blonde man with brown vest" />
+
+  <section id="take-a-look-at-the-black-market" class="walkthrough-section">
+    <QuestStep id="take-a-look-at-the-black-market" title="Take a look at the Black Market">
+      <p>Now that we have access to the black market, remember that building to the south that wouldn't open? Head down there and we can now go inside. Go inside and you can find several merchants. Seems like they all see the same materials (which is great to upgrade our equipment, but what you really want is to approach the merchant in the upper left corner to trigger a little scene. It seems this man has knowledge on Sky Armors... and it seems it's a Seraph Armor. Nice!</p>
+    </QuestStep>
+  </section>
+
+  <section id="head-for-norgants-camp" class="walkthrough-section">
+    <QuestStep id="head-for-norgants-camp" title="Head for Norgant's camp">
+      <p>Remember that bandit from Rockbottom? Yeah, we're going to go talk to him. Fast travel to the southern crystal in Kortara and fly north to the central area. Get off your Sky Armor (or in hover mode) cross the bridge going east and a scene will play where we're not allowed entrance. Dammit. Sienna, being that she's a thief, will get us inside. We're now playing as her.</p>
+
+      <p>Go down the wall to the right and into the cave.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/9/9a/Ce_567.jpg/730px-Ce_567.jpg" alt="Cave entrance" />
+
+      <p>Note that this is a part where you need to navigate yourself through this area blind. There are 4 exits of this tunnel (also counting where we're going in). Avoid going directly north and to the upper left exit. Instead you want to go for the bottom left exit.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/1/1d/Ce_568.jpg/730px-Ce_568.jpg" alt="Bottom left exit" />
+
+      <p>Go up the wall here and head north but wait for the bandit to also look north so you can slip past him.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/e/e1/Ce_569.jpg/730px-Ce_569.jpg" alt="Sneak past the bandit" />
+
+      <p>Once you do and cross the bridge you'll have a ton of bandits up ahead. The one on the left has sunglasses on. He's sleeping. Head west past him and grab the chest with <strong>Norgant's Key</strong>, but a scene will play out before you're able to get it.</p>
+
+      <p>Grab the key, return to the bridge and we now want to go east past the 2 bandits. Here you'll have to time yourself and cross when both are looking east. Note that they have different timings so be careful.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/f/fb/Ce_570.jpg/730px-Ce_570.jpg" alt="Timing slip past bandits" />
+
+      <p>Up here you'll find a door. Go ahead and open it to find an actual cave. Go left at the fork to open the back entrance for the rest. Head north now and exit this cave to find our Seraph Armor. It's tied up to a floating rock but it looks awesome!</p>
+
+      <p>Sadly Norgant catches us and... nah, no boss fight. He'll actually sell it to us for 50,000 arc... that's it? No trickery here! At this point I had almost 100k so it was an easy purchase.</p>
+    </QuestStep>
+  </section>
+
+  <section id="pay-up-for-the-seraph-armor" class="walkthrough-section">
+    <QuestStep id="pay-up-for-the-seraph-armor" title="Pay up for the Seraph Armor">
+      <Tip type="note">
+        before you spend your money on it I HIGHLY recommend you go get that Unique Monster in Shambala, the one that requires 100k arc for it to appear. If you fought it already then go ahead and continue.
+      </Tip>
+
+      <p>Head back outside the cave and go talk to Norgant. Tell him you want to buy the Seraph Armor and you'll strike a deal with him, netting you an incredibly powerful chassis for your Sky Armor and the end of the sidequest. Congrats!</p>
+    </QuestStep>
+  </section>
+
+  <NextSteps links={[{ href: "/", label: "Return to Home" }]} />
+</WalkthroughLayout>
