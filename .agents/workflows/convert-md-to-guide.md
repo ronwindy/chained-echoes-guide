@@ -30,6 +30,7 @@ Follow these steps to convert a markdown file into an Astro walkthrough guide:
 2. **Page Wrapper**: Create the `.astro` file wrapper:
    - Import `WalkthroughLayout` and needed components (`QuestStep`, `Image`, `Video`, `Tip`, `BossFight`, `MediaGrid`, `NextSteps`, `StoryBlurb`).
    - Map `<h2>` headers into the `sections` array and use `<WalkthroughLayout>`.
+   - Always include a relevant `subtitle` prop in `<WalkthroughLayout>` (e.g., 'MAIN QUEST WALKTHROUGH' or 'SIDE QUEST WALKTHROUGH').
 3. **Global Content Introduction**: Wrap story text in `<StoryBlurb>` and cover the text inside with an `<em>` tag.
 4. **Sections Mapping**:
    - Wrap top-level regions in `<section id="ID" class="walkthrough-section">`.
