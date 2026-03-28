@@ -8,13 +8,18 @@
     max-width: 800px;
     margin: 0 auto 4rem;
     padding: 2.5rem;
-    background: linear-gradient(145deg, rgba(226, 180, 59, 0.05), rgba(226, 180, 59, 0.02));
+    background: linear-gradient(
+      145deg,
+      rgba(226, 180, 59, 0.05),
+      rgba(226, 180, 59, 0.02)
+    );
     border-radius: 16px;
     border: 1px dashed rgba(226, 180, 59, 0.3);
     position: relative;
   }
 
-  .story-blurb::before, .story-blurb::after {
+  .story-blurb::before,
+  .story-blurb::after {
     content: "“";
     position: absolute;
     font-size: 4rem;
@@ -43,5 +48,22 @@
   :global(.story-blurb em) {
     color: var(--accent-gold);
     font-style: italic;
+  }
+
+  :global(.story-blurb ul),
+  :global(.story-blurb ol) {
+    text-align: left;
+    max-width: 600px;
+    margin: 1.5rem auto;
+    padding-left: 1.5rem;
+  }
+
+  :global(.story-blurb li) {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+
+  :global(.story-blurb li strong) {
+    color: var(--text-primary);
   }
 </style>

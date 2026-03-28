@@ -1,0 +1,577 @@
+---
+import StoryBlurb from "../../components/StoryBlurb.astro";
+import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import Image from "../../components/Image.astro";
+import Video from "../../components/Video.astro";
+import BossFight from "../../components/BossFight.astro";
+import Tip from "../../components/Tip.astro";
+
+const baseUrl = import.meta.env.BASE_URL;
+
+const sections = [
+  { id: "head-for-the-teleporter", label: "Head for the teleporter" },
+  {
+    id: "empyrean-ruins",
+    label: "Empyrean Ruins",
+    subsections: [
+      {
+        id: "reach-the-inner-chamber",
+        label: "Reach the inner chamber of the ruins",
+      },
+      { id: "follow-the-voice", label: "Follow the voice" },
+    ],
+  },
+];
+---
+
+<WalkthroughLayout
+  title="Ruins Under a Tree"
+  subtitle="The Sanctuary of Shambala has been found. Now on to lifting its secret."
+  sections={sections}
+>
+  <StoryBlurb>
+    <p>
+      The Sanctuary of Shambala has been found. Now on to lifting its secret.
+    </p>
+  </StoryBlurb>
+
+  <section id="head-for-the-teleporter" class="walkthrough-section">
+    <h2 class="section-title">Head for the teleporter</h2>
+    <div class="step-content">
+      <p>
+        As we regain control go ahead and leave the village so you can get on
+        your SA then head to the far north where the first cannon was. Remember
+        that green square on the ground? That's our teleporter.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/e/ed/Ce_494.jpg/730px-Ce_494.jpg"
+        alt="Teleporter location"
+      />
+      <p>
+        As you get close to it some scenes will play out and we'll be in a brand
+        new area!
+      </p>
+    </div>
+  </section>
+
+  <section id="empyrean-ruins" class="walkthrough-section">
+    <h2 class="section-title">Empyrean Ruins</h2>
+
+    <QuestStep
+      id="reach-the-inner-chamber"
+      title="Reach the inner chamber of the ruins"
+    >
+      <p>
+        The scenes from before will continue here but we'll eventually regain
+        control. Head forward and go inside the ruins. In here go up the hallway
+        and we'll reach an open room with a puzzle! So that's why we were doing
+        them back then!
+      </p>
+      <p>
+        Time to move the orbs onto the golden place. Try doing it by yourself
+        but if you can't then follow the following directions:
+      </p>
+      <p>
+        Move the left orb right to destroy the block, then push the right orb
+        up, then right, then down. For the other orb go up then right. Super
+        simple but looks more complicated because there's a bunch of blocks.
+      </p>
+      <p>
+        Continue north to reach an outdoor area. As we move north Thraz will
+        tell us we need to activate both switches to open the gate. Time to go
+        find them. Let's start by going right. Go right and jump down into the
+        water. From here go south first and get out of the water to find a chest
+        with <strong>Decorated Vest</strong>.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/7/76/Ce_495.jpg/730px-Ce_495.jpg"
+        alt="Decorated Vest chest location"
+      />
+      <p>
+        Return back up to where you jumped down and get out the right side. As
+        you do you'll have some enemies to the right. Be careful because these
+        guys are strong. They are also special. The ones with the blue eye are
+        weaker to magical attacks while the red ones are just a bit weaker to
+        physical, but not by much.
+      </p>
+      <p>
+        Head north after the fight and back into the water we go. Go north and
+        look at the little waterfall to find a hidden cave. Head inside to find
+        a chest with <strong>Refined Gunspear</strong>.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/1/16/Ce_496.jpg/730px-Ce_496.jpg"
+        alt="Refined Gunspear chest location"
+      />
+      <p>
+        Back outside go right and out of the water then make your way north.
+        There are no items on the way but at the far north you'll find more
+        enemies and a new one, the <strong>Golem</strong>. This guy can actually
+        pack a punch so I recommend you either use Glenn's Ultra Move or lower
+        the Golem's ATK ASAP.
+      </p>
+      <p>
+        After the fight cross the bridge and get into the water. We are to go
+        south but before we do head north and go under the bridge to find a
+        chest with <strong>Parade Armor</strong>.
+      </p>
+      <div
+        class="media-grid"
+        style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1.5rem 0;"
+      >
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/8/81/Ce_497.jpg/326px-Ce_497.jpg"
+          alt="Parade Armor chest"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/b/b5/Ce_498.jpg/326px-Ce_498.jpg"
+          alt="Parade Armor chest second view"
+        />
+      </div>
+      <p>
+        Return and go south and down the little waterfall now and enter the
+        ruins on the left to find your first switch. Go ahead and step on it.
+        Once you do head back outside, get in the water and head south down the
+        waterfalls. After that go back to the start and let's go explore the
+        western side of the area.
+      </p>
+      <p>
+        As you go you'll see a red statue with some red spikes behind it. Before
+        you do anything with it to the left is a chest behind those red circles
+        on the ground with <strong>Monster Fangs x3</strong>.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/0/0e/Ce_499.jpg/730px-Ce_499.jpg"
+        alt="Monster Fangs chest location"
+      />
+      <p>
+        Now go ahead and hit the statue... it changes the position of the
+        spikes. This will be handy. Continue north and go left to find a pair of
+        Golems. Destroy them and go south from the fight to find a chest with <strong
+          >Meal x3</strong
+        >.
+      </p>
+      <p>
+        Return and continue west to find a "puzzle". Hit the yellow statue on
+        the left, then the one on the right... and continue north to reach a
+        fork. Destroy the Golems and go left first to find a chest inside the
+        ruins with <strong>Kerberos FK300</strong>, another awesome SA upgrade!
+        This one went straight to Sienna!
+      </p>
+      <p>
+        Return and go right now. Check the bottom of the screen to find a red
+        statue. Hit it then go north, hit the yellow statue then hit the red
+        statue again. Head inside the ruins and step on the switch. Once you do
+        head south and go back to where the gate was Go through it to reach
+        another puzzle.
+      </p>
+      <p>
+        This puzzle is simple so read how to do it: push the left orb left then
+        up. Push the right orb left then up so that they're together. Now push
+        the bottom orb right to the blue block then up into the breakable block.
+        Once done this push the left orb right into the right orb, then push
+        them both down onto the golden plate. This grants you access to the next
+        area.
+      </p>
+      <p>
+        We are outside and very high! I thought we were back on the ground.
+        Anyway, head north to trigger some scenes where we see some Golems
+        tending to the fields and fishing. Nice. Once you can move head over to
+        the left side to find a metal chest, this one with <strong
+          >Agamemnon FA300</strong
+        >. After this, follow the stream (if you can call it that) north to a
+        small semi-hidden cave entrance. Inside, you will find two <strong
+          >crystal sources</strong
+        >.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/5/50/Ce_500.jpg/730px-Ce_500.jpg"
+        alt="Crystal sources location"
+      />
+      <p>
+        There's nothing on the right side so go ahead and go north through the
+        entrance to the next area. Here there are no enemies but there are some
+        chests. Start by flying right and you'll be able to spot a metal chest
+        next to the water with <strong>Glaive V300</strong>, another neat
+        upgrade for my Sienna.
+      </p>
+      <p>
+        From here head to the little square area to the northeast where you can
+        find a chest with <strong>Ovelia FO300</strong>.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/3/34/Ce_501.jpg/730px-Ce_501.jpg"
+        alt="Ovelia FO300 chest location"
+      />
+      <p>
+        Head to the western side and you'll spot a pair of large gorillas. Fight
+        them with your SAs and open the chest they were guarding for <strong
+          >Sword & Shield S300</strong
+        >.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/0/06/Ce_502.jpg/730px-Ce_502.jpg"
+        alt="Sword & Shield S300 chest location"
+      />
+      <p>
+        Directly north is another chest with <strong>Ether Cannon E300</strong>,
+        but this one is guarded by a dragon. Not a hard fight. And from here
+        simply proceed north to the next area.
+      </p>
+      <p>
+        Past the hallway we'll be back outside but we can't use our Sky Armors.
+        Dang it. From where we start go north first and into the ruins. This
+        leads to an area that has a chest with <strong>Fine Wool x5</strong> and we
+        can board our SAs here. Do so and go directly west to find a little chest
+        with <strong>Ley Line Coat</strong>.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/c/c5/Ce_503.jpg/730px-Ce_503.jpg"
+        alt="Ley Line Coat chest location"
+      />
+      <p>
+        Directly south is the way forward but we need to land to the southern
+        area, kill the gorillas and move forward. Once in the other area get
+        back on your SAs. The island directly west of the entrance has a metal
+        chest with <strong>Hammer & Shield H300</strong>, a very nice upgrade.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/d/da/Ce_504.jpg/730px-Ce_504.jpg"
+        alt="Hammer & Shield H300 chest location"
+      />
+      <p>
+        Go over to the eastern isles and you'll find 2 metal chests. We can only
+        grab the bottom one right now, which has <strong>Bowgun B300</strong>.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/2/23/Ce_505.jpg/730px-Ce_505.jpg"
+        alt="Bowgun B300 chest location"
+      />
+      <p>
+        We'll need to find a way to get the other one. Return to the entrance
+        and go north to find a pair of dragons. You have to go west to enter
+        hover mode, then go kill them. Afterwards head north to a larger area.
+        Grab the <strong>crystal source</strong> to the left then you'll see there's
+        a path going left behind the building. Follow it to find a metal chest with
+        <strong>Merlin FM300</strong>, another great upgrade.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/8/8f/Ce_506.jpg/730px-Ce_506.jpg"
+        alt="Merlin FM300 chest location"
+      />
+      <p>
+        Return and now head right and kill the gorillas here. Get off your SAs
+        and go right to find yet another metal chest, this one with <strong
+          >Paris FP300</strong
+        >. Before you leave this little area look on the southern edge to find a
+        spot where you can jump down. Jump down to reach that metal chest we
+        didn't get before for <strong>Dayajir</strong>. This seems to be a
+        unique chassis for your Sky Armors and it looks pretty dope. It's also
+        meant more for whoever is your magic user.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/2/20/Ce_507.jpg/730px-Ce_507.jpg"
+        alt="Dayajir chest location"
+      />
+      <p>
+        Return to where you fought the gorillas, get back on your SAs and head
+        north now to fight a dragon and a pair of gorillas. Head into the ruins
+        after the fight to find yet another puzzle with orbs. This one took me a
+        minute but do the following:
+      </p>
+      <p>
+        Move the left orb down to break a block, then push it back up and right
+        onto the golden plate. For the right orb, move it right, down, left, up,
+        and right onto the golden plate. Easy! Head north and back outside save
+        your game, get on your SAs and continue north to trigger a scene and a
+        boss fight!
+      </p>
+
+      <BossFight title="SHAVED HEAD">
+        <Video id="265DhZ6SZu0" title="Shaved Head Boss Fight" />
+        <p>
+          Did you miss having a hard boss? No, me neither. This is also a Sky
+          Armor fight so it's extra hard haha.
+        </p>
+        <p>
+          To begin with, the boss can act twice so that means keeping your OD
+          gauge in check and mostly being in Gear 2 to keep the gauge going
+          down. That's not it though, but the big thing is that near the end of
+          the fight, once you drop the boss to a certain amount of HP, he'll
+          stop attacking and prepare an attack that will end the fight at the
+          end of the countdown.
+        </p>
+        <p>
+          Despite the boss hitting pretty hard, he has some very annoying
+          skills, namely Stone Coat. This creates a barrier that completely
+          protects the boss for like 5 turns from every attack. This is annoying
+          and multi hit attacks don't count as many, just as 1 attack.
+        </p>
+        <p>
+          So for this fight you'll want to have Victor on super healing duty.
+          Having heal nonstop while you try to sneak in a defense down attack.
+          Keep your damage dealers in Gear 2 for the most party to counter the
+          boss' double turn but also have them go back to Gear 0 to regain their
+          TP while you have your other party members go up to Gear 2 to keep the
+          gauge down while the damage dealers are "healing".
+        </p>
+        <p>
+          Once the boss starts to prepare its ultimate attack, there's no need
+          to heal. Go all out and do as much damage as you can to deal with the
+          boss. Have your healer use items to heal TP for the damage dealers if
+          needed, and in case of Victor, if you haven't changed his weapons,
+          drop the boss' defense to increase the damage. Again, an MMO's "DPS
+          check" in a raid boss. If you don't have enough damage you're dead.
+          Hmm. You should be find since they give you plenty of time.
+        </p>
+        <ul>
+          <li>
+            <strong>Attack</strong>: hits one character for around 1000 dmg.
+          </li>
+          <li>
+            <strong>Stomping Hand</strong>: hits 5 times randomly for around 600
+            dmg. each hit.
+          </li>
+          <li>
+            <strong>Stone Coat</strong>: creates a barrier that prevents all
+            damage until broken. Lasts for around 5 hits.
+          </li>
+          <li>
+            <strong>Preparing Ancient Magic</strong>: prepares an attack (takes
+            3 turns) that ends the fight and gives you a game over.
+          </li>
+        </ul>
+      </BossFight>
+
+      <p>
+        After the fight head inside the ruins to trigger some more scenes.
+        Remember that huge stone slab we saw in Shambala? There are more here.
+        Lenne manages to read them so enjoy the scenes that play out here.
+      </p>
+      <p>
+        Once the scenes are over (everything's super interesting!) simply head
+        north up the stairs and into the next area.
+      </p>
+    </QuestStep>
+
+    <QuestStep id="follow-the-voice" title="Follow the voice">
+      <p>
+        We have a much larger area to explore here. You'll see there are some
+        blue spikes blocking our way to the right. Go up the stairs to find a
+        merchant at the top. Make use of him (that sounded so bad haha) and to
+        the right is a red and yellow statue. Go past them and go up the stairs
+        to the north. Follow this path to find another yellow statue. Go ahead
+        and activate it to move the spikes.
+      </p>
+      <p>
+        Head back and jump down the edge since we just blocked off the stairs.
+        Go south now and as you go east note that you can go north under the
+        passage. Before you do so head east and go up the stairs at the end.
+        Follow this path until it takes you into a room that has a chest with <strong
+          >Rayon Fiber x2</strong
+        >.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/d/d5/Ce_513.jpg/730px-Ce_513.jpg"
+        alt="Rayon Fiber x2 chest location"
+      />
+      <p>
+        Head back down and now go under the passage to fight the Golems. Past
+        the enemies is a fork. Head north first into the building to trigger a
+        scene... a vision of the past. Afterwards head forward and step on the
+        first button. 2 to go.
+      </p>
+      <p>
+        Head back outside and go south now down the stairs. There's a red statue
+        to the right we can't get to right now. Just remember where it is.
+        Continue south and follow this path until you get to the next fork.
+        North is blocked by red spikes so head west past the blocked blue statue
+        and down the stairs to find a yellow statue. Go ahead and interact with
+        it to swap the yellow spikes.
+      </p>
+      <p>
+        Return to where the blue statue was and interact with it. After you do
+        head back east and interact with the red statue we previously passed.
+        Once you do head back south, go up the stairs and head north past where
+        the spikes where blocking us. From here go left and interact with the
+        blue statue. Once you've done this head west and go back up the stairs
+        and hit the yellow statue in the corner (the very first one we hit).
+        Then hit the blue statue once more.
+      </p>
+      <p>
+        With that head back to where the red statue is and we can now go down
+        the stairs. This takes us to 4 chests, these contain <strong
+          >Ambrosia, Runeblade, Paralyze Hit Crystal, and Beleet's Bow</strong
+        >. Awesome upgrades for Glenn and Robb.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/9/9c/Ce_514.jpg/730px-Ce_514.jpg"
+        alt="Ambrosia, Runeblade, Paralyze Hit Crystal, and Beleet's Bow chests"
+      />
+      <p>
+        Return up the stairs, go south and up the stairs. From here go north and
+        interact with the blue statue once again, then go right and around
+        towards the western side to interact with the yellow statue. Lastly,
+        head back right and interact with the blue statue so we can open up the
+        path on the western side. This basically takes us back to the merchant.
+        This wasn't as bad as I thought it was going to be.
+      </p>
+      <p>
+        We can now go to the west side. As you go west you'll go down a
+        staircase. Go down and go south in between that and the one going up. As
+        you follow this path you'll see a staircase going down. Before you go
+        down go right behind the stone archs and interact with the little bird
+        here to pick it up.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/6/64/Ce_515.jpg/730px-Ce_515.jpg"
+        alt="First bird location"
+      />
+      <p>
+        Go down the staircase now to fight some Clock Spiders and grab the <strong
+          >crystal sources</strong
+        > if you wish. Across the water to the north is a chest with <strong
+          >Sweets x2</strong
+        >.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/4/44/Ce_516.jpg/730px-Ce_516.jpg"
+        alt="Sweets x2 chest location"
+      />
+      <p>
+        Return up to where the 2 stairs are and talk to the Golem on the left.
+        He's the one looking for the birds. Well we got one. Head south down the
+        stairs to find another Golem. Talk to him then go south following the
+        path on the right (under theh wall). This leads to our second <strong
+          >bird</strong
+        >.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/e/ef/Ce_517.jpg/730px-Ce_517.jpg"
+        alt="Second bird location"
+      />
+      <p>
+        Return to the Golem and go left to find an arch northwest of the huge
+        face statue. Before you go north under it go left and talk to the Golem
+        over here. He's blocking our way. Hmm. From here though go south and
+        look for a little opening amongst the tree leaves. Follow this path to
+        find the last <strong>bird</strong>.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/2/2d/Ce_518.jpg/730px-Ce_518.jpg"
+        alt="Third bird location"
+      />
+      <p>
+        Return and go north under the arch now. When you reach the water, before
+        you go up the stairs go east first under the bridge to find some Golem
+        enemies. To the north is a little passage with a chest that has <strong
+          >Ancient Skull x6</strong
+        >. Destroy the Golems and Clock Spiders and past them is another Golem.
+        Talk to him so he goes back.
+      </p>
+      <p>
+        Return and now go up the stairs to find yet another Golem. Talk to him
+        and he'll go back as well. Go northwest now to find the final chest with <strong
+          >Defend Gain TP</strong
+        >. And with that head back south to where the Golem was blocking the
+        entrance and we can now go through. Go inside to find our second button.
+        Just one more.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/4/45/Ce_519.jpg/730px-Ce_519.jpg"
+        alt="Second button location"
+      />
+      <p>
+        Head back east and up the stairs to where the Golem looking for the
+        birds is. Give them to him and he'll move out of the way. Head north now
+        and go inside the building to find the final button. Go ahead and step
+        on it.
+      </p>
+      <p>
+        And with that head back east and we can now go through the gate next to
+        the merchant. And of course we have another puzzle. Here's how to do it:
+      </p>
+      <p>
+        Push the left orb right and break the gray block. Push the right orb
+        left into the other orb, then push it up and left into the breakable
+        block. With that block there now push the bottom orb left and up into
+        the orb once again.
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/0/08/Ce_520.jpg/730px-Ce_520.jpg"
+        alt="Puzzle solution step 1"
+      />
+      <p>
+        From here push the bottom orb right first, then push it up. Now push the
+        left orb right into the other orb, then north onto the golden plate. Now
+        for the last orb simply push it right, then up, and left onto the golden
+        plate.
+      </p>
+      <p>
+        Go ahead and head north until you reach a nice room with 8 chests! Yeah,
+        a lot! These contain: <strong
+          >Javelin, Plot Armor, Mythril Ore x10, Wyrm Carapace x7, 5000a, Suport
+          Drones D300, Great Sword GS300, Church Key</strong
+        >. That is A LOT of upgrades!
+      </p>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/2/28/Ce_521.jpg/730px-Ce_521.jpg"
+        alt="8 chests room with Javelin, Plot Armor, Mythril Ore, Wyrm Carapace, 5000a, Suport Drones, Great Sword, Church Key"
+      />
+      <p>
+        Go ahead and equip your new stuff, save your game and head back outside
+        to trigger some scenes and a boss fight!
+      </p>
+
+      <BossFight title="DARK SKY ARMOR">
+        <Video id="S2Sd7FMsOAU" title="Dark Sky Armor Boss Fight" />
+        <p>
+          Ok, this is not really a boss fight, but oh well we might as well
+          consider it one.
+        </p>
+        <p>
+          So, this guy doesn't do much, but what he does is REALLY dangerous.
+          His Pure Terror move inflicts "terrified" status on one character.
+          Egyl tells you that you HAVE to fully heal your party member of
+          they'll die (god this reminds me of DOOM in Final Fantasy XIV haha).
+          Make sure to use items or your skills to fully heal.
+        </p>
+        <p>
+          So for this fight I recommend you equip a weapon that gives you Repair
+          All. This is because the boss will use Pure Terror on everyone. You
+          will need to heal up everyone after this happens. Besides that you can
+          have your main damage dealers do whatever they want/can do deal damage
+          but the ones you really want to worry about are your healer/healers.
+          Try keeping them with enough TP so that they can cast Repair All at
+          least once so you can avoid dying from Pure Terror.
+        </p>
+        <ul>
+          <li>
+            <strong>Pure Terror</strong>: halves the party member with
+            "terrified" and lowers their HP to half.
+          </li>
+          <li>
+            <strong>Attack</strong>: hits 4 times randomly for around 500 dmg.
+            each.
+          </li>
+          <li>
+            <strong>Paralyzing Thunder</strong>: inflicts all party members with
+            paralyze.
+          </li>
+        </ul>
+      </BossFight>
+
+      <p>
+        After the fight we'll have several scenes play out where we'll have more
+        flashbacks of Lenne and Timothy, but this time it's Glenn who's seeing
+        them. Is Glenn Timothy? It definitely has to be, huh?
+      </p>
+      <p>
+        We'll wake up back in our base where we talk about what to do, we see
+        the church... can't say more haha. The quest will come to an end and the
+        next one will start. See you guys there!
+      </p>
+    </QuestStep>
+  </section>
+</WalkthroughLayout>

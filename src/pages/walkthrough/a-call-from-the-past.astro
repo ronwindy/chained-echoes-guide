@@ -1,5 +1,6 @@
 ---
 import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
+import StoryBlurb from "../../components/StoryBlurb.astro";
 import QuestStep from "../../components/QuestStep.astro";
 import Image from "../../components/Image.astro";
 import Video from "../../components/Video.astro";
@@ -7,7 +8,6 @@ import Tip from "../../components/Tip.astro";
 import BossFight from "../../components/BossFight.astro";
 import MediaGrid from "../../components/MediaGrid.astro";
 import NextSteps from "../../components/NextSteps.astro";
-import StoryBlurb from "../../components/StoryBlurb.astro";
 
 const sections = [
   {
@@ -50,7 +50,12 @@ const sections = [
 >
   <!-- STORY BLURB -->
 
-  Lenne sees strange visions from her past. Is it worth pursuing them?
+  <StoryBlurb>
+    <p>
+      <em
+        >Lenne sees strange visions from her past. Is it worth pursuing them?</em>
+    </p>
+  </StoryBlurb>
 
   <!-- PART 1: HERMIT'S ISLE SECTION -->
   <section id="hermits-isle" class="walkthrough-section">

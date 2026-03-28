@@ -1,4 +1,5 @@
 ---
+import StoryBlurb from "../../components/StoryBlurb.astro";
 import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
 
 const sections = [
@@ -16,14 +17,14 @@ const sections = [
 ---
 
 <WalkthroughLayout title="Looking for Allies" sections={sections}>
-  <div class="story-blurb">
+  <StoryBlurb>
     <p>
       <em
         >The group is waiting for Cameron's word. Until then, you should search
         for new clan members.</em
       >
     </p>
-  </div>
+  </StoryBlurb>
 
   <section id="side-quests" class="walkthrough-section">
     <h2 class="section-title">Side quests</h2>

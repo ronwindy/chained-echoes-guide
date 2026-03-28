@@ -1,4 +1,5 @@
 ---
+import StoryBlurb from "../../components/StoryBlurb.astro";
 import WalkthroughLayout from "../../layouts/WalkthroughLayout.astro";
 const baseUrl = import.meta.env.BASE_URL;
 
@@ -21,44 +22,45 @@ const sections = [
   subtitle="Act 2 - The Whole World Opens Up"
   sections={sections}
 >
-  <div class="story-blurb">
+  <StoryBlurb>
     <p>
       Welcome to one of the biggest pages I've written for this guide thus far.
-      We're going to go explore the entire world so be ready. A couple things to
-      note:
     </p>
-    <ul>
-      <li>
-        We'll be getting several sidequests while on this exploration page. I'll
-        be listing them in their own separate pages and will be linking them.
-        Open them up in a new tab if you want/need help with them.
-      </li>
-      <li>
-        We'll be recruiting several people for our island. I will have a page
-        with all of them up so keep an eye there if you need help.
-      </li>
-      <li>
-        There'll be A LOT of fighting. This is 100% optional for you guys but
-        you can always lower the difficulty of the game so that the fights go by
-        much faster. Personally I did this during this whole page <strong
-          >BUT</strong
-        > I have to be clear here: I always fight the enemies first on normal difficulty
-        so I know they're actually killable, and bosses are ALWAYS fought on normal
-        difficulty. Lowering the difficulty is just to make things go faster (you
-        have no idea how many hours it takes to write these haha).
-      </li>
-      <li>
-        Speaking of fighting, make sure to do your Rewards Board, as much as you
-        can do. Note for the challenges where you need to fight enemies you can
-        use your Sky Armors in many cases. Use that to your advantage.
-      </li>
-    </ul>
-    <p>
-      And those are my tips/notes. Do with them as you will. An now though,
-      we're going to go explore. You ready? I hope so because we have a lot to
-      tackle!
-    </p>
-  </div>
+  </StoryBlurb>
+  <p>
+    We're going to go explore the entire world so be ready. A couple things to
+    note:
+  </p>
+  <ul>
+    <li>
+      We'll be getting several sidequests while on this exploration page. I'll
+      be listing them in their own separate pages and will be linking them. Open
+      them up in a new tab if you want/need help with them.
+    </li>
+    <li>
+      We'll be recruiting several people for our island. I will have a page with
+      all of them up so keep an eye there if you need help.
+    </li>
+    <li>
+      <em>There'll be A LOT of fighting</em>. This is 100% optional for you guys
+      but you can always lower the difficulty of the game so that the fights go
+      by much faster. Personally I did this during this whole page <strong
+        >BUT</strong
+      > I have to be clear here: I always fight the enemies first on normal difficulty
+      so I know they're actually killable, and bosses are ALWAYS fought on normal
+      difficulty. Lowering the difficulty is just to make things go faster (you have
+      no idea how many hours it takes to write these haha).
+    </li>
+    <li>
+      Speaking of fighting, make sure to do your Rewards Board, as much as you
+      can do. Note for the challenges where you need to fight enemies you can
+      use your Sky Armors in many cases. Use that to your advantage.
+    </li>
+  </ul>
+  <p>
+    And those are my tips/notes. Do with them as you will. An now though, we're
+    going to go explore. You ready? I hope so because we have a lot to tackle!
+  </p>
 
   <section id="hermits-isle" class="walkthrough-section">
     <h2 class="section-title">Hermit's Isle</h2>
