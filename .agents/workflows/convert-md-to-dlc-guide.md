@@ -29,60 +29,59 @@ Follow these steps to convert a markdown file into an Astro DLC walkthrough guid
 1. **Acknowledge Output Limitations**: Determine the size of the source file. If it's too large to convert in a single response, use the chunking protocol described in the guidelines above. Maintain 1:1 parity with the source text.
 
 2. **Page Wrapper**: Create the `.astro` file wrapper:
-
    - Import `DlcLayout` (not `WalkthroughLayout`) and needed components (`QuestStep`, `Image`, `Video`, `Tip`, `BossFight`, `MediaGrid`, `EndLogo`, `StoryBlurb`).
    - Map `<h2>` headers into the `sections` array and use `<DlcLayout>`.
    - Always include a relevant `subtitle` prop in `<DlcLayout>` (e.g., 'DLC WALKTHROUGH' or 'DLC SIDE QUEST WALKTHROUGH').
 
 3. **Global Content Introduction**: Wrap story text in `<StoryBlurb>` and cover the text inside with an `<em>` tag.
 
-4. **Sections Mapping**:
+4. **Text Formatting**:
+   - **Do NOT wrap regular walkthrough text in `<em>` tags** - only use `<em>` for story text inside `<StoryBlurb>` components.
+   - Regular walkthrough instructions should be plain text inside `<p>` tags without any italic formatting.
 
+5. **Sections Mapping**:
    - Wrap top-level regions in `<section id="ID" class="walkthrough-section">`.
    - Wrap specific objectives in `<QuestStep id="ID" title="Title">`.
 
-5. **Media Mapping**:
-
+6. **Media Mapping**:
    - Use `<Image src="..." alt="..." />` for single images (wrap in component, not raw `<div class="media-container">`).
+   - **Image URLs**: For images sourced from Neoseeker, use the external CDN URLs directly (e.g., `https://cdn.staticneo.com/ew/1/16/Ec_805.jpg`). Do NOT use local paths like `${baseUrl}images/dlc/ec-805.jpg` unless the images have been downloaded to the project.
    - Use `<Video id="YOUTUBE_ID" title="..." />` for videos (not raw `<iframe>` tags).
    - Use `<MediaGrid columns={2}>` to wrap multiple `<Image>` components (not raw `<div class="media-grid">`).
 
-6. **Callouts**: Use `<Tip type="tip|warning|note">` for NOTE/blockquote sections.
+7. **Callouts**: Use `<Tip type="tip|warning|note">` for NOTE/blockquote sections.
 
-7. **Boss Fights**: Use `<BossFight title="...">` for boss sections, including a `<Video>` and list of stats inside.
+8. **Boss Fights**: Use `<BossFight title="...">` for boss sections, including a `<Video>` and list of stats inside.
 
-8. **QuestStep Component**:
-
+9. **QuestStep Component**:
    - **Always use `<QuestStep id="ID" title="Title">`** for quest objectives (not manual `<article>` with `<h3>` and `<img>` tags).
    - The `id` should be a kebab-case version of the objective title (e.g., "Head for the top of Raminas Tower" → `head-for-the-top-of-raminas-tower`).
    - The `title` should be the exact objective text as it appears in the source.
    - **Common Mistake**: Do NOT use raw HTML like `<article id="..." class="quest-step"><h3><img src="..." class="obj-icon" /></h3>...</article>`. Always use the `<QuestStep>` component.
 
-9. **Common Mistakes to Avoid**:
+10. **Common Mistakes to Avoid**:
+    - **Images**: Always use `<Image>` component, not raw `<div class="media-container">` with `<img>` tags.
+    - **Multiple Images**: Always use `<MediaGrid columns={2}>` component, not raw `<div class="media-grid">`.
+    - **Videos**: Always use `<Video id="..." title="...">` component, not raw `<iframe>` tags.
+    - **Boss Fight Videos**: Videos inside boss fights should use `<Video>` component inside `<BossFight>`, not raw iframes.
+    - **QuestStep**: Always use `<QuestStep id="..." title="...">` component, not manual `<article>` with `<h3>` and `<img>` tags.
+    - **Italic Text**: Do NOT wrap regular walkthrough text in `<em>` tags - only use `<em>` for story text inside `<StoryBlurb>` components.
 
-   - **Images**: Always use `<Image>` component, not raw `<div class="media-container">` with `<img>` tags.
-   - **Multiple Images**: Always use `<MediaGrid columns={2}>` component, not raw `<div class="media-grid">`.
-   - **Videos**: Always use `<Video id="..." title="...">` component, not raw `<iframe>` tags.
-   - **Boss Fight Videos**: Videos inside boss fights should use `<Video>` component inside `<BossFight>`, not raw iframes.
-   - **QuestStep**: Always use `<QuestStep id="..." title="...">` component, not manual `<article>` with `<h3>` and `<img>` tags.
+11. **Next Steps**: Use `<EndLogo />` at the very bottom.
 
-10. **Next Steps**: Use `<EndLogo />` at the very bottom.
-
-11. **Astro Syntax**:
-
+12. **Astro Syntax**:
     - Escape bare ampersands `&`.
     - Ensure imports are at the top.
 
-12. **Link to TOC / Sidebar**: Add the new guide to `src/pages/ashes-of-elrant-dlc/table-of-contents.astro` and the sidebar in `DlcLayout.astro`.
+13. **Link to TOC / Sidebar**: Add the new guide to `src/pages/ashes-of-elrant-dlc/table-of-contents.astro` and the sidebar in `DlcLayout.astro`.
 
-13. **Guide Completion Tracking**:
-
+14. **Guide Completion Tracking**:
     - Add `guideId` prop to `<DlcLayout>` component (use the page slug, e.g., `guideId="dlc-into-the-unknown"`).
     - The `GuideProgress.astro` component will automatically render a "Mark as Completed" button at the top of the page.
     - Users can toggle completion status, which is saved to localStorage (separate from main game: `chained-echoes-dlc-completed`).
     - Completed guides show a checkmark (✓) in the DLC sidebar and table of contents.
 
-14. **DLC-Specific Layout**:
+15. **DLC-Specific Layout**:
     - Use `<DlcLayout>` instead of `<WalkthroughLayout>` for all DLC guides.
     - The DLC layout uses `logo-dlc.png` instead of the main game logo.
     - Completion tracking is separate from the main game (uses `chained-echoes-dlc-completed` localStorage key).
