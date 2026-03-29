@@ -86,9 +86,15 @@ const { guideId, guideTitle } = Astro.props;
 </style>
 
 <script>
-  // Get completed guides from localStorage
+  // Detect if we're in DLC context by checking body class
+  const isDLCContext = document?.body?.classList.contains("dlc-theme") || false;
+
+  // Get completed guides from localStorage (uses different key for DLC)
   const getCompletedGuides = (): string[] => {
-    const stored = localStorage.getItem("chained-echoes-completed");
+    const key = isDLCContext
+      ? "chained-echoes-dlc-completed"
+      : "chained-echoes-completed";
+    const stored = localStorage.getItem(key);
     return stored ? JSON.parse(stored) : [];
   };
 
@@ -123,6 +129,9 @@ const { guideId, guideTitle } = Astro.props;
 
   // Toggle guide completion status
   (window as any).toggleCompletion = (id: string, title: string) => {
+    const key = isDLCContext
+      ? "chained-echoes-dlc-completed"
+      : "chained-echoes-completed";
     const completed = getCompletedGuides();
     const index = completed.indexOf(id);
 
@@ -134,7 +143,7 @@ const { guideId, guideTitle } = Astro.props;
       completed.push(id);
     }
 
-    localStorage.setItem("chained-echoes-completed", JSON.stringify(completed));
+    localStorage.setItem(key, JSON.stringify(completed));
 
     // Update the button state
     updateButtonState(id, title);
