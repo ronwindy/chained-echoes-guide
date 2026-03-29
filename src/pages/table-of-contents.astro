@@ -201,8 +201,8 @@ const baseUrl = import.meta.env.BASE_URL;
       </ul>
     </section>
 
-    <!-- Ashes of Elrant DLC -->
-    <section class="toc-card">
+    <!-- Ashes of Elrant DLC (link-out card) -->
+    <section class="toc-card toc-card--dlc">
       <h2>
         <svg viewBox="0 0 24 24" class="title-icon"
           ><path
@@ -212,43 +212,17 @@ const baseUrl = import.meta.env.BASE_URL;
         >
         Ashes of Elrant DLC
       </h2>
-      <h3>Introduction</h3>
-      <ul>
-        <li><a href="#">Introduction</a></li>
-      </ul>
-
-      <h3>Walkthrough</h3>
-      <ul>
-        <li><a href="#">Into the Unknown</a></li>
-        <li><a href="#">Beyond the Rift</a></li>
-        <li><a href="#">The Big Escape</a></li>
-        <li><a href="#">The Truth of Elrant</a></li>
-        <li><a href="#">The Open Way</a></li>
-        <li><a href="#">Final World Exploration</a></li>
-        <li><a href="#">Deus Ex Machina</a></li>
-      </ul>
-
-      <h3>Sidequest</h3>
-      <ul>
-        <li><a href="#">A Second Option</a></li>
-      </ul>
-
-      <h3>Reward Board</h3>
-      <ul>
-        <li><a href="#">Mushroom Forest</a></li>
-        <li><a href="#">Elrant City</a></li>
-        <li><a href="#">Lost Gardens</a></li>
-        <li><a href="#">Deadlands</a></li>
-        <li><a href="#">Wastelands</a></li>
-        <li><a href="#">Old Town</a></li>
-      </ul>
-
-      <h3>Guides</h3>
-      <ul>
-        <li><a href="#">All DLC Class Emblems</a></li>
-        <li><a href="#">All DLC Collectibles</a></li>
-        <li><a href="#">All Flesh of Farnese Locations</a></li>
-      </ul>
+      <p class="dlc-card-description">
+        A separate standalone guide for all Ashes of Elrant DLC content, with
+        its own walkthrough, sidequests, reward boards, and guides — tracked
+        independently from the main game.
+      </p>
+      <a
+        href=`${baseUrl}ashes-of-elrant-dlc/table-of-contents`
+        class="dlc-cta-button"
+      >
+        Play the Ashes of Elrant DLC Guide →
+      </a>
     </section>
   </div>
 </Layout>
@@ -436,6 +410,55 @@ const baseUrl = import.meta.env.BASE_URL;
     right: 0;
     color: var(--accent-gold);
     font-weight: bold;
+  }
+
+  /* DLC link-out card */
+  .toc-card--dlc {
+    background: linear-gradient(145deg, rgba(40, 10, 60, 0.6), rgba(21, 24, 33, 0.9));
+    border-color: rgba(168, 85, 247, 0.3);
+  }
+
+  .toc-card--dlc::before {
+    background: linear-gradient(to bottom, #a855f7, transparent);
+    opacity: 0.8;
+  }
+
+  .toc-card--dlc:hover {
+    border-color: rgba(168, 85, 247, 0.7);
+    box-shadow:
+      0 12px 30px rgba(0, 0, 0, 0.5),
+      0 0 20px rgba(168, 85, 247, 0.25);
+  }
+
+  .dlc-card-description {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .dlc-cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(80, 20, 120, 0.3));
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    border-radius: 8px;
+    color: #c084fc;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+  }
+
+  .dlc-cta-button:hover {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.35), rgba(80, 20, 120, 0.45));
+    border-color: rgba(168, 85, 247, 0.7);
+    color: #e9d5ff;
+    transform: translateX(4px);
+    text-decoration: none;
   }
 </style>
 

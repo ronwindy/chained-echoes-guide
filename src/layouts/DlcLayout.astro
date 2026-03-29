@@ -1,0 +1,239 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Ashes of Elrant DLC Interactive Walkthrough" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href=`${baseUrl}favicon.svg` />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | Ashes of Elrant DLC Guide</title>
+  </head>
+  <body class="dlc-theme">
+    <div class="layout-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Menu">
+            <span class="hamburger"></span>
+          </button>
+          <a href=`${baseUrl}ashes-of-elrant-dlc/table-of-contents` class="header-logo">
+            <img
+              src=`${baseUrl}logo-dlc.png`
+              alt="Ashes of Elrant DLC"
+              class="sidebar-logo"
+            />
+          </a>
+        </div>
+        <nav class="sidebar-nav">
+          <details class="nav-section" open>
+            <summary><h3>Getting Started</h3></summary>
+            <ul class="nav-links">
+              <li>
+                <a href=`${baseUrl}ashes-of-elrant-dlc/table-of-contents`>Table of Contents</a>
+              </li>
+              <li class="nav-backlink">
+                <a href=`${baseUrl}table-of-contents` class="backlink">↩ Return to Main Guide</a>
+              </li>
+            </ul>
+          </details>
+
+          <details class="nav-section">
+            <summary><h3>Introduction</h3></summary>
+            <ul class="nav-links">
+              <li><a href="#">Introduction</a></li>
+            </ul>
+          </details>
+
+          <details class="nav-section">
+            <summary><h3>Walkthrough</h3></summary>
+            <ul class="nav-links">
+              <li><a href="#">Into the Unknown</a></li>
+              <li><a href="#">Beyond the Rift</a></li>
+              <li><a href="#">The Big Escape</a></li>
+              <li><a href="#">The Truth of Elrant</a></li>
+              <li><a href="#">The Open Way</a></li>
+              <li><a href="#">Final World Exploration</a></li>
+              <li><a href="#">Deus Ex Machina</a></li>
+            </ul>
+          </details>
+
+          <details class="nav-section">
+            <summary><h3>Sidequest</h3></summary>
+            <ul class="nav-links">
+              <li><a href="#">A Second Option</a></li>
+            </ul>
+          </details>
+
+          <details class="nav-section">
+            <summary><h3>Reward Board</h3></summary>
+            <ul class="nav-links">
+              <li><a href="#">Mushroom Forest</a></li>
+              <li><a href="#">Elrant City</a></li>
+              <li><a href="#">Lost Gardens</a></li>
+              <li><a href="#">Deadlands</a></li>
+              <li><a href="#">Wastelands</a></li>
+              <li><a href="#">Old Town</a></li>
+            </ul>
+          </details>
+
+          <details class="nav-section">
+            <summary><h3>Guides</h3></summary>
+            <ul class="nav-links">
+              <li><a href="#">All DLC Class Emblems</a></li>
+              <li><a href="#">All DLC Collectibles</a></li>
+              <li><a href="#">All Flesh of Farnese Locations</a></li>
+            </ul>
+          </details>
+        </nav>
+      </aside>
+      <main class="main-content">
+        <slot />
+      </main>
+    </div>
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const sidebar = document.querySelector(".sidebar");
+      const overlay = document.getElementById("sidebar-overlay");
+
+      if (menuToggle && sidebar && overlay) {
+        menuToggle.addEventListener("click", () => {
+          sidebar.classList.toggle("active");
+          overlay.classList.toggle("active");
+          document.body.classList.toggle("menu-open");
+        });
+
+        overlay.addEventListener("click", () => {
+          sidebar.classList.remove("active");
+          overlay.classList.remove("active");
+          document.body.classList.remove("menu-open");
+        });
+
+        // Close menu when clicking links
+        const navLinks = sidebar.querySelectorAll(".nav-links a");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            sidebar.classList.remove("active");
+            overlay.classList.remove("active");
+            document.body.classList.remove("menu-open");
+          });
+        });
+      }
+
+      // Update sidebar to show completed DLC guides (separate from main game)
+      const getCompletedGuides = (): string[] => {
+        const stored = localStorage.getItem("chained-echoes-dlc-completed");
+        return stored ? JSON.parse(stored) : [];
+      };
+
+      const completedGuides = getCompletedGuides();
+
+      // Map DLC guide IDs to their href patterns in the sidebar
+      const guideIdMap: Record<string, string> = {
+        "dlc-introduction": "ashes-of-elrant-dlc/introduction",
+        "dlc-into-the-unknown": "ashes-of-elrant-dlc/into-the-unknown",
+        "dlc-beyond-the-rift": "ashes-of-elrant-dlc/beyond-the-rift",
+        "dlc-the-big-escape": "ashes-of-elrant-dlc/the-big-escape",
+        "dlc-the-truth-of-elrant": "ashes-of-elrant-dlc/the-truth-of-elrant",
+        "dlc-the-open-way": "ashes-of-elrant-dlc/the-open-way",
+        "dlc-final-world-exploration": "ashes-of-elrant-dlc/final-world-exploration",
+        "dlc-deus-ex-machina": "ashes-of-elrant-dlc/deus-ex-machina",
+        "dlc-a-second-option": "ashes-of-elrant-dlc/a-second-option",
+      };
+
+      // Wait for DOM to be ready
+      if (typeof document !== "undefined") {
+        document.addEventListener("DOMContentLoaded", () => {
+          completedGuides.forEach((guideId) => {
+            const hrefPattern = guideIdMap[guideId];
+            if (hrefPattern) {
+              const link = sidebar?.querySelector(
+                `a[href*="${hrefPattern}"]`,
+              ) as HTMLAnchorElement;
+              if (link) {
+                link.classList.add("completed");
+              }
+            }
+          });
+
+          // Highlight active link and open its parent details
+          const currentUrlStr = window.location.href.split("#")[0].replace(/\/$/, "");
+          const allSidebarLinks = document.querySelectorAll(".sidebar .nav-links a");
+
+          allSidebarLinks.forEach((link) => {
+            const anchor = link as HTMLAnchorElement;
+            const linkUrl = anchor.href.split("#")[0].replace(/\/$/, "");
+
+            if (linkUrl === currentUrlStr && link.getAttribute("href") !== "#") {
+              link.classList.add("active");
+
+              let parent = link.parentElement;
+              while (parent && !parent.classList.contains("sidebar-nav")) {
+                if (parent.tagName === "DETAILS") {
+                  (parent as HTMLDetailsElement).open = true;
+                }
+                parent = parent.parentElement;
+              }
+            }
+          });
+        });
+      }
+
+      (window as any).updateCompletedIndicators = () => {
+        const completedGuides = getCompletedGuides();
+        const guideIdMap = {
+          "dlc-introduction": "ashes-of-elrant-dlc/introduction",
+          "dlc-into-the-unknown": "ashes-of-elrant-dlc/into-the-unknown",
+          "dlc-beyond-the-rift": "ashes-of-elrant-dlc/beyond-the-rift",
+          "dlc-the-big-escape": "ashes-of-elrant-dlc/the-big-escape",
+          "dlc-the-truth-of-elrant": "ashes-of-elrant-dlc/the-truth-of-elrant",
+          "dlc-the-open-way": "ashes-of-elrant-dlc/the-open-way",
+          "dlc-final-world-exploration": "ashes-of-elrant-dlc/final-world-exploration",
+          "dlc-deus-ex-machina": "ashes-of-elrant-dlc/deus-ex-machina",
+          "dlc-a-second-option": "ashes-of-elrant-dlc/a-second-option",
+        };
+
+        const sidebarLinks = document.querySelectorAll(".sidebar .nav-links a");
+        sidebarLinks.forEach((link) => {
+          const href = link.getAttribute("href") || "";
+          const guideId = Object.keys(guideIdMap).find((id) =>
+            href.includes((guideIdMap as any)[id]),
+          );
+          if (guideId && completedGuides.includes(guideId)) {
+            link.classList.add("completed");
+          } else {
+            link.classList.remove("completed");
+          }
+        });
+      };
+    </script>
+  </body>
+</html>
+
+<style>
+  /* "Return to Main Guide" backlink styling */
+  .nav-backlink a.backlink {
+    color: var(--text-muted) !important;
+    font-style: italic;
+    font-size: 0.88rem !important;
+    opacity: 0.8;
+    transition: color 0.2s, opacity 0.2s;
+  }
+
+  .nav-backlink a.backlink:hover {
+    color: var(--accent-gold) !important;
+    opacity: 1;
+    background-color: transparent !important;
+  }
+</style>

@@ -1,4 +1,5 @@
 ---
+import Tip from "../components/Tip.astro";
 import Layout from "../layouts/Layout.astro";
 const baseUrl = import.meta.env.BASE_URL;
 ---
@@ -10,23 +11,6 @@ const baseUrl = import.meta.env.BASE_URL;
   </div>
 
   <section class="content-section" id="intro">
-    <div class="story-blurb">
-      <p>
-        <strong>NOTE</strong>: Wrote a full guide for the newly released DLC,
-        Ashes of Elrant. Click the link below to check it out!
-      </p>
-
-      <ul>
-        <li>
-          <a
-            href="https://www.neoseeker.com/chained-echoes/Ashes_of_Elrant_Introduction"
-            title="Ashes of Elrant Introduction"
-            >Ashes of Elrant
-          </a>
-        </li>
-      </ul>
-    </div>
-
     <h2>Introduction</h2>
 
     <div class="handwritten">
@@ -67,121 +51,124 @@ const baseUrl = import.meta.env.BASE_URL;
         Enough of me rambling, let's get into the adventure and find out what
         happens together!
       </p>
+
+      <p>
+        <a
+          href="https://www.neoseeker.com/chained-echoes/File:Vinheim_cursive.png"
+        >
+          <img
+            src="https://cdn.staticneo.com/ew/thumb/f/ff/Vinheim_cursive.png/80px-Vinheim_cursive.png"
+            alt="Vinheim cursive.png"
+          />
+        </a>
+      </p>
     </div>
+    <div class="offer">
+      <h3>What this guide will offer:</h3>
 
-    <p>
-      <a
-        href="https://www.neoseeker.com/chained-echoes/File:Vinheim_cursive.png"
-      >
-        <img
-          src="https://cdn.staticneo.com/ew/thumb/f/ff/Vinheim_cursive.png/80px-Vinheim_cursive.png"
-          alt="Vinheim cursive.png"
-        />
-      </a>
-    </p>
-    <h3>What this guide will offer:</h3>
+      <ul>
+        <li>Complete walkthrough for the game from start to finish</li>
+        <li>All Boss Strategies</li>
+        <li>All Side Quests</li>
+        <li>Important Collectables</li>
+        <li>Much, much more!</li>
+      </ul>
+    </div>
+    <div class="controls">
+      <h2>Controls</h2>
 
-    <ul>
-      <li>Complete walkthrough for the game from start to finish</li>
-      <li>All Boss Strategies</li>
-      <li>All Side Quests</li>
-      <li>Important Collectables</li>
-      <li>Much, much more!</li>
-    </ul>
-
-    <h2>Controls</h2>
-
-    <table class="controls-table">
-      <thead>
-        <tr>
-          <th>XBOX</th>
-          <th>FUNCTION</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td
-            ><img
-              src="https://cdn.staticneo.com/ew/thumb/8/80/VinXBA.png/23px-VinXBA.png"
-              alt="XBOX A"
-            /></td
-          >
-          <td>Use / Talk / Confirm</td>
-        </tr>
-        <tr>
-          <td
-            ><img
-              src="https://cdn.staticneo.com/ew/thumb/e/ee/VinXB.png/23px-VinXB.png"
-              alt="XBOX B"
-            /></td
-          >
-          <td>Cancel</td>
-        </tr>
-        <tr>
-          <td
-            ><img
-              src="https://cdn.staticneo.com/ew/thumb/6/65/VinXY.png/23px-VinXY.png"
-              alt="XBOX Y"
-            /></td
-          >
-          <td>Menu</td>
-        </tr>
-        <tr>
-          <td
-            ><img
-              src="https://cdn.staticneo.com/ew/thumb/d/d4/VinXX.png/23px-VinXX.png"
-              alt="XBOX X"
-            /></td
-          >
-          <td>Map</td>
-        </tr>
-        <tr>
-          <td
-            ><img
-              src="https://cdn.staticneo.com/ew/thumb/4/42/VinXRB.png/23px-VinXRB.png"
-              alt="XBOX RB"
-            /></td
-          >
-          <td>Switch Character (Battle), Call / Raise Sky Armor</td>
-        </tr>
-        <tr>
-          <td
-            ><img
-              src="https://cdn.staticneo.com/ew/thumb/9/94/VinXLB.png/23px-VinXLB.png"
-              alt="XBOX LB"
-            /></td
-          >
-          <td>Flee (Battle), Exit / Lower Sky Armor</td>
-        </tr>
-        <tr>
-          <td
-            ><img
-              src="https://cdn.staticneo.com/ew/thumb/1/19/VinXRT.png/23px-VinXRT.png"
-              alt="XBOX RT"
-            /></td
-          >
-          <td>Quest Log</td>
-        </tr>
-        <tr>
-          <td
-            ><img
-              src="https://cdn.staticneo.com/ew/thumb/6/62/VinXLT.png/23px-VinXLT.png"
-              alt="XBOX LT"
-            /></td
-          >
-          <td>Reward Board</td>
-        </tr>
-        <tr>
-          <td
-            ><img
-              src="https://cdn.staticneo.com/ew/thumb/d/d6/VinXMenu.png/23px-VinXMenu.png"
-              alt="XBOX Menu"
-            /></td
-          >
-          <td>Main Menu</td>
-        </tr>
-      </tbody>
-    </table>
+      <table class="controls-table">
+        <thead>
+          <tr>
+            <th>XBOX</th>
+            <th>FUNCTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              ><img
+                src="https://cdn.staticneo.com/ew/thumb/8/80/VinXBA.png/23px-VinXBA.png"
+                alt="XBOX A"
+              /></td
+            >
+            <td>Use / Talk / Confirm</td>
+          </tr>
+          <tr>
+            <td
+              ><img
+                src="https://cdn.staticneo.com/ew/thumb/e/ee/VinXB.png/23px-VinXB.png"
+                alt="XBOX B"
+              /></td
+            >
+            <td>Cancel</td>
+          </tr>
+          <tr>
+            <td
+              ><img
+                src="https://cdn.staticneo.com/ew/thumb/6/65/VinXY.png/23px-VinXY.png"
+                alt="XBOX Y"
+              /></td
+            >
+            <td>Menu</td>
+          </tr>
+          <tr>
+            <td
+              ><img
+                src="https://cdn.staticneo.com/ew/thumb/d/d4/VinXX.png/23px-VinXX.png"
+                alt="XBOX X"
+              /></td
+            >
+            <td>Map</td>
+          </tr>
+          <tr>
+            <td
+              ><img
+                src="https://cdn.staticneo.com/ew/thumb/4/42/VinXRB.png/23px-VinXRB.png"
+                alt="XBOX RB"
+              /></td
+            >
+            <td>Switch Character (Battle), Call / Raise Sky Armor</td>
+          </tr>
+          <tr>
+            <td
+              ><img
+                src="https://cdn.staticneo.com/ew/thumb/9/94/VinXLB.png/23px-VinXLB.png"
+                alt="XBOX LB"
+              /></td
+            >
+            <td>Flee (Battle), Exit / Lower Sky Armor</td>
+          </tr>
+          <tr>
+            <td
+              ><img
+                src="https://cdn.staticneo.com/ew/thumb/1/19/VinXRT.png/23px-VinXRT.png"
+                alt="XBOX RT"
+              /></td
+            >
+            <td>Quest Log</td>
+          </tr>
+          <tr>
+            <td
+              ><img
+                src="https://cdn.staticneo.com/ew/thumb/6/62/VinXLT.png/23px-VinXLT.png"
+                alt="XBOX LT"
+              /></td
+            >
+            <td>Reward Board</td>
+          </tr>
+          <tr>
+            <td
+              ><img
+                src="https://cdn.staticneo.com/ew/thumb/d/d6/VinXMenu.png/23px-VinXMenu.png"
+                alt="XBOX Menu"
+              /></td
+            >
+            <td>Main Menu</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 </Layout>
 
@@ -190,7 +177,6 @@ const baseUrl = import.meta.env.BASE_URL;
     text-align: center;
     padding: 4rem 0;
     margin-bottom: 2rem;
-    border-bottom: 1px solid var(--border-color);
   }
 
   .hero-logo {
@@ -199,6 +185,10 @@ const baseUrl = import.meta.env.BASE_URL;
     max-height: 15rem; /* Large imposing logo for the hero section */
     margin-bottom: 1rem;
     display: inline-block;
+  }
+
+  .offer {
+    border-top: 1px solid var(--border-color);
   }
 
   .subtitle {

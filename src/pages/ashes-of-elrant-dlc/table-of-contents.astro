@@ -1,0 +1,334 @@
+---
+import DlcLayout from "../../layouts/DlcLayout.astro";
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<DlcLayout title="Table of Contents">
+  <div class="toc-header">
+    <img
+      src=`${baseUrl}logo-dlc.png`
+      alt="Chained Echoes: Ashes of Elrant"
+      class="toc-logo"
+    />
+  </div>
+
+  <div class="toc-grid">
+    <!-- Introduction -->
+    <section class="toc-card">
+      <h2>
+        <svg viewBox="0 0 24 24" class="title-icon"
+          ><path
+            fill="currentColor"
+            d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+          ></path></svg
+        >
+        Introduction
+      </h2>
+      <ul>
+        <li><a href="#">Introduction</a></li>
+      </ul>
+    </section>
+
+    <!-- Walkthrough -->
+    <section class="toc-card">
+      <h2>
+        <svg viewBox="0 0 24 24" class="title-icon"
+          ><path
+            fill="currentColor"
+            d="M21 16.5c0 .38-.21.71-.53.88l-7.97 4.43c-.16.09-.33.14-.5.14s-.34-.05-.5-.14l-7.97-4.43c-.32-.17-.53-.5-.53-.88v-9c0-.38.21-.71.53-.88l7.97-4.43c.16-.09.33-.14.5-.14s.34.05.5.14l7.97 4.43c.32.17.53.5.53.88v9M12 4.15L6.04 7.47v6.66L12 17.45l5.96-3.32V7.47L12 4.15Z"
+          ></path></svg
+        >
+        Walkthrough
+      </h2>
+      <ul>
+        <li><a href="#">Into the Unknown</a></li>
+        <li><a href="#">Beyond the Rift</a></li>
+        <li><a href="#">The Big Escape</a></li>
+        <li><a href="#">The Truth of Elrant</a></li>
+        <li><a href="#">The Open Way</a></li>
+        <li><a href="#">Final World Exploration</a></li>
+        <li><a href="#">Deus Ex Machina</a></li>
+      </ul>
+    </section>
+
+    <!-- Sidequest -->
+    <section class="toc-card">
+      <h2>
+        <svg viewBox="0 0 24 24" class="title-icon"
+          ><path
+            fill="currentColor"
+            d="M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2m-1-4l-1.41-1.41L13 12.17V4h-2v8.17L8.41 9.59L7 11l5 5 5-5Z"
+          ></path></svg
+        >
+        Sidequest
+      </h2>
+      <ul>
+        <li><a href="#">A Second Option</a></li>
+      </ul>
+    </section>
+
+    <!-- Reward Board -->
+    <section class="toc-card">
+      <h2>
+        <svg viewBox="0 0 24 24" class="title-icon"
+          ><path
+            fill="currentColor"
+            d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 18H6V4h12v16M8 15h8v2H8v-2m0-4h8v2H8v-2m0-4h8v2H8V7Z"
+          ></path></svg
+        >
+        Reward Board
+      </h2>
+      <ul>
+        <li><a href="#">Mushroom Forest</a></li>
+        <li><a href="#">Elrant City</a></li>
+        <li><a href="#">Lost Gardens</a></li>
+        <li><a href="#">Deadlands</a></li>
+        <li><a href="#">Wastelands</a></li>
+        <li><a href="#">Old Town</a></li>
+      </ul>
+    </section>
+
+    <!-- Guides -->
+    <section class="toc-card">
+      <h2>
+        <svg viewBox="0 0 24 24" class="title-icon"
+          ><path
+            fill="currentColor"
+            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27Z"
+          ></path></svg
+        >
+        Guides
+      </h2>
+      <ul>
+        <li><a href="#">All DLC Class Emblems</a></li>
+        <li><a href="#">All DLC Collectibles</a></li>
+        <li><a href="#">All Flesh of Farnese Locations</a></li>
+      </ul>
+    </section>
+  </div>
+</DlcLayout>
+
+<style>
+  .toc-header {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    padding: 0 1rem;
+  }
+
+  .toc-logo {
+    display: block;
+    margin: 0 auto 1.5rem;
+    width: 100%;
+    max-width: 40rem;
+    height: auto;
+    filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.7));
+  }
+
+  .toc-header h1 {
+    font-size: clamp(1.8rem, 10vw, 3.5rem);
+    color: var(--accent-gold);
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .subtitle {
+    font-size: clamp(0.8rem, 5vw, 1.1rem);
+    color: var(--text-muted);
+    font-family: var(--font-heading);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.9;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Grid Settings */
+  .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 2.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .toc-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  .toc-card {
+    background: linear-gradient(145deg, var(--bg-card), rgba(21, 24, 33, 0.9));
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2.2rem;
+    position: relative;
+    overflow: hidden;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease,
+      border-color 0.3s ease;
+    backdrop-filter: blur(8px);
+  }
+
+  .toc-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      var(--dlc-accent, #a855f7),
+      transparent
+    );
+    opacity: 0.7;
+  }
+
+  .toc-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+      0 12px 30px rgba(0, 0, 0, 0.5),
+      0 0 20px var(--dlc-accent-glow, rgba(45, 212, 191, 0.2));
+    border-color: var(--dlc-accent, #2dd4bf);
+  }
+
+  .toc-card h2 {
+    color: var(--accent-gold);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
+    margin-bottom: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    word-break: break-word;
+  }
+
+  .title-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    color: var(--accent-gold);
+    filter: drop-shadow(0 0 5px rgba(226, 180, 59, 0.4));
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
+  }
+
+  .toc-card:hover .title-icon {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 0 8px rgba(45, 212, 191, 0.6));
+    color: var(--dlc-accent, #2dd4bf);
+  }
+
+  .toc-card ul {
+    list-style: none;
+    margin-left: 0.2rem;
+  }
+
+  .toc-card li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .toc-card li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--dlc-accent, #a855f7);
+    font-size: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.5;
+    transition:
+      opacity 0.2s,
+      transform 0.2s;
+  }
+
+  .toc-card li:hover::before {
+    opacity: 1;
+    transform: translateY(-50%) translateX(5px);
+  }
+
+  .toc-card a {
+    color: var(--text-main);
+    transition:
+      color 0.2s,
+      background-color 0.2s;
+    display: block;
+    padding: 0.2rem 0;
+  }
+
+  .toc-card a:hover {
+    color: var(--accent-gold);
+    text-decoration: none;
+  }
+
+  /* Completed guide indicator */
+  .toc-card a.completed {
+    color: var(--accent-gold);
+    position: relative;
+  }
+
+  .toc-card a.completed::after {
+    content: "✓";
+    position: absolute;
+    right: 0;
+    color: var(--accent-gold);
+    font-weight: bold;
+  }
+</style>
+
+<script>
+  // Update table of contents to show completed DLC guides
+  const getCompletedGuides = (): string[] => {
+    const stored = localStorage.getItem("chained-echoes-dlc-completed");
+    return stored ? JSON.parse(stored) : [];
+  };
+
+  // Map DLC guide IDs to their href patterns in the TOC
+  const guideIdMap: Record<string, string> = {
+    "dlc-introduction": "introduction",
+    "dlc-into-the-unknown": "into-the-unknown",
+    "dlc-beyond-the-rift": "beyond-the-rift",
+    "dlc-the-big-escape": "the-big-escape",
+    "dlc-the-truth-of-elrant": "the-truth-of-elrant",
+    "dlc-the-open-way": "the-open-way",
+    "dlc-final-world-exploration": "final-world-exploration",
+    "dlc-deus-ex-machina": "deus-ex-machina",
+    "dlc-a-second-option": "a-second-option",
+  };
+
+  // Update TOC links with completed status
+  const updateTOCLinks = () => {
+    const completedGuides = getCompletedGuides();
+    const tocLinks = document.querySelectorAll(".toc-card a");
+    tocLinks.forEach((link) => {
+      const href = link.getAttribute("href") || "";
+      const guideId = Object.keys(guideIdMap).find((id) =>
+        href.includes(guideIdMap[id]),
+      );
+      if (guideId && completedGuides.includes(guideId)) {
+        link.classList.add("completed");
+      } else {
+        link.classList.remove("completed");
+      }
+    });
+  };
+
+  if (typeof document !== "undefined") {
+    document.addEventListener("DOMContentLoaded", () => {
+      updateTOCLinks();
+    });
+  }
+
+  (window as any).updateCompletedIndicators = updateTOCLinks;
+</script>
