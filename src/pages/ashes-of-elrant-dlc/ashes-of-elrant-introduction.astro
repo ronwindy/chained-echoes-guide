@@ -1,0 +1,276 @@
+---
+import Tip from "../../components/Tip.astro";
+import DlcLayout from "../../layouts/DlcLayout.astro";
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<DlcLayout title="Ashes of Elrant Introduction">
+  <div class="hero">
+    <img
+      src={`${baseUrl}logo-dlc.png`}
+      alt="Ashes of Elrant DLC"
+      class="hero-logo"
+    />
+    <p class="subtitle">An Interactive Walkthrough</p>
+  </div>
+
+  <section class="content-section" id="intro">
+    <h2>Introduction</h2>
+
+    <div class="handwritten">
+      <p>
+        Welcome to our Chained Echoes: Ashes of Elrant DLC (2025) walkthrough
+        and guide! With this guide you can expect a full walkthrough from
+        beginning to end with strategies for every dungeon, every quest, every
+        sidequest, strategies for every boss fight, and much more!
+      </p>
+
+      <p>
+        Man does it feel good to be back! This game was one of my favorite back
+        in 2022 and I even had no idea there was DLC coming out, but once I was
+        notified, of course I was going to hop onboard and write a guide for it!
+      </p>
+
+      <p>
+        This DLC is also quite crazy in terms of size. The story behind it is,
+        at least so far where I am personally in the story, quite good. They've
+        included a fishing minigame, a digging minigame (I hate this one haha)
+        and many more things that make it a much more enjoyable experience.
+      </p>
+
+      <p>
+        So follow me, as we venture into the world of Chained Echoes once more!
+      </p>
+
+      <p>
+        <a
+          href="https://www.neoseeker.com/chained-echoes/File:Vinheim_cursive.png"
+        >
+          <img
+            src="https://cdn.staticneo.com/ew/thumb/f/ff/Vinheim_cursive.png/80px-Vinheim_cursive.png"
+            alt="Vinheim cursive.png"
+          />
+        </a>
+      </p>
+    </div>
+
+    <div class="offer">
+      <h3>What this guide will offer:</h3>
+
+      <ul>
+        <li>Complete walkthrough for the game from start to finish</li>
+        <li>All Boss Strategies</li>
+        <li>All Side Quests</li>
+        <li>Important Collectables</li>
+        <li>Much, much more!</li>
+      </ul>
+    </div>
+
+    <div class="controls">
+      <h2>Controls</h2>
+
+      <table class="controls-table">
+        <thead>
+          <tr>
+            <th>XBOX</th>
+            <th>FUNCTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                src="https://cdn.staticneo.com/ew/thumb/8/80/VinXBA.png/23px-VinXBA.png"
+                alt="XBOX A"
+              />
+            </td>
+            <td>Use / Talk / Confirm</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://cdn.staticneo.com/ew/thumb/e/ee/VinXB.png/23px-VinXB.png"
+                alt="XBOX B"
+              />
+            </td>
+            <td>Cancel</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://cdn.staticneo.com/ew/thumb/6/65/VinXY.png/23px-VinXY.png"
+                alt="XBOX Y"
+              />
+            </td>
+            <td>Menu</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://cdn.staticneo.com/ew/thumb/d/d4/VinXX.png/23px-VinXX.png"
+                alt="XBOX X"
+              />
+            </td>
+            <td>Map</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://cdn.staticneo.com/ew/thumb/4/42/VinXRB.png/23px-VinXRB.png"
+                alt="XBOX RB"
+              />
+            </td>
+            <td>Switch Character (Battle), Call / Raise Sky Armor</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://cdn.staticneo.com/ew/thumb/9/94/VinXLB.png/23px-VinXLB.png"
+                alt="XBOX LB"
+              />
+            </td>
+            <td>Flee (Battle), Exit / Lower Sky Armor</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://cdn.staticneo.com/ew/thumb/1/19/VinXRT.png/23px-VinXRT.png"
+                alt="XBOX RT"
+              />
+            </td>
+            <td>Quest Log</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://cdn.staticneo.com/ew/thumb/6/62/VinXLT.png/23px-VinXLT.png"
+                alt="XBOX LT"
+              />
+            </td>
+            <td>Reward Board</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://cdn.staticneo.com/ew/thumb/d/d6/VinXMenu.png/23px-VinXMenu.png"
+                alt="XBOX Menu"
+              />
+            </td>
+            <td>Main Menu</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</DlcLayout>
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .hero-logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 15rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+
+  .offer {
+    border-top: 1px solid var(--border-color);
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    font-family: var(--font-heading);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .content-section {
+    margin-bottom: 3rem;
+  }
+
+  .content-section h2 {
+    font-size: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .handwritten {
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .handwritten p {
+    margin-bottom: 1.5rem;
+  }
+
+  .handwritten img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .offer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .offer ul {
+    padding: 0;
+    list-style-type: disc;
+    margin-left: 1.5rem;
+  }
+
+  .offer ul li {
+    padding: 0.25rem 0;
+  }
+
+  .controls {
+    margin-top: 2rem;
+  }
+
+  .controls-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background-color: var(--card-bg, rgba(0, 0, 0, 0.2));
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .controls-table th,
+  .controls-table td {
+    border: 1px solid var(--border-color, #444);
+    padding: 0.75rem;
+    text-align: center;
+  }
+
+  .controls-table th {
+    background-color: var(--secondary-bg, rgba(0, 0, 0, 0.4));
+    font-family: var(--font-heading);
+    color: var(--primary-color, #f0c05a);
+    font-size: 1.1rem;
+  }
+
+  .controls-table td img {
+    vertical-align: middle;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 2rem 0;
+    }
+    .hero-logo {
+      max-height: 6rem;
+    }
+    .subtitle {
+      font-size: 1rem;
+    }
+  }
+</style>

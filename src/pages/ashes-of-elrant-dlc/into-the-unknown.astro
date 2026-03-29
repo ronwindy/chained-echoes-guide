@@ -1,0 +1,183 @@
+---
+import DlcLayout from "../../layouts/DlcLayout.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import Image from "../../components/Image.astro";
+import Tip from "../../components/Tip.astro";
+import StoryBlurb from "../../components/StoryBlurb.astro";
+import EndLogo from "../../components/EndLogo.astro";
+import MediaGrid from "../../components/MediaGrid.astro";
+
+const baseUrl = import.meta.env.BASE_URL;
+
+const sections = [
+  { id: "intro", label: "Introduction" },
+  { id: "reach-the-enemys-commander", label: "Reach the enemy's commander" },
+];
+---
+
+<DlcLayout title="Into the Unknown - Ashes of Elrant DLC" sections={sections}>
+  <section class="content-section" id="intro">
+    <h2>Introduction</h2>
+
+    <p>
+      <em
+        >Welcome back to Chained Echoes everyone! I hope you enjoyed the game as
+        much as I did! Please read the note below before we continue.</em
+      >
+    </p>
+
+    <Tip type="note">
+      Before you start the DLC, I recommend you load up your save file and go
+      purchase items / consumables. The game will take away our money so I
+      advise you go and stock up on items. You might as well. I had over half a
+      million that I couldn't use.
+    </Tip>
+
+    <Tip type="note">
+      Throughout the guide you'll see some little notes from me. These are
+      marked with <vin
+        >. They are mostly just my inner dialogue, my thoughts or just make
+        mention when I find something funny or whatnot. Feel free to completely
+        ignore. I used to do this back in the day (like 10+ years ago) and
+        people would enjoy it. Let me know down below if I should do this more
+        often, with my future guides!
+      </vin>
+
+      <Tip type="warning">
+        It is HIGHLY recommended you play through this DLC after completing the
+        game. The game gives you a save file if you don't have a "Cleared Save
+        File", but it's better to finish the game before tackling this DLC
+        because it contains MASSIVE spoilers for the end parts of the game.
+      </Tip>
+
+      <p>
+        <em
+          >That being said, I'll also consider you have fully played through the
+          game, have all the weapons, armor, sky armor, and are ready to tackle
+          everything... and know how to play the game of course.</em
+        >
+      </p>
+      <p>
+        <em>And with that said, let's get this started!</em>
+      </p>
+
+      <p>
+        From the Title Screen, select the "DLC - Ashes of Elrant" option ->
+        Start, load your save file and you'll be asked if you want a recap of
+        the story. If it's been a while since you've played the game, trust me,
+        it's worth going through it. I know it definitely helped me.
+      </p>
+
+      <p>
+        Once it's over, we'll have control of our party in the middle of a town
+        on fire. What's happening? We'll be immediately tossed into a fight
+        against... Villagers?
+      </p>
+
+      <Tip type="tip">
+        <vin
+          >Am I seeing this right? Weren't we like on the other side, fighting
+          to help/save them?</vin
+        >
+      </Tip>
+
+      <p>
+        These enemies are total pushover so go ahead and deal with them. Watch
+        the scene after the fight and we'll finally regain control afterwards.
+      </p>
+    </Tip>
+
+    <QuestStep
+      id="reach-the-enemys-commander"
+      title="Reach the enemy's commander"
+    >
+      There are 3 chests to pick up in the area. From where we gain control head
+      north and enter the house in front of us. Inside exit via the western room
+      and back outside go left to find a chest with <strong
+        >Angel Wing x4</strong
+      >.
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/1/1b/Ec_800.jpg/363px-Ec_800.jpg"
+          alt="Chest location for Angel Wing x4"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/7/79/Ec_801.jpg/363px-Ec_801.jpg"
+          alt="Angel Wing x4 chest"
+        />
+      </MediaGrid>
+
+      Continue going right and just past the rubble we'll have a fork. Go south
+      first and go south between the houses to find a chest with <strong
+        >Meal x3</strong
+      >.
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/6/62/Ec_802.jpg/600px-Ec_802.jpg"
+        alt="Chest location for Meal x3"
+      />
+
+      Head back north to the fork and we're going northeast now, but before you
+      go too north, go right behind the house with the balcony and the red roof
+      to find the final chest, this one has <strong>Sweets x2</strong>.
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/6/62/Ec_803.jpg/600px-Ec_803.jpg"
+        alt="Chest location for Sweets x2"
+      />
+
+      Head north for another scene. Afterwards, continue moving forward for
+      another scene and fight with more Villagers. Hmm. The scenes will continue
+      afterwards and we'll end up fighting some Baki. There's 2 of them and
+      they're considered a "boss fight", but they're really not. Simply buff
+      your party and attack. They have an attack that hits 5 times randomly for
+      like 20 dmg. per hit so it's pretty much nothing. Many more scenes will
+      play out here and we'll go back in time to before the mission started.
+      We'll regain control on the outskirts of town. Go ahead and call your Sky
+      Armor by pressing
+      <img
+        src="https://cdn.staticneo.com/ew/thumb/8/86/PSR1.png/21px-PSR1.png"
+        alt="R1 Button"
+      />, press
+      <img
+        src="https://cdn.staticneo.com/ew/thumb/8/86/PSR1.png/21px-PSR1.png"
+        alt="R1 Button"
+      />
+      again to fly and then go directly west across the river and go back down to
+      hover mode past the tall red grass. Afterwards go southeast to the river, follow
+      it northeast and enter the cave to the north. On the other side of the cave
+      some scenes will play out where we lose control of our Sky Armor. So that's
+      why we weren't using them. Anyway, once you regain control head north all the
+      way until you enter the next area where we find "General Guston".
+
+      <Tip type="tip">
+        <vin>I completely forgot he existed haha.</vin>
+      </Tip>
+
+      After the scene we'll fight him. Just like with the Baki, he's a pushover.
+      Simply buff your team, debuff him and attack. He'll end up creating a
+      couple of clones you'll need to deal with. Even if you defeat him, you'll
+      still need to defeat the clones. After the fight the scenes will continue
+      playing out and we'll be sent somewhere. Oh goodness, this is how we start
+      the DLC!
+    </QuestStep>
+
+    <EndLogo />
+
+    <style>
+      .content-section {
+        padding: 2rem 0;
+      }
+
+      .content-section h2 {
+        color: var(--accent-gold);
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 0.75rem;
+        margin-bottom: 1.5rem;
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </section>
+</DlcLayout>
