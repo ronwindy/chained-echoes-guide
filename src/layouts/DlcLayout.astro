@@ -91,7 +91,11 @@ const baseUrl = import.meta.env.BASE_URL;
                   >Beyond the Rift</a
                 >
               </li>
-              <li><a href="#">The Big Escape</a></li>
+              <li>
+                <a href={`${baseUrl}ashes-of-elrant-dlc/the-big-escape`}
+                  >The Big Escape</a
+                >
+              </li>
               <li><a href="#">The Truth of Elrant</a></li>
               <li><a href="#">The Open Way</a></li>
               <li><a href="#">Final World Exploration</a></li>
@@ -401,13 +405,15 @@ const baseUrl = import.meta.env.BASE_URL;
     margin: 0 auto;
     width: 100%;
     padding: 0 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 
   .main-content {
     flex: 1;
     min-width: 0;
     padding: 2rem 1rem;
-    max-width: 900px;
+    max-width: 1100px;
   }
 
   /* DLC Header Styling - matches main guide */
@@ -524,7 +530,7 @@ const baseUrl = import.meta.env.BASE_URL;
   /* Responsive Design */
   @media (max-width: 1100px) {
     .content-wrapper {
-      gap: 1.5rem;
+      gap: 3.5rem;
     }
 
     .local-toc {

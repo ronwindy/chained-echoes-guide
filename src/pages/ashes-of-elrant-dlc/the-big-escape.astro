@@ -1,0 +1,394 @@
+---
+import DlcLayout from "../../layouts/DlcLayout.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import Image from "../../components/Image.astro";
+import Video from "../../components/Video.astro";
+import Tip from "../../components/Tip.astro";
+import BossFight from "../../components/BossFight.astro";
+import MediaGrid from "../../components/MediaGrid.astro";
+import EndLogo from "../../components/EndLogo.astro";
+import StoryBlurb from "../../components/StoryBlurb.astro";
+
+const sections = [
+  {
+    id: "try-to-talk-your-way-out",
+    label: "Try to talk your way out of the situation",
+  },
+  { id: "leonars-event", label: "Leonar's Event" },
+  {
+    id: "try-to-force-your-way-out",
+    label: "Try to force your way out of the situation",
+  },
+];
+---
+
+<DlcLayout
+  title="The Big Escape"
+  subtitle="DLC WALKTHROUGH"
+  guideId="the-big-escape"
+  sections={sections}
+>
+  <!-- SECTION 1: Try to talk your way out of the situation -->
+  <section id="try-to-talk-your-way-out" class="content-section">
+    <h2>Try to talk your way out of the situation</h2>
+
+    <QuestStep
+      id="try-to-talk-your-way-out-quest"
+      title="Try to talk your way out of the situation"
+    >
+      <p>
+        Well, we are now stuck in jail and we're playing as the little doggo.
+        Nice! Approach the bottom left cell gate and you'll see a list of all
+        your party members. By clicking on one you can watch a little scene of
+        what the city's putting them through. They're usually pretty funny.
+        Every 4 of them you watch will trigger an event with Leonar, but you can
+        select to rest for the day to ignore the 4 character scenes and jump
+        directly to Leonar's event.
+      </p>
+
+      <p>
+        The first event has you playing as Leonar and just fighting a Chicock.
+        That's about it. The second event is much longer and we get to actually
+        play as him.
+      </p>
+
+      <Tip type="note">
+        <vin
+          >This guy reminds me a lot of Lycaon from ZZZ (Zenless Zone Zero).
+          Good stuff!</vin
+        >
+      </Tip>
+    </QuestStep>
+  </section>
+
+  <!-- SECTION 2: Leonar's Event -->
+  <section id="leonars-event" class="content-section">
+    <h2>Leonar's Event</h2>
+
+    <QuestStep id="leonars-event-quest" title="Leonar's Event">
+      <p>Right off the bat you'll have some info about him.</p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/4/46/Ec_839.jpg/600px-Ec_839.jpg"
+        alt="Leonar's character information screen"
+      />
+
+      <p>
+        Anyway, as Leonar, start by equipping a Class Emblem. I just gave him
+        the Rune Knight one. Then head left across the bridge and follow the
+        bottom left path first to get to a small island with <strong
+          >Hero's Medal</strong
+        >.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/0/0b/Ec_840.jpg/600px-Ec_840.jpg"
+        alt="Hero's Medal location on small island"
+      />
+
+      <p>
+        Return to the large area and head north up the wall now. Kill the
+        Chicock then take the upper right ladder up to find 2 more Chicock. Kill
+        them and go right from here. Drop down a ledge and open the chest for <strong
+          >Hero's Medal</strong
+        >. Another one?
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/4/48/Ec_841.jpg/600px-Ec_841.jpg"
+        alt="Second Hero's Medal chest location"
+      />
+
+      <p>
+        Return to where the fight was and take the upper left path. Here going
+        south leads back to where we fought the single Chicock. Instead, from
+        the pond note that we have an upper left and upper right path. Take the
+        upper LEFT first to find a chest with <strong
+          >Party Points Voucher</strong
+        >.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/f/fa/Ec_842.jpg/600px-Ec_842.jpg"
+        alt="Party Points Voucher chest location"
+      />
+
+      <p>
+        Return and take the upper right now, taking the thin northern path
+        immediately to find the last chest here with <strong
+          >Flying Killer</strong
+        >. Go right now to find 3 Chicock. Kill them all and head right to
+        trigger a scene with Leonar and then we'll be back with the party.
+      </p>
+
+      <Tip type="note">
+        <vin
+          >I was so upset because I missed the last 2 chests! Thank god this
+          game has auto save, huh? Saved me from replaying a whole bunch haha.</vin
+        >
+      </Tip>
+    </QuestStep>
+  </section>
+
+  <!-- SECTION 3: Try to force your way out of the situation -->
+  <section id="try-to-force-your-way-out" class="content-section">
+    <h2>Try to force your way out of the situation</h2>
+
+    <QuestStep
+      id="try-to-force-your-way-out-quest"
+      title="Try to force your way out of the situation"
+    >
+      <p>
+        Go through 4 more character scenes (should be your last 4) and after
+        some scenes you'll regain control.
+      </p>
+
+      <p>
+        Head inside your cell... what is the merchant doing in here? Was he
+        hiding in the toilet? Anyway, he doesn't have anything new but he's here
+        if you need him. For now go right and you'll see a person in the cell.
+        We'll need to come back to him later. For now head to the northwestern
+        corner and take the stairs up to the next floor.
+      </p>
+
+      <p>
+        Up here we have an anvil. Use it if needed then go left to trigger a
+        scene. They stole all of our powers. Hmm. To the south you'll see a
+        large lock enemy. This is this area's boss but before we fight it we'll
+        need to get our powers back. Hmm.
+      </p>
+
+      <p>
+        Start by heading back to the NPC in the cell from before and he tells us
+        that we need to defeat other smaller "lock enemies" in order to get our
+        powers back, the <strong>Key Knights</strong>. Now we know.
+      </p>
+
+      <p>Head back upstairs and go west past the boss and up the stairs #2.</p>
+
+      <Tip type="tip">
+        <vin
+          >You see how all the stairs are numbered in the map? We'll be using
+          those numbers to go through this area real quick.</vin
+        >
+      </Tip>
+
+      <p>
+        On the second floor, enter the first cell south of you to find a chest
+        with <strong>Miranda Fiber x5</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/7/73/Ec_844.jpg/600px-Ec_844.jpg"
+        alt="Miranda Fiber x5 chest location"
+      />
+
+      <p>
+        You can talk to the soldiers here for some reason... what? Anyway, go
+        left and take the upper left exit #4 first. This takes you to a dead end
+        with a chest that has <strong>Human Killer</strong> inside.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/5/51/Ec_847.jpg/600px-Ec_847.jpg"
+        alt="Human Killer chest location"
+      />
+
+      <p>
+        Return back downstairs and head south down the middle path to find our
+        first Key Knight, the red one. All of them are the same. They have an
+        attack that hits twice for around 40 dmg. per hit and can also hit the
+        entire party twice for around 25 dmg. per hit per character. Not bad.
+      </p>
+
+      <p>
+        After the fight we'll have our attack skills back. Let's go! Further
+        south, go left and pick up the sparkle for <strong>Angel Wing x4</strong
+        >. Take the #3 exit now to go back down to the first floor. In this room
+        you can find a chest with <strong>Ringed Suit</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/6/69/Ec_845.jpg/600px-Ec_845.jpg"
+        alt="Ringed Suit chest location"
+      />
+
+      <p>
+        Head back up to the previous floor and take the bottom right exit #5.
+        We'll be on the third floor now. The second cell allows us to go to the
+        northern side of the floor, but go right first to find the green Key
+        Knight. This is the heals guy.
+      </p>
+
+      <p>
+        After killing him enter the next cell to find a chest with <strong
+          >Eye of Heimfran x4</strong
+        >.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/c/ca/Ec_846.jpg/600px-Ec_846.jpg"
+        alt="Eye of Heimfran x4 chest location"
+      />
+
+      <p>
+        Take the bottom right exit #7 up to the fourth floor where you can find
+        both the brown and blue Key Knights! The buffs and debuffs guys to the
+        far right. After killing them head back down to the previous floor and
+        take the upper left exit #6 now.
+      </p>
+
+      <p>
+        We are back on the fourth floor now. Go left and go up the upper left
+        exit #8. We'll reach the fifth floor. Go south here and you'll notice
+        exit #11 on the right and there's a hole on the left.
+      </p>
+
+      <p>
+        Take the exit #11 first. This leads to the sixth floor and as you go
+        right you'll find a <strong>Pool of Power</strong>. Super useful! You'll
+        also see a pair of Key Knights on the other side. Those are the last
+        ones.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/2/25/Ec_849.jpg/600px-Ec_849.jpg"
+        alt="Pool of Power and final Key Knights"
+      />
+
+      <p>
+        Now enter the cell to the right to find a chest with <strong
+          >Carbon Bone x5</strong
+        >.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/3/36/Ec_850.jpg/600px-Ec_850.jpg"
+        alt="Carbon Bone x5 chest location"
+      />
+
+      <p>
+        Return back to the previous floor and now take the hole. We'll be
+        halfway down the staircase. Go RIGHT first down the stairs and open the
+        chest inside for <strong>Hero's Medal</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/8/88/Ec_848.jpg/600px-Ec_848.jpg"
+        alt="Hero's Medal in staircase chest"
+      />
+
+      <p>
+        Return back outside and go up the stairs to the top. In here we'll see a
+        pool of blood? Lava? What is this? Check the right side of it to find a
+        chest with <strong>MAG Up</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/b/bb/Ec_851.jpg/600px-Ec_851.jpg"
+        alt="MAG Up chest location"
+      />
+
+      <p>
+        Enter the upper left cell of the floor to find yet another chest, this
+        one with <strong>Hideous Hide x5</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/7/76/Ec_852.jpg/600px-Ec_852.jpg"
+        alt="Hideous Hide x5 chest location"
+      />
+
+      <p>
+        Head up the #10 exit, go left and kill the 2 Key Knights we previously
+        saw. They are the last ones. Once you've done that, enter the cell on
+        the left to find a chest with <strong>MIND Up</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/e/eb/Ec_853.jpg/600px-Ec_853.jpg"
+        alt="MIND Up chest location"
+      />
+
+      <p>
+        Now check the upper left corner to find a portal. This takes you back to
+        the entrance. Take it and once back to the bottom, save your game and
+        head south to trigger a "boss fight".
+      </p>
+    </QuestStep>
+
+    <!-- BOSS FIGHT: KEY MASTER -->
+    <BossFight title="KEY MASTER">
+      <p>
+        Ok, for this to be a boss is kind of a joke. The Key Master for the most
+        part doesn't do much. His only actual attack hits 10 times. The attacks
+        are random so it doesn't hit as hard. He has a move where he doesn't do
+        anything. Preparing Lock Down skips his turn where he gives you the Lock
+        Down debuff, which prevents you from switching out party members for a
+        couple of turns (thanks to <strong>Var</strong> in the comments for this!)
+      </p>
+
+      <p>
+        He also panics, which basically means he skips his turn as well. He can
+        dispel all of your buffs for the party. This one is particularly
+        annoying, but not so bad.
+      </p>
+
+      <p>
+        He can, however, and this is probably what makes him extremely
+        dangerous, he can summon all 6 Key Knights. That's right, every single
+        one will be here ready to attack you. They are as strong as you fought
+        them before, and they all hit twice. However, he only ever used this
+        attack when it was around his 10-12th turn, which leads me to believe
+        this is a timed fight. In case you're curious, I defeated this boss
+        before he could reach his 4th turn. Yeah, he's that weak.
+      </p>
+
+      <ul>
+        <li>
+          <strong>Preparing Lock Down</strong>: skips turn and prepares attack.
+        </li>
+        <li>
+          <strong>Lock Down</strong>: grants you the Lock Down debuff which
+          prevents you from switching out party members.
+        </li>
+        <li>
+          <strong>Key War</strong>: hits 10 times randomly for around 35 dmg.
+          each hit.
+        </li>
+        <li><strong>Dispel</strong>: removes all your buffs.</li>
+        <li>
+          <strong>Key Army</strong>: summons all 6 Key Knights at the same time.
+        </li>
+      </ul>
+    </BossFight>
+
+    <p>
+      After the fight head south and exit this place to trigger some scenes.
+      Yep, saw that coming. There will be several scenes here, and really good
+      ones as well so enjoy them all.
+    </p>
+
+    <p>
+      Once all the scenes are over, the quest will come to an end and the next
+      one will start.
+    </p>
+  </section>
+
+  <EndLogo />
+</DlcLayout>
+
+<style>
+  .content-section {
+    padding: 2rem 0;
+  }
+
+  .content-section h2 {
+    color: var(--accent-gold);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+</style>
