@@ -120,3 +120,8 @@ Common button URLs:
 13. **Astro Syntax**:
     - Escape bare ampersands `&`.
     - Ensure imports are at the top.
+
+14. **Navigation Links**:
+    - Update the table of contents file (`table-of-contents.astro`) to add a link to the new guide.
+    - Update the DlcLayout sidebar to include a link to the new guide in the Walkthrough section.
+    - Use the pattern: `<a href={`${baseUrl}ashes-of-elrant-dlc/{page-slug}`}>{Page Title}</a>`
