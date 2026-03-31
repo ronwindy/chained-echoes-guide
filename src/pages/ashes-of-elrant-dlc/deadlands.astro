@@ -1,24 +1,242 @@
 ---
 import DlcLayout from "../../layouts/DlcLayout.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import Image from "../../components/Image.astro";
+import Tip from "../../components/Tip.astro";
+import BossFight from "../../components/BossFight.astro";
+import MediaGrid from "../../components/MediaGrid.astro";
 import EndLogo from "../../components/EndLogo.astro";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const sections = [
-  { id: "coming-soon", label: "Coming Soon" },
+  { id: "initial-exploration", label: "Initial Exploration" },
+  { id: "a-second-option-sidequest", label: "Part of \"A Second Option\" Sidequest" },
+  { id: "continuing-the-exploration", label: "Continuing the Exploration" },
+  { id: "the-sky-isles", label: "The Sky Isles" },
 ];
 ---
 
-<DlcLayout
-  title="Deadlands"
-  subtitle="THE OPEN WAY — DLC WALKTHROUGH"
-  guideId="dlc-deadlands"
-  sections={sections}
->
-  <section id="coming-soon" class="content-section">
-    <h2>Coming Soon</h2>
-    <p>
-      This guide is still being written. Please check back later for the full
-      Deadlands walkthrough.
-    </p>
+<DlcLayout title="Deadlands" subtitle="DLC WALKTHROUGH" guideId="dlc-deadlands" sections={sections}>
+
+  <!-- SECTION 1: Initial Exploration -->
+  <section id="initial-exploration" class="content-section">
+    <h2>Initial Exploration</h2>
+
+    <QuestStep id="initial-exploration-quest" title="Explore the Deadlands">
+      <p>After the introduction to the area, head west to a fork. Go north then you can go east at the next fork if you want. There's another locked building over here. Kind of weird, huh?</p>
+      <p>Anyway, head north from the previous fork and go east at the next one to find a chest with <strong>Mythical Skull x4</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/c/c8/Ec_894.jpg/600px-Ec_894.jpg" alt="Mythical Skull x4 chest" />
+
+      <p>Go west now and at the end it looks like a dead end, but on the right side there's an invisible path. You can't fall so take it to reach our first <strong>Pool of Power</strong>.</p>
+
+      <MediaGrid columns={2}>
+        <Image src="https://cdn.staticneo.com/ew/thumb/f/fd/Ec_895.jpg/363px-Ec_895.jpg" alt="Invisible path to Pool of Power" />
+        <Image src="https://cdn.staticneo.com/ew/thumb/d/dd/Ec_896.jpg/363px-Ec_896.jpg" alt="First Pool of Power" />
+      </MediaGrid>
+
+      <p>Return to the fork near the start of the area and go west now. Make sure to take the very little path going southwest to find a chest with <strong>Rainbow Ore x4</strong>. I missed this one the first time I went through here.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/9/95/Ec_1008.jpg/600px-Ec_1008.jpg" alt="Rainbow Ore x4 chest" />
+
+      <p>We'll find a teleportation crystal and an anvil you can use. From here let's take the southwestern path first. From this area, you can go south to reach the area in the Mushroom Forest where you first played as Leonar. If you missed the chests like I did, you can go get them.</p>
+      <p>However, if you check the northwestern corner of this area you can find a little ladder going up. Follow this path and you'll find a chest at the very end with <strong>MIND Up</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/1/1b/Ec_898.jpg/600px-Ec_898.jpg" alt="MIND Up chest" />
+
+      <p>Head north from the teleportation crystal and in the area up ahead, kill the enemies and check the left side of the little pit to find a chest with <strong>Fancy Leather x4</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/0/09/Ec_897.jpg/600px-Ec_897.jpg" alt="Fancy Leather x4 chest" />
+
+      <p>Head north from here to find another invisible path. Following it to the north leads to the next area. HOWEVER, halfway through it you can go left. A fork in the hidden path. This leads to the southwestern area of the Deadlands but I'm not going to cover it right now. We'll do so later once we're stronger because there's a tough boss over there.</p>
+      <p>That being said, still take this left hidden path and you'll be able to check that there's another fork, or a couple of them. Take the first one north to find a chest with <strong>Ethereal Gear</strong> then take the next one west for another chest, this one with <strong>Vanyard's String x3</strong>.</p>
+
+      <MediaGrid columns={2}>
+        <Image src="https://cdn.staticneo.com/ew/thumb/4/42/Ec_1009.jpg/363px-Ec_1009.jpg" alt="Ethereal Gear chest" />
+        <Image src="https://cdn.staticneo.com/ew/thumb/2/21/Ec_1010.jpg/363px-Ec_1010.jpg" alt="Vanyard's String x3 chest" />
+      </MediaGrid>
+
+      <p>The path going south leads to the area we're ignoring right now but feel free to go there and activate the teleportation crystal that's right at the entrance. Once you've done so, return to the first fork in the invisible path and head north into the next area.</p>
+      <p>As we enter the area, head north for a fight then we'll be left at a fork. Go north to the "bridge" made out of plants with eyeballs and at the end you can find a chest with <strong>Water Attack</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/5/59/Ec_900.jpg/600px-Ec_900.jpg" alt="Water Attack chest" />
+
+      <p>Return to the fork and go east. This leads to the village where the sidequest <a href={`${baseUrl}ashes-of-elrant-dlc/a-second-option`}>A Second Option</a> takes us. I'm going to assume you started it so let's go over it here.</p>
+    </QuestStep>
+  </section>
+
+  <!-- SECTION 2: Part of "A Second Option" Sidequest -->
+  <section id="a-second-option-sidequest" class="content-section">
+    <h2>Part of "A Second Option" Sidequest</h2>
+
+    <QuestStep id="a-second-option-sidequest-quest" title="Part of &quot;A Second Option&quot; Sidequest">
+      <p>As we approach the village we'll have a scene with Bastyan. Once it's over, enter the house to the right of the teleportation crystal and read the note. What is that? Well, exit the house and go northeast to a graveyard. Check the first gravestone on the second row to find <strong>8428a</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/7/75/Ec_901.jpg/600px-Ec_901.jpg" alt="Graveyard gravestone code" />
+
+      <p>Southeast of the graveyard is a ledge you can jump down from. Jump down to a plant eyeball bridge and follow it down to find a chest with <strong>Bowgun V700</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/1/1c/Ec_902.jpg/600px-Ec_902.jpg" alt="Bowgun V700 chest" />
+
+      <p>Climb the ladder and slide down then check the house to your northeast. Inside you can find... what is this? Talk to the "Gothic Girl" and she'll give you <strong>Cute Lantern</strong>. What is this for? It's a key item.</p>
+      <p>Leave the house and go west to find a blue circle. It's digging time! Of course, this is the same as the last 2 we've done so far and you'll get <strong>Sovereign Class Emblem</strong> as a reward. Nice. This one is actually REALLY good as it has "King's Punishment", which allows you to attack every enemy once for 3x damage. Perfect to end fights quick.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/3/39/Ec_903.jpg/600px-Ec_903.jpg" alt="Sovereign Class Emblem dig spot" />
+
+      <p>Head back north across the bridge and enter the house left of the crystal and go through the hole in the wall. In here go north at the fork to find a chest with <strong>3891a</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/e/e9/Ec_904.jpg/600px-Ec_904.jpg" alt="3891a chest" />
+
+      <p>Head east now, watch the scene and head north to reach a fork. Go right first then follow the bottom right path for another chest, this one with <strong>Inact Resistance</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/5/51/Ec_905.jpg/600px-Ec_905.jpg" alt="Inact Resistance chest" />
+
+      <p>Return 2 forks and go north now. Get on the plant eyeball bridge thing to find a chest at the end with <strong>ATK Up</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/9/96/Ec_906.jpg/600px-Ec_906.jpg" alt="ATK Up chest" />
+
+      <p>Return back down and take the upper left path now to find 3 soldiers. Yeah, these guys are part of the resistance so we'll need to deal with them. Sorry lads.</p>
+      <p>From here head east to reach an anomaly. This one shows us Magnolia! When you regain control, go east, kill some more soldiers and head north for the final chest in here, this one with <strong>Skill Points Voucher</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/5/5d/Ec_907.jpg/600px-Ec_907.jpg" alt="Skill Points Voucher chest" />
+
+      <p>Return to where we saw the anomaly and head north and exit the cave.</p>
+      <p>Back outside, move to the end of the path to trigger another scene with the resistance. We'll end up fighting them. The little captain doesn't really do anything different so deal with him as well. The scenes will continue after the fight and once its over, open the large chest for <strong>Glaive V700</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/8/8d/Ec_908.jpg/600px-Ec_908.jpg" alt="Glaive V700 chest" />
+
+      <p>And with that, we're done with this little sidequest segment. Head to the <a href={`${baseUrl}ashes-of-elrant-dlc/a-second-option`}>A Second Option</a> sidequest page if you want to continue with that quest.</p>
+    </QuestStep>
+  </section>
+
+  <!-- SECTION 3: Continuing the Exploration -->
+  <section id="continuing-the-exploration" class="content-section">
+    <h2>Continuing the Exploration</h2>
+
+    <QuestStep id="continuing-the-exploration-quest" title="Continuing the Exploration">
+      <p>Return to the fork right outside the little village and head north across the bridge. Go west and you'll see a new <strong>Fishing Spot</strong>. Nice!</p>
+
+      <MediaGrid columns={2}>
+        <Image src="https://cdn.staticneo.com/ew/thumb/8/89/Ec_909.jpg/363px-Ec_909.jpg" alt="Fishing Spot 1 location" />
+        <Image src="https://cdn.staticneo.com/ew/thumb/e/e4/Ec_910.jpg/363px-Ec_910.jpg" alt="Fishing Spot 1 details" />
+      </MediaGrid>
+
+      <p>Head up the little ladder to the west and we'll have another fork. Go west across the bridge first to get a chest with <strong>2500a</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/d/d7/Ec_911.jpg/600px-Ec_911.jpg" alt="2500a chest" />
+
+      <p>Return to the fork and to the right we have another one. We can go north, or east. Go EAST first then follow the upper path when you reach the split. You'll cross a bridge and then reach a fork (path going west and a ladder going north). Go west first to find a chest at the very end with <strong>HP Up</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/1/17/Ec_912.jpg/600px-Ec_912.jpg" alt="HP Up chest" />
+
+      <p>Return and go up the ladder now, killing the enemies up here. After doing so, go north from here first to reach a chest at the dead end with <strong>Lively Ingredients</strong>.</p>
+
+      <Tip type="warning">
+        <vin>This is a VERY important chest as we need it to proceed with the story so make sure to grab it!</vin>
+      </Tip>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/5/54/Ec_913.jpg/600px-Ec_913.jpg" alt="Lively Ingredients chest" />
+
+      <p>Return and go east now. As you go you'll end up going south and down a ladder. Here we can go left or right. Go RIGHT first and check the bottom left corner for a chest with <strong>Merlin FM700</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/3/34/Ec_914.jpg/600px-Ec_914.jpg" alt="Merlin FM700 chest" />
+
+      <p>Return and go left now, using the lip on the ledge to jump left, then north. This takes us back to where we need to be. From here go north across the bridge then go west into the next area.</p>
+      <p>This area right now is a dead end. However, to the north you can find our second <strong>Fishing Spot</strong> of the area...</p>
+
+      <MediaGrid columns={2}>
+        <Image src="https://cdn.staticneo.com/ew/thumb/6/67/Ec_915.jpg/363px-Ec_915.jpg" alt="Fishing Spot 2 location" />
+        <Image src="https://cdn.staticneo.com/ew/thumb/5/56/Ec_916.jpg/363px-Ec_916.jpg" alt="Fishing Spot 2 details" />
+      </MediaGrid>
+
+      <p>And across the bridge there's a chest with <strong>King's Greatsword</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/3/3d/Ec_917.jpg/600px-Ec_917.jpg" alt="King's Greatsword chest" />
+
+      <p>Fast travel back to the teleportation crystal in the village and from the fork right outside it, go WEST this time. We haven't gone this way but we've already opened up the next area since we got that Fishing Spot.</p>
+      <p>Anyway, as you go west, go south when you reach another fork (right before leaving this area) and enter the house down here. This is the brother of the huge cat we fought back in the city. We don't need to fight him this time but he won't go back until you find his owner. Hmm! Oh well, we'll come back later... maybe.</p>
+
+      <Tip type="note">
+        Make sure to go back to the cat in the city and let him know and he'll become an "Outdoor Cat". Basically he leaves.
+      </Tip>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/2/2f/Ec_918.jpg/600px-Ec_918.jpg" alt="Cat's brother house" />
+
+      <p>Return to the fork outside and go west now into the next area.</p>
+      <p>Once here talk to the soldier and he'll mention we can't continue because the Deadlands are going crazy and it's blocked off our path. Hmm. We'll need to make some <strong>Water of Life</strong>. Gotcha.</p>
+      <p>Remember I mentioned we needed to make some potions back when we were back in the city? Yes, this is why. We also need the "Lively Ingredients" item we previously got!</p>
+      <p>Fast travel back to the crystal in the center of the southern area then go to where the cauldron is and create the Water of Life potion.</p>
+
+      <MediaGrid columns={2}>
+        <Image src="https://cdn.staticneo.com/ew/thumb/d/dd/Ec_919.jpg/363px-Ec_919.jpg" alt="Cauldron location" />
+        <Image src="https://cdn.staticneo.com/ew/thumb/0/0e/Ec_920.jpg/363px-Ec_920.jpg" alt="Creating Water of Life" />
+      </MediaGrid>
+
+      <p>Once we have the Water of Life, return to where we talked to the soldier in the Deadlands and interact with the green mushroom tree thing in the center and you'll see how it changes the surroundings. This is cool!</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/4/4d/Ec_922.jpg/600px-Ec_922.jpg" alt="Water of Life mushroom tree transformation" />
+
+      <p>Once you're able to move, head south right away to find a chest with <strong>Lankintin Star</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/c/c1/Ec_923.jpg/600px-Ec_923.jpg" alt="Lankintin Star chest" />
+
+      <p>Head north from the fork now, and follow the path to the very north where you'll find a lone chest with <strong>Collector's Coin</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/c/c0/Ec_924.jpg/600px-Ec_924.jpg" alt="Collector's Coin chest" />
+
+      <p>Return to the fork down south and go left this time. We'll be in yet another fork. Well, the large skulls to the left are blocking our path (they're enemies in a little bit) so for now go north and go around the area until you reach another one of those green mushroom trees. Use your Water of Life to change things up.</p>
+      <p>Once you've done so, go right and south to start a fight against those large skulls from before. After the fight go west and at the fork go south first. To the far south there's a hidden passage you can't see. It leads to a chest with <strong>Light Resistance</strong>.</p>
+
+      <MediaGrid columns={2}>
+        <Image src="https://cdn.staticneo.com/ew/thumb/f/f2/Ec_925.jpg/363px-Ec_925.jpg" alt="Hidden passage entrance" />
+        <Image src="https://cdn.staticneo.com/ew/thumb/b/b1/Ec_926.jpg/363px-Ec_926.jpg" alt="Light Resistance chest" />
+      </MediaGrid>
+
+      <p>Return and take the upper left path now to find another mushroom tree. Use your Water of Life on it. Once you've done this, return to where you fought the first large skulls and from this area go north all the way. You'll cross a bridge and see another mushroom tree on the right behind the bones. To get it simply go west and north around the large rock in the center.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/e/ee/Ec_927.jpg/600px-Ec_927.jpg" alt="Mushroom tree behind bones" />
+
+      <p>After doing this, before moving look to the bottom right of your screen and you'll see a little lip that allows us to jump down into the water, next to the bridge. Go there.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/2/2b/Ec_928.jpg/600px-Ec_928.jpg" alt="Lip to jump into the water" />
+
+      <p>Once here jump down into the water and go west. We'll want to go past the bridges using the little bit of clean water to swim across. You'll be able to get out from the other side.</p>
+      <p>Once you get out, move ahead and kill the Skull enemies. From them take the upper left path and use your Water of Life on the mushroom tree. This cleans the area... but that's it? No! If you look closely, this is the origin point of the water! It basically cleans the entire river.</p>
+      <p>Head back south and get back in the water, and now take it right. Go all the way right and get out at the end, then head north to find a <strong>Pool of Power</strong>.</p>
+
+      <MediaGrid columns={2}>
+        <Image src="https://cdn.staticneo.com/ew/thumb/0/03/Ec_929.jpg/363px-Ec_929.jpg" alt="Second Pool of Power location" />
+        <Image src="https://cdn.staticneo.com/ew/thumb/9/9d/Ec_930.jpg/363px-Ec_930.jpg" alt="Second Pool of Power" />
+      </MediaGrid>
+
+      <p>Return to where you fought the last skulls and go right now to find an anvil and a teleportation crystal. From here go right and at the fork, to the right it takes us back into the Old City — that content is covered on the World Exploration page.</p>
+      <p>For now, head north and into the next area.</p>
+    </QuestStep>
+  </section>
+
+  <!-- SECTION 4: The Sky Isles -->
+  <section id="the-sky-isles" class="content-section">
+    <h2>The Sky Isles</h2>
+
+    <QuestStep id="the-sky-isles-quest" title="Head to the Sky Isles">
+      <p>This is our destination target, the <strong>Sky Isles</strong>. Go ahead and save your game then move forward to trigger a scene and then a boss fight.</p>
+    </QuestStep>
+
+    <BossFight title="Gabriel">
+      <p>Ok, this fight isn't too hard. He'll feel much more difficult if you're like me and completely forgot how these Sky Armor battles were.</p>
+      <p>Well, a quick TL;DR: keep an eye on the top left bar. If you've unlocked the talent that helps with these Sky Armor fights, then you'll only have Gear 1 and Gear 2. Gear 1 moves the bar to the right, while Gear 2 moves it to the left. You of course want to stay in the orange zone.</p>
+      <p>While in Gear 1, at the start of your turn you'll replenish some TP. You want to change between Gear 1 and Gear 2 to keep your damage up but also keep your TP replenished. For this I highly suggest you keep 2 characters in Gear 1 and 2 in Gear 2. When your characters are about halfway through their TP, switch them. Since we don't have Gear 3 now then this should be a breeze.</p>
+      <p>As for the boss, he shockingly doesn't have any attacks besides a normal attack that hits one party member and a counter which you should try to avoid by not attacking him.</p>
+      <ul>
+        <li><strong>Act Twice</strong>: allows him to act twice per turn.</li>
+        <li><strong>Act Thrice</strong>: allows him to act three times per turn. This is usually when you've dealt enough damage to the boss.</li>
+        <li><strong>Basic Attack</strong>: hits for around 600 dmg.</li>
+        <li><strong>Counter Stance</strong>: counters all physical attacks.</li>
+      </ul>
+    </BossFight>
+
+    <p>After the fight we'll have some scenes. Once they're over, this exploration will also be over. Head on over to <a href={`${baseUrl}ashes-of-elrant-dlc/the-open-way`}>The Open Way</a> quest page so you can continue with the exploration.</p>
   </section>
 
   <EndLogo />

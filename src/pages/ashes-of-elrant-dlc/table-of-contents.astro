@@ -337,6 +337,11 @@ const baseUrl = import.meta.env.BASE_URL;
 
   .child-list li {
     margin-bottom: 0.5rem;
+    padding-left: 0;
+  }
+
+  .child-list li::before {
+    content: none;
   }
 
   .child-list a {
