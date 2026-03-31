@@ -1,0 +1,243 @@
+---
+import DlcLayout from "../../layouts/DlcLayout.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import Image from "../../components/Image.astro";
+import Video from "../../components/Video.astro";
+import Tip from "../../components/Tip.astro";
+import BossFight from "../../components/BossFight.astro";
+import MediaGrid from "../../components/MediaGrid.astro";
+import EndLogo from "../../components/EndLogo.astro";
+import StoryBlurb from "../../components/StoryBlurb.astro";
+
+const baseUrl = import.meta.env.BASE_URL;
+
+const sections = [
+  { id: "leave-the-castle", label: "Leave the Castle" },
+  { id: "find-bjorg-and-hange", label: "Find Bjorg and Hange" },
+  { id: "head-to-the-central-plaza", label: "Head to the central plaza" },
+  { id: "investigating-the-old-city", label: "Investigating the Old City" },
+  { id: "exploring-the-deadlands", label: "Exploring the Deadlands" },
+  { id: "exploring-the-wastelands", label: "Exploring the Wastelands" }
+];
+---
+
+<DlcLayout title="The Open Way" subtitle="DLC WALKTHROUGH" guideId="dlc-the-open-way" sections={sections}>
+
+  <!-- SECTION 1: Leave the Castle -->
+  <section id="leave-the-castle" class="content-section">
+    <h2>Leave the Castle</h2>
+    
+    <QuestStep id="leave-the-castle-quest" title="Leave the Castle">
+      <p>We regain control right outside the throne room. Go down the stairs and down the ones directly below you to reach the first floor. Down here, to the right you can find a shop that sells equipment for your Sky Armors.</p>
+      <p>Go down the stairs to the southeast and you'll reach the basement. Enter the first room in front of you to find a chest with <strong>Goddess' Wool x4</strong>.</p>
+      
+      <Image src="https://cdn.staticneo.com/ew/thumb/b/b4/Ec_871.jpg/600px-Ec_871.jpg" alt="Goddess' Wool x4" />
+      
+      <p>Go left from the room and grab the sparkle for <strong>Exchange Parts x2</strong>. Go left past the hallway going north to find the gym and outside you'll see one of those really buffed dudes. Talk to him and you'll be able to use your SP and PP Vouchers here. Good stuff.</p>
+      
+      <Image src="https://cdn.staticneo.com/ew/thumb/4/43/Ec_870.jpg/600px-Ec_870.jpg" alt="SP and PP Vouchers NPC" />
+      
+      <p>Nothing inside the gym itself. Go north up the hallway and the first room on the left is the dormitory. You can find a sparkle in the corner with <strong>Fetish x3</strong>. To the right of this is a cafeteria of sorts. Nothing in here.</p>
+      <p>Further north down the hallway is the hangar, and to the left the treasure room (locked of course) and to the right is the entrance to the prison. Nothing else for us.</p>
+      <p>For now head back upstairs and leave the castle through the central exit to the south.</p>
+      <p>As we exit we'll be welcomed to <strong>Elrant City</strong>. We can now actually explore, albeit just a bit.</p>
+    </QuestStep>
+  </section>
+
+  <!-- SECTION 2: Find Bjorg and Hange -->
+  <section id="find-bjorg-and-hange" class="content-section">
+    <h2>Find Bjorg and Hange</h2>
+    
+    <QuestStep id="find-bjorg-and-hange-quest" title="Find Bjorg and Hange">
+      <Tip type="note">
+        <vin>I wonder if that Hange is reference to Attack on Titan? Who's watched the show? I love it. Not the best, but I really liked it.</vin>
+      </Tip>
+      <p>Let's make this quick. I'll just point out the important stuff but make sure you go around and explore as well. With that said, from where we start go directly south and in the center of the circle (where the star icon is on the map) you can find the teleportation crystal.</p>
+      <p>From here go up the stairs to the right of it and go northeast to find a chest with <strong>AGI Up</strong>.</p>
+      
+      <Image src="https://cdn.staticneo.com/ew/thumb/7/7e/Ec_872.jpg/600px-Ec_872.jpg" alt="AGI Up Chest" />
+      
+      <p>Return to the crystal and go west past the stairs to trigger a scene when you reach the area with the pillars. This here is Bjorg. After the scene, enter the house to reach the <strong>Old Town</strong>. This is an objective in your bulletin board. We can't do anything in here sadly.</p>
+      <p>Head back outside and check the bottom left corner for a chest with <strong>Fancy Leather x4</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/b/b2/Ec_873.jpg/600px-Ec_873.jpg" alt="Fancy Leather x4 Chest" />
+
+      <p>Open your map and do you see the 2 entrances southeast of the teleportation crystal? Head on over there and you'll see 2 houses. Enter the one on the left (blue roof) to find a HUGE cat in the background. Talking to it will start a fight.</p>
+      
+      <Tip type="warning">
+        <strong>Note</strong>: This is a good fight. He acts twice and has attacks like "Bad Mouthing" which hits the party for around 50 dmg. and can enter a Counter Stance. This last one is pretty annoying because his counter hits for around 220 dmg. Simply wait it out until his next turn.
+      </Tip>
+
+      <p>After the fight he'll ask you for a favor, to look for his brother. Supposedly he looks very similar to this cat. Hmm. We'll keep an eye out.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/c/cb/Ec_874.jpg/600px-Ec_874.jpg" alt="Huge Cat Fight" />
+
+      <p>Exit the house and go directly right to find the last chest in this place with <strong>Mythical Skull x4</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/8/81/Ec_875.jpg/600px-Ec_875.jpg" alt="Mythical Skull x4 Chest" />
+
+      <p>Southwest of the chest is a brown blob monster thing. This thing is Hange. Man, how low have you fallen!</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/0/05/Ec_876.jpg/600px-Ec_876.jpg" alt="Hange" />
+    </QuestStep>
+  </section>
+
+  <!-- SECTION 3: Head to the central plaza -->
+  <section id="head-to-the-central-plaza" class="content-section">
+    <h2>Head to the central plaza</h2>
+    
+    <QuestStep id="head-to-the-central-plaza-quest" title="Head to the central plaza">
+      <p>After the scene with him, head back to the central plaza (north of where the teleportation crystal is) and we'll have a lengthy scene. Once it's over, we'll have our next objective.</p>
+      <p>Just as a heads up, this quest is EXTREMELY long. Yeah, we need to go and basically complete both the Deadlands and the Wastelands. They are not separate quests. Why not? Who knows. Knowing this though, I'll be writing the Deadlands and Wastelands in their own page and linking it here so we don't have a gigantic page.</p>
+      <p>However, before we do that let's go and explore the rest of the city because there's a whole new area we need to check. For now, head south and enter the southern part of the city.</p>
+      <p>Once here go south down the middle path to trigger a scene where we see a bunch of soldiers leave. Afterwards, further south is the central spot of the map with the teleportation crystal. From here go right and there's a large building with 2 entrances to the north. This is the large shop. They don't really sell that much but you can purchase upgrade materials from them. They're pricey though.</p>
+      <p>You can go upstairs in here and out of the house. This lets you go talk to a bird but it says nothing important... at least I don't think it is.</p>
+      <p>Return and exit the building. Go north up the passage next to the house to reach the market. Check the southwestern side to find a passage between 2 houses that takes us to a chest with <strong>Vanyard's String x4</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/8/8b/Ec_877.jpg/600px-Ec_877.jpg" alt="Vanyard's String x4 Chest" />
+
+      <p>Return to the area with the crystal and go south. Don't exit the city. instead go east when possible and go all the way east and into the large building over here. This looks to be a warehouse. In here go around the outer perimeter (in between the boxes and the outer walls) to reach the chest in the bottom right corner for <strong>Goddess' Wool x4</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/7/7e/Ec_887.jpg/600px-Ec_887.jpg" alt="Goddess' Wool x4 Chest 2" />
+
+      <p>Return to the area with the teleportation crystal an look northwest to find a house you can go in. Enter here to find it's the Fishing Guild. They sell usable items, really useful ones. They can also sell some good items once we reach lv.5 and 10, but we're not there yet.</p>
+      <p>Leave the building and we're taking the western path now. As you go you'll see a large building with 3 entrances to the north, and a bridge to the south. There's not really much inside the northern building but feel free to check it out. For now go south across the bridge and immediately go right. Follow this path going around the top of the area and you'll eventually reach a building with a chest that has <strong>Rainbow Ore x4</strong> inside.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/4/4c/Ec_878.jpg/600px-Ec_878.jpg" alt="Rainbow Ore x4 Chest" />
+
+      <p>Head back north and go down the stairs around the corner to trigger a scene where we see Bastyan kill some NPCs.</p>
+      
+      <Tip type="note">
+        <vin>Am I the only one that gets triggered that his sprite has a red cape, but his face artwork when he speaks has a green one? Haha.</vin>
+      </Tip>
+
+      <p>Anyway, watching this scene will trigger a sidequest.</p>
+      <ul>
+        <li><a href={`${baseUrl}ashes-of-elrant-dlc/a-second-option`}>A Second Option</a></li>
+      </ul>
+
+      <MediaGrid columns={2}>
+        <Image src="https://cdn.staticneo.com/ew/thumb/6/63/Ec_880.jpg/363px-Ec_880.jpg" alt="A Second Option sidequest 1" />
+        <Image src="https://cdn.staticneo.com/ew/thumb/4/41/Ec_881.jpg/363px-Ec_881.jpg" alt="A Second Option sidequest 2" />
+      </MediaGrid>
+
+      <p>After the scene, to the left we have a fork: a small staircase going up, or continue going left. Go left past the staircase and enter the house at the end. There's a huge cauldron in here. If you've unlocked the "Brewery" talent then you can make potions here. Note that these potions are story and exploration related, not really potions that heal you and stuff...</p>
+      
+      <Tip type="warning">
+        <strong>Note</strong>: We're going to need to brew a potion later in the "Deadlands" area so make sure you unlock the talent ASAP if you haven't already. It's only 20 PP so it's pretty easy to do so.
+      </Tip>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/3/3e/Ec_882.jpg/600px-Ec_882.jpg" alt="Brewery Cauldron" />
+
+      <p>Return and go up the stairs now. Drop down at the end and STOP. To the right you'll see the entrance to a house. DO NOT go past the entrance. Instead go inside the house and exit via the other exit to find a chest with <strong>Jack's Ring</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/e/e6/Ec_883.jpg/600px-Ec_883.jpg" alt="Jack's Ring Chest" />
+
+      <p>Approach the left side the ground will break open and drop us.</p>
+
+      <Tip type="note">
+        <vin>MAN! I fell down here before opening the chest and I had to run all the way back! That was a pain to do! Make sure you don't do that!</vin>
+      </Tip>
+    </QuestStep>
+  </section>
+
+  <!-- SECTION 4: Investigating the Old City -->
+  <section id="investigating-the-old-city" class="content-section">
+    <h2>Investigating the Old City</h2>
+    
+    <QuestStep id="investigating-the-old-city-quest" title="Investigating the Old City">
+      <p>Well, we are now in the Old City. Yeah, we've already been here, kinda, but now we can explore a bit. From where we land open your map and locate the exit on the eastern side of the area. This gets you back to the city, on the northern side. Pretty cool, huh?</p>
+      <p>Anyway, from where we land go east and north at the fork. You'll fight some <strong>Phantom Pain</strong> here. They're pretty easy...</p>
+
+      <Tip type="note">
+        <vin>SNAAAAAAAKE!!!</vin>
+      </Tip>
+
+      <p>Afterwards go west and north at the fork for a chest with <strong>2780a</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/5/5e/Ec_885.jpg/600px-Ec_885.jpg" alt="2780a Chest" />
+
+      <p>Return and go up the stairs and into the little room to the north to find a chest with <strong>Demon's Claws</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/1/17/Ec_884.jpg/600px-Ec_884.jpg" alt="Demon's Claws Chest" />
+
+      <p>Go right and north at the fork to reach a new area. It seems to be pretty big. Open the only chest here in this dead end to find <strong>Lion Crest Key</strong>. Remember when we first entered the Old City we couldn't open the door? This is the key.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/1/1c/Ec_886.jpg/600px-Ec_886.jpg" alt="Lion Crest Key Chest" />
+
+      <p>Return to the previous area and leave the Old City completely to be back in the city itself. Let's continue the exploration, shall we? We might as well. Head back to the northern area of the city, enter the house on the northwestern side and in here use the key we just got to open the door. Good stuff!</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/a/ac/Ec_888.jpg/600px-Ec_888.jpg" alt="Locked Door Old City" />
+
+      <p>Inside, take the first fork north for a chest with <strong>Fire Attack</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/c/c2/Ec_889.jpg/600px-Ec_889.jpg" alt="Fire Attack Chest" />
+
+      <p>Continue going east into the next area, which is the same one where we found the key. Go up the roof and head to the second roof. Here you'll see a spot where you can jump down. Before doing so, go right and activate the teleportation crystal. From here go east and north to the next area.</p>
+      <p>In here go left first to find a large golden chest with <strong>Flesh of Farnese</strong>.</p>
+
+      <MediaGrid columns={2}>
+        <Image src="https://cdn.staticneo.com/ew/thumb/5/54/Ec_891.jpg/363px-Ec_891.jpg" alt="Flesh of Farnese Chest 1" />
+        <Image src="https://cdn.staticneo.com/ew/thumb/7/75/Ec_890.jpg/363px-Ec_890.jpg" alt="Flesh of Farnese Chest 2" />
+      </MediaGrid>
+
+      <p>Going right leads to a dead end so return to the roof with the spot where we can jump down and do so. Follow the path around and head north to the next area.</p>
+      <p>Here enter the room to the north first to fight some Phantom Pain enemies and then open the chest to find <strong>Master's Amulet</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/2/25/Ec_892.jpg/600px-Ec_892.jpg" alt="Master's Amulet Chest" />
+
+      <p>Head west into the next area, which is the last, or so it seems. You'll get the notification about your bulletin board.</p>
+      <p>Anyway, this is a dead end and the only thing you can find here is a chest with <strong>Collector's Coin</strong>.</p>
+
+      <Image src="https://cdn.staticneo.com/ew/thumb/c/c2/Ec_893.jpg/600px-Ec_893.jpg" alt="Collector's Coin Chest" />
+
+      <p>We have explored everything in this place, at least right now.</p>
+    </QuestStep>
+  </section>
+
+  <!-- SECTION 5: Exploring the Deadlands -->
+  <section id="exploring-the-deadlands" class="content-section">
+    <h2>Exploring the Deadlands</h2>
+    
+    <QuestStep id="exploring-the-deadlands-quest" title="Exploring the Deadlands">
+      <p>With the Old Town out of the way, let us continue with the story. Remember that I'm dividing the exploration in their own pages, so click the link below for the Deadlands exploration. If you don't remember how to get there, from the central teleportation crystal in the city, take the WESTERN exit to reach this area.</p>
+      <ul>
+        <li><a href={`${baseUrl}ashes-of-elrant-dlc/deadlands`}>Deadlands</a></li>
+      </ul>
+    </QuestStep>
+  </section>
+
+  <!-- SECTION 6: Exploring the Wastelands -->
+  <section id="exploring-the-wastelands" class="content-section">
+    <h2>Exploring the Wastelands</h2>
+    
+    <QuestStep id="exploring-the-wastelands-quest" title="Exploring the Wastelands">
+      <p>With the Deadlands explored, let's go explore the Wastelands now. You reach this area by taking the EASTERN exit from the teleportation crystal in the middle of the city.</p>
+      <ul>
+        <li><a href={`${baseUrl}ashes-of-elrant-dlc/wastelands`}>Wastelands</a></li>
+      </ul>
+      <p>Once you've completed exploring the Wastelands (and the Deadlands of course), we'll be taken back to the throne room automatically where several scenes will play out and the quest will eventually come to an end, starting the final quest, Deus Ex Machina. However, let's go and do a cleanup of all the areas in the DLC. Click the link below to go to that page. Of course if you don't want to do it and want to just finish the DLC, click the link above.</p>
+      <ul>
+        <li><a href={`${baseUrl}ashes-of-elrant-dlc/final-world-exploration`}>Final World Exploration</a></li>
+        <li><a href={`${baseUrl}ashes-of-elrant-dlc/deus-ex-machina`}>Deus Ex Machina</a></li>
+      </ul>
+    </QuestStep>
+  </section>
+
+  <EndLogo />
+</DlcLayout>
+
+<style>
+  .content-section {
+    padding: 2rem 0;
+  }
+
+  .content-section h2 {
+    color: var(--accent-gold);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+</style>

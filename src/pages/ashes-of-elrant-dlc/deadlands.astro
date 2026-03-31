@@ -1,0 +1,40 @@
+---
+import DlcLayout from "../../layouts/DlcLayout.astro";
+import EndLogo from "../../components/EndLogo.astro";
+
+const sections = [
+  { id: "coming-soon", label: "Coming Soon" },
+];
+---
+
+<DlcLayout
+  title="Deadlands"
+  subtitle="THE OPEN WAY — DLC WALKTHROUGH"
+  guideId="dlc-deadlands"
+  sections={sections}
+>
+  <section id="coming-soon" class="content-section">
+    <h2>Coming Soon</h2>
+    <p>
+      This guide is still being written. Please check back later for the full
+      Deadlands walkthrough.
+    </p>
+  </section>
+
+  <EndLogo />
+</DlcLayout>
+
+<style>
+  .content-section {
+    padding: 2rem 0;
+  }
+
+  .content-section h2 {
+    color: var(--accent-gold);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+</style>

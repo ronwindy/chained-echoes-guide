@@ -101,7 +101,28 @@ const baseUrl = import.meta.env.BASE_URL;
                   >The Truth of Elrant</a
                 >
               </li>
-              <li><a href="#">The Open Way</a></li>
+              <li>
+                <a href={`${baseUrl}ashes-of-elrant-dlc/the-open-way`}
+                  >The Open Way</a
+                >
+                <ul class="nav-children">
+                  <li>
+                    <a href={`${baseUrl}ashes-of-elrant-dlc/deadlands`}
+                      >Deadlands</a
+                    >
+                  </li>
+                  <li>
+                    <a href={`${baseUrl}ashes-of-elrant-dlc/world-exploration`}
+                      >World Exploration</a
+                    >
+                  </li>
+                  <li>
+                    <a href={`${baseUrl}ashes-of-elrant-dlc/wastelands`}
+                      >Wastelands</a
+                    >
+                  </li>
+                </ul>
+              </li>
               <li><a href="#">Final World Exploration</a></li>
               <li><a href="#">Deus Ex Machina</a></li>
             </ul>
@@ -229,6 +250,9 @@ const baseUrl = import.meta.env.BASE_URL;
         "dlc-the-big-escape": "ashes-of-elrant-dlc/the-big-escape",
         "dlc-the-truth-of-elrant": "ashes-of-elrant-dlc/the-truth-of-elrant",
         "dlc-the-open-way": "ashes-of-elrant-dlc/the-open-way",
+        "dlc-deadlands": "ashes-of-elrant-dlc/deadlands",
+        "dlc-world-exploration": "ashes-of-elrant-dlc/world-exploration",
+        "dlc-wastelands": "ashes-of-elrant-dlc/wastelands",
         "dlc-final-world-exploration":
           "ashes-of-elrant-dlc/final-world-exploration",
         "dlc-deus-ex-machina": "ashes-of-elrant-dlc/deus-ex-machina",
@@ -289,6 +313,9 @@ const baseUrl = import.meta.env.BASE_URL;
           "dlc-the-big-escape": "ashes-of-elrant-dlc/the-big-escape",
           "dlc-the-truth-of-elrant": "ashes-of-elrant-dlc/the-truth-of-elrant",
           "dlc-the-open-way": "ashes-of-elrant-dlc/the-open-way",
+          "dlc-deadlands": "ashes-of-elrant-dlc/deadlands",
+          "dlc-world-exploration": "ashes-of-elrant-dlc/world-exploration",
+          "dlc-wastelands": "ashes-of-elrant-dlc/wastelands",
           "dlc-final-world-exploration":
             "ashes-of-elrant-dlc/final-world-exploration",
           "dlc-deus-ex-machina": "ashes-of-elrant-dlc/deus-ex-machina",
@@ -423,7 +450,7 @@ const baseUrl = import.meta.env.BASE_URL;
   /* DLC Header Styling - matches main guide */
   .dlc-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     padding-top: 1rem;
   }
 
@@ -453,6 +480,40 @@ const baseUrl = import.meta.env.BASE_URL;
 
   .dlc-content {
     padding-top: 1rem;
+  }
+
+  /* Reset global h2 top margin inside content sections */
+  :global(.content-section h2) {
+    margin-top: 0;
+  }
+
+  /* Tighten top padding on content sections */
+  :global(.content-section) {
+    padding-top: 0.5rem !important;
+  }
+
+  /* Child nav items (nested under a parent guide) */
+  .nav-children {
+    list-style: none;
+    padding: 0;
+    margin: 0.35rem 0 0 1rem;
+    border-left: 2px solid var(--border-color);
+    padding-left: 0.75rem;
+  }
+
+  .nav-children li {
+    margin-bottom: 0.35rem;
+  }
+
+  .nav-children a {
+    font-size: 0.85rem;
+    color: var(--text-muted) !important;
+    opacity: 0.85;
+  }
+
+  .nav-children a:hover {
+    color: var(--accent-gold) !important;
+    opacity: 1;
   }
 
   /* "Return to Main Guide" backlink styling */
