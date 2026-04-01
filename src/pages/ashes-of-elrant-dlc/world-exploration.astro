@@ -1,24 +1,334 @@
 ---
 import DlcLayout from "../../layouts/DlcLayout.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import Image from "../../components/Image.astro";
+import Tip from "../../components/Tip.astro";
 import EndLogo from "../../components/EndLogo.astro";
+import MediaGrid from "../../components/MediaGrid.astro";
+
+const baseUrl = import.meta.env.BASE_URL;
 
 const sections = [
-  { id: "coming-soon", label: "Coming Soon" },
+  { id: "old-city", label: "Old City" },
+  { id: "northwestern-island", label: "Northwestern Island" },
+  { id: "northeastern-island", label: "Northeastern Island" },
+  { id: "southeastern-island", label: "Southeastern Island" },
+  { id: "southwestern-island", label: "Southwestern Island" },
 ];
 ---
 
 <DlcLayout
   title="World Exploration"
-  subtitle="THE OPEN WAY — DLC WALKTHROUGH"
+  subtitle="DLC WALKTHROUGH"
   guideId="dlc-world-exploration"
   sections={sections}
 >
-  <section id="coming-soon" class="content-section">
-    <h2>Coming Soon</h2>
+  <!-- SECTION 1: Old City -->
+  <section id="old-city" class="content-section">
+    <h2>Old City</h2>
+
     <p>
-      This guide is still being written. Please check back later for the full
-      World Exploration walkthrough.
+      Since we can now use our airship, let's explore the world, at least what
+      we can right now. Of course, before we do the whole exploration with the
+      airship, let's go explore the Old City. Remember the entrance I mentioned
+      at the end of the Deadlands? Let's go there.
     </p>
+
+    <p>
+      If you don't remember where it is, fast travel to the northwestern
+      teleportation crystal and go right from it and around and you'll see a
+      hidden path going into the side of the cliff.
+    </p>
+
+    <MediaGrid columns={2}>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/a/ad/Ec_931.jpg/363px-Ec_931.jpg"
+        alt="Hidden path entrance in the cliff"
+      />
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/d/d6/Ec_932.jpg/363px-Ec_932.jpg"
+        alt="Path leading into the Old City"
+      />
+    </MediaGrid>
+
+    <p>
+      Inside follow the path and go down to the bottom of the cave where you'll
+      enter the Old City.
+    </p>
+
+    <p>
+      In here go right, kill the Phantom Pains and jump down the wall. At the
+      bottom we can go left or right. Go left and jump down the ledge in the
+      bottom left corner to reach a chest that has <strong
+        >Mythical Skull x4</strong
+      >.
+    </p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/6/69/Ec_934.jpg/600px-Ec_934.jpg"
+      alt="Chest with Mythical Skull x4"
+    />
+
+    <p>
+      Jump down and enter the building to the right of the stairs. Go through
+      the building and back outside go left to find a chest with <strong
+        >Evasion Master</strong
+      >.
+    </p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/3/3b/Ec_935.jpg/600px-Ec_935.jpg"
+      alt="Chest with Evasion Master"
+    />
+
+    <p>
+      Head to the far right now and enter the building. Go through this one as
+      well and at the end you can find a chest with <strong
+        >Vanyard's String x4</strong
+      >.
+    </p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/0/0d/Ec_936.jpg/600px-Ec_936.jpg"
+      alt="Chest with Vanyard's String x4"
+    />
+
+    <p>
+      That's all we can explore on this side. Return across the last 2 buildings
+      then enter the upper left building (in front of where you first jumped
+      down the ledge). Inside, go inside the first room to find a chest with <strong
+        >Evasionist</strong
+      >.
+    </p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/e/e3/Ec_933.jpg/600px-Ec_933.jpg"
+      alt="Chest with Evasionist"
+    />
+
+    <p>
+      Go right now and down the stairs and exit the building. Out here go down 2
+      sets of stairs. At the bottom go right first and around to find a <strong
+        >Pool of Power</strong
+      >. These are ALWAYS welcome.
+    </p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/f/fb/Ec_937.jpg/600px-Ec_937.jpg"
+      alt="Pool of Power location"
+    />
+
+    <p>
+      Take the left path now and at the bottom, on the southern side you'll see
+      a hole you can jump down into. Do so and you'll find a cave with a
+      teleportation crystal. If you go north you'll see platform with 4 colored
+      crystals. What is this place? This screams boss fight!
+    </p>
+
+    <p>
+      There's nothing we can do and we're pretty much done exploring... right
+      now at least.
+    </p>
+
+    <p>
+      Go ahead and call your airship now and we'll be able to move around. Let's
+      do this.
+    </p>
+  </section>
+
+  <!-- SECTION 2: Northwestern Island -->
+  <section id="northwestern-island" class="content-section">
+    <h2>Northwestern Island</h2>
+
+    <p>You can find this one northwest of Deadlands.</p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/1/1a/Ec_938.jpg/600px-Ec_938.jpg"
+      alt="Northwestern Island location"
+    />
+
+    <p>
+      Once we land, get on your Sky Armor and go to the larger island to the
+      northeast. Get off here and open the large golden chest for <strong
+        >Flesh of Farnese</strong
+      >.
+    </p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/f/ff/Ec_939.jpg/600px-Ec_939.jpg"
+      alt="Golden chest with Flesh of Farnese"
+    />
+  </section>
+
+  <!-- SECTION 3: Northeastern Island -->
+  <section id="northeastern-island" class="content-section">
+    <h2>Northeastern Island</h2>
+
+    <p>This one is located northeast of the Wastelands.</p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/b/b5/Ec_940.jpg/600px-Ec_940.jpg"
+      alt="Northeastern Island location"
+    />
+
+    <p>
+      As you land, directly south you can find a <strong>Fishing Spot</strong>,
+      and to the right is a Worm Merchant to sell you materials for all your
+      upgrading needs.
+    </p>
+
+    <MediaGrid columns={2}>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/e/e4/Ec_941.jpg/363px-Ec_941.jpg"
+        alt="Fishing Spot on Northeastern Island"
+      />
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/3/3f/Ec_942.jpg/363px-Ec_942.jpg"
+        alt="Worm Merchant on Northeastern Island"
+      />
+    </MediaGrid>
+  </section>
+
+  <!-- SECTION 4: Southeastern Island -->
+  <section id="southeastern-island" class="content-section">
+    <h2>Southeastern Island</h2>
+
+    <p>This is south of the Wastelands.</p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/f/f8/Ec_943.jpg/600px-Ec_943.jpg"
+      alt="Southeastern Island location"
+    />
+
+    <p>
+      Once here head take the northwestern path. Take this north and around the
+      island. You'll eventually reach a chest at the very end with <strong
+        >Queen's Gun</strong
+      >.
+    </p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/c/cd/Ec_944.jpg/600px-Ec_944.jpg"
+      alt="Chest with Queen's Gun"
+    />
+
+    <p>
+      From here use the lip to jump down to the little island below so you can
+      get back on your Sky Armors. Get off where we started, head north and
+      you'll need to fight some cat enemies. After fighting them, take the
+      northeastern ladder and up here go right to find a chest with <strong
+        >Lankintin Star</strong
+      >.
+    </p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/2/2a/Ec_945.jpg/600px-Ec_945.jpg"
+      alt="Chest with Lankintin Star"
+    />
+
+    <p>
+      Go left now then take the UPPER path first to find a chest with <strong
+        >Robes Bonus</strong
+      >.
+    </p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/9/92/Ec_946.jpg/600px-Ec_946.jpg"
+      alt="Chest with Robes Bonus"
+    />
+
+    <p>
+      Go ahead and take the bottom path. You'll be able to jump from platform to
+      platform. Follow this path until you reach yet another fork. Once again,
+      take the top path first to reach a chest with <strong
+        >Lankintin Star</strong
+      >.
+    </p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/2/22/Ec_947.jpg/600px-Ec_947.jpg"
+      alt="Chest with second Lankintin Star"
+    />
+
+    <p>
+      Return and take the bottom path next. Go up the ladders and take this path
+      until you see 2 lips you can use to jump off. Take the RIGHT GREEN one to
+      reach a <strong>Pool of Power</strong>.
+    </p>
+
+    <MediaGrid columns={2}>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/1/1d/Ec_948.jpg/363px-Ec_948.jpg"
+        alt="Platform with colored lips"
+      />
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/e/e5/Ec_949.jpg/363px-Ec_949.jpg"
+        alt="Pool of Power on Southeastern Island"
+      />
+    </MediaGrid>
+
+    <p>And with that we're done with this place.</p>
+  </section>
+
+  <!-- SECTION 5: Southwestern Island -->
+  <section id="southwestern-island" class="content-section">
+    <h2>Southwestern Island</h2>
+
+    <p>This one is southwest of the Deadlands.</p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/9/9f/Ec_950.jpg/600px-Ec_950.jpg"
+      alt="Southwestern Island location"
+    />
+
+    <p>
+      Once here fly directly north to find a green island. Get off on the
+      eastern side of it, go west and kill the cat enemies. Afterwards, check
+      the southern side to find a <strong>Fishing Spot</strong>.
+    </p>
+
+    <MediaGrid columns={2}>
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/8/8c/Ec_952.jpg/363px-Ec_952.jpg"
+        alt="Green island on Southwestern Island"
+      />
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/6/68/Ec_953.jpg/363px-Ec_953.jpg"
+        alt="Fishing Spot on Southwestern Island"
+      />
+    </MediaGrid>
+
+    <p>
+      Go further left to find a chest with <strong>Lankintin Star x2</strong>.
+    </p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/9/9e/Ec_951.jpg/600px-Ec_951.jpg"
+      alt="Chest with Lankintin Star x2"
+    />
+
+    <p>
+      Go ahead and use the lip here to jump down to another chest, this one with <strong
+        >Collector's Coin</strong
+      >.
+    </p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/7/7a/Ec_954.jpg/600px-Ec_954.jpg"
+      alt="Chest with Collector's Coin"
+    />
+
+    <p>
+      From here jump down to the south, call in your Sky Armors and head back to
+      the green island up above, but from here you'll want to go northeast to
+      find a second green island. Get off on the southwestern corner and follow
+      the path to the very end to find a chest with <strong>Ambrosia</strong>.
+    </p>
+
+    <Image
+      src="https://cdn.staticneo.com/ew/thumb/b/b9/Ec_955.jpg/600px-Ec_955.jpg"
+      alt="Chest with Ambrosia"
+    />
   </section>
 
   <EndLogo />
