@@ -1,24 +1,824 @@
 ---
 import DlcLayout from "../../layouts/DlcLayout.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import Image from "../../components/Image.astro";
+import Tip from "../../components/Tip.astro";
+import BossFight from "../../components/BossFight.astro";
+import MediaGrid from "../../components/MediaGrid.astro";
 import EndLogo from "../../components/EndLogo.astro";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const sections = [
-  { id: "coming-soon", label: "Coming Soon" },
+  { id: "post-world-exploration", label: "Post World Exploration" },
+  {
+    id: "part-of-a-second-option-sidequest",
+    label: 'Part of "A Second Option" Sidequest',
+  },
+  { id: "continuing-the-exploration", label: "Continuing the Exploration" },
 ];
 ---
 
 <DlcLayout
   title="Wastelands"
-  subtitle="THE OPEN WAY — DLC WALKTHROUGH"
+  subtitle="DLC WALKTHROUGH"
   guideId="dlc-wastelands"
   sections={sections}
 >
-  <section id="coming-soon" class="content-section">
-    <h2>Coming Soon</h2>
-    <p>
-      This guide is still being written. Please check back later for the full
-      Wastelands walkthrough.
-    </p>
+  <!-- SECTION 1: Post World Exploration -->
+  <section id="post-world-exploration" class="content-section">
+    <h2>Post World Exploration</h2>
+
+    <QuestStep id="post-world-exploration-quest" title="Post World Exploration">
+      <p>
+        During the introduction of the area, Yaol will let us know that we can
+        use our Sky Armors here, and even fly.
+      </p>
+      <p>
+        Now, before we continue with the Wastelands, since we can now use our
+        Sky Armors AND our airship, let's go do some <a
+          href={`${baseUrl}ashes-of-elrant-dlc/world-exploration`}
+          >World Exploration</a
+        >. Of course, for this you'll need to unlock the talent to call in your
+        airship...
+      </p>
+
+      <Tip type="note">
+        <vin>Ok, how the hell is this considered a talent? Haha.</vin>
+      </Tip>
+
+      <p>
+        Anyway, click the link above so you can do some world exploration. It's
+        actually not that much and can be done pretty quick.
+      </p>
+
+      <hr />
+
+      <p>Welcome back! Had fun flying around this world? Pretty rad, huh?</p>
+      <p>
+        From where we land, go left and use your Sky Armors to kill the
+        Snailworm. Go south afterwards to find a chest with <strong
+          >Mythical Skull x4</strong
+        >.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/7/76/Ec_956.jpg/600px-Ec_956.jpg"
+        alt="Mythical Skull x4 chest"
+      />
+
+      <p>
+        Return to the large area to the east and start by checking your south to
+        find our first <strong>Fishing Spot</strong>.
+      </p>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/c/cd/Ec_957.jpg/363px-Ec_957.jpg"
+          alt="First Fishing Spot location"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/c/c2/Ec_958.jpg/363px-Ec_958.jpg"
+          alt="First Fishing Spot"
+        />
+      </MediaGrid>
+
+      <p>
+        From here go north and you'll see a ladder going up to a Snailworm. We
+        can't kill it just yet. For now head back down the ladder and follow the
+        wall east to find a teleportation crystal. From here go southeast and
+        you'll see the ground is colored differently. This is a sand "river". It
+        basically moves you down so you want to cross while pressing up.
+      </p>
+      <p>
+        Anyway, on the other side you can find a chest with <strong
+          >Nectar</strong
+        >.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/9/9d/Ec_959.jpg/600px-Ec_959.jpg"
+        alt="Nectar chest"
+      />
+
+      <p>
+        Head north now and on the right side you'll find a little tower. We need
+        to deactivate 3 of these in order for us to activate flight mode.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/a/a9/Ec_960.jpg/600px-Ec_960.jpg"
+        alt="First tower to deactivate"
+      />
+
+      <p>
+        Head north up the slope and up here, to continue we need to go north but
+        for now go south first and get on your Sky Armor to kill the Snailworm.
+        This is how we kill it. Once you've done so, return to the ladder next
+        to the teleportation crystal and go up it. We can now go west up here.
+        Do so, jump down when possible and head north past the enemies to find a
+        chest with <strong>Lord's Bow</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/9/9e/Ec_961.jpg/600px-Ec_961.jpg"
+        alt="Lord's Bow chest"
+      />
+
+      <p>
+        Jump across the gap to the right and we'll be in a large open area. From
+        where we are go directly east and you should be able to spot a "Digging
+        Spot". Do your thing here to get the <strong
+          >False Hero Class Emblem</strong
+        >. Next to it is also a chest under a palm tree with <strong
+          >Goddess' Wool x4</strong
+        >.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/b/bf/Ec_962.jpg/600px-Ec_962.jpg"
+        alt="Digging Spot and Goddess' Wool chest"
+      />
+
+      <p>
+        Directly north of us are a pair of Snailworm enemies. Kill them and look
+        to the left to find some building. Check in between the building and the
+        tree to find a hidden passage that takes you to a chest with <strong
+          >Offensive Drones O700</strong
+        >.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/c/c6/Ec_984.jpg/600px-Ec_984.jpg"
+        alt="Offensive Drones O700 chest"
+      />
+
+      <p>
+        Go east-northeast now and you'll see a worm you can talk to. It says
+        something about the Snailworms taking you somewhere when they eat you...
+      </p>
+
+      <Tip type="note">
+        <p>
+          We'll be letting them eat us later. We need to make a potion for that.
+        </p>
+      </Tip>
+
+      <p>
+        To the north there's a cave and you'll see a trail of what looks like
+        coins going into it. Head inside and at the end of the cave you can find
+        a <strong>Researcher</strong>. Talking to him you'll learn about the
+        "Collector's Coins". We need to bring him 10. So far we only have 5 of
+        them. We'll come back to him.
+      </p>
+      <p>
+        Back outside, check the northwestern corner of the area to find a chest
+        between 2 buildings that has <strong>Light Attack</strong> in it.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/c/c4/Ec_963.jpg/600px-Ec_963.jpg"
+        alt="Light Attack chest"
+      />
+
+      <p>
+        Not much else we can do so fast travel to the teleportation crystal to
+        the south and take the exit to the northeast to the next area.
+      </p>
+      <p>
+        As soon as we enter, go right a little bit and something unexpected will
+        happen. A gigantic sword will come falling down from the sky. Whoa!
+        Well, let's see what this is all about!
+      </p>
+      <p>
+        Call your airship and you'll see a cloud to the southwest. Enter it for
+        a little scene. Wow!
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/d/d0/Ec_964.jpg/600px-Ec_964.jpg"
+        alt="Gigantic sword scene"
+      />
+
+      <p>
+        Well, the TL;DR is that we can now use the "Flesh of Farnese" we've been
+        finding to upgrade our weapons to the max. These are the weapons we've
+        been finding HERE in this DLC, not the ones we brought from the main
+        game. Sounds about right. Anyway, we can do this ourselves from any
+        anvil so that's a huge plus. We don't need to come back to him at all.
+      </p>
+
+      <Tip type="note">
+        <vin
+          >You CANNOT tell me there are no Attack on Titan references in this
+          game! First Hange, then a titan? Yep.</vin
+        >
+      </Tip>
+
+      <p>
+        Return to the Wastelands and from the large sword go east and we'll have
+        a large sand river. This river goes from the very north side all the way
+        to the south. This entire area is us going from left to right and slowly
+        going up until we can take the northern exit.
+      </p>
+      <p>
+        That being said, get on the sand river and take the bottom LEFT exit.
+        Here go to the far left to find a chest with <strong
+          >Vanyard's String</strong
+        >.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/4/4e/Ec_965.jpg/600px-Ec_965.jpg"
+        alt="Vanyard's String chest"
+      />
+
+      <p>
+        Go back a bit and jump across the gap to the north, then return to the
+        river and take the bottom right exit now. Go right past the Snailworms
+        and you'll go north and end up at the river once again, near the top.
+        From here open your map and note the 2 paths on the left side of the
+        river below you. The top one is the way to go BUT take the bottom one
+        first to reach a chest with <strong>Elemental Cannon M700</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/4/4a/Ec_967.jpg/600px-Ec_967.jpg"
+        alt="Elemental Cannon M700 chest"
+      />
+
+      <p>
+        From here go right when on the river and you'll reach a new area that
+        has a chest with <strong>Support Drones D700</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/6/6e/Ec_966.jpg/600px-Ec_966.jpg"
+        alt="Support Drones D700 chest"
+      />
+
+      <p>
+        Return back to the top and now take the top left exit. Kill the enemies
+        and you'll be able to ride your Sky Armor. This is great because we can
+        now hover over the river. This means we want to go north into the next
+        area, but before we do head back south to where we found the Support
+        Drones and just north of it you most likely saw an NPC.
+      </p>
+      <p>
+        Talk to him and open the chest behind him for <strong
+          >Sewerage Key</strong
+        >. I think I know where this goes!
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/6/63/Ec_968.jpg/600px-Ec_968.jpg"
+        alt="Sewerage Key chest"
+      />
+
+      <p>
+        Head north and take the top right exit of the river to find our second
+        tower thing. Just one more and we'll be able to fly!
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/2/22/Ec_969.jpg/600px-Ec_969.jpg"
+        alt="Second tower to deactivate"
+      />
+
+      <p>And with this, head north up the river to the next area.</p>
+      <p>
+        As soon as we enter, get off your Sky Armor and go west. You'll find the
+        second <strong>Fishing Spot</strong> of the area. Good!
+      </p>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/c/c8/Ec_970.jpg/363px-Ec_970.jpg"
+          alt="Second Fishing Spot location"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/b/be/Ec_971.jpg/363px-Ec_971.jpg"
+          alt="Second Fishing Spot"
+        />
+      </MediaGrid>
+
+      <p>
+        Return to the entrance afterwards and go north up the bridge. At the
+        first fork go west to find an anomaly. This is another one for Glenn.
+        Afterwards head south to find a chest with <strong
+          >Lankintin Star</strong
+        >.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/5/5c/Ec_972.jpg/600px-Ec_972.jpg"
+        alt="Lankintin Star chest"
+      />
+
+      <p>
+        To the east at the fork, at the very end of the path there's a painter.
+        Talk to him and he mentions some of his canvases fell down into the
+        river. Hmm. We'll look for them eventually.
+      </p>
+      <p>
+        For now return to the bridges and head north for another fork. To the
+        east there are several collectibles you can pick up. Go north and you'll
+        see a dragon fly over you. Whoa!
+      </p>
+
+      <Tip type="note">
+        <vin>Yeah, we're killing this thing in a little bit haha.</vin>
+      </Tip>
+
+      <p>
+        Further north there's a ladder going down. Take it down and follow the
+        southwestern path to reach a chest with <strong>Fancy Leather x4</strong
+        >.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/2/2b/Ec_973.jpg/600px-Ec_973.jpg"
+        alt="Fancy Leather x4 chest"
+      />
+
+      <p>
+        Head back and go north to find a teleportation crystal. To the right
+        there are some Snailworms. Kill them and to the right are some
+        buildings. From the middle of them take the southern path to reach a
+        chest with <strong>Rainbow Ore x4</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/c/c4/Ec_974.jpg/600px-Ec_974.jpg"
+        alt="Rainbow Ore x4 chest"
+      />
+
+      <p>
+        Go to the northeastern side to find a little cave. Head inside and go
+        through it. On the other side you'll find the final tower. You can now
+        fly! Let's go!
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/e/ea/Ec_975.jpg/600px-Ec_975.jpg"
+        alt="Final tower - flight unlocked"
+      />
+
+      <p>
+        Well, now that we can fly, let's go explore! In this screen, go to the
+        little area next to the teleportation crystal to find the last chest of
+        this area with <strong>Digested Ingredients</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/7/72/Ec_976.jpg/600px-Ec_976.jpg"
+        alt="Digested Ingredients chest"
+      />
+
+      <p>
+        And with this this area is now complete. Let's move to the southeastern
+        area now.
+      </p>
+      <p>
+        Start by flying to the circular area on the northeastern corner to find
+        a golden chest with a <strong>Flesh of Farnese</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/9/9b/Ec_979.jpg/600px-Ec_979.jpg"
+        alt="Flesh of Farnese golden chest"
+      />
+
+      <p>
+        Open your map and locate the little circular area to the southwest. Go
+        there and open the chest for a <strong>Collector's Coin</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/a/a3/Ec_980.jpg/600px-Ec_980.jpg"
+        alt="Collector's Coin chest"
+      />
+
+      <p>
+        Once again, to the southwest is another circular area next to the sand
+        river. Go there and open the chest for a <strong>Machine Killer</strong
+        >.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/a/a2/Ec_981.jpg/600px-Ec_981.jpg"
+        alt="Machine Killer chest"
+      />
+
+      <p>
+        And lastly, northwest is another circular area that has a chest with <strong
+          >Party Points Voucher</strong
+        >.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/8/8b/Ec_982.jpg/600px-Ec_982.jpg"
+        alt="Party Points Voucher chest"
+      />
+
+      <p>
+        We are missing one chest. It's in the circular area directly north of
+        here but we can't get off on top of grass. Easy fix. Enter the
+        southwestern area of the Wastelands and go to the northeastern corner.
+        Get off your Sky Armor and grab the chest above the little worm below to
+        find <strong>Switcher</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/8/80/Ec_977.jpg/600px-Ec_977.jpg"
+        alt="Switcher chest"
+      />
+
+      <p>
+        Go right into the previous area, climb the ladder and open the chest for <strong
+          >Agamemnon FA 700</strong
+        >. This is the last one!
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/6/6a/Ec_978.jpg/600px-Ec_978.jpg"
+        alt="Agamemnon FA 700 chest"
+      />
+
+      <p>
+        Head back to the previous area so you can get back on your Sky Armor.
+        From where you got on your Sky Armor, to the south is a sneaky little
+        chest that has <strong>Ether Cannon E700</strong>. This is the last one.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/0/0c/Ec_983.jpg/600px-Ec_983.jpg"
+        alt="Ether Cannon E700 chest"
+      />
+
+      <p>
+        Head north to the northwestern area of the Wastelands. This is the final
+        one. Start by going to the southwestern part of it, get off and kill the
+        Snailworms. Afterwards, move to the end of the path to find a chest with <strong
+          >Ovelia FO700</strong
+        >.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/a/a5/Ec_985.jpg/600px-Ec_985.jpg"
+        alt="Ovelia FO700 chest"
+      />
+
+      <p>
+        Get back on your Sky Armor and check the little area to the northwest.
+        You'll find a chest with <strong>Goddess' Spear</strong> and a cave.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/9/9c/Ec_986.jpg/600px-Ec_986.jpg"
+        alt="Goddess' Spear chest and cave"
+      />
+
+      <p>
+        Head inside the cave... we're back in Old Town? How's this possible?
+        Follow the path until you reach the area we were previously in and once
+        here go down the stairs and then jump down the ledge on the left side to
+        reach the final chest in here with <strong>Goddess' Wool x4</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/d/d0/Ec_987.jpg/600px-Ec_987.jpg"
+        alt="Goddess' Wool x4 chest in Old Town"
+      />
+
+      <p>
+        That's it for this area. Fast travel back to the teleportation crystal
+        in the Wastelands and head back to where we entered the cave. From here
+        go north and you'll see a spot on the mountain you can get off. Do so,
+        cross the bridge to the right, kill the crocodile looking enemies and
+        jump down the cliff to reach a spot with <strong>Lankintin Star</strong
+        >.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/c/c1/Ec_988.jpg/600px-Ec_988.jpg"
+        alt="Lankintin Star location"
+      />
+
+      <p>
+        Go to the northwestern area and you'll see the dragon here. Land at the
+        bottom, save your game and head up for a boss fight.
+      </p>
+
+      <BossFight title="BOSS FIGHT: LONG">
+        <p>
+          Right off the bat, this dragon will use "Act Twice" and will be having
+          double action each turn for the rest of the fight.
+        </p>
+        <p>
+          Thankfully, Long isn't really a difficult boss. Similar to the
+          previous boss fight we had on our Sky Armors...
+        </p>
+
+        <Tip type="note">
+          <vin
+            >I've been playing and writing my Xenoblade X guide, and I've played
+            so much I keep wanting to call the Sky Armors Skells... ha!</vin
+          >
+        </Tip>
+
+        <p>
+          ... this fight also feels like a tutorial boss. That being said, it
+          has a VERY annoying mechanic, and that's his Barrier Switch. For this
+          he changes between a magical and a physical barrier. When he's "magic
+          resistant" he'll dodge every single magical attack. When he's
+          "physical resistant"... he dodges all physical attacks. This lasts for
+          a couple of his turns. Annoying. Of course for this you'll want to be
+          spamming attacks that go against his current barrier.
+        </p>
+        <p>
+          Other than that, he'll normally use his normal attacks and his fire
+          attack. The attacks themselves aren't really an issue.
+        </p>
+        <p>
+          However, when his HP drops to around 50% he'll start acting 3 times
+          per turn. For the most part the fight remains the same... until he
+          uses his "Full Barrier" move. This pretty much gives him resistance to
+          both magical and physical attacks, just like his Barrier Switch move.
+          This time around simply wait it out. I recommend you switch to Gear 1
+          and defend so you can gain your TP back while at the same time moving
+          the needle in the gauge back. Of course you can also buff your party.
+          Don't try debuffing the boss because you can't right now.
+        </p>
+        <p>
+          Remember that the boss is extremely weak to Water as well so if you
+          have any water attacks like the "Water Shot" then use it when possible
+          cus this deals tons of damage.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Barrier Switch</strong>: changes between being magic or
+            physical resistant.
+          </li>
+          <li>
+            <strong>Normal Attack</strong>: hits one character for around 350
+            dmg.
+          </li>
+          <li>
+            <strong>Fire</strong>: performs a fire attack on the entire party
+            for around 500 dmg.
+          </li>
+          <li>
+            <strong>Turning up the Heat</strong>: hits a party member twice for
+            around 375 dmg. each hit.
+          </li>
+          <li>
+            <strong>Full Barrier</strong>: gains both magical and physical
+            resistant barriers.
+          </li>
+        </ul>
+
+        <p>
+          After the fight a little scene will trigger in the room we previously
+          saw with the crystals. What is this place? Looks like a super boss?
+        </p>
+        <p>
+          Anyway, let's complete this area... as much as we can. Head to the
+          northeastern part of the area and get off your Sky Armor. Once you do
+          there are 2 spots where you can jump off from. Jump down the left side
+          twice and you'll land where there's a chest with <strong
+            >Great Sword GS700</strong
+          >.
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/9/94/Ec_989.jpg/600px-Ec_989.jpg"
+          alt="Great Sword GS700 chest"
+        />
+
+        <p>
+          Jump down and open the chest to the right for <strong
+            >Fancy Leather x4</strong
+          >.
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/7/7a/Ec_990.jpg/600px-Ec_990.jpg"
+          alt="Fancy Leather x4 chest"
+        />
+
+        <p>
+          Fly back to the very top and drop down the right side, then the left
+          side and you'll end up reaching a chest with <strong
+            >Rainbow Ore x4</strong
+          >.
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/3/33/Ec_991.jpg/600px-Ec_991.jpg"
+          alt="Rainbow Ore x4 chest"
+        />
+
+        <p>Drop down once more and you'll be where the soldier is.</p>
+      </BossFight>
+    </QuestStep>
+  </section>
+
+  <!-- SECTION 2: Part of "A Second Option" Sidequest -->
+  <section id="part-of-a-second-option-sidequest" class="content-section">
+    <h2>Part of "A Second Option" Sidequest</h2>
+
+    <QuestStep
+      id="part-of-a-second-option-sidequest-quest"
+      title='Part of "A Second Option" Sidequest'
+    >
+      <p>
+        The following is part of the
+        <a href="https://www.neoseeker.com/chained-echoes/A_Second_Option"
+          >A Second Option</a
+        >
+        sidequest so feel free to ignore if you're not doing it right now.
+      </p>
+      <p>
+        Go ahead and talk to the soldier here. He'll mention the rebels and the
+        skull. These are basically buttons to open a way forward. For now, press
+        the skull to enter the cave.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/8/85/Ec_993.jpg/600px-Ec_993.jpg"
+        alt="Skull button to enter cave"
+      />
+
+      <p>
+        Once inside, kill the rebels up ahead and on the right side of the room
+        you can find another skull. Press it to open a way forward on the left
+        side. Head through and as soon as you enter go left and hit the skull,
+        then go right and hit a second button. This will open a door in the
+        center.
+      </p>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/4/4d/Ec_994.jpg/363px-Ec_994.jpg"
+          alt="First skull button in cave"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/d/d9/Ec_995.jpg/363px-Ec_995.jpg"
+          alt="Second button in cave"
+        />
+      </MediaGrid>
+
+      <p>
+        Go through this central door and on the other side, go left first to
+        find a chest at the end with <strong>Hero's Medal</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/d/df/Ec_996.jpg/600px-Ec_996.jpg"
+        alt="Hero's Medal chest"
+      />
+
+      <p>
+        Go right across the bridge now and kill the next rebels you come across.
+        This here is a fork. There's nothing to the right so go left. Take the
+        bottom path and keep an eye on the right side to find a skull among the
+        bushes.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/a/a2/Ec_997.jpg/600px-Ec_997.jpg"
+        alt="Skull among bushes"
+      />
+
+      <p>
+        Press it and it'll open a door to the far right side of the room, which
+        before was a dead end. Go through it to find <strong
+          >Crit Damage Up</strong
+        >.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/4/48/Ec_998.jpg/600px-Ec_998.jpg"
+        alt="Crit Damage Up chest"
+      />
+
+      <p>
+        Return to where you pressed the skull and go north to where a scene will
+        play out.
+      </p>
+      <p>
+        After the scene, go left, kill the rebels and hit the skull. Head
+        through, save your game and move forward for another scene and then a
+        boss fight.
+      </p>
+
+      <BossFight title="BOSS FIGHT: WRAITH">
+        <p>
+          Let me start out by saying... why is this thing weak to darkness?
+          Given the type of enemy, shouldn't it be light? Oh well, make sure to
+          equip darkness spells to do some real damage to this thing.
+        </p>
+        <p>
+          Anyway, the boss itself didn't do much. I took him out in 3 of his
+          turns, and that's without exploiting his weakness to darkness.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Blinding Light</strong>: hits everyone for around 80 light
+            dmg.
+          </li>
+          <li><strong>Charm</strong>: charms a party member.</li>
+          <li>
+            <strong>Normal Attack</strong>: hits a party member for around 50
+            dmg.
+          </li>
+        </ul>
+
+        <p>
+          Watch the scene after the fight (lengthy one), we're supposed to
+          leave. It feels very anticlimactic, huh?
+        </p>
+      </BossFight>
+    </QuestStep>
+  </section>
+
+  <!-- SECTION 3: Continuing the exploration -->
+  <section id="continuing-the-exploration" class="content-section">
+    <h2>Continuing the Exploration</h2>
+
+    <QuestStep
+      id="continuing-the-exploration-quest"
+      title="Continuing the Exploration"
+    >
+      <p>
+        With the sidequest portion out of the way, head back to the northeastern
+        corner of the map and hover over the western sand river north until you
+        reach the next area.
+      </p>
+      <p>
+        Similar to the area at the end of the Deadlands, save your game and head
+        up the staircase to trigger a scene and then a boss fight.
+      </p>
+
+      <BossFight title="BOSS FIGHT: SARIEL">
+        <p>
+          This fight is very similar to the one we had against Gabriel. Unlike
+          Gabriel though, he comes with 2 Dart Seraph Armor enemies. They are
+          much weaker than the bosses and have one thing that makes the boss hit
+          harder.
+        </p>
+        <p>
+          These Dart Seraph Armor enemies have an attack called "Raining
+          Drones". These lower the entire party's Wind RES, allowing the boss to
+          hit from 500 dmg. up to 750-800 dmg. Of course, dealing with these 2
+          will be your highest priority. They do go down in like 2 turns so it's
+          not really an issue.
+        </p>
+        <p>
+          It may shock you, but Sariel doesn't start with Act Twice. He'll only
+          attack once per turn, but of course as you lower his HP he'll use it
+          and will start acting twice. He'll also start using his Drone Thunder
+          attack which is a party wide attack. I rarely saw him use it though.
+        </p>
+        <p>Other than that, this is a pretty easy and straightforward boss.</p>
+
+        <ul>
+          <li>
+            <strong>Sariel</strong>
+            <ul>
+              <li>
+                <strong>Tornado</strong>: hits 3 times to random party members
+                for around 500 wind dmg.
+              </li>
+              <li>
+                <strong>Drone Thunder</strong>: hits entire party for around 400
+                wind dmg.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Dart Seraph Armor</strong>
+            <ul>
+              <li>
+                <strong>Normal Attack</strong>: hits for around 500 dmg.
+              </li>
+              <li>
+                <strong>Raining Drones</strong>: hits entire party for around
+                300 dmg. and lowers Wind RES.
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <p>
+          After the fight we'll have some scenes play out and the Wastelands
+          exploration will come to an end.
+        </p>
+      </BossFight>
+    </QuestStep>
   </section>
 
   <EndLogo />
