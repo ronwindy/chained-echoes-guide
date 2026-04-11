@@ -1,0 +1,1347 @@
+---
+import DlcLayout from "../../layouts/DlcLayout.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import Image from "../../components/Image.astro";
+import Tip from "../../components/Tip.astro";
+import BossFight from "../../components/BossFight.astro";
+import MediaGrid from "../../components/MediaGrid.astro";
+import EndLogo from "../../components/EndLogo.astro";
+
+const baseUrl = import.meta.env.BASE_URL;
+
+const sections = [
+  { id: "elrant-city", label: "Elrant City" },
+  { id: "wastelands", label: "Wastelands" },
+  { id: "old-city", label: "Old City" },
+  { id: "mushroom-forest", label: "Mushroom Forest" },
+  { id: "deadlands", label: "Deadlands" },
+  { id: "elrant-city-again", label: "Elrant City Again" },
+  { id: "old-city-2", label: "Old City" },
+  { id: "lost-gardens", label: "Lost Gardens" },
+];
+---
+
+<DlcLayout
+  title="World Exploration 2"
+  subtitle="DLC WALKTHROUGH"
+  guideId="dlc-world-exploration-2"
+  sections={sections}
+>
+  <!-- SECTION 1: Elrant City -->
+  <section id="elrant-city" class="content-section">
+    <h2>Elrant City</h2>
+
+    <QuestStep id="elrant-city-quest" title="Elrant City">
+      <p>
+        There are several things we need to do in order to complete what remains
+        of the DLC. Let's start in the city!
+      </p>
+      <p>
+        Fast travel to the crystal on the northern side of the city. Go to the
+        southern part and locate the locked house right before exiting. Remember
+        the Sewerage Key we previously found in the Wastelands? Yeah, we can use
+        it to open the door.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/5/5b/Ec_1000.jpg/600px-Ec_1000.jpg"
+        alt="Locked house in Elrant City"
+      />
+
+      <p>
+        Inside jump in the water and we'll be able to swim through the city.
+        Follow the water south (there's only one path) and when you're on the
+        southern most side of the canal (when going west), get off using the rope
+        ladder.
+      </p>
+      <p>
+        Here go northwest to find a chest with
+        <strong>Champion's Fangs</strong>.
+      </p>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/5/50/Ec_1001.jpg/363px-Ec_1001.jpg"
+          alt="Champion's Fangs chest location"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/d/dc/Ec_1002.jpg/363px-Ec_1002.jpg"
+          alt="Champion's Fangs chest"
+        />
+      </MediaGrid>
+
+      <p>
+        Jump back in the water and continue west until you're on the western side
+        of the area. As you go under the walkway you'll be able to go inside the
+        large building, or continue north. You can go inside the building and
+        unlock the door so you can jump back down into the water whenever you
+        want.
+      </p>
+      <p>
+        For now though head north and go left when possible to find a
+        <strong>Pool of Power</strong>. It should be your last one in the city.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/0/00/Ec_1003.jpg/600px-Ec_1003.jpg"
+        alt="Pool of Power in Elrant City"
+      />
+
+      <p>
+        Return to the water and continue north. Enter the house on the left and
+        in the back room (this place is REALLY ominous huh?) you'll find a
+        cloaked individual called "Abel".
+      </p>
+      <p>
+        Enjoy the talk with him. He explains a lot of things and he's also part
+        of the bulletin board tabs. Good stuff!
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/0/0c/Ec_1004.jpg/600px-Ec_1004.jpg"
+        alt="Abel in the back room"
+      />
+
+      <p>
+        Fast travel back to the crystal on this southern side of the city and
+        head to the cauldron. This time we're making the "Slow Digestion XL"
+        potion. We don't have the materials for the Minimi one.
+      </p>
+      <p>
+        With the Slow Digestion potion, head on over to the Wastelands.
+      </p>
+
+      <h3>Deals</h3>
+      <p>
+        Before you leave the city, or whenever you come back, make sure to go to
+        the merchant inside the palace and sell all your collectibles to get the
+        Deals to pop up. Here you can find several good items, including a couple
+        ultimate weapons and a Flesh of Farnese to upgrade them.
+      </p>
+    </QuestStep>
+  </section>
+
+  <!-- SECTION 2: Wastelands -->
+  <section id="wastelands" class="content-section">
+    <h2>Wastelands</h2>
+
+    <QuestStep id="wastelands-quest" title="Wastelands">
+      <p>
+        Back here, remember the info we got about the large Snailworms eating
+        and going to a cave? Well, enter a fight with any Snailworm without your
+        Sky Armor and the first attack they'll use is
+        <strong>Devouring Party</strong>. This will eat you and take you
+        somewhere.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/3/39/Ec_1005.jpg/600px-Ec_1005.jpg"
+        alt="Snailworm Devouring Party attack"
+      />
+    </QuestStep>
+  </section>
+
+  <!-- SECTION 3: Old City -->
+  <section id="old-city" class="content-section">
+    <h2>Old City</h2>
+
+    <QuestStep id="old-city-quest" title="Old City">
+      <p>
+        Yeah, we appear in the Old Town! From where we appear, go north then
+        right to find a chest with <strong>Collector's Coin</strong>. Go all the
+        way west now to find a <strong>Pool of Power</strong>.
+      </p>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/1/1b/Ec_1006.jpg/363px-Ec_1006.jpg"
+          alt="Collector's Coin location"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/8/8a/Ec_1007.jpg/363px-Ec_1007.jpg"
+          alt="Pool of Power in Old City"
+        />
+      </MediaGrid>
+
+      <p>
+        And with this we're pretty much done with the Old Town. We just need to
+        clear that cave at the bottom that had the 4 colored crystals. For now
+        return to
+      </p>
+      <p>
+        For now, let's go to the Mushroom Forest. However, we're going to go in
+        a different way. We want to take Leonar's path.
+      </p>
+    </QuestStep>
+  </section>
+  <!-- SECTION 4: Mushroom Forest -->
+  <section id="mushroom-forest" class="content-section">
+    <h2>Mushroom Forest</h2>
+
+    <QuestStep id="mushroom-forest-quest" title="Mushroom Forest">
+      <p>
+        Remember where Leonar's path was? If not, fast travel to the
+        teleportation crystal on the southeastern corner of the Deadlands and
+        take the southwestern exit into the Mushroom Forest. You'll notice the
+        orange ground right away and there's no map.
+      </p>
+      <p>
+        Once here, call in your Sky Armor and fly directly south to find a cave.
+        Head inside and go through the cave and we'll end up in the northwestern
+        most part of the forest.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/8/82/Ec_1011.jpg/600px-Ec_1011.jpg"
+        alt="Mushroom Forest cave entrance"
+      />
+
+      <p>
+        We needed to come from this side because we can't land anywhere else.
+        Bummer. Anyway, follow the path, kill the Chrioptera and follow the path
+        until you jump down into the water.
+      </p>
+      <p>
+        In the water, swim down the waterfall and get out on the little island
+        down here. Kill some more Chrioptera and open the golden chest for a
+        <strong>Flesh of Farnese</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/c/ce/Ec_1017.jpg/600px-Ec_1017.jpg"
+        alt="Flesh of Farnese golden chest"
+      />
+
+      <p>
+        Get back in the water and go right. Ignore the waterfall going up...
+      </p>
+
+      <Tip type="note">
+        <vin>
+          Are these... upperfalls? Waterups? Waterraise? I've spent an unhealthy
+          amount of time thinking about it haha.
+        </vin>
+      </Tip>
+
+      <p>
+        ... and continue going to the far right for a red chest that has
+        <strong>Sappenpanzer</strong> inside. Great armor.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/0/00/Ec_1018.jpg/600px-Ec_1018.jpg"
+        alt="Sappenpanzer chest"
+      />
+
+      <p>
+        Go up the waterfall we skipped and go north up another waterfall. Up here
+        go right and get out to get a teleportation crystal and an anvil. Get in
+        the water on the right and to the next little island. Here STOP! Save
+        your game and read below because as you try to fish on the right side
+        we'll have probably the strongest boss fight in the DLC... at least the
+        one that gave me the most trouble.
+      </p>
+
+      <BossFight title="BOSS FIGHT: MANEATER">
+        <p>
+          I had no idea we were going to be fighting a boss here, but here we
+          are. I was rather confused because I had already done both of the
+          Fishing Spots in the forest.
+        </p>
+        <p>
+          Two things I highly recommend you do is to equip your characters with
+          wind attacks, if they have them. The boss is weak to them. Also, and
+          definitely more importantly, bring protection against water. This is
+          the one thing you want! The boss attacks using water a lot so the more
+          protected you are against the element the better.
+        </p>
+        <p>
+          Of course, you want to do your normal boss stuff, like using Glenn's
+          All Break to fully debuff the boss, buff yourself, etc. If you brought
+          Victor, equipping skills like "Shielding Mazurka" and "Healing Hymn"
+          would prove to be extremely useful. Of course, Heroic Ode is one I use
+          all the time as well.
+        </p>
+        <p>
+          Anyway, the reason why this boss is difficult is because it just hits
+          really hard. The one attack you really want to be careful of is his
+          Body Slam. This attack hits for almost 300 dmg. to the entire party.
+          Yeah, and this was me buffed AND defending. Make sure to be protected
+          against water AND as much DEF as you possibly can. This is also the
+          reason why Victor's Shielding Mazurka skill is so good. It helps you
+          withstand the damage. Of course, his Healing Hymn also helps with the
+          healing but make sure to fully heal as fast as you can.
+        </p>
+        <p>
+          His other attacks are also a pain. His Water Prison makes one of your
+          party members unable to move so make sure to destroy it ASAP. Fully
+          focus on it to free your party member. Another attack is his Flood
+          Wave. He usually starts using this attack when he starts acting twice
+          per turn. This attack hits quite hard and he LOVES to use it twice per
+          turn so be very careful. Another reason to bring Victor and his bubble
+          shield... and the healing as well.
+        </p>
+        <p>
+          And lastly, just to make him annoying, they gave him "Poison Wind".
+          Poisons your party. Thank you... I hate you.
+        </p>
+        <p>
+          Overall, as long as your heals can keep up with this boss fight, it's
+          simple in terms of what he can do, but like I said, he hits hard so
+          make sure to bring as much protection as you can.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Body Slam</strong>: this is a 2 turn attack. The first turn
+            it'll move back and the next turn it'll attack, hitting the entire
+            party for around 300 dmg.
+          </li>
+          <li>
+            <strong>Water Prison</strong>: creates a bubble around a party member
+            that prevents them from taking a turn.
+          </li>
+          <li>
+            <strong>Flood Wave</strong>: hits the entire party for around 150
+            water dmg.
+          </li>
+          <li>
+            <strong>Poison Wind</strong>: inflicts poison on all party members
+            that last 2 turns.
+          </li>
+        </ul>
+
+        <p>
+          After the fight you'll see that we've killed a second one of these
+          Maelstrom Monsters. Nice! This is our second one (the first one was
+          the Dragon).
+        </p>
+      </BossFight>
+
+      <p>
+        Now let's go complete the rest of the forest. Fast travel to the
+        teleportation crystal at the researcher base (the one on the southern
+        side of the northwestern corner of the area) and in front of the building
+        you'll see a sparkle. Check it to find
+        <strong>Poison Formula</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/4/48/Ec_1012.jpg/600px-Ec_1012.jpg"
+        alt="Poison Formula sparkle"
+      />
+
+      <p>
+        Fly to the little path of land south of the northern teleportation
+        crystal to find the last chest in this area containing
+        <strong>Shack Key</strong>.
+      </p>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/b/b0/Ec_1019.jpg/363px-Ec_1019.jpg"
+          alt="Shack Key location"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/6/69/Ec_1020.jpg/363px-Ec_1020.jpg"
+          alt="Shack Key chest"
+        />
+      </MediaGrid>
+
+      <Tip type="note">
+        <p>
+          <strong>Note</strong>: This is an important key! We'll be using it
+          quite a bit later on.
+        </p>
+      </Tip>
+
+      <p>
+        Head south from here back into the southwestern area (the first area
+        where we appeared in), get in your Sky Armor and check the area to the
+        southeast. There's a Strix enemy sleeping. Kill it with your Sky Armor
+        and go south east from it to find a chest with
+        <strong>Sword & Shield S700</strong>. This should be the last one.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/2/26/Ec_1015.jpg/600px-Ec_1015.jpg"
+        alt="Sword & Shield S700 chest"
+      />
+
+      <p>
+        Now locate the entrance you can see on your map on the western side of
+        the area, directly west from the top spot of the lake. Northeast of this
+        entrance is a spot where you can land. Land, get out of your Sky Armors
+        and follow this path north to the very end where you'll be able to get a
+        chest with <strong>Rainbow Ore x4</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/0/0d/Ec_1013.jpg/600px-Ec_1013.jpg"
+        alt="Rainbow Ore x4 chest"
+      />
+
+      <p>
+        This area should be done as well. We now just need to clear the
+        southeastern corner. Let's do this.
+      </p>
+      <p>
+        Fly to the southeastern corner of the forest and you'll notice in the
+        northwestern corner there's a little spot where you can land. For some
+        odd reason I couldn't move past the river. You're supposed to go
+        southeast across the river and to where the Chicock is. It seems my Sky
+        Armor was too thicc. We'll get to that in a bit.
+      </p>
+      <p>
+        While flying, go to the patch of land to the northeast where there are 3
+        Strix enemies. Kill them and open the chest here for
+        <strong>Paris FP700</strong>.
+      </p>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/0/09/Ec_1022.jpg/363px-Ec_1022.jpg"
+          alt="Paris FP700 location"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/c/c0/Ec_1021.jpg/363px-Ec_1021.jpg"
+          alt="Paris FP700 chest"
+        />
+      </MediaGrid>
+
+      <p>
+        Fly a bit southwest and land on the area here. There's a
+        <strong>Fishing Spot</strong> here.
+      </p>
+
+      <Tip type="note">
+        <p>
+          <strong>Note</strong>: This SHOULD be our last one and you should have
+          only 1 more fish type missing. You should also be around lv.9. Go ahead
+          and keep fishing until you reach lv.10. Even duplicate fishes give you
+          EXP so make sure to fish until you're max lv.
+        </p>
+      </Tip>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/8/8e/Ec_1023.jpg/363px-Ec_1023.jpg"
+          alt="Fishing Spot location 1"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/8/8e/Ec_1024.jpg/363px-Ec_1024.jpg"
+          alt="Fishing Spot location 2"
+        />
+      </MediaGrid>
+
+      <p>
+        From here get on the bridge and open your map. Notice there are 5 little
+        "isles" you can check by taking the bridge? Let's go over them real
+        quick. The top right has a fish you can talk to. He mentions upperfalls...
+        haha. Reverse waterfalls. Useless info for us.
+      </p>
+      <p>
+        The eastern "isle" has nothing as well. However, head to the larger one
+        on the southeastern side, kill the Chicock and get on your Sky Armor.
+        Hover along the path, kill the whopping 4 Strix enemies and grab the
+        <strong>Pool of Power</strong> past them.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/1/11/Ec_1027.jpg/600px-Ec_1027.jpg"
+        alt="Pool of Power past Strix enemies"
+      />
+
+      <p>
+        Head to the bottom left isle from the bridge and you'll find 3 more Strix
+        enemies. We cannot kill these as we can't get here using our Sky Armors.
+        How to do this? Do grab the chest here for
+        <strong>Lost House Key</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/1/1d/Ec_1029.jpg/600px-Ec_1029.jpg"
+        alt="Lost House Key chest"
+      />
+
+      <p>
+        The upper left isle has a chest that has
+        <strong>Eye of Heimfran x5</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/1/11/Ec_1028.jpg/600px-Ec_1028.jpg"
+        alt="Eye of Heimfran x5 chest"
+      />
+
+      <p>
+        Now go to the land on the western side and you'll see 3 more Strix
+        enemies. We cannot land here due to the enemies BUT notice to the south
+        there's a chest? I was able to land next to it, despite not being a
+        landable (is that a word?) land. Of course, open the chest for
+        <strong>Hammer & Shield H700</strong> and kill the Strix enemies.
+      </p>
+
+      <Tip type="note">
+        <p>
+          <strong>Note</strong>: If you can't do this then they most likely
+          patched the issue where you couldn't land on the little land to the
+          north. If so, simply move southwest from the Chicock to where the Strix
+          enemies are.
+        </p>
+      </Tip>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/1/1b/Ec_1025.jpg/600px-Ec_1025.jpg"
+        alt="Hammer & Shield H700 chest"
+      />
+
+      <p>
+        Go back towards the Chicock but follow the river to the southeast to
+        find a very sneaky chest with <strong>Poison Hit</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/a/a8/Ec_1031.jpg/600px-Ec_1031.jpg"
+        alt="Poison Hit chest"
+      />
+
+      <p>
+        Return to where the Chicock was and go northeast from here. Jump across
+        the river and at the end you can find a chest with
+        <strong>Collector's Coin</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/f/ff/Ec_1030.jpg/600px-Ec_1030.jpg"
+        alt="Collector's Coin chest"
+      />
+
+      <p>
+        Lastly, go to the island on the south-southwestern side of the area to
+        find a golden chest with <strong>Flesh of Farnese</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/8/80/Ec_1026.jpg/600px-Ec_1026.jpg"
+        alt="Flesh of Farnese golden chest island"
+      />
+
+      <p>
+        And with this we're pretty much done with the Mushroom Forest. We need
+        one more chest but we'll get it in a little bit.
+      </p>
+    </QuestStep>
+  </section>
+  <!-- SECTION 5: Deadlands -->
+  <section id="deadlands" class="content-section">
+    <h2>Deadlands</h2>
+
+    <QuestStep id="deadlands-quest" title="Deadlands">
+      <p>
+        Fast travel to the southeastern teleportation crystal and immediately go
+        west. You SHOULD see the ghost of a lady walking west. Follow it into
+        the wall.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/1/1f/Ec_1016.jpg/600px-Ec_1016.jpg"
+        alt="Ghost lady leading to hidden area"
+      />
+
+      <p>
+        Inside we'll find a huge anglerfish. These things are hideous! Anyway,
+        talk to it and it'll tell you it's luring spirits to eat them. Hmm.
+        He'll also notice we have a lantern just like his. This is the
+        <strong>Cute Lantern</strong> we got from that goth girl back in the
+        little village. Remember her?
+      </p>
+      <p>
+        Anyway, give the fish the lantern to it and you'll receive
+        <strong>High-Quality Bait</strong>. This is the start of a long exchange
+        quest. Well, it's not a quest, but you know what I mean.
+      </p>
+      <p>
+        Return to the teleportation crystal, open your map and locate the locked
+        building on the eastern side. Head there and we'll now be able to open
+        the door.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/1/17/Ec_1032.jpg/600px-Ec_1032.jpg"
+        alt="Locked building in Deadlands"
+      />
+
+      <p>
+        Inside the building you'll see a purple orb and if you interact with it
+        you'll see 3 more colors. These colors represent locations. This little
+        shack is able to teleport you to the different areas. Yeah, the entire
+        building teleports.
+      </p>
+
+      <ul>
+        <li>Yellow: Mushroom Forest</li>
+        <li>White: Elrant City</li>
+        <li>Green: Wastelands</li>
+      </ul>
+
+      <p>
+        Do Yellow first and exit the house. Remember this spot where the 3 Strix
+        enemies were? Yeah, you kill them with the house haha. They don't
+        respawn either so what you want to do is get back inside the house,
+        teleport away and come back to the Mushroom Forest to grab that chest
+        which has <strong>Angel's Cards</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/2/2a/Ec_1033.jpg/600px-Ec_1033.jpg"
+        alt="Angel's Cards chest"
+      />
+
+      <p>
+        Do Green in the house to be taken to the Wastelands. This leads directly
+        to a <strong>Pool of Power</strong>. Man I was wondering how to get this
+        one!
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/3/3d/Ec_1034.jpg/600px-Ec_1034.jpg"
+        alt="Pool of Power in Wastelands via shack"
+      />
+
+      <p>
+        Anyway, leave the house here and teleport back to the Deadlands. Go to
+        where the house used to be and you can find a chest behind it with
+        <strong>Lord's Sword</strong>. Finally an upgrade for Glenn!
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/3/3e/Ec_1035.jpg/600px-Ec_1035.jpg"
+        alt="Lord's Sword chest"
+      />
+
+      <p>
+        We are now going to explore the southwestern side of the Deadlands! If
+        you've already been here like I mentioned before, then simply fast travel
+        back here. If you haven't, then, when on the invisible path that leads
+        to the north, go west to find a hidden path that leads to it. Map below
+        for example.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/1/1e/Ec_1036.jpg/600px-Ec_1036.jpg"
+        alt="Hidden path to southwestern Deadlands"
+      />
+
+      <p>
+        Once here go left and kill the Lava Snail enemies. From here you'll want
+        to go past them and you'll see a chest on a little island. The gimmick
+        of this place is that you need to wait for platforms to rise from under
+        the lava so you can cross. You know where they'll appear because there
+        will be a ton of little bubbles. The chest here has
+        <strong>Goddess' Wool x4</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/6/6e/Ec_1037.jpg/600px-Ec_1037.jpg"
+        alt="Goddess' Wool x4 chest on island"
+      />
+
+      <p>
+        Return and now go south. After the moving platform, go west and follow
+        this path as it curves and goes north. Once on safe ground we can go
+        north, west, or southwest. Go southwest first and it'll take you to a
+        fight against a pair of <strong>Water Balloon</strong> enemies.
+      </p>
+      <p>
+        These enemies are EXTREMELY important in this area because they'll help
+        us create paths. Of course it's not as simple as killing them and you
+        get your path, ho no! What you want to do here is to go into a fight
+        with them and attack them a little bit until they use their
+        <strong>Puff All Day</strong> move.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/8/87/Ec_1038.jpg/600px-Ec_1038.jpg"
+        alt="Water Balloon Puff All Day move"
+      />
+
+      <p>
+        Once they do this simply defend and let them explode. This ends the fight
+        and you'll get your path.
+      </p>
+
+      <Tip type="note">
+        <p>
+          <strong>Note</strong>: You'll want to do this with every single Water
+          Balloon enemy you encounter in this area.
+        </p>
+      </Tip>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/2/23/Ec_1041.jpg/363px-Ec_1041.jpg"
+          alt="Water Balloon path 1"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/b/bb/Ec_1042.jpg/363px-Ec_1042.jpg"
+          alt="Water Balloon path 2"
+        />
+      </MediaGrid>
+
+      <p>
+        And with our path created, return and take the WESTERN path now. You'll
+        go south and use the path you just created to go to the safe area to the
+        west. Here go north (ignore the ladder on the right side) to find
+        another group of Water Balloon enemies. Kill them to create a path.
+      </p>
+      <p>
+        Return to the ladder we previously ignored and take it. Jump down at the
+        end to be back at the fork from before.
+      </p>
+      <p>
+        Head north now, kill the enemies and we'll have several ways we can go.
+        Go north first and deal with the Water Balloons. Once the path is
+        created, head back, go right and the first path north is where you
+        created the path. You need to create a second path up here so skip it
+        for now, continue right and go south first, making an immediate right to
+        find a chest with <strong>Kerberos FK700</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/7/79/Ec_1039.jpg/600px-Ec_1039.jpg"
+        alt="Kerberos FK700 chest"
+      />
+
+      <p>
+        Return and go north now. Go through the fight up here and do the Water
+        Balloon thing to create that second path I mentioned before. Once you've
+        done this return back south and now go up the path we previously skipped.
+        This takes us to a <strong>Pool of Power</strong>. Nice! Make sure to
+        also talk to the worm behind it to get a
+        <strong>Party Points Voucher</strong> and
+        <strong>Skill Points Voucher</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/9/9a/Ec_1040.jpg/600px-Ec_1040.jpg"
+        alt="Pool of Power and worm"
+      />
+
+      <p>
+        Return west to where we fought the group of enemies (Snails and Water
+        Balloon) and take the WESTERN path now. As we follow this path north we'll
+        have a split. One of the paths is one of those that hide under the lava
+        but ignore it for now. Instead take the northwestern path first to reach
+        a chest with <strong>Collector's Coin</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/1/18/Ec_1043.jpg/600px-Ec_1043.jpg"
+        alt="Collector's Coin chest"
+      />
+
+      <p>
+        Return and take the other path, the one that hides under the lava. At the
+        top go left and open the chest for
+        <strong>Smallish Ingredients</strong>, then SAVE YOUR GAME!
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/c/ce/Ec_1044.jpg/600px-Ec_1044.jpg"
+        alt="Smallish Ingredients chest"
+      />
+
+      <p>Go left now and we'll be in a boss fight!</p>
+
+      <BossFight title="BOSS FIGHT: VULCAN">
+        <p>
+          Ok, I was not expecting a boss fight here. Well, I kinda was looking
+          for one since we already fought the dragon and the shark. The shark was
+          by far the hardest one of the bunch. This one is right in between the 2.
+        </p>
+        <p>
+          For starters, right off the bat he acts twice. From what I could tell,
+          he always starts with his "Heatwave" attack. This does a bunch of
+          damage but it also starts a heatwave (hence the name). As some one who
+          lives in south California, I'm VERY used to these and the crazy 105F
+          weather (40+C) haha.
+        </p>
+        <p>
+          That being said, for us in the game this means we'll be taking damage
+          at the start of each of our character's turns (10 dmg.). It's not a
+          lot but it feels like it is because the boss is really slow so our
+          party members will have a lot of turns. The damage we take will only
+          increase after each of the boss's turns (starts at 10 dmg, then after
+          the boss's next turn it'll do 20 dmg, so on and so forth). Of course
+          this also means that he'll be increasing the damage he does to you so
+          it's in your best interest to finish this fight ASAP.
+        </p>
+        <p>
+          This is another reason why the boss hits so hard. You want to try to
+          keep your HP as high as you possibly can, just in case the boss
+          decides to hit the same character twice with his Fire Stare move.
+        </p>
+        <p>
+          The strat for this boss fight is pretty much the same that the one we
+          used against the shark. Bringing Victor is one of the best things you
+          can do because has his bubble barrier that can help you deflect damage
+          from either of his attacks, but he also has TP and HP regen, allowing
+          you to counteract the boss's Heatwave with ease.
+        </p>
+        <p>
+          Other than that, focus on debuffing the boss while buffing yourself
+          and use water attacks to exploit his weakness. Overall a much easier
+          boss than that stupid shark!
+        </p>
+
+        <ul>
+          <li>
+            <strong>Heatwave</strong>: hits all party members for around 130 dmg.
+          </li>
+          <li>
+            <strong>Fire Stare</strong>: hits a party member for around 200 dmg.
+          </li>
+          <li>
+            <strong>Fire</strong>: hits all party members for around 140 dmg.
+          </li>
+        </ul>
+
+        <p>We're almost done! We've got one more chest to do!</p>
+      </BossFight>
+
+      <p>
+        Fast travel to the teleportation crystal on the northeastern side of the
+        map (at the rebel village) and from here go west into the next area, then
+        continue going west until you reach the spot below. There's actually a
+        hidden path you can take to reach the final chest here with
+        <strong>Hero's Medal</strong>.
+      </p>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/6/68/Ec_1046.jpg/238px-Ec_1046.jpg"
+          alt="Hero's Medal location 1"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/0/04/Ec_1045.jpg/238px-Ec_1045.jpg"
+          alt="Hero's Medal location 2"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/c/cd/Ec_1047.jpg/238px-Ec_1047.jpg"
+          alt="Hero's Medal chest"
+        />
+      </MediaGrid>
+
+      <p>
+        Make sure to also go to the house where the huge dog was. Inside you can
+        find both the dog and the cat. Talk to them and you'll learn about their
+        owner. You'll also get <strong>Flesh of Farnese</strong> for your
+        troubles.
+      </p>
+      <p>
+        And with that we're done with the Deadlands! Next, let's go back to the
+        city real quick.
+      </p>
+    </QuestStep>
+  </section>
+  <!-- SECTION 6: Elrant City Again -->
+  <section id="elrant-city-again" class="content-section">
+    <h2>Elrant City Again</h2>
+
+    <QuestStep id="elrant-city-again-quest" title="Elrant City Again">
+      <p>
+        Back in the city, head back to the cauldron and it's time to make the
+        Minimi potion. This will allow us to become extremely small and go
+        through the holes we've seen all throughout town!
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/0/09/Ec_1048.jpg/600px-Ec_1048.jpg"
+        alt="Minimi potion cauldron"
+      />
+
+      <p>
+        Sadly we can't just drink it whenever or wherever we are. We need to
+        find a bench to do so. Just south of the cauldron, in the same room
+        there's a bench. Interact with it and you'll become chibi!
+      </p>
+
+      <Tip type="note">
+        <p>
+          <strong>Note</strong>: You can't jump, run, or climb stairs while in
+          chibi form.
+        </p>
+      </Tip>
+
+      <p>
+        Go through the hole in the wall and out here go around the corner and
+        north and into the hole. You'll appear on the floor above. Go left and
+        into the next house to find a chest with
+        <strong>Party Points Voucher</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/4/46/Ec_1049.jpg/600px-Ec_1049.jpg"
+        alt="Party Points Voucher chest via hole"
+      />
+
+      <p>
+        Fast travel back to the teleportation crystal in this area and you'll
+        continue to be chibi. This is because we have the benches near the
+        crystal. Anyway, start by going south, go right and into the first house
+        to the north. Go through the hole inside and exit the house to be on the
+        rooftop. Open the chest up here to find <strong>AGI Up</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/3/34/Ec_1050.jpg/600px-Ec_1050.jpg"
+        alt="AGI Up chest on rooftop"
+      />
+
+      <p>
+        Return to the crystal and let's go east towards the Wastelands. Keep
+        your eyes to the north to spot a hole past the third bridge. Go inside
+        this building and go through the hole in here. Exit the house up here on
+        the second floor and move to the end of the rooftop and talk to the bird.
+        It'll take you to its "house", which is on top of a tree. That's pretty
+        cool!
+      </p>
+      <p>
+        Up here take this path right and go up when possible to grab a chest
+        with <strong>Lankintin Star</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/4/4e/Ec_1051.jpg/600px-Ec_1051.jpg"
+        alt="Lankintin Star chest on tree"
+      />
+
+      <p>
+        Continue going right and go up the last ladder to find another chest,
+        this one with <strong>Hero's Medal</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/6/63/Ec_1052.jpg/600px-Ec_1052.jpg"
+        alt="Hero's Medal chest on tree"
+      />
+
+      <p>
+        Head to the southeastern corner of the tree area to find a
+        <strong>Pool of Power</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/e/ef/Ec_1053.jpg/600px-Ec_1053.jpg"
+        alt="Pool of Power on tree"
+      />
+
+      <p>
+        From here go south to the very bottom to find the last chest here with
+        <strong>TP Up</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/0/06/Ec_1054.jpg/600px-Ec_1054.jpg"
+        alt="TP Up chest"
+      />
+
+      <p>Return to your feathery friend to go back to the city.</p>
+      <p>
+        Once back, go back through the house, go north to the market, go west
+        and enter the house over here to find a chest with
+        <strong>5345a</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/2/2e/Ec_1055.jpg/600px-Ec_1055.jpg"
+        alt="5345a chest in house"
+      />
+
+      <p>
+        Return to the crystal and go west this time, entering the large building
+        to the north. In here go to the back of the building and go through the
+        hole. We'll be on the second floor. Enter the top right room and go
+        through the hole in the wall and we'll be in the diorama. Man this is so
+        cool!
+      </p>
+
+      <Tip type="note">
+        <vin>
+          Speaking of Dioramas, you guys should definitely play Fantasian! It's
+          an RPG made by the creator of Final Fantasy. All areas are gigantic
+          dioramas and look amazing!
+        </vin>
+      </Tip>
+
+      <p>
+        Anyway, here you can check the western side to find a golden chest with
+        <strong>Flesh of Farnese</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/2/2f/Ec_1056.jpg/600px-Ec_1056.jpg"
+        alt="Flesh of Farnese in diorama"
+      />
+
+      <p>
+        Return to the crystal once more and head north now. Talk to the fish
+        poking its head out of the water on the left side and have him take you
+        to his home.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/3/34/Ec_1057.jpg/600px-Ec_1057.jpg"
+        alt="Fish taking you to his home"
+      />
+
+      <p>
+        Once in his house, go ahead and grab the chest with
+        <strong>Collector's Coin</strong> from the bottom left side and the
+        <strong>Pool of Power</strong> from the bottom right side.
+      </p>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/9/93/Ec_1058.jpg/363px-Ec_1058.jpg"
+          alt="Collector's Coin in fish house"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/c/ca/Ec_1059.jpg/363px-Ec_1059.jpg"
+          alt="Pool of Power in fish house"
+        />
+      </MediaGrid>
+
+      <p>
+        Return to the city and enter the Fishing Guild. go down the stairs in
+        here and talk to the purple fisher. Remember that high quality bait we
+        previously got? Give it to him and he'll give you a
+        <strong>Fine Sieve</strong>.
+      </p>
+      <p>
+        With this sieve, fast travel to the bottom left crystal in the
+        Wastelands and remember that guy in the southeastern side of the area
+        that was looking for his sieve? Give it to him to get
+        <strong>Old Canvas</strong>.
+      </p>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/0/0c/Ec_1060.jpg/363px-Ec_1060.jpg"
+          alt="Fine Sieve exchange 1"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/0/07/Ec_1061.jpg/363px-Ec_1061.jpg"
+          alt="Fine Sieve exchange 2"
+        />
+      </MediaGrid>
+
+      <p>
+        Now, remember the painter guy in the northeastern side of the area? Going
+        right at the first fork in the bridges? Go back to him and hand over the
+        Old Canvas. He'll let us go through so we can grab that
+        <strong>Pool of Power</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/3/3c/Ec_1062.jpg/600px-Ec_1062.jpg"
+        alt="Pool of Power via Old Canvas exchange"
+      />
+
+      <p>That's it for this area!</p>
+    </QuestStep>
+  </section>
+  <!-- SECTION 7: Old City -->
+  <section id="old-city-2" class="content-section">
+    <h2>Old City</h2>
+
+    <QuestStep id="old-city-2-quest" title="Old City">
+      <p>
+        Well, there's another thing to do! We finally got all 10 Collector's
+        Coins. Fast travel back to Wastelands's southwestern crystal and head
+        north, go inside the cave and talk to the man inside.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/9/97/Ec_1073.jpg/600px-Ec_1073.jpg"
+        alt="Researcher with Collector's Coins"
+      />
+
+      <p>
+        He'll thank you and give you the huge skull in the back. This is a
+        Maelstrom Terror (one of the optional bosses we've been fighting like
+        the shark). Interact with it and... it'll turn to dust. Whoops. This
+        actually counts as killing it and the final crystal will shatter,
+        creating a magic circle in the middle.
+      </p>
+      <p>
+        Fast travel back to the crystal (it's on the northwestern area of the
+        Old City map), save your game and move to it to trigger a boss fight.
+      </p>
+
+      <BossFight title="BOSS FIGHT: RULER GAEMDRIEL">
+        <p>
+          Ok, I'm not going to beat around the bush, this guy looks
+          intimidating, but I'm not going to lie, he's a total pushover. I even
+          feel like the shark boss was harder than this guy and you'll see why
+          in a bit.
+        </p>
+        <p>
+          First of all, note that this huge guy has circles on his left and
+          right. I didn't notice this at first but these are also targets. Don't
+          worry, each circle on both sides count as one, so pretty much there's
+          only 3 extra targets.
+        </p>
+
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/7/72/Ec_1074.jpg/600px-Ec_1074.jpg"
+          alt="Ruler Gaemdriel targets"
+        />
+
+        <p>
+          Now, each of these drums do something different. They each have their
+          own name and what they do pretty much. Physical, Magical, Debuffing
+          Wardrums. Both the Physical and Magical drums are offensive, but the
+          debuffing one will inflict every single debuff the game has. It's
+          definitely the most annoying one. When you're debuffed, simply wait the
+          turns and don't bother buffing yourself as it's not going to stay
+          thanks to the debuffs. Instead, keep yourself healed until they all
+          end.
+        </p>
+        <p>
+          I recommend you deal with this one first as having to wait for the
+          debuffs to run out is annoying. Once they do, completely buff yourself
+          and go ham on the boss, exploiting their wind weakness. You WANT to
+          attack the drums and not him. The reason for this is because every
+          time you destroy a drum he'll take 20000 dmg. Well, 19999 dmg. That's
+          right! Destroying all 3 will end the fight.
+        </p>
+        <p>
+          Something huge you can do is to bring Mikah with Double Steps. This
+          drastically increases your speed and the amount of turns you get,
+          easily getting rid of the debuffs while giving you time still to buff
+          yourself.
+        </p>
+        <p>Other than that, this fight is ridiculously easy.</p>
+
+        <Tip type="note">
+          <p>
+            <strong>Note</strong>: The boss has an Ultimate attack that I've
+            never been able to see. If you know what it does let me know down
+            below. I'm still assuming you can easily defend and use Victor's
+            bubble barrier to prevent dying from it.
+          </p>
+        </Tip>
+
+        <ul>
+          <li>
+            <strong>Battle Preparations</strong>: gives the boss "Act Thrice".
+          </li>
+          <li>
+            <strong>Curse</strong>: the boss inflicts Curse on the party for 3
+            turns.
+          </li>
+          <li>
+            <strong>Physical Wardrums</strong>: hits the party for around 75 dmg.
+          </li>
+          <li>
+            <strong>Magical Wardrums</strong>: hits the entire party for around
+            75 dmg.
+          </li>
+          <li>
+            <strong>Debuffing Wardrums</strong>: inflicts every single status
+            ailment for 2 turns.
+          </li>
+        </ul>
+
+        <p>After the fight... you'll get absolutely nothing.</p>
+
+        <Tip type="note">
+          <vin>
+            Yep, zero, zilch, nada from this boss. Man what a turn off. I feel
+            like we got blue balled for nothing hahaha. Still, it feels good to
+            defeat the optional semi hidden boss of the game.
+          </vin>
+        </Tip>
+      </BossFight>
+    </QuestStep>
+  </section>
+  <!-- SECTION 8: Lost Gardens -->
+  <section id="lost-gardens" class="content-section">
+    <h2>Lost Gardens</h2>
+
+    <QuestStep id="lost-gardens-quest" title="Lost Gardens">
+      <p>
+        Well, we are very close to the end! We just need to cover this area and
+        we're good to go. Fast travel to the southern crystal where the Fishing
+        Spot is and read the note below.
+      </p>
+
+      <h3>Final Fish</h3>
+      <p>
+        I'm not sure if the final fish only appears here, but it's here where I
+        got it. To get it you need to be lv.10 at fishing and have all 45 other
+        fishes captured.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/5/58/Ec_1088.jpg/600px-Ec_1088.jpg"
+        alt="Final fishing spot"
+      />
+
+      <p>
+        Once you have those, I waited here once with
+        <img
+          src="https://cdn.staticneo.com/ew/thumb/6/6f/PSSQUARE.png/21px-PSSQUARE.png"
+          alt="PS Square button"
+          style="vertical-align: middle"
+        />
+        and the shadow of the new fish arrived. It kinda looks like a turtle but
+        if it had its head facing you.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/9/97/Ec_1089.jpg/600px-Ec_1089.jpg"
+        alt="Final fish shadow"
+      />
+
+      <p>
+        You need to catch it with another fish so do so. It's a very hard one to
+        catch so be patient.
+      </p>
+      <p>
+        Now go ahead and enter the building on the right. Yeah, we can finally
+        open it.
+      </p>
+      <p>
+        Go through it and on the other side, to the right we have a chess board
+        with a whopping 7 Pawn pieces. You can get the "Kill 4 Queens in the
+        same fight" if you didn't get it during the boss fight. Besides that,
+        you don't get anything from them except from drops. I thought it was
+        going to be the key to unlock a boss fight... but nope. Hmm.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/5/5a/Ec_1063.jpg/600px-Ec_1063.jpg"
+        alt="Chess board with Pawns"
+      />
+
+      <p>
+        Go directly north from the left side of the chess board and you'll find
+        another maze. As you go north, go left when you first can and you'll go
+        around and find a <strong>Pool of Power</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/d/d8/Ec_1064.jpg/600px-Ec_1064.jpg"
+        alt="Pool of Power in maze"
+      />
+
+      <p>
+        Now do you notice the 3 paths east of the Pool of Power? Go down the
+        middle one to reach a chest with <strong>Fancy Leather x4</strong>.
+      </p>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/e/ec/Ec_1065.jpg/363px-Ec_1065.jpg"
+          alt="Fancy Leather x4 location"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/3/31/Ec_1066.jpg/363px-Ec_1066.jpg"
+          alt="Fancy Leather x4 chest"
+        />
+      </MediaGrid>
+
+      <p>
+        Make your way to the northeastern side of the "maze" until you can exit
+        it to the north. Go west down the stone path to find an
+        <strong>anomaly</strong>. This SHOULD be your last one and you should
+        get the node marked in the bulletin board.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/6/62/Ec_1067.jpg/600px-Ec_1067.jpg"
+        alt="Final anomaly"
+      />
+
+      <p>
+        Return inside the maze and go: right (see the chest?), left and back
+        right following the bottom path to reach that red chest with
+        <strong>Pheuma Lollypop</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/5/52/Ec_1068.jpg/600px-Ec_1068.jpg"
+        alt="Pheuma Lollypop chest"
+      />
+
+      <p>
+        Head to the southeastern corner of the maze and as you exit it you'll
+        spot a cave in the corner. Go inside and go through the tunnel to arrive
+        at... the Wastelands? Well, here you'll FINALLY be able to open the
+        golden chest for a <strong>Flesh of Farnese</strong> and grab that last
+        <strong>Pool of Power</strong>.
+      </p>
+
+      <Tip type="note">
+        <vin>
+          These 2 were driving me INSANE! I had no idea how to get them and I
+          spent so much time running around like a headless chicken. To think we
+          needed to come from another area *facepalm*.
+        </vin>
+      </Tip>
+
+      <MediaGrid columns={2}>
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/3/33/Ec_1069.jpg/363px-Ec_1069.jpg"
+          alt="Flesh of Farnese via Lost Gardens tunnel"
+        />
+        <Image
+          src="https://cdn.staticneo.com/ew/thumb/0/0f/Ec_1070.jpg/363px-Ec_1070.jpg"
+          alt="Final Pool of Power via Lost Gardens tunnel"
+        />
+      </MediaGrid>
+
+      <p>
+        Return to the chess board with all the Pawns in the Lost Garden and
+        let's grab the last chest. From the right side of the chess board go
+        north into the maze then go: right and north to reach the chest with
+        <strong>Mythical Skull x4</strong>.
+      </p>
+
+      <Image
+        src="https://cdn.staticneo.com/ew/thumb/f/fc/Ec_1071.jpg/600px-Ec_1071.jpg"
+        alt="Mythical Skull x4 chest"
+      />
+
+      <p>
+        And with that we're pretty much done and ready to finish the game. You
+        ready? Let's do this! I'll see you guys in the final quest page,
+        <a
+          href="https://www.neoseeker.com/chained-echoes/Deus_Ex_Machina"
+          target="_blank"
+          >Deus Ex Machina</a
+        >.
+      </p>
+    </QuestStep>
+  </section>
+
+  <EndLogo />
+</DlcLayout>
+
+<style>
+  .content-section {
+    padding: 2rem 0;
+  }
+
+  .content-section h2 {
+    color: var(--accent-gold);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+</style>
