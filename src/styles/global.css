@@ -444,28 +444,33 @@ body.menu-open {
   }
 
   .sidebar-header {
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 0;
     border-bottom: none;
     padding-bottom: 0;
+    position: relative;
   }
 
   .sidebar-logo {
-    max-height: 40px;
-    margin: 0;
+    max-height: 48px;
+    margin: 0 auto;
   }
 
   .menu-toggle {
     display: flex;
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .sidebar-nav {
     position: fixed;
-    top: 60px;
+    top: 72px;
     /* Below the top bar */
     left: -280px;
     width: 280px;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 72px);
     background: var(--bg-sidebar);
     padding: 2rem 1.5rem;
     transition: transform 0.3s ease;
@@ -489,7 +494,7 @@ body.menu-open {
 
   .main-content {
     margin-left: 0;
-    padding: 5rem 1rem 2rem;
+    padding: 6rem 1rem 2rem;
     /* padding-top to account for fixed header */
     width: 100%;
   }
