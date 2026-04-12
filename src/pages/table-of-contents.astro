@@ -9,345 +9,386 @@ const baseUrl = import.meta.env.BASE_URL;
     <p class="subtitle">Complete Guide to Chained Echoes</p>
   </div>
 
-  <div class="toc-grid">
+ <div class="toc-grid">
     <!-- Getting Started -->
     <section class="toc-card">
-      <h2>
-        <svg viewBox="0 0 24 24" class="title-icon"
-          ><path
-            fill="currentColor"
-            d="M19 2H5c-1.11 0-2 .89-2 2v16c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2m-1 18H6V4h12v16m-2-10h-2V6h2v4m0 4h-2v-2h2v2m0 4h-2v-2h2v2Z"
-          ></path></svg
-        >
-        Getting Started
-      </h2>
-      <ul>
-        <li><a href={baseUrl}>Controls</a></li>
-        <li><a href=`${baseUrl}table-of-contents`>Table of Contents</a></li>
-      </ul>
+      <button class="toc-card-toggle" aria-expanded="false">
+        <h2>
+          <svg class="toggle-icon" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+          </svg>
+          <svg viewBox="0 0 24 24" class="title-icon"
+            ><path
+              fill="currentColor"
+              d="M19 2H5c-1.11 0-2 .89-2 2v16c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2m-1 18H6V4h12v16m-2-10h-2V6h2v4m0 4h-2v-2h2v2m0 4h-2v-2h2v2Z"
+            ></path></svg
+          >
+          Getting Started
+        </h2>
+      </button>
+      <div class="toc-card-content">
+        <ul>
+          <li><a href={baseUrl}>Controls</a></li>
+          <li><a href=`${baseUrl}table-of-contents`>Table of Contents</a></li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Walkthrough -->
+   <!-- Walkthrough -->
     <section class="toc-card">
-      <h2>
-        <svg viewBox="0 0 24 24" class="title-icon"
-          ><path
-            fill="currentColor"
-            d="M21 16.5c0 .38-.21.71-.53.88l-7.97 4.43c-.16.09-.33.14-.5.14s-.34-.05-.5-.14l-7.97-4.43c-.32-.17-.53-.5-.53-.88v-9c0-.38.21-.71.53-.88l7.97-4.43c.16-.09.33-.14.5-.14s.34.05.5.14l7.97 4.43c.32.17.53.5.53.88v9M12 4.15L6.04 7.47v6.66L12 17.45l5.96-3.32V7.47L12 4.15Z"
-          ></path></svg
-        >
-        Walkthrough
-      </h2>
+      <button class="toc-card-toggle" aria-expanded="false">
+        <h2>
+          <svg class="toggle-icon" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+          </svg>
+          <svg viewBox="0 0 24 24" class="title-icon"
+            ><path
+              fill="currentColor"
+              d="M21 16.5c0 .38-.21.71-.53.88l-7.97 4.43c-.16.09-.33.14-.5.14-.5-.14-.5-.14-.5-.14s-.34-.05-.5-.14l-7.97-4.43c-.32-.17-.53-.5-.53-.88v-9c0-.38.21-.71.53-.88l7.97-4.43c.16-.09-.33-.14-.5-.14s.34.05-.5.14l7.97 4.43c.32.17-.53.5.53.88v9M12 4.15L6.04 7.47v6.66L12 17.45l5.96-3.32V7.47L12 4.15Z"
+            ></path></svg
+          >
+          Walkthrough
+        </h2>
+      </button>
+      <div class="toc-card-content">
+        <h3>Act 2</h3>
+        <ul>
+          <li>
+            <a href=`${baseUrl}walkthrough/three-months-later`
+              >Three Months Later</a
+            >
+          </li>
+          <li>
+            <a href=`${baseUrl}walkthrough/world-exploration`>World Exploration</a
+            >
+          </li>
+          <li>
+            <a href=`${baseUrl}walkthrough/search-for-princess`
+              >Searching for a Princess</a
+            >
+          </li>
+          <li>
+            <a href=`${baseUrl}walkthrough/looking-for-allies`
+              >Looking for Allies</a
+            >
+          </li>
+          <li>
+            <a href=`${baseUrl}walkthrough/storming-tormund`>Storming Tormund</a>
+          </li>
+          <li>
+            <a href=`${baseUrl}walkthrough/mysterious-girl-2`>Mysterious Girl 2</a
+            >
+          </li>
+        </ul>
 
-      <h3>Act 2</h3>
-      <ul>
-        <li>
-          <a href=`${baseUrl}walkthrough/three-months-later`
-            >Three Months Later</a
-          >
-        </li>
-        <li>
-          <a href=`${baseUrl}walkthrough/world-exploration`>World Exploration</a
-          >
-        </li>
-        <li>
-          <a href=`${baseUrl}walkthrough/search-for-princess`
-            >Searching for a Princess</a
-          >
-        </li>
-        <li>
-          <a href=`${baseUrl}walkthrough/looking-for-allies`
-            >Looking for Allies</a
-          >
-        </li>
-        <li>
-          <a href=`${baseUrl}walkthrough/storming-tormund`>Storming Tormund</a>
-        </li>
-        <li>
-          <a href=`${baseUrl}walkthrough/mysterious-girl-2`>Mysterious Girl 2</a
-          >
-        </li>
-      </ul>
+        <h3>Act 3</h3>
+        <ul>
+          <li>
+            <a href={`${baseUrl}walkthrough/a-call-from-the-past`}
+              >A Call From the Past</a
+            >
+          </li>
+          <li>
+            <a href={`${baseUrl}walkthrough/ruins-under-a-tree`}
+              >Ruins Under a Tree</a
+            >
+          </li>
+          <li>
+            <a href={`${baseUrl}walkthrough/grave-of-reina`}>The Grave of Reina</a
+            >
+          </li>
+          <li>
+            <a href={`${baseUrl}walkthrough/in-good-faith`}>In Good Faith</a>
+          </li>
+        </ul>
 
-      <h3>Act 3</h3>
-      <ul>
-        <li>
-          <a href={`${baseUrl}walkthrough/a-call-from-the-past`}
-            >A Call From the Past</a
-          >
-        </li>
-        <li>
-          <a href={`${baseUrl}walkthrough/ruins-under-a-tree`}
-            >Ruins Under a Tree</a
-          >
-        </li>
-        <li>
-          <a href={`${baseUrl}walkthrough/grave-of-reina`}>The Grave of Reina</a
-          >
-        </li>
-        <li>
-          <a href={`${baseUrl}walkthrough/in-good-faith`}>In Good Faith</a>
-        </li>
-      </ul>
+        <h3>Finale</h3>
+        <ul>
+          <li>
+            <a href=`${baseUrl}walkthrough/chained-echoes`>Chained Echoes</a>
+          </li>
+          <li>
+            <a href=`${baseUrl}walkthrough/end-of-an-era` }>End of an Era</a>
+          </li>
+          <li>
+            <a href=`${baseUrl}walkthrough/world-exploration-2`
+              >World Exploration (2nd)</a
+            >
+          </li>
+          <li><a href=`${baseUrl}walkthrough/killing-gods`>Killing Gods</a></li>
+        </ul>
 
-      <h3>Finale</h3>
-      <ul>
-        <li>
-          <a href=`${baseUrl}walkthrough/chained-echoes`>Chained Echoes</a>
-        </li>
-        <li>
-          <a href=`${baseUrl}walkthrough/end-of-an-era` }>End of an Era</a>
-        </li>
-        <li>
-          <a href=`${baseUrl}walkthrough/world-exploration-2`
-            >World Exploration (2nd)</a
-          >
-        </li>
-        <li><a href=`${baseUrl}walkthrough/killing-gods`>Killing Gods</a></li>
-      </ul>
-
-      <h3>Post Game</h3>
-      <ul>
-        <li>
-          <a href=`${baseUrl}walkthrough/eastern-ograne-grottos`
-            >Eastern Ograne Grottos</a
-          >
-        </li>
-      </ul>
+        <h3>Post Game</h3>
+        <ul>
+          <li>
+            <a href=`${baseUrl}walkthrough/eastern-ograne-grottos`
+              >Eastern Ograne Grottos</a
+            >
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Sidequests -->
+  <!-- Sidequests -->
     <section class="toc-card">
-      <h2>
-        <svg viewBox="0 0 24 24" class="title-icon"
-          ><path
-            fill="currentColor"
-            d="M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2m-1-4l-1.41-1.41L13 12.17V4h-2v8.17L8.41 9.59L7 11l5 5 5-5Z"
-          ></path></svg
-        >
-        Sidequests
-      </h2>
-      <ul>
-        <li>
-          <a href=`${baseUrl}sidequests/the-food-the-chap-and-the-hungry`
-            >The Food, the Chap, and the Hungry</a
+      <button class="toc-card-toggle" aria-expanded="false">
+        <h2>
+          <svg class="toggle-icon" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+          </svg>
+          <svg viewBox="0 0 24 24" class="title-icon"
+            ><path
+              fill="currentColor"
+              d="M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2m-1-4l-1.41-1.41L13 12.17V4h-2v8.17L8.41 9.59L7 11l5 5 5-5Z"
+            ></path></svg
           >
-        </li>
-        <li>
-          <a href=`${baseUrl}sidequests/a-little-vacation`>A Little Vacation</a>
-        </li>
-        <li>
-          <a href=`${baseUrl}sidequests/the-gates-of-nhysa`
-            >The Gates of Nhysa</a
-          >
-        </li>
-        <li>
-          <a href=`${baseUrl}sidequests/into-the-maelstrom`
-            >Into the Maelstrom</a
-          >
-        </li>
-        <li>
-          <a href=`${baseUrl}sidequests/for-the-love-of-food`
-            >For the Love of Food</a
-          >
-        </li>
-        <li>
-          <a href=`${baseUrl}sidequests/a-goblins-dilemma`>A Goblin's Dilemma</a
-          >
-        </li>
-        <li>
-          <a href=`${baseUrl}sidequests/two-winged-angel`>Two-Winged Angel</a>
-        </li>
-        <li>
-          <a href=`${baseUrl}sidequests/falfalaran-sings-the-fairy`
-            >Falfalaran Sings the Fairy</a
-          >
-        </li>
-        <li>
-          <a href=`${baseUrl}sidequests/a-will-to-live`>A Will To Live</a>
-        </li>
-        <li>
-          <a href=`${baseUrl}sidequests/no-place-for-happy-endings`
-            >No Place for Happy Endings</a
-          >
-        </li>
-      </ul>
+          Sidequests
+        </h2>
+      </button>
+      <div class="toc-card-content">
+        <ul>
+          <li>
+            <a href=`${baseUrl}sidequests/the-food-the-chap-and-the-hungry`
+              >The Food, the Chap, and the Hungry</a
+            >
+          </li>
+          <li>
+            <a href=`${baseUrl}sidequests/a-little-vacation`>A Little Vacation</a>
+          </li>
+          <li>
+            <a href=`${baseUrl}sidequests/the-gates-of-nhysa`
+              >The Gates of Nhysa</a
+            >
+          </li>
+          <li>
+            <a href=`${baseUrl}sidequests/into-the-maelstrom`
+              >Into the Maelstrom</a
+            >
+          </li>
+          <li>
+            <a href=`${baseUrl}sidequests/for-the-love-of-food`
+              >For the Love of Food</a
+            >
+          </li>
+          <li>
+            <a href=`${baseUrl}sidequests/a-goblins-dilemma`>A Goblin's Dilemma</a
+            >
+          </li>
+          <li>
+            <a href=`${baseUrl}sidequests/two-winged-angel`>Two-Winged Angel</a>
+          </li>
+          <li>
+            <a href=`${baseUrl}sidequests/falfalaran-sings-the-fairy`
+              >Falfalaran Sings the Fairy</a
+            >
+          </li>
+          <li>
+            <a href=`${baseUrl}sidequests/a-will-to-live`>A Will To Live</a>
+          </li>
+          <li>
+            <a href=`${baseUrl}sidequests/no-place-for-happy-endings`
+              >No Place for Happy Endings</a
+            >
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Boss Fights -->
+ <!-- Boss Fights -->
     <section class="toc-card">
-      <h2>
-        <svg viewBox="0 0 24 24" class="title-icon"
-          ><path
-            fill="currentColor"
-            d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10s10-4.47 10-10S17.53 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8m-4-7h2.5l-1.5 3l4.5-4h-2.5l1.5-3l-4.5 4Z"
-          ></path></svg
-        >
-        Boss Fights
-      </h2>
-      <ul>
-        <li><a href="#">Prologue</a></li>
-        <li><a href="#">Act 1</a></li>
-        <li><a href="#">Act 2</a></li>
-        <li><a href="#">Act 3</a></li>
-        <li><a href="#">Act 4</a></li>
-      </ul>
+      <button class="toc-card-toggle" aria-expanded="false">
+        <h2>
+          <svg class="toggle-icon" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+          </svg>
+          <svg viewBox="0 0 24 24" class="title-icon"
+            ><path
+              fill="currentColor"
+              d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10s10-4.47 10-10S17.53 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8m-4-7h2.5l-1.5 3l4.5-4h-2.5l1.5-3l-4.5 4Z"
+            ></path></svg
+          >
+          Boss Fights
+        </h2>
+      </button>
+      <div class="toc-card-content">
+        <ul>
+          <li><a href="#">Prologue</a></li>
+          <li><a href="#">Act 1</a></li>
+          <li><a href="#">Act 2</a></li>
+          <li><a href="#">Act 3</a></li>
+          <li><a href="#">Act 4</a></li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Reward Board -->
+<!-- Reward Board -->
     <section class="toc-card">
-      <h2>
-        <svg viewBox="0 0 24 24" class="title-icon"
-          ><path
-            fill="currentColor"
-            d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 18H6V4h12v16M8 15h8v2H8v-2m0-4h8v2H8v-2m0-4h8v2H8V7Z"
-          ></path></svg
-        >
-        Reward Board
-      </h2>
-      <ul>
-        <li>
-          <a
-            href="https://www.neoseeker.com/chained-echoes/walkthrough/Rohlan_Fields"
-            target="_blank"
-            rel="noopener noreferrer">Rohlan Fields</a
+      <button class="toc-card-toggle" aria-expanded="false">
+        <h2>
+          <svg class="toggle-icon" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+          </svg>
+          <svg viewBox="0 0 24 24" class="title-icon"
+            ><path
+              fill="currentColor"
+              d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 18H6V4h12v16M8 15h8v2H8v-2m0-4h8v2H8v-2m0-4h8v2H8V7Z"
+            ></path></svg
           >
-        </li>
-        <li>
-          <a
-            href="https://www.neoseeker.com/chained-echoes/walkthrough/Dancing_City_of_Farnsport"
-            target="_blank"
-            rel="noopener noreferrer">Dancing City of Farnsport</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.neoseeker.com/chained-echoes/walkthrough/Ograne_Grottos"
-            target="_blank"
-            rel="noopener noreferrer">Ograne Grottos</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.neoseeker.com/chained-echoes/walkthrough/Kortara_Mountain_Range"
-            target="_blank"
-            rel="noopener noreferrer">Kortara Mountain Range</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.neoseeker.com/chained-echoes/walkthrough/Fiorwoods"
-            target="_blank"
-            rel="noopener noreferrer">Fiorwoods</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.neoseeker.com/chained-echoes/walkthrough/City_of_Rain_Tormund"
-            target="_blank"
-            rel="noopener noreferrer">City of Rain Tormund</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.neoseeker.com/chained-echoes/walkthrough/Flower_Fields_of_Perpetua"
-            target="_blank"
-            rel="noopener noreferrer">Flower Fields of Perpetua</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.neoseeker.com/chained-echoes/walkthrough/Arkant_Archipelago"
-            target="_blank"
-            rel="noopener noreferrer">Arkant Archipelago</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.neoseeker.com/chained-echoes/walkthrough/New_Wyrnshire"
-            target="_blank"
-            rel="noopener noreferrer">New Wyrnshire</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.neoseeker.com/chained-echoes/walkthrough/Flying_Continent_Shambala"
-            target="_blank"
-            rel="noopener noreferrer">Flying Continent Shambala</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.neoseeker.com/chained-echoes/walkthrough/Magic_Academy_Nhysa"
-            target="_blank"
-            rel="noopener noreferrer">Magic Academy Nhysa</a
-          >
-        </li>
-      </ul>
+          Reward Board
+        </h2>
+      </button>
+      <div class="toc-card-content">
+        <ul>
+          <li>
+            <a
+              href="https://www.neoseeker.com/chained-echoes/walkthrough/Rohlan_Fields"
+              target="_blank"
+              rel="noopener noreferrer">Rohlan Fields</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.neoseeker.com/chained-echoes/walkthrough/Dancing_City_of_Farnsport"
+              target="_blank"
+              rel="noopener noreferrer">Dancing City of Farnsport</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.neoseeker.com/chained-echoes/walkthrough/Ograne_Grottos"
+              target="_blank"
+              rel="noopener noreferrer">Ograne Grottos</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.neoseeker.com/chained-echoes/walkthrough/Kortara_Mountain_Range"
+              target="_blank"
+              rel="noopener noreferrer">Kortara Mountain Range</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.neoseeker.com/chained-echoes/walkthrough/Fiorwoods"
+              target="_blank"
+              rel="noopener noreferrer">Fiorwoods</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.neoseeker.com/chained-echoes/walkthrough/City_of_Rain_Tormund"
+              target="_blank"
+              rel="noopener noreferrer">City of Rain Tormund</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.neoseeker.com/chained-echoes/walkthrough/Flower_Fields_of_Perpetua"
+              target="_blank"
+              rel="noopener noreferrer">Flower Fields of Perpetua</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.neoseeker.com/chained-echoes/walkthrough/Arkant_Archipelago"
+              target="_blank"
+              rel="noopener noreferrer">Arkant Archipelago</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.neoseeker.com/chained-echoes/walkthrough/New_Wyrnshire"
+              target="_blank"
+              rel="noopener noreferrer">New Wyrnshire</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.neoseeker.com/chained-echoes/walkthrough/Flying_Continent_Shambala"
+              target="_blank"
+              rel="noopener noreferrer">Flying Continent Shambala</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.neoseeker.com/chained-echoes/walkthrough/Magic_Academy_Nhysa"
+              target="_blank"
+              rel="noopener noreferrer">Magic Academy Nhysa</a
+            >
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Guides -->
+<!-- Guides -->
     <section class="toc-card">
-      <h2>
-        <svg viewBox="0 0 24 24" class="title-icon"
-          ><path
-            fill="currentColor"
-            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27Z"
-          ></path></svg
-        >
-        Guides
-      </h2>
-      <ul>
-        <li>
-          <a
-            href="https://www.neoseeker.com/chained-echoes/walkthrough/Class_Emblems"
-            target="_blank"
-            rel="noopener noreferrer">Class Emblems</a
+      <button class="toc-card-toggle" aria-expanded="false">
+        <h2>
+          <svg class="toggle-icon" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+          </svg>
+          <svg viewBox="0 0 24 24" class="title-icon"
+            ><path
+              fill="currentColor"
+              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27Z"
+            ></path></svg
           >
-        </li>
-        <li>
-          <a
-            href="https://www.neoseeker.com/chained-echoes/walkthrough/Clan_Members"
-            target="_blank"
-            rel="noopener noreferrer">Clan Members</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.neoseeker.com/chained-echoes/walkthrough/Deals"
-            target="_blank"
-            rel="noopener noreferrer">Deals</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.neoseeker.com/chained-echoes/walkthrough/Collectibles"
-            target="_blank"
-            rel="noopener noreferrer">Collectibles</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.neoseeker.com/chained-echoes/walkthrough/Unique_Monsters"
-            target="_blank"
-            rel="noopener noreferrer">Unique Monsters</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.neoseeker.com/chained-echoes/walkthrough/Ultimate_Weapons"
-            target="_blank"
-            rel="noopener noreferrer">Ultimate Weapons</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.neoseeker.com/chained-echoes/walkthrough/Elemental_Tablets"
-            target="_blank"
-            rel="noopener noreferrer">Elemental Tablets Locations</a
-          >
-        </li>
-      </ul>
+          Guides
+        </h2>
+      </button>
+      <div class="toc-card-content">
+        <ul>
+          <li>
+            <a
+              href="https://www.neoseeker.com/chained-echoes/walkthrough/Class_Emblems"
+              target="_blank"
+              rel="noopener noreferrer">Class Emblems</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.neoseeker.com/chained-echoes/walkthrough/Clan_Members"
+              target="_blank"
+              rel="noopener noreferrer">Clan Members</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.neoseeker.com/chained-echoes/walkthrough/Deals"
+              target="_blank"
+              rel="noopener noreferrer">Deals</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.neoseeker.com/chained-echoes/walkthrough/Collectibles"
+              target="_blank"
+              rel="noopener noreferrer">Collectibles</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.neoseeker.com/chained-echoes/walkthrough/Unique_Monsters"
+              target="_blank"
+              rel="noopener noreferrer">Unique Monsters</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.neoseeker.com/chained-echoes/walkthrough/Ultimate_Weapons"
+              target="_blank"
+              rel="noopener noreferrer">Ultimate Weapons</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.neoseeker.com/chained-echoes/walkthrough/Elemental_Tablets"
+              target="_blank"
+              rel="noopener noreferrer">Elemental Tablets Locations</a
+            >
+          </li>
+        </ul>
+      </div>
     </section>
 
     <!-- Ashes of Elrant DLC (link-out card) -->
@@ -406,11 +447,12 @@ const baseUrl = import.meta.env.BASE_URL;
     margin: 0 auto;
   }
 
-  /* Grid Settings */
+/* Grid Settings */
   .toc-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     gap: 2.5rem;
+    align-items: start;
   }
 
   /* Responsive Grid Tweaks */
@@ -421,18 +463,74 @@ const baseUrl = import.meta.env.BASE_URL;
     }
   }
 
-  .toc-card {
+ .toc-card {
     background: linear-gradient(145deg, var(--bg-card), rgba(21, 24, 33, 0.9));
     border: 1px solid var(--border-color);
     border-radius: 12px;
-    padding: 2.2rem;
+    padding: 0;
     position: relative;
     overflow: hidden;
     transition:
-      transform 0.3s ease,
       box-shadow 0.3s ease,
       border-color 0.3s ease;
     backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    min-height: 110px;
+  }
+
+  .toc-card-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    padding: 1.5rem 1.8rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 110px;
+    flex-shrink: 0;
+  }
+
+  .toggle-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    color: var(--accent-blue);
+    transition: transform 0.3s ease;
+  }
+
+  .toc-card-toggle[aria-expanded="true"] .toggle-icon {
+    transform: rotate(180deg);
+  }
+
+  .toc-card-toggle h2 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .toc-card-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+.toc-card-toggle[aria-expanded="true"] + .toc-card-content {
+    max-height: 2000px;
+    transition: max-height 0.5s ease-in;
+    padding: 0 2.2rem 2.2rem 2.2rem;
+    margin-top: 0;
+  }
+
+  .toc-card ul {
+    margin-top: 0;
+  }
+
+  .toc-card h3 {
+    margin-top: 2rem;
   }
 
   .toc-card::before {
@@ -446,30 +544,37 @@ const baseUrl = import.meta.env.BASE_URL;
     opacity: 0.6;
   }
 
-  .toc-card:hover {
-    transform: translateY(-5px);
+.toc-card:hover {
     box-shadow:
       0 12px 30px rgba(0, 0, 0, 0.5),
       0 0 20px var(--accent-glow);
     border-color: var(--accent-blue);
   }
 
+  .toc-card-toggle[aria-expanded="true"] h2 {
+    color: var(--accent-blue);
+  }
+
+  .toc-card-toggle[aria-expanded="true"] .title-icon {
+    color: var(--accent-blue);
+    filter: drop-shadow(0 0 8px var(--accent-blue));
+  }
+
   .toc-card h2 {
     color: var(--accent-gold);
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.75rem;
-    margin-bottom: 2rem;
-    font-size: clamp(1.5rem, 4vw, 2rem); /* Significant header size */
+    margin-bottom: 0;
+    font-size: clamp(1.2rem, 3.2vw, 1.45rem);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
-    gap: 1rem;
-    word-break: break-word;
+    gap: 0.75rem;
+    white-space: nowrap;
+    text-transform: uppercase;
   }
 
   .title-icon {
-    width: 32px; /* Slightly larger icon for the larger text */
-    height: 32px;
+    width: 26px;
+    height: 26px;
     flex-shrink: 0;
     color: var(--accent-gold);
     filter: drop-shadow(0 0 5px rgba(226, 180, 59, 0.4));
@@ -569,9 +674,25 @@ const baseUrl = import.meta.env.BASE_URL;
       rgba(21, 24, 33, 0.9)
     );
     border-color: rgba(45, 212, 191, 0.3);
+    padding: 1.5rem 1.8rem;
+    position: relative;
+    overflow: hidden;
+    transition:
+      box-shadow 0.3s ease,
+      border-color 0.3s ease;
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    min-height: 110px;
   }
 
   .toc-card--dlc::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
     background: linear-gradient(to bottom, #2dd4bf, transparent);
     opacity: 0.8;
   }
@@ -675,13 +796,25 @@ const baseUrl = import.meta.env.BASE_URL;
     });
   };
 
+// Expose function for toggleCompletion to call
+  (window as any).updateCompletedIndicators = updateTOCLinks;
+
+  // Collapsible cards functionality
+  const initCollapsibleCards = () => {
+    const toggles = document.querySelectorAll(".toc-card-toggle");
+
+    toggles.forEach((toggle) => {
+      toggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!isExpanded));
+      });
+    });
+  };
+
   // Wait for DOM to be ready
   if (typeof document !== "undefined") {
-    document.addEventListener("DOMContentLoaded", () => {
-      updateTOCLinks();
-    });
+    initCollapsibleCards();
+    updateTOCLinks();
   }
-
-  // Expose function for toggleCompletion to call
-  (window as any).updateCompletedIndicators = updateTOCLinks;
 </script>
