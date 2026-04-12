@@ -443,25 +443,32 @@ body.menu-open {
     overflow: visible;
   }
 
-  .sidebar-header {
-    justify-content: center;
+ .sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 0;
     border-bottom: none;
     padding-bottom: 0;
     position: relative;
+    width: 100%;
+    padding: 0 0.5rem;
   }
 
   .sidebar-logo {
     max-height: 48px;
-    margin: 0 auto;
+    margin: 0;
   }
 
   .menu-toggle {
     display: flex;
-    position: absolute;
-    left: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%);
+    position: static;
+    transform: none;
+    margin: 0;
+  }
+
+  .header-logo {
+    margin: 0;
   }
 
   .sidebar-nav {
