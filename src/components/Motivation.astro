@@ -1,0 +1,125 @@
+---
+interface Props {
+  text?: string;
+}
+
+const { text } = Astro.props;
+---
+
+<div class="motivation-callout">
+  <div class="motivation-content">
+    <span class="motivation-icon">◈</span>
+    <p><slot>{text}</slot></p>
+    <span class="motivation-icon">◈</span>
+  </div>
+</div>
+
+<style>
+  .motivation-callout {
+    --motivation-accent: var(--accent-gold);
+    --motivation-glow: rgba(226, 180, 59, 0.4);
+    --motivation-bg-glow: rgba(226, 180, 59, 0.05);
+
+    margin: 4rem auto;
+    max-width: 900px;
+    position: relative;
+    padding: 2.5rem;
+    background: linear-gradient(
+      145deg,
+      rgba(26, 29, 39, 0.9),
+      rgba(15, 18, 25, 0.95)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  /* DLC Theme support */
+  :global(.dlc-theme) .motivation-callout {
+    --motivation-accent: #2dd4bf;
+    --motivation-glow: rgba(45, 212, 191, 0.4);
+    --motivation-bg-glow: rgba(45, 212, 191, 0.05);
+    border-color: rgba(45, 212, 191, 0.2);
+  }
+
+  .motivation-callout::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--motivation-accent), transparent);
+    box-shadow: 2px 0 15px var(--motivation-glow);
+  }
+
+  .motivation-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 1;
+  }
+
+  .motivation-callout p {
+    font-family: var(--font-heading);
+    font-size: clamp(1.1rem, 3vw, 1.6rem);
+    font-weight: 700;
+    color: var(--motivation-accent);
+    margin: 0 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-align: center;
+    text-shadow: 0 0 15px var(--motivation-glow);
+  }
+
+  .motivation-icon {
+    font-size: 1.5rem;
+    color: var(--motivation-accent);
+    opacity: 0.8;
+    filter: drop-shadow(0 0 5px var(--motivation-glow));
+    animation: pulse 2.5s infinite ease-in-out;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 0.4;
+      transform: scale(0.9);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+
+  .motivation-callout::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+      circle,
+      var(--motivation-bg-glow) 0%,
+      transparent 60%
+    );
+    animation: drift 15s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  @keyframes drift {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>

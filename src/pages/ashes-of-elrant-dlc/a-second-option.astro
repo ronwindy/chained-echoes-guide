@@ -1,0 +1,384 @@
+---
+import DlcLayout from "../../layouts/DlcLayout.astro";
+import QuestStep from "../../components/QuestStep.astro";
+import Image from "../../components/Image.astro";
+import Tip from "../../components/Tip.astro";
+import BossFight from "../../components/BossFight.astro";
+import MediaGrid from "../../components/MediaGrid.astro";
+import EndLogo from "../../components/EndLogo.astro";
+
+const baseUrl = import.meta.env.BASE_URL;
+
+const sections = [
+  { id: "introduction", label: "Introduction" },
+  { id: "speak-with-yaol-in-the-throne-room", label: "Speak with Yaol in the throne room" },
+  { id: "visit-the-village-in-the-deadlands", label: "Visit the village in the Deadlands" },
+  { id: "report-to-yaol", label: "Report to Yaol" },
+  { id: "talk-to-milena-in-the-palaces-dungeon", label: "Talk to Milena in the palace's dungeon" },
+  { id: "talk-to-milena-in-the-city", label: "Talk to Milena in the city" },
+  { id: "return-to-the-palaces-dungeon", label: "Return to the palace's dungeon" },
+  { id: "listen-to-yaols-news", label: "Listen to Yaol's news" },
+  { id: "confront-the-rebels-in-the-wastelands", label: "Confront the rebels in the Wastelands" },
+];
+---
+
+<DlcLayout
+  title="A Second Option"
+  subtitle="DLC SIDE QUEST WALKTHROUGH"
+  guideId="dlc-a-second-option"
+  sections={sections}
+>
+  <!-- SECTION: Introduction -->
+  <section id="introduction" class="content-section">
+    <h2>Introduction</h2>
+    <p>
+      We can start this quest by watching the scene that takes place on in the slums area of Elrant, on the southwestern corner of the southern area.
+    </p>
+    <Image 
+      src="https://cdn.staticneo.com/ew/thumb/5/56/Ec_879.jpg/730px-Ec_879.jpg" 
+      alt="Slums area of Elrant scene location" 
+    />
+    <MediaGrid columns={2}>
+      <Image 
+        src="https://cdn.staticneo.com/ew/thumb/6/63/Ec_880.jpg/363px-Ec_880.jpg" 
+        alt="Side quest start scene 1" 
+      />
+      <Image 
+        src="https://cdn.staticneo.com/ew/thumb/4/41/Ec_881.jpg/363px-Ec_881.jpg" 
+        alt="Side quest start scene 2" 
+      />
+    </MediaGrid>
+  </section>
+
+  <!-- SECTION: Speak with Yaol in the throne room -->
+  <section id="speak-with-yaol-in-the-throne-room" class="content-section">
+    <h2>Speak with Yaol in the throne room</h2>
+    
+    <QuestStep id="speak-with-yaol-in-the-throne-room-quest" title="Speak with Yaol in the throne room">
+      <Tip type="note">
+        <vin>Am I the only one that thinks and reads <strong>Yaoi</strong> instead of Yaol? Is my brain fried?</vin>
+      </Tip>
+      
+      <p>
+        Ahem, once we've started the sidequest, head back to the palace and go to the throne room to trigger a scene with Yaol.
+      </p>
+    </QuestStep>
+  </section>
+
+  <!-- SECTION: Visit the village in the Deadlands -->
+  <section id="visit-the-village-in-the-deadlands" class="content-section">
+    <h2>Visit the village in the Deadlands</h2>
+
+    <QuestStep id="visit-the-village-in-the-deadlands-quest" title="Visit the village in the Deadlands">
+      <p>
+        Once the scene is over, we need to go explore the Deadlands. Full exploration in the link below.
+      </p>
+
+      <ul>
+        <li><a href={`${baseUrl}ashes-of-elrant-dlc/deadlands`}>Deadlands Exploration</a></li>
+      </ul>
+
+      <p>
+        For this quest, we want to go to the village. I'll mark it in the image below.
+      </p>
+
+      <Image 
+        src="https://cdn.staticneo.com/ew/thumb/d/d7/Ec_899.jpg/600px-Ec_899.jpg" 
+        alt="Deadlands village location map" 
+      />
+
+      <p>
+        As we approach the village we'll have a scene with Bastyan. Once it's over, enter the house to the right of the teleportation crystal and read the note. What is that? Well, exit the house and go northeast to a graveyard. Check the first gravestone on the second row to find <strong>8428a</strong>.
+      </p>
+
+      <Image 
+        src="https://cdn.staticneo.com/ew/thumb/7/75/Ec_901.jpg/600px-Ec_901.jpg" 
+        alt="Finding currency in the graveyard" 
+      />
+
+      <p>
+        Southeast of the graveyard is a ledge you can jump down from. Jump down to a plant eyeball bridge and follow it down to find a chest with <strong>Bowgun V700</strong>.
+      </p>
+
+      <Image 
+        src="https://cdn.staticneo.com/ew/thumb/1/1c/Ec_902.jpg/600px-Ec_902.jpg" 
+        alt="Bowgun V700 chest location" 
+      />
+
+      <p>
+        Climb the ladder and slide down then check the house to your northeast. Inside you can find... what is this? Talk to the "Gothic Girl" and she'll give you <strong>Cute Lantern</strong>. What is this for? It's a key item.
+      </p>
+
+      <p>
+        Leave the house and go west to find a blue circle. It's digging time! Of course, this is the same as the last 2 we've done so far and you'll get <strong>Sovereign Class Emblem</strong> as a reward. Nice. This one is actually REALLY good as it has "King's Punishment", which allows you to attack very enemy once for 3x damage. Perfect to end fights quick.
+      </p>
+
+      <Image 
+        src="https://cdn.staticneo.com/ew/thumb/3/39/Ec_903.jpg/600px-Ec_903.jpg" 
+        alt="Class Emblem digging spot" 
+      />
+
+      <p>
+        Head back north across the bridge and enter the house left of the crystal and go through the hole in the wall. In here go north at the fork to find a chest with <strong>3891a</strong>.
+      </p>
+
+      <Image 
+        src="https://cdn.staticneo.com/ew/thumb/e/e9/Ec_904.jpg/600px-Ec_904.jpg" 
+        alt="Currency chest inside the house cave" 
+      />
+
+      <p>
+        Head east now, watch the scene and head north to reach a fork. Go right first then follow the bottom right path for another chest, this one with <strong>Inact Resistance</strong>.
+      </p>
+
+      <Image 
+        src="https://cdn.staticneo.com/ew/thumb/5/51/Ec_905.jpg/600px-Ec_905.jpg" 
+        alt="Inact Resistance chest location" 
+      />
+
+      <p>
+        Return 2 forks and go north now. Get on the plant eyeball bridge thing to find a chest at the end with <strong>ATK Up</strong>.
+      </p>
+
+      <Image 
+        src="https://cdn.staticneo.com/ew/thumb/9/96/Ec_906.jpg/600px-Ec_906.jpg" 
+        alt="ATK Up chest location" 
+      />
+
+      <p>
+        Return back down and take the upper left path now to find 3 soldiers. Yeah, these guys are part of the resistance so we'll need to deal with them. Sorry lads.
+      </p>
+
+      <p>
+        From here head east to reach an anomaly. This one shows us Magnolia! When you regain control, go east, kill some more soldiers and head north for the final chest in here, this one with <strong>Skill Points Voucher</strong>.
+      </p>
+
+      <Image 
+        src="https://cdn.staticneo.com/ew/thumb/5/5d/Ec_907.jpg/600px-Ec_907.jpg" 
+        alt="Skill Points Voucher chest" 
+      />
+
+      <p>
+        Return to where we saw the anomaly and head north and exit the cave.
+      </p>
+
+      <p>
+        Back outside, move to the end of the path to trigger another scene with the resistance. We'll end up fighting them. The little captain doesn't really do anything different so deal with him as well. The scenes will continue after the fight and once its over, open the large chest for <strong>Glaive V700</strong>.
+      </p>
+
+      <Image 
+        src="https://cdn.staticneo.com/ew/thumb/8/8d/Ec_908.jpg/600px-Ec_908.jpg" 
+        alt="Glaive V700 chest after the fight" 
+      />
+    </QuestStep>
+  </section>
+
+  <!-- SECTION: Report to Yaol -->
+  <section id="report-to-yaol" class="content-section">
+    <h2>Report to Yaol</h2>
+
+    <QuestStep id="report-to-yaol-quest" title="Report to Yaol">
+      <p>
+        Return to the throne room in the city and talk to Yaol.
+      </p>
+    </QuestStep>
+  </section>
+
+  <!-- SECTION: Talk to Milena in the palace's dungeon -->
+  <section id="talk-to-milena-in-the-palaces-dungeon" class="content-section">
+    <h2>Talk to Milena in the palace's dungeon</h2>
+
+    <QuestStep id="talk-to-milena-in-the-palaces-dungeon-quest" title="Talk to Milena in the palace's dungeon">
+      <p>
+        After a scene with her we'll need to go to the dungeon. You know, the prison area where we were held captive. If you don't remember, head back to the first floor of the palace, then take either of the bottom left or right staircases down to the basement, then take the central hallway north and make a right at the end.
+      </p>
+
+      <p>
+        Once in the prison go north to trigger a scene with a soldier and a researcher.
+      </p>
+
+      <Tip type="note">
+        <vin>Wow, this researcher is crazy. All of them are!</vin>
+      </Tip>
+
+      <p>
+        Once the scene is over, go left and enter the room over here to talk to Milena. We'll have a rather lengthy scene here, but a good one.
+      </p>
+    </QuestStep>
+  </section>
+
+  <!-- SECTION: Talk to Milena in the city -->
+  <section id="talk-to-milena-in-the-city" class="content-section">
+    <h2>Talk to Milena in the city</h2>
+
+    <QuestStep id="talk-to-milena-in-the-city-quest" title="Talk to Milena in the city">
+      <p>
+        Once the scene is over, fast travel to the teleportation crystal on the northern side of the city then head to the eastern side of the area (with the 2 houses you can enter). We actually want to approach the larger house north of them.
+      </p>
+      <p>
+        As you approach it another scene will play out.
+      </p>
+
+      <Image 
+        src="https://cdn.staticneo.com/ew/thumb/3/33/Ec_921.jpg/600px-Ec_921.jpg" 
+        alt="Approaching the house in the city" 
+      />
+    </QuestStep>
+  </section>
+
+  <!-- SECTION: Return to the palace's dungeon -->
+  <section id="return-to-the-palaces-dungeon" class="content-section">
+    <h2>Return to the palace's dungeon</h2>
+
+    <QuestStep id="return-to-the-palaces-dungeon-quest" title="Return to the palace's dungeon">
+      <p>
+        Once another lengthy scene is over, return to where we first talked to Milena to have the scenes continue.
+      </p>
+    </QuestStep>
+  </section>
+
+  <!-- SECTION: Listen to Yaol's news -->
+  <section id="listen-to-yaols-news" class="content-section">
+    <h2>Listen to Yaol's news</h2>
+
+    <QuestStep id="listen-to-yaols-news-quest" title="Listen to Yaol's news">
+      <p>
+        Once the scenes are over, return to the throne room and talk to Yaol once more.
+      </p>
+    </QuestStep>
+  </section>
+
+  <!-- SECTION: Confront the rebels in the Wastelands -->
+  <section id="confront-the-rebels-in-the-wastelands" class="content-section">
+    <h2>Confront the rebels in the Wastelands</h2>
+
+    <QuestStep id="confront-the-rebels-in-the-wastelands-quest" title="Confront the rebels in the Wastelands">
+      <p>
+        Now that we're done investigating the rebels in the Deadlands, we now have to go to the Wastelands. We pretty much have to play through the entire area to unlock flying with our Sky Armors. <a href={`${baseUrl}ashes-of-elrant-dlc/wastelands`}>CLICK HERE</a> to go to the Wastelands page and play through it until you unlock flying, then head to the rebel's location marked in the map below.
+      </p>
+
+      <Image 
+        src="https://cdn.staticneo.com/ew/thumb/8/82/Ec_992.jpg/600px-Ec_992.jpg" 
+        alt="Rebel's location in the Wastelands map" 
+      />
+
+      <p>
+        Once here, talk to the soldier. He'll mention the rebels and the skull. These are basically buttons to open a way forward. For now, press the skull to enter the cave.
+      </p>
+
+      <Image 
+        src="https://cdn.staticneo.com/ew/thumb/8/85/Ec_993.jpg/600px-Ec_993.jpg" 
+        alt="Cave entrance with skull button" 
+      />
+
+      <p>
+        Once inside, kill the rebels up ahead and on the right side of the room you can find another skull. Press it to open a way forward on the left side. Head through and as soon as you enter go left and hit the skull, then go right and hit a second button. This will open a door in the center.
+      </p>
+
+      <MediaGrid columns={2}>
+        <Image 
+          src="https://cdn.staticneo.com/ew/thumb/4/4d/Ec_994.jpg/363px-Ec_994.jpg" 
+          alt="Skull button mechanism 1" 
+        />
+        <Image 
+          src="https://cdn.staticneo.com/ew/thumb/d/d9/Ec_995.jpg/363px-Ec_995.jpg" 
+          alt="Skull button mechanism 2" 
+        />
+      </MediaGrid>
+
+      <p>
+        Go through this central door and on the other side, go left first to find a chest at the end with <strong>Hero's Medal</strong>.
+      </p>
+
+      <Image 
+        src="https://cdn.staticneo.com/ew/thumb/d/df/Ec_996.jpg/600px-Ec_996.jpg" 
+        alt="Hero's Medal chest location" 
+      />
+
+      <p>
+        Go right across the bridge now and kill the next rebels you come across. This here is a fork. There's nothing to the right so go left. Take the bottom path and keep an eye on the right side to find a skull among the bushes.
+      </p>
+
+      <Image 
+        src="https://cdn.staticneo.com/ew/thumb/a/a2/Ec_997.jpg/600px-Ec_997.jpg" 
+        alt="Hidden skull among the bushes" 
+      />
+
+      <p>
+        Press it and it'll open a door to the far right side of the room, which before was a dead end. Go through it to find <strong>Crit Damage Up</strong>.
+      </p>
+
+      <Image 
+        src="https://cdn.staticneo.com/ew/thumb/4/48/Ec_998.jpg/600px-Ec_998.jpg" 
+        alt="Crit Damage Up chest location" 
+      />
+
+      <p>
+        Return to where you pressed the skull and go north to where a scene will play out.
+      </p>
+
+      <p>
+        After the scene, go left, kill the rebels and hit the skull. Head through, save your game and move forward for another scene and then a boss fight.
+      </p>
+
+      <BossFight title="WRAITH">
+        <p>
+          Let me start out by saying... why is this thing weak to darkness? Given the type of enemy, shouldn't it be light? Oh well, make sure to equip darkness spells to do some real damage to this thing.
+        </p>
+        <p>
+          Anyway, the boss itself didn't do much. I took him out in 3 of his turns, and that's without exploiting his weakness to darkness.
+        </p>
+
+        <ul>
+          <li><strong>Weakness</strong>: Darkness</li>
+          <li><strong>Blinding Light</strong>: hits everyone for around 80 light dmg.</li>
+          <li><strong>Charm</strong>: charms a party member.</li>
+          <li><strong>Normal Attack</strong>: hits a party member for around 50 dmg.</li>
+          <li><strong>Death Stagger</strong>: thanks to Zurlabic for this one. He uses this when he's nearly defeated. Puts it on entire party and your only option is to switch out each character when it’s their turn.</li>
+        </ul>
+      </BossFight>
+
+      <p>
+        Watch the scene after the fight (lengthy one), we're supposed to leave. It feels very anticlimactic, huh?
+      </p>
+
+      <p>
+        Well anyway, head back to the throne room in the palace to trigger a scene with Leonar's people. Once it's over, so too will the quest end.
+      </p>
+
+      <p>
+        Make sure to go to the basement and enter the room in the northwestern corner (directly west from the entrance to the prison). You'll find the last 5 chests in there that give you:
+      </p>
+
+      <ul>
+        <li>Jester's Rapier</li>
+        <li>Flesh of Farnese</li>
+        <li>Hero's Medal</li>
+        <li>10,000a</li>
+        <li>Farnese Vest</li>
+      </ul>
+
+      <Image 
+        src="https://cdn.staticneo.com/ew/thumb/8/8e/Ec_999.jpg/600px-Ec_999.jpg" 
+        alt="Final chests in the palace basement" 
+      />
+    </QuestStep>
+  </section>
+
+  <EndLogo />
+</DlcLayout>
+
+<style>
+  .content-section {
+    padding: 2rem 0;
+  }
+
+  .content-section h2 {
+    color: var(--accent-gold);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+</style>

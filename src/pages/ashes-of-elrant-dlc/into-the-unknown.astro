@@ -6,6 +6,7 @@ import Tip from "../../components/Tip.astro";
 import StoryBlurb from "../../components/StoryBlurb.astro";
 import EndLogo from "../../components/EndLogo.astro";
 import MediaGrid from "../../components/MediaGrid.astro";
+import Motivation from "../../components/Motivation.astro";
 
 const baseUrl = import.meta.env.BASE_URL;
 
@@ -38,59 +39,53 @@ const sections = [
       million that I couldn't use.
     </Tip>
 
-    <Tip type="note">
-      Throughout the guide you'll see some little notes from me. These are
-      marked with <vin
-        >. They are mostly just my inner dialogue, my thoughts or just make
-        mention when I find something funny or whatnot. Feel free to completely
-        ignore. I used to do this back in the day (like 10+ years ago) and
-        people would enjoy it. Let me know down below if I should do this more
-        often, with my future guides!
-      </vin>
+    Throughout the guide you'll see some little notes from me. They are mostly
+    just my inner dialogue, my thoughts or just make mention when I find
+    something funny or whatnot. Feel free to completely ignore. I used to do
+    this back in the day (like 10+ years ago) and people would enjoy it. Let me
+    know down below if I should do this more often, with my future guides!
 
-      <Tip type="warning">
-        It is HIGHLY recommended you play through this DLC after completing the
-        game. The game gives you a save file if you don't have a "Cleared Save
-        File", but it's better to finish the game before tackling this DLC
-        because it contains MASSIVE spoilers for the end parts of the game.
-      </Tip>
-
-      <p>
-        <em
-          >That being said, I'll also consider you have fully played through the
-          game, have all the weapons, armor, sky armor, and are ready to tackle
-          everything... and know how to play the game of course.</em
-        >
-      </p>
-      <p>
-        <em>And with that said, let's get this started!</em>
-      </p>
-
-      <p>
-        From the Title Screen, select the "DLC - Ashes of Elrant" option ->
-        Start, load your save file and you'll be asked if you want a recap of
-        the story. If it's been a while since you've played the game, trust me,
-        it's worth going through it. I know it definitely helped me.
-      </p>
-
-      <p>
-        Once it's over, we'll have control of our party in the middle of a town
-        on fire. What's happening? We'll be immediately tossed into a fight
-        against... Villagers?
-      </p>
-
-      <Tip type="tip">
-        <vin
-          >Am I seeing this right? Weren't we like on the other side, fighting
-          to help/save them?</vin
-        >
-      </Tip>
-
-      <p>
-        These enemies are total pushover so go ahead and deal with them. Watch
-        the scene after the fight and we'll finally regain control afterwards.
-      </p>
+    <Tip type="warning">
+      It is HIGHLY recommended you play through this DLC after completing the
+      game. The game gives you a save file if you don't have a "Cleared Save
+      File", but it's better to finish the game before tackling this DLC because
+      it contains MASSIVE spoilers for the end parts of the game.
     </Tip>
+
+    <p>
+      <em
+        >That being said, I'll also consider you have fully played through the
+        game, have all the weapons, armor, sky armor, and are ready to tackle
+        everything... and know how to play the game of course.</em
+      >
+    </p>
+
+    <Motivation>And with that said, let's get this started!</Motivation>
+
+    <p>
+      From the Title Screen, select the "DLC - Ashes of Elrant" option -> Start,
+      load your save file and you'll be asked if you want a recap of the story.
+      If it's been a while since you've played the game, trust me, it's worth
+      going through it. I know it definitely helped me.
+    </p>
+
+    <p>
+      Once it's over, we'll have control of our party in the middle of a town on
+      fire. What's happening? We'll be immediately tossed into a fight
+      against... Villagers?
+    </p>
+
+    <Tip type="tip">
+      <vin
+        >Am I seeing this right? Weren't we like on the other side, fighting to
+        help/save them?</vin
+      >
+    </Tip>
+
+    <p>
+      These enemies are total pushover so go ahead and deal with them. Watch the
+      scene after the fight and we'll finally regain control afterwards.
+    </p>
 
     <QuestStep
       id="reach-the-enemys-commander"
@@ -183,22 +178,20 @@ const sections = [
       playing out and we'll be sent somewhere. Oh goodness, this is how we start
       the DLC!
     </QuestStep>
-
-    <EndLogo />
-
-    <style>
-      .content-section {
-        padding: 2rem 0;
-      }
-
-      .content-section h2 {
-        color: var(--accent-gold);
-        border-bottom: 1px solid var(--border-color);
-        padding-bottom: 0.75rem;
-        margin-bottom: 1.5rem;
-        font-size: clamp(1.5rem, 4vw, 2rem);
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-      }
-    </style>
   </section>
+  <EndLogo />
+  <style>
+    .content-section {
+      padding: 2rem 0;
+    }
+
+    .content-section h2 {
+      color: var(--accent-gold);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  </style>
 </DlcLayout>
