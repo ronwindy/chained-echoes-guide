@@ -1,0 +1,253 @@
+---
+import DlcLayout from "../../layouts/DlcLayout.astro";
+import Image from "../../components/Image.astro";
+import EndLogo from "../../components/EndLogo.astro";
+
+const baseUrl = import.meta.env.BASE_URL;
+
+const sections = [
+  { id: "overview", label: "Overview" },
+  { id: "objectives", label: "All Objectives" },
+];
+---
+
+<DlcLayout title="Mushroom Forest Reward Board" subtitle="DLC REWARD BOARD" guideId="dlc-mushroom-forest-reward-board" sections={sections}>
+
+  <section id="overview" class="content-section">
+    <h2>Overview</h2>
+    <p>Full in depth locations of everything are in the main guide.</p>
+    <Image src="https://cdn.staticneo.com/ew/thumb/d/d3/Ec_Mushroom_Forest_BB.jpg/730px-Ec_Mushroom_Forest_BB.jpg" alt="Mushroom Forest BB map" />
+  </section>
+
+  <section id="objectives" class="content-section">
+    <h2>Objectives</h2>
+    <div class="objectives-table">
+      <div class="table-header">
+        <div class="col-code"></div>
+        <div class="col-desc">Objective</div>
+        <div class="col-note col-note--full">Notes</div>
+      </div>
+
+      <div class="table-row" id="objective-8h">
+        <div class="col-code">8H</div>
+        <div class="col-desc">Win an encounter without using any healing skills.</div>
+        <div class="col-note col-note--full"></div>
+      </div>
+
+      <div class="table-row" id="objective-9e">
+        <div class="col-code">9E</div>
+        <div class="col-desc">Step into the Mushroom Forest.</div>
+        <div class="col-note col-note--full"></div>
+      </div>
+
+      <div class="table-row" id="objective-9f">
+        <div class="col-code">9F</div>
+        <div class="col-desc">Defeat 8x Chrioptera.</div>
+        <div class="col-note col-note--full"></div>
+      </div>
+
+      <div class="table-row" id="objective-9g">
+        <div class="col-code">9G</div>
+        <div class="col-desc">Explore most of the area.</div>
+        <div class="col-note col-note--full"></div>
+      </div>
+
+      <div class="table-row" id="objective-9h">
+        <div class="col-code">9H</div>
+        <div class="col-desc">Find a Class Emblem.</div>
+        <div class="col-note col-note--full">See <a href="#">All DLC Class Emblems</a> for location details.</div>
+      </div>
+
+      <div class="table-row" id="objective-10e">
+        <div class="col-code">10E</div>
+        <div class="col-desc">Find all 10 <a href="#">Collectibles</a>.</div>
+        <div class="col-note col-note--full"></div>
+      </div>
+
+      <div class="table-row" id="objective-10g">
+        <div class="col-code">10G</div>
+        <div class="col-desc">Find 33 treasure chests.</div>
+        <div class="col-note col-note--full"></div>
+      </div>
+
+      <div class="table-row" id="objective-11d">
+        <div class="col-code">11D</div>
+        <div class="col-desc">Find 3 Pools of Power.</div>
+        <div class="col-note">The 2 in the northeastern corner: approach the right one from the south through the water; the left one is inside the cave near the fishing spot.</div>
+        <div class="col-image">
+          <Image src="https://cdn.staticneo.com/ew/thumb/a/ac/Ec_1103.jpg/600px-Ec_1103.jpg" alt="Pool of Power locations in northeastern corner" />
+        </div>
+      </div>
+
+      <div class="table-row" id="objective-11e">
+        <div class="col-code">11E</div>
+        <div class="col-desc">Defeat a tree.</div>
+        <div class="col-note">This is a mimic, the only green tree you'll find here.</div>
+        <div class="col-image">
+          <Image src="https://cdn.staticneo.com/ew/thumb/8/84/Ec_1104.jpg/600px-Ec_1104.jpg" alt="Mimic tree in Mushroom Forest" />
+        </div>
+      </div>
+
+      <div class="table-row" id="objective-11f">
+        <div class="col-code">11F</div>
+        <div class="col-desc">Defeat 17 Chicock.</div>
+        <div class="col-note col-note--full"></div>
+      </div>
+
+      <div class="table-row" id="objective-11g">
+        <div class="col-code">11G</div>
+        <div class="col-desc">Complete all fishing spots.</div>
+        <div class="col-note"></div>
+        <div class="col-image">
+          <Image src="https://cdn.staticneo.com/ew/thumb/2/2e/Ec_1105.jpg/600px-Ec_1105.jpg" alt="Fishing spots in Mushroom Forest" />
+        </div>
+      </div>
+
+      <div class="table-row" id="objective-12g">
+        <div class="col-code">12G</div>
+        <div class="col-desc">Defeat 10x Strix.</div>
+        <div class="col-note col-note--full"></div>
+      </div>
+    </div>
+  </section>
+
+  <EndLogo />
+</DlcLayout>
+
+<style>
+  .content-section {
+    padding: 2rem 0;
+  }
+
+  .content-section h2 {
+    color: var(--accent-gold);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .objectives-table {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    background: linear-gradient(145deg, rgba(10, 40, 35, 0.4), rgba(15, 25, 23, 0.6));
+  }
+
+  .table-header,
+  .table-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr 200px;
+    align-items: stretch;
+  }
+
+  .table-header {
+    background: linear-gradient(90deg, rgba(45, 212, 191, 0.15), rgba(45, 212, 191, 0.05));
+    border-bottom: 2px solid rgba(45, 212, 191, 0.3);
+    font-weight: 600;
+    color: #2dd4bf;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+  }
+
+  .table-row {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    transition: background 0.2s ease;
+    scroll-margin-top: 2rem;
+  }
+
+  .table-row:last-child {
+    border-bottom: none;
+  }
+
+  .table-row:hover {
+    background: rgba(45, 212, 191, 0.06);
+  }
+
+  .col-code {
+    text-align: center;
+    font-weight: 700;
+    color: #2dd4bf;
+    font-size: 1.05rem;
+    font-family: var(--font-heading);
+    padding: 1rem 1.25rem;
+    border-right: 1px solid rgba(45, 212, 191, 0.2);
+  }
+
+  .col-desc {
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.6;
+    padding: 1rem 1.25rem;
+    border-right: 1px solid rgba(45, 212, 191, 0.2);
+  }
+
+  .col-desc a {
+    color: #ccfbf1;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .col-desc a:hover {
+    color: #fff;
+  }
+
+  .col-note {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding: 1rem 1.25rem;
+    border-right: 1px solid rgba(45, 212, 191, 0.2);
+  }
+
+  .col-note--full {
+    grid-column: 3 / 5;
+    border-right: none;
+  }
+
+  .col-note a {
+    color: #ccfbf1;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .col-note a:hover {
+    color: #fff;
+  }
+
+  .col-image {
+    padding: 1rem 1.25rem;
+  }
+
+  .col-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+  }
+
+  @media (max-width: 900px) {
+    .table-header,
+    .table-row {
+      grid-template-columns: 70px 1fr 0px;
+    }
+
+    .col-note,
+    .col-note--full {
+      border-right: none;
+    }
+
+    .col-image {
+      display: none;
+    }
+
+    .col-note--full {
+      grid-column: auto;
+    }
+
+    .col-desc {
+      border-right: none;
+    }
+  }
+</style>
