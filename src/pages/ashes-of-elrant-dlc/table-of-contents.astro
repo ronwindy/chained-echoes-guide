@@ -483,11 +483,13 @@ const baseUrl = import.meta.env.BASE_URL;
 
   // Map DLC guide IDs to their href patterns in the TOC
   const guideIdMap: Record<string, string> = {
-    "dlc-introduction": "introduction",
+    "dlc-introduction": "ashes-of-elrant-introduction",
     "dlc-into-the-unknown": "into-the-unknown",
     "dlc-beyond-the-rift": "beyond-the-rift",
     "dlc-the-big-escape": "the-big-escape",
-    "dlc-the-truth-of-elrant": "the-truth-of-elrant",
+    "the-big-escape": "the-big-escape",
+    "dlc-the-truth-of-elerant": "the-truth-of-elerant",
+    "dlc-the-truth-of-elrant": "the-truth-of-elerant",
     "dlc-the-open-way": "the-open-way",
     "dlc-deadlands": "deadlands",
     "dlc-world-exploration": "world-exploration",
@@ -504,8 +506,9 @@ const baseUrl = import.meta.env.BASE_URL;
     const tocLinks = document.querySelectorAll(".toc-card a");
     tocLinks.forEach((link) => {
       const href = link.getAttribute("href") || "";
+      const cleanHref = href.split(/[?#]/)[0].replace(/\/$/, "");
       const guideId = Object.keys(guideIdMap).find((id) =>
-        href.includes(guideIdMap[id]),
+        cleanHref.endsWith("/" + guideIdMap[id]) || cleanHref.endsWith(guideIdMap[id]),
       );
       if (guideId && completedGuides.includes(guideId)) {
         link.classList.add("completed");

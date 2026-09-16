@@ -12,7 +12,6 @@ const { guideId, guideTitle } = Astro.props;
   class="complete-btn"
   data-guide-id={guideId}
   data-guide-title={guideTitle}
-  onclick={`toggleCompletion('${guideId}', '${guideTitle}')`}
   aria-label={`Mark "${guideTitle}" as completed`}
 >
   <span class="complete-icon">○</span>
@@ -87,11 +86,14 @@ const { guideId, guideTitle } = Astro.props;
 
 <script>
   // Detect if we're in DLC context by checking body class
-  const isDLCContext = document?.body?.classList.contains("dlc-theme") || false;
+  const isDLCContext = (): boolean =>
+    typeof document !== "undefined" &&
+    Boolean(document.body?.classList.contains("dlc-theme"));
 
   // Get completed guides from localStorage (uses different key for DLC)
   const getCompletedGuides = (): string[] => {
-    const key = isDLCContext
+    if (typeof localStorage === "undefined") return [];
+    const key = isDLCContext()
       ? "chained-echoes-dlc-completed"
       : "chained-echoes-completed";
     const stored = localStorage.getItem(key);
@@ -100,6 +102,7 @@ const { guideId, guideTitle } = Astro.props;
 
   // Update button state based on completion status
   const updateButtonState = (id: string, title: string) => {
+    if (typeof document === "undefined") return;
     const completed = getCompletedGuides();
     const isCompleted = completed.includes(id);
     const button = document.getElementById(`complete-btn-${id}`);
@@ -129,7 +132,8 @@ const { guideId, guideTitle } = Astro.props;
 
   // Toggle guide completion status
   (window as any).toggleCompletion = (id: string, title: string) => {
-    const key = isDLCContext
+    if (typeof localStorage === "undefined") return;
+    const key = isDLCContext()
       ? "chained-echoes-dlc-completed"
       : "chained-echoes-completed";
     const completed = getCompletedGuides();
@@ -148,21 +152,43 @@ const { guideId, guideTitle } = Astro.props;
     // Update the button state
     updateButtonState(id, title);
 
-    // Update sidebar and TOC
-    (window as any).updateCompletedIndicators();
+    // Update sidebar and TOC defensively
+    if (typeof (window as any).updateCompletedIndicators === "function") {
+      (window as any).updateCompletedIndicators();
+    }
   };
 
-  // Initialize button state on page load using data attributes
-  if (typeof document !== "undefined") {
-    document.addEventListener("DOMContentLoaded", () => {
-      const button = document.querySelector(`[data-guide-id]`);
-      if (button) {
-        const guideId = button.getAttribute("data-guide-id");
-        const guideTitle = button.getAttribute("data-guide-title");
-        if (guideId && guideTitle) {
-          updateButtonState(guideId, guideTitle);
-        }
+  // Initialize button states on page load
+  const initButtons = () => {
+    if (typeof document === "undefined") return;
+    const buttons = document.querySelectorAll<HTMLButtonElement>(".complete-btn");
+    buttons.forEach((button) => {
+      const guideId = button.getAttribute("data-guide-id");
+      const guideTitle = button.getAttribute("data-guide-title");
+      if (guideId && guideTitle) {
+        updateButtonState(guideId, guideTitle);
       }
     });
+  };
+
+  if (typeof document !== "undefined") {
+    // Event delegation for clicks on complete buttons
+    document.addEventListener("click", (e) => {
+      const button = (e.target as HTMLElement | null)?.closest<HTMLButtonElement>(
+        ".complete-btn",
+      );
+      if (!button) return;
+      const guideId = button.getAttribute("data-guide-id");
+      const guideTitle = button.getAttribute("data-guide-title") || "";
+      if (guideId) {
+        (window as any).toggleCompletion(guideId, guideTitle);
+      }
+    });
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initButtons);
+    } else {
+      initButtons();
+    }
   }
 </script>

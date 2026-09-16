@@ -257,11 +257,13 @@ const baseUrl = import.meta.env.BASE_URL;
 
       // Map DLC guide IDs to their href patterns in the sidebar
       const guideIdMap: Record<string, string> = {
-        "dlc-introduction": "ashes-of-elrant-dlc/introduction",
+        "dlc-introduction": "ashes-of-elrant-dlc/ashes-of-elrant-introduction",
         "dlc-into-the-unknown": "ashes-of-elrant-dlc/into-the-unknown",
         "dlc-beyond-the-rift": "ashes-of-elrant-dlc/beyond-the-rift",
         "dlc-the-big-escape": "ashes-of-elrant-dlc/the-big-escape",
-        "dlc-the-truth-of-elrant": "ashes-of-elrant-dlc/the-truth-of-elrant",
+        "the-big-escape": "ashes-of-elrant-dlc/the-big-escape",
+        "dlc-the-truth-of-elerant": "ashes-of-elrant-dlc/the-truth-of-elerant",
+        "dlc-the-truth-of-elrant": "ashes-of-elrant-dlc/the-truth-of-elerant",
         "dlc-the-open-way": "ashes-of-elrant-dlc/the-open-way",
         "dlc-deadlands": "ashes-of-elrant-dlc/deadlands",
         "dlc-world-exploration": "ashes-of-elrant-dlc/world-exploration",
@@ -272,20 +274,27 @@ const baseUrl = import.meta.env.BASE_URL;
         "dlc-mushroom-forest-reward-board": "ashes-of-elrant-dlc/mushroom-forest-reward-board",
       };
 
+      (window as any).updateCompletedIndicators = () => {
+        const completed = getCompletedGuides();
+        const sidebarLinks = document.querySelectorAll(".sidebar .nav-links a");
+        sidebarLinks.forEach((link) => {
+          const href = link.getAttribute("href") || "";
+          const cleanHref = href.split(/[?#]/)[0].replace(/\/$/, "");
+          const guideId = Object.keys(guideIdMap).find((id) =>
+            cleanHref.endsWith(guideIdMap[id]),
+          );
+          if (guideId && completed.includes(guideId)) {
+            link.classList.add("completed");
+          } else {
+            link.classList.remove("completed");
+          }
+        });
+      };
+
       // Wait for DOM to be ready
       if (typeof document !== "undefined") {
         document.addEventListener("DOMContentLoaded", () => {
-          completedGuides.forEach((guideId) => {
-            const hrefPattern = guideIdMap[guideId];
-            if (hrefPattern) {
-              const link = sidebar?.querySelector(
-                `a[href*="${hrefPattern}"]`,
-              ) as HTMLAnchorElement;
-              if (link) {
-                link.classList.add("completed");
-              }
-            }
-          });
+          (window as any).updateCompletedIndicators();
 
           // Highlight active link and open its parent details
           const currentUrlStr = window.location.href
@@ -314,38 +323,6 @@ const baseUrl = import.meta.env.BASE_URL;
               }
             }
           });
-        });
-      }
-
-      (window as any).updateCompletedIndicators = () => {
-        const completedGuides = getCompletedGuides();
-        const guideIdMap = {
-          "dlc-introduction": "ashes-of-elrant-dlc/introduction",
-          "dlc-into-the-unknown": "ashes-of-elrant-dlc/into-the-unknown",
-          "dlc-beyond-the-rift": "ashes-of-elrant-dlc/beyond-the-rift",
-          "dlc-the-big-escape": "ashes-of-elrant-dlc/the-big-escape",
-          "dlc-the-truth-of-elrant": "ashes-of-elrant-dlc/the-truth-of-elrant",
-          "dlc-the-open-way": "ashes-of-elrant-dlc/the-open-way",
-          "dlc-deadlands": "ashes-of-elrant-dlc/deadlands",
-          "dlc-world-exploration": "ashes-of-elrant-dlc/world-exploration",
-          "dlc-wastelands": "ashes-of-elrant-dlc/wastelands",
-          "dlc-world-exploration-2": "ashes-of-elrant-dlc/world-exploration-2",
-          "dlc-deus-ex-machina": "ashes-of-elrant-dlc/deus-ex-machina",
-          "dlc-a-second-option": "ashes-of-elrant-dlc/a-second-option",
-          "dlc-mushroom-forest-reward-board": "ashes-of-elrant-dlc/mushroom-forest-reward-board",
-        };
-
-        const sidebarLinks = document.querySelectorAll(".sidebar .nav-links a");
-        sidebarLinks.forEach((link) => {
-          const href = link.getAttribute("href") || "";
-          const guideId = Object.keys(guideIdMap).find((id) =>
-            href.includes((guideIdMap as any)[id]),
-          );
-          if (guideId && completedGuides.includes(guideId)) {
-            link.classList.add("completed");
-          } else {
-            link.classList.remove("completed");
-          }
         });
       };
 

@@ -776,6 +776,10 @@ const baseUrl = import.meta.env.BASE_URL;
     "world-exploration-2": "world-exploration-2",
     "a-call-from-the-past": "a-call-from-the-past",
     "ruins-under-a-tree": "ruins-under-a-tree",
+    "grave-of-reina": "grave-of-reina",
+    "in-good-faith": "in-good-faith",
+    "chained-echoes": "chained-echoes",
+    "end-of-an-era": "end-of-an-era",
     "the-food-the-chap-and-the-hungry": "the-food-the-chap-and-the-hungry",
     "killing-gods": "killing-gods",
     "eastern-ograne-grottos": "eastern-ograne-grottos",
@@ -796,7 +800,10 @@ const baseUrl = import.meta.env.BASE_URL;
     const tocLinks = document.querySelectorAll(".toc-card a");
     tocLinks.forEach((link) => {
       const href = link.getAttribute("href") || "";
-      const guideId = Object.keys(guideIdMap).find((id) => href.includes(id));
+      const cleanHref = href.split(/[?#]/)[0].replace(/\/$/, "");
+      const guideId = Object.keys(guideIdMap).find((id) =>
+        cleanHref.endsWith("/" + guideIdMap[id]) || cleanHref.endsWith(guideIdMap[id]),
+      );
       if (guideId && completedGuides.includes(guideId)) {
         link.classList.add("completed");
       } else {
