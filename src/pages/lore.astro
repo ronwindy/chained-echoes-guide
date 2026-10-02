@@ -1,0 +1,805 @@
+---
+import WalkthroughLayout from "../layouts/WalkthroughLayout.astro";
+import StoryBlurb from "../components/StoryBlurb.astro";
+
+const sections = [
+  {
+    id: "races",
+    label: "Races",
+    subsections: [
+      { id: "major-humanoid-races", label: "Major Humanoid Races" },
+      { id: "ancient-ascended-beings", label: "Ancient & Ascended" },
+      { id: "hybrids-anomalies", label: "Hybrids & Anomalies" },
+    ],
+  },
+  {
+    id: "worldbuilding",
+    label: "Worldbuilding",
+    subsections: [
+      { id: "wapen", label: "Wapen" },
+      { id: "do", label: "Do" },
+      { id: "brandyon", label: "Brandyon" },
+      { id: "jadar", label: "Jadar" },
+      { id: "miranda", label: "Miranda" },
+      { id: "valandis", label: "Valandis" },
+      { id: "pangea", label: "Pangea" },
+    ],
+  },
+  { id: "miscellaneous", label: "Miscellaneous" },
+  { id: "mythology-history", label: "Mythology / History" },
+  { id: "seven-true-kings", label: "The Seven True Kings" },
+  {
+    id: "final-notes",
+    label: "Final Notes",
+    subsections: [
+      { id: "endings-summary", label: "Endings Summary" },
+    ],
+  },
+];
+---
+
+<WalkthroughLayout
+  title="Lore Notes"
+  subtitle="MISCELLANEOUS LORE & WORLD NOTES"
+  sections={sections}
+>
+  <StoryBlurb>
+    <p>
+      With the DLC coming up sometime this spring, I decided to replay Chained Echoes. Because there's a lot of miscellaneous ''lore'' information mentioned in the game that can be easy to forget, I decided to keep a list. I'm sure a lot of this information isn't very important, but you never know what might be brought up again. Do not take this list as any sort of definitive ''encyclopedia'' of the game's lore. The chance that I missed information, forgot something, or misinterpreted a line of dialogue is very high. I've written anything that involves personal speculation in italics, to set it apart from the more definitive information.
+    </p>
+    <br />
+    <p>
+      In an attempt to make things slightly more readable, I sorted the information into categories (although I did place history and mythology together, because the two are somewhat intertwined). I'm not sure what the best order for these categories is though, so this may still be confusing.
+    </p>
+  </StoryBlurb>
+
+  <!-- Races -->
+  <section id="races" class="lore-section">
+    <div class="lore-card">
+      <h2 class="lore-card__title">Races</h2>
+
+      <div class="lore-historical-notice">
+        <p>
+          The different humanoid races used to live in separate communities before the <strong>War Of The Thousand Kingdoms</strong>, after which cultural integration and shared societies gradually developed across the world.
+        </p>
+      </div>
+
+      <!-- Group 1: Major Humanoid Races -->
+      <div id="major-humanoid-races" class="lore-subsection">
+        <h3 class="lore-subsection__title">Major Humanoid Races</h3>
+        <p class="lore-intro">The widespread sapient species commonly found throughout Eldrea's continents and city-states.</p>
+
+        <div class="races-grid">
+          <!-- Hyoms -->
+          <article class="race-card">
+            <div class="race-card__header">
+              <h4 class="race-card__name">Hyoms</h4>
+              <span class="race-badge race-badge--common">Common Human</span>
+            </div>
+            <div class="race-card__body">
+              <p>''Regular'' humans. The <strong>Arnsreich</strong> contains the largest Hyom population in the world.</p>
+            </div>
+          </article>
+
+          <!-- Sova -->
+          <article class="race-card">
+            <div class="race-card__header">
+              <h4 class="race-card__name">Sova</h4>
+              <span class="race-badge race-badge--avian">Avian Folk</span>
+            </div>
+            <div class="race-card__body">
+              <p>Bird-like humanoids who possess keen nocturnal senses. They can see perfectly in the dark and frequently dwell on sky islands such as <strong>He'Kandria</strong>.</p>
+            </div>
+          </article>
+
+          <!-- Lisvan -->
+          <article class="race-card">
+            <div class="race-card__header">
+              <h4 class="race-card__name">Lisvan</h4>
+              <span class="race-badge race-badge--reptile">Reptilian Folk</span>
+            </div>
+            <div class="race-card__body">
+              <p>Lizard-like humanoids with a singular reproductive biology: only male Lisvan exist, and they reproduce purely asexually. Adaptations include sun-loving desert Lisvan in <strong>Jadar</strong> and an aquatic subspecies in <strong>Miranda</strong>.</p>
+            </div>
+          </article>
+
+          <!-- Thera -->
+          <article class="race-card">
+            <div class="race-card__header">
+              <h4 class="race-card__name">Thera</h4>
+              <span class="race-badge race-badge--beast">Feline Folk</span>
+            </div>
+            <div class="race-card__body">
+              <p>Humanoids who resemble predatory cats, known for their agile reflexes, predatory instincts, and hunting nature.</p>
+            </div>
+          </article>
+
+          <!-- Polka -->
+          <article class="race-card">
+            <div class="race-card__header">
+              <h4 class="race-card__name">Polka</h4>
+              <span class="race-badge race-badge--beast">Porcine Folk</span>
+            </div>
+            <div class="race-card__body">
+              <p>Porcine humanoids who resemble pigs, known for their simple demeanor and tendency to have low intelligence.</p>
+            </div>
+          </article>
+
+          <!-- Phiora -->
+          <article class="race-card">
+            <div class="race-card__header">
+              <h4 class="race-card__name">Phiora</h4>
+              <span class="race-badge race-badge--aquatic">Aquatic Folk</span>
+            </div>
+            <div class="race-card__body">
+              <p>Humanoids who resemble fish. There is an underground Phioran village in <strong>Arkant</strong> named <strong>L'yehr</strong>. Historically, the Phiora bred <strong>Seahorse Knights</strong> as mounts and fighting units.</p>
+            </div>
+          </article>
+
+          <!-- Gimle -->
+          <article class="race-card">
+            <div class="race-card__header">
+              <h4 class="race-card__name">Gimle</h4>
+              <span class="race-badge race-badge--amorphous">Amorphous</span>
+            </div>
+            <div class="race-card__body">
+              <p>Gelatinous beings whose bodies do not have a uniform shape. They can fuse with others of their species for short periods of time, sharing memories and experiences.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Group 2: Ancient & Ascended Beings -->
+      <div id="ancient-ascended-beings" class="lore-subsection">
+        <h3 class="lore-subsection__title">Ancient & Ascended Beings</h3>
+        <p class="lore-intro">Long-lived precursors and godlike entities whose influence spans millennia.</p>
+
+        <div class="races-grid races-grid--wide">
+          <!-- Aar -->
+          <article class="race-card race-card--ancient">
+            <div class="race-card__header">
+              <h4 class="race-card__name">Aar</h4>
+              <span class="race-badge race-badge--ancient">Long-Lived Precursors</span>
+            </div>
+            <div class="race-card__body">
+              <p>A race of human-like beings who live for thousands of years, possessing immense wisdom and power. Notable Aar seen throughout the story include:</p>
+              <ul class="race-card__sublist">
+                <li><strong>Victor</strong> — playwright, bard, and veteran warrior from Arkadia.</li>
+                <li><strong>Endahrt</strong> — pilot of the Seraph Armor Caspar and bodyguard to Markas.</li>
+                <li><strong>Markas</strong> — leader of the Gandebranth Society and follower of the Harbringer.</li>
+                <li><strong>Gwayn / Nalkilber</strong> — ancient scholar and master of ancient ''true magic''.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Vaen -->
+          <article class="race-card race-card--divine">
+            <div class="race-card__header">
+              <h4 class="race-card__name">Vaen</h4>
+              <span class="race-badge race-badge--divine">Ascended Immortals</span>
+            </div>
+            <div class="race-card__body">
+              <p>Originally a human-like race who gained immortality and effectively ascended into godhood, considering themselves the ''judges and executioners'' of the world:</p>
+              <ul class="race-card__sublist">
+                <li><strong>Order Of Leonar:</strong> The Vaen were considered the ''allies'' of the Order, who built the sunken magic academy of <strong>Nhysa</strong> to bridge into their realm.</li>
+                <li><strong>Dimensional Watchers:</strong> Reside in another dimension, eternally watching over the seal keeping the demonic <strong>Harbringer</strong> contained.</li>
+                <li><strong>Grand Grimoire:</strong> Created the Grand Grimoire, unleashing it on humanity every few centuries to cull their population and prevent excessive growth, before <strong>Gwayn</strong> stole it from them.</li>
+                <li><strong>Essence Fusion:</strong> Possess the ability to fuse with other beings — which they used to ''become one'' with <strong>Labrodia Dervinas</strong> in an effort to destroy him.</li>
+                <li><strong>Contingency Plan:</strong> Their strategy to conquer the Harbringer required <strong>Lenne</strong> dying at a specific point in time; if this failed, their contingency was to destroy the entire world.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Group 3: Hybrids, Transformations & Anomalies -->
+      <div id="hybrids-anomalies" class="lore-subsection">
+        <h3 class="lore-subsection__title">Hybrids, Transformations & Anomalies</h3>
+        <p class="lore-intro">Cross-species mixes, artificially altered humans, and enigmatic non-human entities.</p>
+
+        <div class="races-grid">
+          <!-- Demis -->
+          <article class="race-card">
+            <div class="race-card__header">
+              <h4 class="race-card__name">Demis</h4>
+              <span class="race-badge">Hybrid Lineage</span>
+            </div>
+            <div class="race-card__body">
+              <p>''<strong>Demis</strong>'' are mixes between two races, bearing physical and physiological attributes of both lineages.</p>
+            </div>
+          </article>
+
+          <!-- Goblins -->
+          <article class="race-card">
+            <div class="race-card__header">
+              <h4 class="race-card__name">Goblins</h4>
+              <span class="race-badge race-badge--anomaly">Transformed Humans</span>
+            </div>
+            <div class="race-card__body">
+              <p>Apparently goblins were once a regular race of monsters, but they all died out except for one. Every other goblin seen in the game is actually a human transformed by a totem pole created by the scholars of <strong>Nhysa</strong> to collect ether.</p>
+              <p class="race-card__speculation"><em>(presumably, turning them into goblins was an unintended side-effect)</em></p>
+            </div>
+          </article>
+
+          <!-- Otters -->
+          <article class="race-card">
+            <div class="race-card__header">
+              <h4 class="race-card__name">Otters</h4>
+              <span class="race-badge race-badge--enigmatic">Unique Sentients</span>
+            </div>
+            <div class="race-card__body">
+              <p>Considered a separate type of creature from humans, monsters, and animals, much like goblins. These somewhat humanoid creatures can master powerful magic and wield weapons with great proficiency.</p>
+            </div>
+          </article>
+
+          <!-- Yus / Ys -->
+          <article class="race-card">
+            <div class="race-card__header">
+              <h4 class="race-card__name">Yus / Ys</h4>
+              <span class="race-badge">Nature Humanoids</span>
+            </div>
+            <div class="race-card__body">
+              <p>A species of Hyom-like beings who live in harmony with nature in isolated communities. <strong>Maria</strong>, the leader of <strong>Taryn</strong>'s Valkyries, is one of these beings. The <strong>Galtena Empire</strong> on <strong>Brandyon</strong> was also founded by the <strong>Yus</strong> <em>(likely the same race as the ''Ys'', with one spelling being a typo)</em>.</p>
+            </div>
+          </article>
+
+          <!-- Mamorians -->
+          <article class="race-card">
+            <div class="race-card__header">
+              <h4 class="race-card__name">Mamorians</h4>
+              <span class="race-badge">Small Folk</span>
+            </div>
+            <div class="race-card__body">
+              <p>Small creatures given no further physical description in records. Despite their obscure nature, they originally founded the prosperous jungle city-state of <strong>Vaati</strong> in southern <strong>Wapen</strong>.</p>
+            </div>
+          </article>
+
+          <!-- The Pope -->
+          <article class="race-card">
+            <div class="race-card__header">
+              <h4 class="race-card__name">The Pope</h4>
+              <span class="race-badge race-badge--unclassified">Unclassified Being</span>
+            </div>
+            <div class="race-card__body">
+              <p>Originally named <strong>Father Hyob</strong>. <em>(The Pope is clearly not human, but it's never mentioned what kind of being he is)</em></p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Monster Origins Scholarly Note -->
+        <div class="lore-note-box">
+          <h4 class="lore-note-box__title">Bestiary & Origin Contradiction</h4>
+          <p>
+            <em>(it's stated that the various monsters fought throughout the game were created by the <strong>Gandebranth Society</strong>. However, some bestiary descriptions describe species evolving naturally or even pre-dating humans.)</em>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Worldbuilding -->
+  <section id="worldbuilding" class="lore-section">
+    <div class="lore-card">
+      <h2 class="lore-card__title">Worldbuilding</h2>
+      <p class="lore-intro">Most of the world's continents form the shape of a ring, their locations within the ''ring'' are as follows:</p>
+      <ul class="lore-list ring-layout">
+        <li><strong>Northeast:</strong> <strong>Wapen</strong></li>
+        <li><strong>Southeast:</strong> <strong>Do</strong></li>
+        <li><strong>Southwest:</strong> <strong>Brandyon</strong></li>
+        <li><strong>Northwest:</strong> <strong>Jadar</strong></li>
+        <li><strong>North:</strong> <strong>Valandis</strong></li>
+        <li><strong>Center:</strong> <strong>Miranda</strong></li>
+        <li><strong>Far North, above the ring:</strong> <strong>Pangea</strong></li>
+      </ul>
+
+      <!-- Wapen -->
+      <div id="wapen" class="lore-subsection">
+        <h3 class="lore-subsection__title">Wapen</h3>
+        <p class="lore-intro"><strong>Wapen</strong> is the largest continent, containing the <strong>Free Cities</strong>, the republic of <strong>Dorver</strong>, the city-state of <strong>Vaati</strong>, and the <strong>Arnsreich</strong>.</p>
+        <ul class="lore-list">
+          <li>The continent consists mostly of plains, but the climate is harsh in the far north, in <strong>Hiraeth</strong> where the <strong>"Highbrothers"</strong> live.</li>
+          <li>Music genres called ''<strong>Ice Core</strong>'' and ''<strong>Earth Core</strong>'' originated in <strong>Hiraeth</strong>.</li>
+          <li>The <strong>Highbrothers</strong> apparently drink ale out of the horns of giant yaks.</li>
+          <li>The <strong>Free Cities</strong> are also in the north of <strong>Wapen</strong>, not far from the continent of <strong>Valandis</strong>.</li>
+          <li>tourists from the <strong>Free Cities</strong> often visit the resort island to the south of <strong>Valandis</strong>.</li>
+          <li>comics are apparently very popular there too.</li>
+          <li>it's a fashion trend in the <strong>Free Cities</strong> to use the <strong>Bighead</strong>'s eyelashes as cosmetics.</li>
+          <li><em>(considering the information above, I imagine the citizens of the Free Cities are quite wealthy, being able to spend money on luxuries)</em></li>
+          <li>when <strong>Egyl</strong> descended to the surface, he trained under a knight named <strong>Sir Izaak Of Dorver</strong>, a member of the <strong>"Knights Of The Dusk Blue"</strong>.</li>
+          <li>In the south is <strong>Ra'Munda</strong>, the world's largest mountain range. Sturdy redwood trees grow on its peaks.</li>
+          <li>in the southwest, there are temperate plains.</li>
+          <li>in the southeast is a jungle, where <strong>Vaati</strong> is located.</li>
+          <li><strong>Vaati</strong> was founded by the <strong>Mamorians</strong></li>
+          <li>Assassins from <strong>Vaati</strong> use special poison that can kill someone within two hours.</li>
+          <li>The researchers investigating the chapel in the <strong>Flower Fields Of Perpetua</strong> are from <strong>Vaati</strong></li>
+          <li>There's a place there called <strong>Ja'Marina</strong>, which contains a <strong>Great Library</strong> considered the ''center of all wisdom''.</li>
+          <li><strong>Maddeleine</strong> is from <strong>Ja'Marina</strong></li>
+          <li>scholars from <strong>Vaati</strong> use <strong>pocket watches</strong>, an apparently rare piece of technology, to tell the time.</li>
+          <li><strong>Vaati</strong> is home to <strong>Mediores Arbo</strong>, the first <strong>True King</strong>. It was believed to be a mountain for thousands of years, but after it was cleared of its flora by geologists, it was discovered to be a living creature.</li>
+          <li>the <strong>Arnsreich</strong>'s pacifist regent <strong>King Haynemann XII</strong> is supposedly trying to conquer other countries through economic infiltration.</li>
+          <li>''<strong>Moss</strong>'' is a slang term for money, used in the <strong>Arnsreich</strong>.</li>
+          <li><strong>Tomke</strong> and <strong>Mikah</strong> are originally from the <strong>Arnsreich</strong></li>
+        </ul>
+      </div>
+
+      <!-- Do -->
+      <div id="do" class="lore-subsection">
+        <h3 class="lore-subsection__title">Do</h3>
+        <p class="lore-intro"><strong>Do</strong> is the home of the <strong>Suna</strong> and <strong>Hana</strong>, who have been waging an eternal war against each other.</p>
+        <ul class="lore-list">
+          <li><strong>Bao</strong>, the monk you can find meditating on the peak of <strong>Mount Rydell</strong>, is from <strong>Do</strong>.</li>
+          <li>The curved blades <strong>Sienna</strong> uses were created by the <strong>Suna</strong>. <em>(This might imply Do is the game's equivalent to Asia? If it is, I'd assume the <strong>Donguri</strong> airship is also from there.)</em></li>
+        </ul>
+      </div>
+
+      <!-- Brandyon -->
+      <div id="brandyon" class="lore-subsection">
+        <h3 class="lore-subsection__title">Brandyon</h3>
+        <p class="lore-intro"><strong>Brandyon</strong> has been ruled by the <strong>Galtena Empire</strong>, since ancient times. The continent has been completely overtaken by a fungus.</p>
+        <ul class="lore-list">
+          <li>The empire was created by the <strong>Yus</strong> race. <em>(This might be the same race as the ''<strong>Ys</strong>'', with one of these spellings being a typo.)</em></li>
+          <li><strong>Galtena</strong> used the <strong>Grand Grimoire</strong> during the <strong>War Of The Thousand Kingdoms</strong>. The destruction caused by it was the reason the peace treaty that ended the war was signed.</li>
+          <li><strong>Lady Bran</strong> of <strong>Gravos</strong> is originally from <strong>Galtena</strong></li>
+        </ul>
+      </div>
+
+      <!-- Jadar -->
+      <div id="jadar" class="lore-subsection">
+        <h3 class="lore-subsection__title">Jadar</h3>
+        <p class="lore-intro"><strong>Jadar</strong> contains <strong>Nabrelia</strong> in the north and the <strong>Empire Of Revolution</strong> to the south.</p>
+        <ul class="lore-list">
+          <li><strong>Nabrelia</strong> had a civil war, until <strong>Prince Deklar</strong> took the capital as the last member of the royal family.</li>
+          <li>there's a place in <strong>Nabrelia</strong> called <strong>Rabaan</strong>, that has a mage academy. <strong>Fridolyn</strong>, considered one of the most powerful magicians in the world, was a court mage here.</li>
+          <li>the rulers of <strong>Nabrelia</strong> keep <strong>golden birds</strong> in cages as status symbols.</li>
+          <li>Assassins from <strong>Markia</strong>, Nabrelia's ''City Of Poison'', use the stingers from <strong>Perpetuan scorpions</strong> to create their deadly poison.</li>
+          <li>The <strong>Dohma desert</strong> covers most of the continent.</li>
+          <li>A subspecies of <strong>Lisvan</strong> who love the sun live in the desert.</li>
+          <li>The desert contains trees that can go for months without water.</li>
+          <li>A piece of the fungus from <strong>Brandyon</strong> was accidentally brought to <strong>Jadar</strong> on a fleeing ship. The <strong>Sultan</strong> of the <strong>Empire Of Revolution</strong> sent out an army to destroy it, but they couldn't get rid of it entirely, and it began to swallow the continent. It's theorized that it will overtake all of Jadar within a few years.</li>
+          <li>The fungus' spread caused a large amount of people to flee from the southern coast of the continent. This event is known as the ''<strong>Jadar Exodus</strong>''.</li>
+          <li><strong>Glenn</strong> was born in a prison city named <strong>Golgota</strong>. The prisoners who lived here were freed after the <strong>Jadar Exodus</strong>.</li>
+        </ul>
+      </div>
+
+      <!-- Miranda -->
+      <div id="miranda" class="lore-subsection">
+        <h3 class="lore-subsection__title">Miranda</h3>
+        <p class="lore-intro">Little information is revealed about <strong>Miranda</strong></p>
+        <ul class="lore-list">
+          <li><strong>Miranda</strong> is home to an aquatic subspecies of <strong>Lisvan</strong></li>
+          <li>Mirandan trees supposedly provide very high-quality wood.</li>
+          <li>The rifles <strong>Amalia</strong> uses are produced in <strong>Miranda</strong></li>
+        </ul>
+      </div>
+
+      <!-- Valandis -->
+      <div id="valandis" class="lore-subsection">
+        <h3 class="lore-subsection__title">Valandis</h3>
+        <p class="lore-intro"><strong>Valandis</strong> is composed of three kingdoms: <strong>Taryn</strong> in the north (capital: <strong>Tormund</strong>), <strong>Escanya</strong> in the south, (capital: <strong>Farnsport</strong>), and <strong>Gravos</strong> in the east. (capital: <strong>Wyrnshire</strong>)</p>
+        <ul class="lore-list">
+          <li>Additionally, <strong>Valandis</strong> was chosen as the location for the ancient magic academy of <strong>Nhysa</strong>, because it used to be a neutral state. <strong>Nhysa</strong> eventually sunk into the ground. It now lies in the ''<strong>Great Chasm</strong>'' and is only home to monsters and the godlike dragon <strong>Asnadiel</strong>.</li>
+          <li><em>(When you eventually explore <strong>Nhysa</strong>, the buildings are covered in scratches and blood stains. Where these came from isn't explained)</em></li>
+          <li><strong>Valandis</strong> is rich in ore. Prior to the founding of <strong>Nhysa</strong>, the continent mostly contained mining villages. The academy attracted enough people for these villages to grow into large cities.</li>
+          <li><strong>Valandis</strong> has the <strong>Opal Sea</strong> to its east and the <strong>Forgotten Sea</strong> to its north.</li>
+          <li><strong>Amalia</strong> is the princess of <strong>Escanya</strong>. She is the only surviving child of <strong>King Droglian IX</strong></li>
+          <li><strong>Lady Reina</strong> is one of <strong>Amalia</strong>'s ancestors</li>
+          <li><strong>Robb</strong>'s father, <strong>Lord Gustaf Ryrmeier</strong> of <strong>Flandern</strong>, once tried rebelling against <strong>Taryn</strong>, but failed. <strong>Flandern</strong> remained part of the kingdom, and <strong>Robb</strong> was taken as a servant in <strong>Tormund</strong>'s castle.</li>
+          <li><strong>He'Kandria</strong> is a group of sky islands near <strong>Valandis</strong>, which <strong>Shambala</strong> broke off from. The <strong>Sova</strong> live here, and the church has facilities here where they create monsters in order to drain the <strong>Maelstrom</strong> of ether.</li>
+          <li><strong>Velta salt</strong> exists only on <strong>Valandis</strong>, in deposits in the depths of <strong>Ograne</strong>.</li>
+        </ul>
+      </div>
+
+      <!-- Pangea -->
+      <div id="pangea" class="lore-subsection">
+        <h3 class="lore-subsection__title">Pangea</h3>
+        <p class="lore-intro"><strong>Pangea</strong> isn't given much of a description</p>
+        <ul class="lore-list">
+          <li>the island of <strong>Baki</strong> lies on the southern coast of <strong>Pangea</strong>. <strong>Half-giants</strong> live here. <strong>Taryn</strong> has hired several Baki for their army, using a magic seal to prevent them from rebelling.</li>
+          <li><strong>Whyatt</strong>, a powerful High Inquisitor of the <strong>Church</strong>, is rumoured to be half <strong>Baki</strong>.</li>
+          <li><strong>Moria</strong>, the oldest tree in the world, stands in <strong>Pangea</strong>. It's an ''<strong>Old One</strong>'', an ancient tree with inherent magic. According to legends, Moria is apparently sentient and feared loneliness, leading it to dig its roots through reality itself, into the <strong>Maelstrom</strong>, which it searches for the memories of dead souls.</li>
+          <li>the glowing bodies of <strong>Waterflies</strong> in <strong>Pangea</strong> resemble an Aurora Borealis at night.</li>
+          <li><em>(information about <strong>Pangea</strong> seems slightly contradictory. Some dialogue mentions that only the southern coast has been explored, but other text states that the rest of the continent is known to be completely uninhabited.)</em></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Miscellaneous -->
+  <section id="miscellaneous" class="lore-section">
+    <div class="lore-card">
+      <h2 class="lore-card__title">Miscellaneous</h2>
+      <ul class="lore-list">
+        <li><strong>Arkadia</strong>, <strong>Victor</strong>'s home city, is apparently known for its wine, but I don't believe they ever mention where this is located.</li>
+        <li>there's a mage convention in <strong>Sha'doria</strong></li>
+        <li><strong>Pavel J. Dorian</strong>, A famous researcher <em>(who is apparently the game's narrator?)</em>, is from <strong>Sha'doria</strong>.</li>
+        <li><strong>Hearth</strong> is known for its steak</li>
+        <li>a villager in the <strong>Arkant Archipelago</strong> mentions a continent called <strong>Landis</strong>. This continent is otherwise never mentioned. <em>(I'm not sure if this is a strange typo of ''<strong>Valandis</strong>'')</em></li>
+        <li>one of the sailors visiting the <strong>Hooge</strong> is from somewhere called <strong>Fernasca</strong></li>
+        <li>the <strong>Gandebranth Society</strong>, which originated from the church, is based in <strong>Valeria</strong>, although many of its members live in the flying city <strong>Marylea</strong></li>
+        <li><strong>Gandebranth</strong> wants to build a new church in a place called <strong>Wyothgan</strong></li>
+        <li>The current pope was originally named <strong>Father Hyob</strong>.</li>
+        <li><strong>Pneuma</strong> is a drug that increases physical and magical capabilities</li>
+        <li>All sky armor technology is based on the three ancient <strong>Seraph Armors</strong>, nicknamed <strong>Caspar</strong>, <strong>Melchior</strong> and <strong>Balthasar</strong>. The <strong>Dayajir</strong> you find in <strong>Shambala</strong> is apparently also a Seraph armor.</li>
+        <li><strong>Balthasar</strong> was briefly used by <strong>Gwayn</strong>, and left behind for <strong>Glenn</strong> to retrieve. <strong>Caspar</strong> is worn by <strong>Endahrt</strong>, <strong>Markas</strong>' "bodyguard". I believe <strong>Melchior</strong> isn't shown.</li>
+        <li>The knowledge of making batteries has been lost to time, which means making new sky armors is difficult. The only batteries in existence are ancient relics found by the <strong>Gandebranth Society</strong>. <em>(I assume the <strong>Opus Stones</strong> that power airships are an example)</em></li>
+        <li>According to the Bestiary, <strong>Hana Dolls</strong> are summoned into the world by a being from another dimension. <em>(possibly the ''<strong>Randomage</strong>'' superboss?)</em></li>
+        <li>There is apparently a difference between regular magic and ancient ''<strong>true magic</strong>''. Only <strong>Gwayn</strong> is stated to use the latter.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Mythology / History -->
+  <section id="mythology-history" class="lore-section">
+    <div class="lore-card">
+      <h2 class="lore-card__title">Mythology/History</h2>
+      <ul class="lore-list">
+        <li>The <strong>Maelstrom</strong> is a cosmic ''whirlpool'' of ether that a person's soul flows into when they die. This ether is eventually turned into a new soul when the person is reincarnated. However, there is a limited amount of ether in existence, meaning the Maelstrom becomes weaker as humanity grows, and people are born with less ether in their body with each generation.</li>
+        <li>It seems like the <strong>Maelstrom</strong> somehow forms a connection between different people's ether.</li>
+        <li>It's described as an ''immeasurable sea'' below the living world. The white void which <strong>Glenn</strong>, <strong>Magnolia</strong> and <strong>Gwayn</strong> can access acts as a connection between the two.</li>
+        <li>Large amounts of miasma can prevent souls from returning to the <strong>Maelstrom</strong>.</li>
+        <li><strong>Manaflora</strong> is a powerful being who lived before the <strong>War Of The Thousand Kingdoms</strong>. It had the power to sense death, and could absorb a person's soul before it could flow into the <strong>Maelstrom</strong></li>
+        <li>During an age of calamities long ago, a demonic being known as ''<strong>The Harbringer</strong>'' appeared, considered the ''manifestation of evil''. The being fed on the suffering of humanity to gain incomprehensible power, threatening to destroy the entire world. The <strong>Heroes Of Leonar</strong> attempted to fight it, but stood no chance. The <strong>Vaen</strong> ended up sealing the demon away inside the <strong>Maelstrom</strong>, aided by someone known as ''<strong>The Holy Mother</strong>''.</li>
+        <li>The red-eyed beasts the party fights throughout the game (the mantis in <strong>Farnsport</strong>, the boar in <strong>Iden</strong> and the <strong>Wiedergänger</strong> in <strong>Nhysa</strong>) are stated to be creations of the <strong>Harbringer</strong>. They are made of corrupted ether from inside the <strong>Maelstrom</strong>. These demons were sent into the world to kill <strong>Gwayn</strong>, but because <strong>Glenn</strong>'s ether was ''adapted'' to Gwayn's when he was chosen as his successor, they also targeted him.</li>
+        <li>Besides the red-eyed monsters, the only creatures referred to as ''demons'' are the <strong>Soul Hoarders</strong> fought in the eastern <strong>Narslene Sewers</strong>. They use their magic chest to prevent souls from entering the <strong>Maelstrom</strong>. This is done in an attempt to gain power and become a ''demon lord''. It's unclear if they have any connection to the <strong>Harbringer</strong>. <em>(although their behavior would presumably aid it by weakening the Maelstrom)</em></li>
+        <li><em>(<strong>Whyatt</strong> mentions ''the Devil'' as a being that exists within the <strong>Church</strong>'s religion. I assume this is referring to the <strong>Harbringer</strong>, who appears to be an equivalent to it, in the same way that the <strong>Vaen</strong> are similar to Angels.)</em></li>
+        <li>After the <strong>Harbringer</strong> was sealed away, the <strong>Order Of Leonar</strong> attempted to find a weapon that could defeat it. They founded the church and seeked out ''maidens'' who they believed may be the reincarnation of the <strong>Holy Mother</strong>. They used the <strong>Song Of Manaflora</strong> to turn their souls into <strong>Echoes</strong>, keeping them intact through future reincarnations.</li>
+        <li>It's mentioned that the maidens' souls contain ''<strong>The Guardians</strong>''. <strong>Lenne</strong>'s Guardians were seen when she initially died in <strong>Tormund</strong>, but they weren't very clear about their exact purpose.</li>
+        <li><em>(After <strong>Lenne</strong> is killed, the <strong>Guardians</strong> say ''Is this part of her plan?'', possibly implying the <strong>Holy Mother</strong> as an entity is greater than any one of her reincarnations.)</em></li>
+        <li><em>(The <strong>Order Of Leonar</strong> also created the mechanical golems who maintain the <strong>Empyrean Ruins</strong>. The ruins themselves, along with the living ''<strong>Shaved Head</strong>'' statue that protects them, are much older though)</em></li>
+        <li><strong>Nhysa</strong> was built by the <strong>Order Of Leonar</strong> to create a gate to the <strong>Vaen</strong>'s dimension. Because this required a great amount of ether, the academy would attract magically gifted people from across the world, so that their ether could be collected by the magic circle in the corridors beneath it.</li>
+        <li><strong>Nhysa</strong> was sunk intentionally, to hide it from the <strong>Vaen</strong> after the gate was completed. <strong>Lady Reina</strong> was given the key to open it, a lily that would never wilt, which contained her soul. This was supposed to remain buried until a weapon to kill the <strong>Harbringer</strong> was found.</li>
+        <li><em>(The phrase to open the gate, contained within the flower, was ''Defying the lord of the underworld, the gates shall open.'' I assume this means the Order would only allow someone to face the Vaen if they also planned to kill the Harbringer after their death.)</em></li>
+        <li>The <strong>Order Of Leonar</strong> eventually transformed into the <strong>Gandebranth Society</strong>, adopting the more general goal of improving the world through technological advancement. Gandebranth is led by an <strong>Aar</strong> named <strong>Markas</strong>, who is ironically a follower of the <strong>Harbringer</strong>. Markas apparently has some sort of grand plan to awaken it, but nothing is ever specified about this beyond the fact that he considered <strong>Gwayn</strong> and the <strong>Vaen</strong> to be obstacles.</li>
+        <li>In the fifth era, from V1248 to V1417, the <strong>War Of The Thousand Kingdoms</strong> was fought. This war involved the entire world, and only ended after <strong>Galtena</strong> began using the <strong>Grand Grimoire</strong>, ending the 5th era. <em>(The game takes place in 807, but it's unclear what era it currently is, or what the durations or epochs of the other eras were.)</em></li>
+        <li>After the world's nations united to stop the war, most races stopped living in segregated communities, and many smaller cultures were lost, leading to a cultural ''homogenization''.</li>
+        <li>The ''<strong>War Of The Thousand Realms</strong>'' was apparently also fought at some point, at a time when <strong>Valandis</strong> was still deserted. It ended when a king named <strong>Gaemdriel</strong>, who ruled the ''<strong>Eastern Realms</strong>'' was overthrown by a resistance. He was sealed away with the power of the elements, brought to an eternal sleep far from civilization. Apparently, Gaemdriel believed he was ''freeing'' people's souls by killing them. <em>(He also mentions being the founder of the <strong>Genos</strong> and the son of <strong>Phantram</strong>, but I don't know what those are. I'm pretty sure this whole monologue is just a joke.)</em></li>
+        <li><em>(As far as I can find, ''<strong>Gaemdriel</strong>'' doesn't mean anything.)</em></li>
+        <li>At some point in the past, a man named <strong>Alfreed</strong> led a legendary group of mercenaries called the ''<strong>Band Of The White Dragon</strong>''. They're known for taking away power from monarchs and establishing democracy. <em>(Even though Alfreed is technically the game's penultimate boss, I don't believe much else is revealed about him.)</em></li>
+        <li>At another unspecified point in the past, a king commissioned weapons for his army from the dwarf blacksmith <strong>Gholadrim</strong>, using the strongest materials in the world. He hoped to use these powerful weapons to end a war his country was fighting in. However, Gholadrim was so perfectionistic that he hadn't even completed a single weapon by the time the king and his country were defeated. The dwarf continued working for 200 years anyways, and had created <strong>27 swords</strong> in the end. In the present day, only <strong>12 swords</strong> are known to exist, which are all owned by noble houses.</li>
+        <li>When a dying person has a strong enough ''desire for life'', an imp-like creature called the <strong>Masked Man</strong> is summoned, who supposedly has the power to change destiny. If the person chooses to make ''<strong>the Pact</strong>'' with the creature, they will receive ''<strong>the Curse</strong>'', meaning they must sacrifice something of value, but will remain alive and gain magical powers. You can't always choose what powers you get, however. <em>(It's implied that there might be a way to lift the Curse, but I don't know if there actually is, or what this would involve.)</em></li>
+        <li><em>(''<strong>Fate</strong>'' is personified at a few points. I'm not sure if this is a regular figure of speech, or if Fate is actually some kind of deity in this world. If it is, that would make the Masked Man its servant.)</em></li>
+        <li>For some reason, the <strong>Megaloworm</strong>'s defeat is considered major enough to get its own ''history lesson'' cutaway, so I'm listing it here. It was a giant worm that went around <strong>Valandis</strong> causing earthquakes, creating giant tunnels and destroying entire villages. Every other earthworm is an offspring of it.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- The Seven True Kings -->
+  <section id="seven-true-kings" class="lore-section">
+    <div class="lore-card">
+      <h2 class="lore-card__title">The ''Seven True Kings''</h2>
+      <p class="lore-intro">The <strong>''Seven True Kings''</strong> is a name given to a group of exceptionally powerful creatures, the ''guardians'' of the world. <em>(This name initially appears to simply be a scientific grouping for otherwise unrelated beings, but dialogue at the end of the game does imply that they have some sort of connection with each other.)</em></p>
+      <ul class="lore-list">
+        <li>The first True King is <strong>Mediores Arbo</strong>, also known as the ''<strong>Meditating Monk</strong>'', a giant ape-like creature which had been sitting still for so long that it fused with the environment and turned to stone. It was initially believed to be a mountain, famous for its wind caves with strong winds that prevented anyone from entering them alive.</li>
+        <li>The second True King is <strong>Grandolar</strong>, ''<strong>The Unwavered</strong>'', a giant boar that moves through the world in a line, creating a huge moat. The paths he creates are used as tunnels.</li>
+        <li>The third True King is <strong>Asnadiel</strong> (also called <strong>Asnadel</strong>), ''<strong>The Undying Dreamer</strong>'', a dragon that sleeps in the miasma that fills the ruins of <strong>Nhysa</strong>.</li>
+        <li>The fourth True King is <strong>Ruhan</strong>, ''<strong>The Divine Voice</strong>'', a disembodied voice that resounds through the world for several minutes once every century, repeating a message in an unknown language. It's known as ''<strong>The Parrot</strong>'' because of this, but nobody knows where the voice comes from.</li>
+        <li>The fifth True King is <strong>Luna Orbetnas</strong>, ''<strong>The Watching Eye</strong>'', the owl-like second moon. Luna kills anyone who attempts to fly into outer space, believing they're ''trespassing'' into his territory. The <strong>Sova</strong> who live in <strong>Shambala</strong> consider him their guardian.</li>
+        <li>The sixth True King is <strong>Wylyord</strong>, ''<strong>The Abyss</strong>'', a ''Kraken'' who creates the tides with his breath and forms giant waves and tsunamis with his tentacles. Nobody has ever seen his body, only the tentacles themselves. <em>(possibly implying it's not just a kraken?)</em></li>
+        <li>The seventh True King is <strong>Karmasinas</strong>, ''<strong>The Black Plague</strong>''. It can contaminate entire cities within a few hours.</li>
+        <li>The eighth True King is <strong>Labrodia Dervinas</strong>, ''<strong>The Manipulator</strong>''. This being is tens of thousands of years old, older than the <strong>Harbringer</strong> and all of humanity. He made mankind forget his existence, taking on many different identities throughout his life <em>(presumably wanting to keep his plan to power the <strong>Grand Grimoire</strong> and kill the <strong>Vaen</strong> hidden)</em>.</li>
+        <li><em>(It appears this True King is more of an abstract ''force'' than a single being, because <strong>Gwayn</strong> planned to give his power to <strong>Glenn</strong>, after preparing him to be his successor throughout his previous lives by adapting his ether to his own, and <strong>Kylian</strong> was able to become <strong>Labrodia</strong> after killing Gwayn. Alternatively, it's also possible that the death of any True King causes its ''power'' to be released and potentially absorbed by a new host.)</em></li>
+        <li>Judging by the abilities <strong>Gwayn</strong>, <strong>Glenn</strong> and <strong>Kylian</strong> are shown or mentioned to possess, <strong>Labrodia</strong> has the power to stop time, interact with the <strong>Maelstrom</strong> and manifest dead souls (in the form of the children in <strong>Flandern</strong> and the blue ghosts in <strong>Nhysa</strong>), disguise himself as other people, read minds, alter people's memories, and overpower the will of others.</li>
+        <li>In his pre-battle monologue, <strong>God-King Gaemdriel</strong> refers to himself as the ''destroyer of True Kings'', which would mean there were once more of them <em>(but once again, I don't think this is intended to be taken too seriously.)</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Final Notes -->
+  <section id="final-notes" class="lore-section">
+    <div class="lore-card">
+      <h2 class="lore-card__title">Final notes</h2>
+      <ul class="lore-list">
+        <li>When the <strong>Grand Grimoire</strong> is shown reforming itself in the game's intro, some sort of knight in magical-looking stone armor looks on. This character never appears again, nor is their identity ever mentioned.</li>
+        <li>Because <strong>Wapen</strong> is given by far the most information out of any continent, I'm expecting the DLC to be set here.</li>
+        <li>When <strong>Markas</strong> mentions his plan to awaken the <strong>Harbringer</strong>, he says ''but that's a story for another time''. I think this not-so-subtly implies he'll return as an antagonist in a potential sequel.</li>
+        <li>It's stated that <strong>June</strong> had some sort of deeper connection to <strong>Gwayn</strong> than that of a romantic relationship, but this isn't explained further. <em>(She dies after Gwayn is killed, and it seems like she's somehow reincarnated as a child afterwards, having lost her memories.)</em></li>
+      </ul>
+
+      <div id="endings-summary" class="lore-subsection">
+        <h3 class="lore-subsection__title">Endings Summary</h3>
+        <p class="lore-intro">For a summary of where everyone is by the end of the game:</p>
+        <ul class="lore-list">
+          <li><strong>Lenne</strong> is elected as the queen of <strong>Valandis</strong>. She intends to dedicate herself to restoring the <strong>Order Of Leonar</strong> and finding a way to defeat the <strong>Harbringer</strong>. <em>(It seems like she's taking care of three children, I don't know if they're hers.)</em></li>
+          <li><strong>Egyl and Robb</strong> plan to travel the world together. Egyl is still learning to fly.</li>
+          <li><strong>Victor</strong> will return home to <strong>Arkadia</strong>. It looks like he also joins a band.</li>
+          <li><strong>Amalia</strong> is shown taking care of injured people with <strong>Tomke</strong> and <strong>Mikah</strong> at some sort of camp. <strong>Cress</strong> has puppies.</li>
+          <li><strong>Ba'Thraz</strong> is back with the <strong>Order Of Leonar</strong> in preparation for the <strong>Harbringer</strong>'s return. He's also trying to find a way to save <strong>Amalia</strong> from the <strong>Masked Man</strong>'s curse</li>
+          <li><strong>Raphael</strong> plans to rebuild the <strong>Church</strong>, without <strong>Markas</strong>' influence. He is joined by <strong>Eva</strong> and <strong>Arlette</strong> in some sort of flying structure <em>(possibly a rebuilt <strong>Marylea</strong>?)</em>.</li>
+          <li><strong>Glenn</strong> is reincarnated as a bird</li>
+          <li><strong>Kylian</strong> retains the power of <strong>Labrodia Dervinas</strong> after <strong>Glenn</strong> gives it back to him. He's leaving <strong>Valandis</strong> to seek out the other <strong>True Kings</strong>. According to <strong>Gwayn</strong>, they will help him in the fight against the <strong>Harbringer</strong>. He has also seemingly adopted <strong>June</strong>, who was told to seek him out by the <strong>Masked Man</strong> (who she calls the ''<strong>Man With The Many Faces</strong>'')</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</WalkthroughLayout>
+
+<style>
+  .lore-section {
+    margin-bottom: 3rem;
+  }
+
+  .lore-card {
+    background: linear-gradient(145deg, var(--bg-card), rgba(21, 24, 33, 0.85));
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  .lore-card__title {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    color: var(--accent-gold);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .lore-intro {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+  }
+
+  .lore-list {
+    list-style-type: square;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .lore-list li {
+    margin-bottom: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-main);
+  }
+
+  .lore-card strong,
+  .lore-list strong {
+    color: var(--accent-gold);
+    font-weight: 600;
+  }
+
+  .lore-list em {
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  .ring-layout li {
+    margin-bottom: 0.4rem;
+  }
+
+  .lore-subsection {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--border-color);
+  }
+
+  .lore-subsection__title {
+    font-size: 1.3rem;
+    color: var(--accent-blue);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* Races Section Modernization */
+  .lore-historical-notice {
+    background: rgba(226, 180, 59, 0.08);
+    border-left: 3px solid var(--accent-gold);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .lore-historical-notice p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--text-main);
+  }
+
+  .races-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .races-grid--wide {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  }
+
+  .race-card {
+    background: rgba(13, 15, 20, 0.6);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .race-card:hover {
+    border-color: rgba(226, 180, 59, 0.4);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .race-card--ancient:hover,
+  .race-card--divine:hover {
+    border-color: rgba(0, 210, 255, 0.4);
+    box-shadow: 0 4px 16px var(--accent-glow);
+  }
+
+  .race-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .race-card__name {
+    font-family: var(--font-heading);
+    color: var(--accent-gold);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.04em;
+  }
+
+  .race-card--ancient .race-card__name,
+  .race-card--divine .race-card__name {
+    color: var(--accent-blue);
+  }
+
+  .race-badge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 9999px;
+    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    font-weight: 500;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .race-badge--common {
+    background: rgba(226, 180, 59, 0.12);
+    border-color: rgba(226, 180, 59, 0.3);
+    color: var(--accent-gold);
+  }
+
+  .race-badge--avian,
+  .race-badge--aquatic {
+    background: rgba(0, 210, 255, 0.1);
+    border-color: rgba(0, 210, 255, 0.3);
+    color: var(--accent-blue);
+  }
+
+  .race-badge--ancient,
+  .race-badge--divine {
+    background: rgba(0, 210, 255, 0.15);
+    border-color: rgba(0, 210, 255, 0.4);
+    color: var(--accent-blue);
+  }
+
+  .race-badge--reptile,
+  .race-badge--beast {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.18);
+    color: var(--text-main);
+  }
+
+  .race-badge--anomaly,
+  .race-badge--unclassified {
+    background: rgba(226, 180, 59, 0.1);
+    border-color: rgba(226, 180, 59, 0.25);
+    color: var(--accent-gold);
+  }
+
+  .race-badge--enigmatic {
+    background: rgba(0, 210, 255, 0.08);
+    border-color: rgba(0, 210, 255, 0.25);
+    color: var(--accent-blue);
+  }
+
+  .race-card__body {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    flex-grow: 1;
+  }
+
+  .race-card__body p {
+    margin-bottom: 0.65rem;
+  }
+
+  .race-card__body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .race-card__body strong {
+    color: var(--accent-gold);
+    font-weight: 600;
+  }
+
+  .race-card__sublist {
+    list-style-type: disc;
+    padding-left: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .race-card__sublist li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    color: var(--text-main);
+  }
+
+  .race-card__sublist li:last-child {
+    margin-bottom: 0;
+  }
+
+  .race-card__speculation {
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+  }
+
+  .lore-note-box {
+    background: rgba(21, 24, 33, 0.6);
+    border: 1px dashed var(--border-color);
+    border-radius: 8px;
+    padding: 1.1rem 1.4rem;
+    margin-top: 1.5rem;
+  }
+
+  .lore-note-box__title {
+    font-family: var(--font-heading);
+    color: var(--accent-gold);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .lore-note-box p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+  }
+
+  .lore-note-box strong {
+    color: var(--accent-gold);
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .lore-card {
+      padding: 1.5rem 1.25rem;
+    }
+
+    .lore-list {
+      padding-left: 1.2rem;
+    }
+
+    .races-grid,
+    .races-grid--wide {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
